@@ -634,7 +634,7 @@ ul.vertical-socials li.social-icon svg {
 .service {
   background: rgba(218, 215, 215, 0.97);
   margin: 10px;
-  padding: 40px;
+  padding: 30px;
   border-radius: 4px;
   text-align: center;
   -webkit-box-flex: 1;
@@ -647,6 +647,19 @@ ul.vertical-socials li.social-icon svg {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 260px;
+}
+
+.icon-container img {
+  width: auto;
+  height: 160px;
 }
 
 .service:hover {
@@ -702,6 +715,7 @@ ul.vertical-socials li.social-icon svg {
   align-self: flex-end;
 }
 
+
 @media all and (max-width: 900px) {
   .services-grid {
     display: -webkit-box;
@@ -709,6 +723,14 @@ ul.vertical-socials li.social-icon svg {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+  }
+
+  .icon-container {
+  display: none;
+}
+
+  .icon-container img {
+   display: none;
   }
   .service i {
     margin: 0rem 0;
