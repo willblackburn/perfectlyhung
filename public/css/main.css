@@ -261,22 +261,23 @@ ul.vertical-socials li.social-icon svg {
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .about {
   background: url('../img/bg2-2.webp');
-  background-position: 70% 50%;
+  background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .services {
   background: url('../img/bg3-2.webp');
-  background-position: 70% 50%;
+  background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 .residential {
@@ -284,21 +285,23 @@ ul.vertical-socials li.social-icon svg {
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 .commercial {
   background: url('../img/bg5-2.webp');
-  background-position: 70% 50%;
+  background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
 }
 
 .contact {
   background: url('../img/bg7-2.webp');
-  background-position: 70% 50%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /*-------------------------------------------------------------------------------
@@ -615,7 +618,7 @@ ul.vertical-socials li.social-icon svg {
 .service h4 {
   font-family: 'Amiri', sans-serif;
   font-weight: 600;
-  line-height: 2rem;
+  line-height: 3rem;
   text-transform: uppercase;
   color: #56ceba;
   font-size: 2rem;
@@ -723,6 +726,10 @@ ul.vertical-socials li.social-icon svg {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+  }
+
+  .service {
+    padding: 15px;
   }
 
   .icon-container {
