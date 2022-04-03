@@ -269,6 +269,7 @@ ul.vertical-socials li.social-icon svg {
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
 }
 
 .services {
@@ -297,6 +298,7 @@ ul.vertical-socials li.social-icon svg {
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
 }
 
 /*-------------------------------------------------------------------------------
@@ -803,12 +805,12 @@ ul.vertical-socials li.social-icon svg {
 }
 @media (min-width: 60em) {
   .gallery {
-    grid-template-columns: repeat(10, 8vw);
+    grid-template-columns: repeat(5, 16vw);
     grid-template-rows: 25vh;
   }
 }
 
-img {
+.gallery img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -818,7 +820,7 @@ img {
   position: relative;
   box-shadow: 0 0 0 #0000;
   opacity: 0.67;
-  filter: sepia(80%) hue-rotate(180deg);
+  /* filter: sepia(80%) hue-rotate(180deg); */
 }
 img:first-child {
   border-radius: 10px 10px 0 0;
@@ -848,12 +850,11 @@ img:last-child {
     border-radius: 0 10px 10px 0;
   }
 }
-img:hover {
+.gallery img:hover {
   opacity: 1;
-  z-index: 1;
+  z-index: 997;
   box-shadow: 1em 1em 1em #0004;
   transition: all 0.3s cubic-bezier(0.3, 0.1, 0.3, 0.85);
-  filter: sepia(0%) hue-rotate(0deg);
   border-radius: 5px;
   width: 300%;
   height: 300%;
@@ -861,7 +862,7 @@ img:hover {
   top: -100%;
 }
 @media (min-width: 40em) {
-  img:hover {
+  .gallery img img:hover {
     width: 250%;
     height: 500%;
     left: -75%;
@@ -869,13 +870,13 @@ img:hover {
   }
 }
 @media (min-width: 10em) and (orientation: landscape) {
-  img:hover {
+  .gallery img img:hover {
     width: 250%;
     height: 200%;
   }
 }
 @media (min-width: 40em) and (orientation: portrait) {
-  img:hover {
+  .gallery img img:hover {
     width: 300%;
     height: 300%;
     left: -100%;
@@ -883,24 +884,24 @@ img:hover {
   }
 }
 @media (min-width: 60em) {
-  img:hover {
+  .gallery img img:hover {
     width: 350%;
     height: 150%;
     left: -75%;
     top: -25%;
   }
-  img:hover ~ img {
+  .gallery img img:hover ~ img {
     left: 175%;
   }
 }
 @media (min-width: 60em) and (orientation: landscape) {
-  img:hover {
+  .gallery img img:hover {
     width: 300%;
     height: 300%;
     left: -75%;
     top: -100%;
   }
-  img:hover ~ img {
+  .gallery img img:hover ~ img {
     left: 100%;
   }
 }
