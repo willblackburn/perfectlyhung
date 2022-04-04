@@ -496,8 +496,9 @@ ul.social-icons {
   }
 
   .main-title-light {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     max-width: 20px;
+    bottom: 6rem;
   }
 
   .secondary-title {
@@ -508,9 +509,9 @@ ul.social-icons {
   }
 
   .secondary-title-light {
-    font-size: .9rem;
+    font-size: .8rem;
     line-height: 1.5rem;
-    bottom: 9.7rem;
+    bottom: 5.5rem;
     margin-left: 6px;
   }
 
@@ -962,16 +963,23 @@ ul.social-icons {
 /* small mobile */
 
 @media (min-width: 320px) {
+
+  .services-grid {
+    padding-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .service{
-    font-size: 1.1rem;
+    font-size: .8rem;
     line-height: 1;
-    padding: 0px;
+    padding: 80px;
     margin: 0px;
   }
 
   .service h4 {
     font-size: 1rem;
-    margin: -2rem 0 0.6rem;
+    margin: 0rem 0 0rem;
   }
 }
 
