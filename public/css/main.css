@@ -476,37 +476,88 @@ ul.social-icons {
   margin-left: 6px;
 }
 
+/* iphone x */
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+
+      .main-title {
+        font-size: .4rem;
+        max-width: 20px;
+        bottom: 10rem;
+        line-height: 3rem;
+      }
+
+     }
+
+
+
+/* iphone 6 7 8 x vertical */
+
+@media (max-width: 414px) {
+
+  .main-container {
+    margin-left: 3rem;
+    padding-top: 25vmin;
+  }
+
+  .paragraph-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    max-width: 80vw;
+    padding-top: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding-top: 30px;
+    max-width: 80vw;
+  }
+
+  .quotes {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding-top: 5rem;
+    max-width: 60vw;
+  }
+  
+}
+
+
 /* mobile */
 
-@media (max-width: 592px) {
+@media (max-width: 768px) {
   .main-container {
-    margin-left: 4rem;
+    margin-left: 3rem;
     padding-top: 25vmin;
   }
 
   .main-title {
-    font-size: 3rem;
+    font-size: 2.4rem;
     max-width: 20px;
     bottom: 10rem;
     line-height: 3rem;
   }
 
   .main-title-light {
-    font-size: 3rem;
+    font-size: 2.4rem;
     max-width: 20px;
   }
 
   .secondary-title {
-    font-size: 1rem;
+    font-size: .7rem;
     line-height: 1.5rem;
     max-width: 90vw;
     bottom: 8.5rem;
   }
 
   .secondary-title-light {
-    font-size: .8rem;
+    font-size: .7rem;
     line-height: 1.5rem;
-    bottom: 9.5rem;
+    bottom: 9.7rem;
     margin-left: 6px;
   }
 
@@ -548,7 +599,7 @@ ul.social-icons {
 
 @media (min-width: 768px) {
   .main-container {
-    margin-left: 4rem;
+    margin-left: 4.2rem;
     padding-top: 15vmin;
   }
 
@@ -790,6 +841,37 @@ ul.social-icons {
 
 
 
+
+
+/* iphone 6 7 8 x vertical */
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .service {
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: 0px;
+    margin: 0px;
+ }
+
+
+}
+
+/* mobile */
+
+@media (max-width: 568px) {
+  .service {
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: 0px;
+    margin: 0px;
+    
+  }
+
+  .icon-container {
+    display: none;
+  }
+}
+
 @media all and (max-width: 900px) {
   .services-grid {
     display: -webkit-box;
@@ -800,7 +882,7 @@ ul.social-icons {
   }
 
   .service {
-    padding: 70px;
+    padding: 50px;
     margin: 5px;
   }
 
@@ -816,14 +898,6 @@ ul.social-icons {
   }
   .services h4 {
     font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 592px) {
-  .service {
-    font-size: 1rem;
-    line-height: 1.4;
-    
   }
 }
 
