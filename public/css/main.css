@@ -15,6 +15,8 @@ Site Design By Will Blackburn. Coda4.com
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&display=swap');
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 /* ---------------------------------------------------------------------------- */
 
 * {
@@ -222,48 +224,73 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     Social Icons
 -------------------------------------------------------------------------------*/
 
-ul.vertical-socials {
-  list-style-type: none;
-  padding: 0;
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  z-index: 995;
+._12 {
+  font-size: 1em;
+}
+._14 {
+  font-size: 1em;
+}
+ul {
+  padding:0;
+  list-style: none;
+}
+.footer-social-icons {
+  width: 350px;
+  display:block;
+  margin: 0 auto;
+}
+.social-icon {
+  color: #fff;
+}
+ul.social-icons {
+  margin-top: 25px;
+  padding-left: 20px;
+}
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+.fa-facebook {
+  padding:10px 14px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
+  background-color: #322f30;
+}
+.fa-facebook:hover {
+  background-color: #3d5b99;
+}
+.fa-twitter {
+  padding:10px 12px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
+  background-color: #322f30;
+}
+.fa-twitter:hover {
+  background-color: #00aced;
 }
 
-ul.vertical-socials li.social-icon {
-  width: 15px;
-  margin: 20px 0;
-  position: relative;
+.fa-youtube {
+  padding:10px 14px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
+  background-color: #322f30;
 }
-
-ul.vertical-socials li.social-icon svg {
-  fill: #333333;
-}
-
-.circle:hover {
-  /* calculate using: (2 * PI * R) */
-  stroke-dasharray: 227;
-  stroke-dashoffset: 0;
-  animation-iteration-count: infinite;
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes rotate {
-  to {
-    stroke-dashoffset: 227;
-  }
-}
-.another-circle {
-  stroke-dasharray: 227;
-  stroke-dashoffset: 227;
-  transition: stroke-dashoffset 2s linear;
-}
-.another-circle:hover {
-  stroke-dashoffset: 0;
+.fa-youtube:hover {
+  background-color: #e64a41;
 }
 
 /*-------------------------------------------------------------------------------
