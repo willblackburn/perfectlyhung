@@ -661,7 +661,7 @@ ul.social-icons {
 @media (min-width: 768px) {
   .main-container {
     margin-left: 4.2rem;
-    padding-top: 15vmin;
+    padding-top: 25vmin;
   }
 
   .main-title {
@@ -689,14 +689,14 @@ ul.social-icons {
 
   .video-title {
     margin-left: 7rem;
-    bottom: 15rem;
+    bottom: 7rem;
     font-size: 3.5rem;
   }
 
   .video-secondary-title {
     font-size: 1.2rem;
     margin-left: 7.5rem;
-    bottom: 14rem;
+    bottom: 6.5rem;
   }
 
   .paragraph-title h3 {
@@ -725,14 +725,14 @@ ul.social-icons {
 
   .phone-title {
     font-size: 1.5rem;
-    bottom: 4rem;
+    bottom: 5rem;
     margin-left: 6px;
   }
 
   .email-title {
  
     font-size: 1.5rem;
-    bottom: 2.5rem;
+    bottom: 3rem;
     margin-left: 6px;
   }
 
