@@ -83,13 +83,13 @@ a {
 }
 
 .header {
-  display: block;
+  display: flex;
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
   box-shadow: none;
   position: fixed;
-  height: 60px!important;
+  height: 90px!important;
   overflow: hidden;
   z-index: 10;
 }
@@ -316,7 +316,7 @@ ul.vertical-socials li.social-icon svg {
 
 .contact {
   background: url('../img/bg7-2.webp');
-  background-position: center;
+  background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -498,7 +498,7 @@ ul.vertical-socials li.social-icon svg {
     font-size: 1.3rem;
     line-height: 1.6rem;
     padding-top: 5rem;
-    max-width: 80vw;
+    max-width: 60vw;
   }
 }
 
@@ -507,7 +507,7 @@ ul.vertical-socials li.social-icon svg {
 @media (min-width: 768px) {
   .main-container {
     margin-left: 7rem;
-    padding-top: 10vmin;
+    padding-top: 20vmin;
   }
 
   .main-title {
@@ -537,6 +537,18 @@ ul.vertical-socials li.social-icon svg {
     max-width: 90vw;
   }
 
+  .video-title {
+    margin-left: 7rem;
+    bottom: 15rem;
+    font-size: 3.5rem;
+  }
+
+  .video-secondary-title {
+    font-size: 1.2rem;
+    margin-left: 7.5rem;
+    bottom: 14rem;
+  }
+
   .paragraph-title h3 {
     max-width: 9%;
   }
@@ -558,7 +570,7 @@ ul.vertical-socials li.social-icon svg {
   .quotes {
     font-size: 1.3rem;
     padding-top: 5rem;
-    max-width: 90vw;
+    max-width: 70vw;
   }
 }
 
@@ -615,8 +627,8 @@ ul.vertical-socials li.social-icon svg {
 
   .video-secondary-title {
     font-size: 1.2rem;
-    margin-left: 11rem;
-    bottom: 14.5rem;
+    margin-left: 11.5rem;
+    bottom: 14rem;
   }
 }
 /*-------------------------------------------------------------------------------
@@ -733,6 +745,7 @@ ul.vertical-socials li.social-icon svg {
 .service .cta {
   align-self: flex-end;
 }
+
 
 
 @media all and (max-width: 900px) {
