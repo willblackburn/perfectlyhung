@@ -489,7 +489,7 @@ ul.vertical-socials li.social-icon svg {
 @media (min-width: 768px) {
   .main-container {
     margin-left: 7rem;
-    padding-top: 15vmin;
+    padding-top: 10vmin;
   }
 
   .main-title {
@@ -534,7 +534,7 @@ ul.vertical-socials li.social-icon svg {
     font-size: 1rem;
     line-height: 1.3rem;
     padding-top: 30px;
-    max-width: 70vw;
+    max-width: 60vw;
   }
 
   .quotes {
@@ -639,6 +639,8 @@ ul.vertical-socials li.social-icon svg {
   margin: 10px;
   padding: 30px;
   border-radius: 4px;
+  font-size: 1.1rem;
+  line-height: 1.2;
   text-align: center;
   -webkit-box-flex: 1;
   flex: 1;
@@ -657,7 +659,7 @@ ul.vertical-socials li.social-icon svg {
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 260px;
+  height: 180px;
 }
 
 .icon-container img {
@@ -671,10 +673,6 @@ ul.vertical-socials li.social-icon svg {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
 }
 
-.service i {
-  font-size: 3.45rem;
-  margin: 8rem 0;
-}
 
 .service1 i,
 .service1 h4,
@@ -744,6 +742,14 @@ ul.vertical-socials li.social-icon svg {
   }
   .services h4 {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 592px) {
+  .service {
+    font-size: 1rem;
+    line-height: 1.4;
+    
   }
 }
 

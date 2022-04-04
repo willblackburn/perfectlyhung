@@ -10,8 +10,6 @@
     />
     <meta name="author" content="PerfectlyHung" />
 
-
-
     <title>
       Perfectly Hung - Professional Picture Hanging & Installation Services
       Based in London, UK.
@@ -274,11 +272,11 @@
           </div>
         </div>
 
-        <div class="modal" id="lightbox">
+        <!-- <div class="modal" id="lightbox">
           <div class="modal-background"></div>
           <div class="modal-content"><img id="lightbox_img" /></div>
           <button class="modal-close"></button>
-        </div>
+        </div> -->
       </div>
 
       <!-- Contact Section -->
@@ -287,8 +285,14 @@
         <div class="main-container">
           <div class="main-title">London</div>
           <div class="secondary-title">Harrow H8 3HD</div>
-          <div class="phone-title">07715590061</div>
-          <div class="email-title">hello@perfectlyhung.uk</div>
+          <div class="phone-title">
+            <a href="tel:07951101683">07951 101683</a>
+          </div>
+          <div class="email-title">
+            <a href="mailto:hello@perfectlyhung.com.com"
+              >hello@perfectlyhung.com</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -321,6 +325,8 @@
         scrollBar: false,
         autoScrolling: true,
         scrollingSpeed: 1500,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
         loopBottom: true,
         anchors: [
           'home',
@@ -333,11 +339,12 @@
           'contact',
         ],
         //Design
+        css3: true,
         controlArrows: true,
         verticalCentered: true,
         sectionsColor: ['#ccc', '#fff'],
-        paddingTop: '3em',
-        paddingBottom: '10px',
+        // paddingTop: '3em',
+        // paddingBottom: '10px',
         dropEffect: true,
         dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999 },
         waterEffect: false,
