@@ -50,6 +50,11 @@ img {
   z-index: 1;
 }
 
+a {
+  text-decoration: none;
+  color:rgb(44, 44, 44)
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -67,136 +72,149 @@ img {
 /* Logo */
 
 .logo {
-  display: flex;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
   margin-top: 0.2rem;
   max-width: 100%;
   height: auto;
   width: auto\9; /* ie8 */
 }
 
-nav {
-  width: 100%;
-  position: fixed;
-  padding: 10px 20px;
-  z-index: 999;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  color: rgb(75, 73, 73);
-  text-decoration: none;
-  font-weight: 600;
-}
-a:hover {
-  text-decoration-thickness: bold;
-}
-
-.menu li {
-  font-size: 16px;
-  padding: 15px 5px;
-}
-
-.menu li a {
-  color: #2e2e2e;
+.header {
   display: block;
-  text-transform: uppercase;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  position: fixed;
+  height: 60px!important;
+  overflow: hidden;
+  z-index: 10;
 }
-
-/* Mobile view */
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
 }
-
-.nav-toggle {
-  order: 1;
-  cursor: pointer;
-}
-
-.nav-item {
+.mainInner{
+  display: table;
+  height: 100%;
   width: 100%;
   text-align: center;
-  order: 3;
+}
+.mainInner div{
+  display:table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+#sidebarMenu {
+  height: 100%;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  margin-top: 0px;
+  transform: translateX(250px);
+  transition: transform 250ms ease-in-out;
+  background: linear-gradient(180deg, #f8f8f8 0%, #e6e6e6 100%);
+  z-index: 998;
+}
+.sidebarMenuInner{
+  margin:0;
+  padding:0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+  list-style: none;
+  color: rgb(44, 44, 44);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+  color: rgb(56, 56, 56);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type=checkbox] {
+  transition: all 0.3s;
+  box-sizing: border-box;
   display: none;
 }
-
-.nav-item.active {
-  display: block;
-  background-color: #f0f0f0;
-}
-
-.bars {
-  position: relative;
-  background: rgb(29, 28, 28);
-  display: inline-block;
-  height: 2px;
-  width: 18px;
-}
-
-.bars::before,
-.bars::after {
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
   position: absolute;
-  content: '';
-  background: rgb(29, 28, 28);
-  display: inline-block;
-  height: 2px;
-  width: 18px;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  top: 32px;
+  right: 35px;
+  height: 22px;
+  width: 22px;
 }
-
-.bars::before {
-  top: 5px;
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(49, 49, 49);
 }
-.bars::after {
-  top: -5px;
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
 }
-
-/* Tablet view */
-
-@media all and (min-width: 768px) {
-  nav {
-    padding: 5px 15px;
-    z-index: 999;
-  }
-  .menu li {
-    font-size: 14px;
-  }
-  .menu {
-    justify-content: center;
-  }
-  .logo {
-    flex: 1;
-  }
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
 }
-
-/* Desktop view */
-
-@media all and (min-width: 1300px) {
-  .nav-item {
-    display: block;
-    width: auto;
-  }
-  .menu li {
-    font-size: 16px;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  .logo {
-    order: 0;
-  }
-  .nav-item {
-    order: 1;
-  }
-
-  .menu li {
-    padding: 15px 10px;
-  }
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
 }
 
 /*-------------------------------------------------------------------------------

@@ -49,20 +49,33 @@
   <!-- Begin Nav -->
 
   <body>
-    <nav>
-      <ul class="menu">
-        <li class="logo">
-          <a href="#home"><img src="./img/perfectlyhung-logo.png" alt="" /></a>
+    <div class="header">
+      <li class="logo">
+        <a href="#home"><img src="./img/perfectlyhung-logo.png" alt="" /></a>
+      </li>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li><span></span></li>
+        <li><a href="#aboutus">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li>
+          <a href="#process">Process</a>
         </li>
-        <!-- <li class="nav-item"><a href="#home">Home</a></li> -->
-        <li class="nav-item"><a href="#aboutus">About</a></li>
-        <li class="nav-item"><a href="#services">Services</a></li>
-        <li class="nav-item"><a href="#process">Process</a></li>
-        <li class="nav-item"><a href="#gallery">Our Work</a></li>
-        <li class="nav-item"><a href="#contact">Contact Us</a></li>
-        <li class="nav-toggle"><span class="bars"></span></li>
+        <li>
+          <a href="#gallery">Our Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact Us</a>
+        </li>
       </ul>
-    </nav>
+    </div>
 
     <!-- Socials -->
     <ul class="vertical-socials">
