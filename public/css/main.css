@@ -122,7 +122,7 @@ a {
   margin-top: 0px;
   transform: translateX(250px);
   transition: transform 250ms ease-in-out;
-  background: linear-gradient(180deg, #f8f8f8 0%, #e6e6e6 100%);
+  background: linear-gradient(180deg, #f8f8f8 0%, #dfd8cd 100%);
   z-index: 998;
 }
 .sidebarMenuInner{
@@ -344,7 +344,7 @@ ul.social-icons {
 
 .contact {
   background: url('../img/bg7-2.webp');
-  background-position: 100% 50%;
+  background-position: 95% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -357,11 +357,12 @@ ul.social-icons {
 .main-container {
   position: relative;
   height: 100%;
-  width: 1600px;
+  width: 1500px;
   padding-bottom: 7vmin;
 }
 
 .main-title {
+  display: flex;
   color: #2e2e2e;
   position: absolute;
   font-family: 'Amiri', sans-serif;
@@ -476,35 +477,45 @@ ul.social-icons {
   margin-left: 6px;
 }
 
-/* iphone x */
-
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) {
-
-      .main-title {
-        font-size: .4rem;
-        max-width: 20px;
-        bottom: 10rem;
-        line-height: 3rem;
-      }
-
-     }
 
 
+/* Small Mobile */
 
-/* iphone 6 7 8 x vertical */
-
-@media (max-width: 414px) {
+@media (min-width: 320px) {
 
   .main-container {
     margin-left: 3rem;
-    padding-top: 25vmin;
+    padding-top: 35vmin;
+  }
+
+  .main-title {
+    font-size: 2.8rem;
+    max-width: 20px;
+    bottom: 10rem;
+    line-height: 3rem;
+  }
+
+  .main-title-light {
+    font-size: 2.8rem;
+    max-width: 20px;
+  }
+
+  .secondary-title {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 8.5rem;
+  }
+
+  .secondary-title-light {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    bottom: 9.7rem;
+    margin-left: 6px;
   }
 
   .paragraph-header {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
     max-width: 80vw;
     padding-top: 1.6rem;
@@ -517,11 +528,47 @@ ul.social-icons {
     max-width: 80vw;
   }
 
+  .video-title {
+    margin-left: 2.5rem;
+    bottom: 10.5rem;
+    font-size: 3.5rem;
+  }
+
+  .video-secondary-title {
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    bottom: 10rem;
+  }
+
   .quotes {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.6rem;
-    padding-top: 5rem;
+    padding-top: 1rem;
     max-width: 60vw;
+  }
+
+  .phone-title {
+    font-size: 1.5rem;
+    bottom: 6.5rem;
+    margin-left: 6px;
+  }
+
+  .email-title {
+ 
+    font-size: 1.5rem;
+    bottom: 4.5rem;
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .quotes {
+    display: none;
+  }
+  
+  .quotes-author {
+    display: none;
   }
   
 }
@@ -529,33 +576,33 @@ ul.social-icons {
 
 /* mobile */
 
-@media (max-width: 768px) {
+@media (min-width: 480px) {
   .main-container {
     margin-left: 3rem;
     padding-top: 25vmin;
   }
 
   .main-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     max-width: 20px;
     bottom: 10rem;
     line-height: 3rem;
   }
 
   .main-title-light {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     max-width: 20px;
   }
 
   .secondary-title {
-    font-size: .7rem;
+    font-size: .9rem;
     line-height: 1.5rem;
     max-width: 90vw;
     bottom: 8.5rem;
   }
 
   .secondary-title-light {
-    font-size: .7rem;
+    font-size: .9rem;
     line-height: 1.5rem;
     bottom: 9.7rem;
     margin-left: 6px;
@@ -576,15 +623,15 @@ ul.social-icons {
   }
 
   .video-title {
-    margin-left: 4rem;
-    bottom: 15rem;
+    margin-left: 2.5rem;
+    bottom: 10.5rem;
     font-size: 3.5rem;
   }
 
   .video-secondary-title {
     font-size: 1.2rem;
-    margin-left: 4.5rem;
-    bottom: 14rem;
+    margin-left: 3rem;
+    bottom: 10rem;
   }
 
   .quotes {
@@ -592,6 +639,19 @@ ul.social-icons {
     line-height: 1.6rem;
     padding-top: 5rem;
     max-width: 60vw;
+  }
+
+  .phone-title {
+    font-size: 1.5rem;
+    bottom: 6.5rem;
+    margin-left: 6px;
+  }
+
+  .email-title {
+ 
+    font-size: 1.5rem;
+    bottom: 4.5rem;
+    margin-left: 6px;
   }
 }
 
@@ -625,7 +685,7 @@ ul.social-icons {
 
   .secondary-title-light {
     font-size: 1.2rem;
-    bottom: 9rem;
+    bottom: 8rem;
     line-height: 1.5rem;
     max-width: 90vw;
   }
@@ -667,7 +727,65 @@ ul.social-icons {
   }
 }
 
-/* Desktop */
+/* Small Desktop */
+
+@media (min-width: 992px) {
+  .main-container {
+    margin-left: 11rem;
+    padding-top: 15vmin;
+    max-width: 100vw;
+  }
+
+  .paragraph-title h3 {
+    max-width: 9%;
+  }
+
+  .paragraph {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    position: relative;
+    padding-top: 50px;
+    max-width: 65%;
+  }
+
+  .paragraph-header {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    max-width: 60vw;
+    padding-top: 1.6rem;
+  }
+
+  .main-title {
+    bottom: 10rem;
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+
+  .secondary-title {
+    bottom: 8.5rem;
+  }
+
+  .secondary-title-light {
+    font-size: 1.2rem;
+    bottom: 9rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+  }
+
+  .video-title {
+    margin-left: 11rem;
+    bottom: 15rem;
+    font-size: 3.5rem;
+  }
+
+  .video-secondary-title {
+    font-size: 1.2rem;
+    margin-left: 11.5rem;
+    bottom: 14rem;
+  }
+}
+
+/* Large Desktop */
 
 @media (min-width: 1300px) {
   .main-container {
@@ -744,8 +862,6 @@ ul.social-icons {
   line-height: 3rem;
   text-transform: uppercase;
   color: #56ceba;
-  font-size: 2rem;
-  margin: 1rem 0 0.6rem;
 }
 
 .services-grid {
@@ -843,34 +959,43 @@ ul.social-icons {
 
 
 
-/* iphone 6 7 8 x vertical */
+/* small mobile */
 
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
-  .service {
-    font-size: .9rem;
-    line-height: 1.2;
+@media (min-width: 320px) {
+  .service{
+    font-size: 1.1rem;
+    line-height: 1;
     padding: 0px;
     margin: 0px;
- }
+  }
 
-
+  .service h4 {
+    font-size: 1rem;
+    margin: -2rem 0 0.6rem;
+  }
 }
 
 /* mobile */
 
-@media (max-width: 568px) {
+@media (min-width: 568px) {
   .service {
-    font-size: .9rem;
+    font-size: 1.3rem;
     line-height: 1.2;
-    padding: 0px;
-    margin: 0px;
+    padding: 20px;
+    margin: 20px;
     
   }
 
+}
+
+@media (max-width: 568px){
   .icon-container {
     display: none;
   }
 }
+
+
+
 
 @media all and (max-width: 900px) {
   .services-grid {
@@ -899,6 +1024,26 @@ ul.social-icons {
   .services h4 {
     font-size: 1.3rem;
   }
+}
+
+/* large desktop */
+
+@media (min-width: 1300px){
+  .service {
+    margin: 10px;
+    padding: 30px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .service h4 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 1rem 0 0.6rem;
+  }
+
+  
+
 }
 
 /*-------------------------------------------------------------------------------
