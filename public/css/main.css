@@ -715,16 +715,16 @@ ul.social-icons {
 
   .paragraph-header {
     font-size: 2.2rem;
-    line-height: 2rem;
-    max-width: 80vw;
+    line-height: 2.5rem;
+    max-width: 75vw;
     padding-top: 2.6rem;
   }
 
   .paragraph {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.3rem;
     padding-top: 30px;
-    max-width: 75vw;
+    max-width: 78vw;
   }
 
   .quotes {
@@ -735,14 +735,14 @@ ul.social-icons {
 
   .phone-title {
     font-size: 1.5rem;
-    bottom: 5rem;
+    bottom: 6.5rem;
     margin-left: 6px;
   }
 
   .email-title {
  
     font-size: 1.5rem;
-    bottom: 3rem;
+    bottom: 5rem;
     margin-left: 6px;
   }
 
@@ -764,7 +764,7 @@ ul.social-icons {
   }
 
   .secondary-title {
-    bottom: 5.2rem;
+    bottom: 6.2rem;
   }
 
   .secondary-title-light {
@@ -817,14 +817,14 @@ ul.social-icons {
 
   .phone-title {
     font-size: 1.5rem;
-    bottom: 6rem;
+    bottom: 4.3rem;
     margin-left: 6px;
   }
 
   .email-title {
  
     font-size: 1.5rem;
-    bottom: 4rem;
+    bottom: 2.8rem;
     margin-left: 6px;
   }
 }
@@ -935,7 +935,9 @@ ul.social-icons {
 }
 
 .service {
-  background: rgba(230, 228, 228, 0.97);
+  background-color: #f0f0f0;
+background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   margin: 10px;
   padding: 30px;
   border-radius: 4px;
@@ -1239,11 +1241,15 @@ ul.social-icons {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
   grid-auto-rows: 270px;
-  grid-gap: 0.8em;
+  grid-gap: 0.1em;
   grid-auto-flow: row dense;
   font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
 }
 
@@ -1317,6 +1323,21 @@ figcaption {
 @media (max-width: 550px) {
   .gallery {
     display: block;
+  }
+
+  figure {
+    margin-bottom: 1em;
+  }
+
+  figcaption {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 958px) {
+  .full-span-column {
+    grid-column: 1/span 2;
+    grid-row: span 1;
   }
 
   figure {
