@@ -1044,19 +1044,21 @@ ul.social-icons {
 @media (min-width: 320px) {
 
   .services-grid {
-    padding-top: 6rem;
+    padding-top: 2rem;
     padding-left: .7rem;
     padding-right: .7rem;
   }
 
   .service{
-    font-size: .9rem;
+    font-size: 1.1rem;
     line-height: 1;
+    margin: 1rem;
+    padding: 2em;
    
   }
 
   .service h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0rem 0 0rem;
   }
 }
@@ -1072,15 +1074,15 @@ ul.social-icons {
   }
 
   .service {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1;
-    padding: 20px;
+    padding: 30px;
     margin: 20px;
     
   }
 
   .service h4 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 20px;
   }
 
