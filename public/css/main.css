@@ -319,7 +319,7 @@ ul.social-icons {
 }
 
 .services {
-  background: url('../img/bg3-2.webp');
+  background: url('../img/bg3.webp');
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -355,6 +355,11 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  flex-shrink: 2;
   position: relative;
   height: 100%;
   width: 1500px;
@@ -942,8 +947,8 @@ ul.social-icons {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #d4d2d2;
-  border-radius: 1rem;
+  border: 5px solid rgb(51, 50, 50);
+  border-radius: 0rem;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1111,12 +1116,12 @@ ul.social-icons {
   .service {
     font-size: 1.2rem;
     line-height: 1.2;
-    padding: 20px;
-    margin: 20px;  
+    padding: 50px;
+    margin: 30px;  
   }
 
   .service h4 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding: 20px;
   }
 }
