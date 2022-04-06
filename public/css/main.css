@@ -262,7 +262,7 @@ ul.social-icons {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition: .5s;
-  background-color: #322f30;
+  background-color: #434343;
 }
 .fa-facebook:hover {
   background-color: #3d5b99;
@@ -274,7 +274,7 @@ ul.social-icons {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition: .5s;
-  background-color: #322f30;
+  background-color: #434343;
 }
 .fa-twitter:hover {
   background-color: #00aced;
@@ -287,7 +287,7 @@ ul.social-icons {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition: .5s;
-  background-color: #322f30;
+  background-color: #434343;
 }
 .fa-youtube:hover {
   background-color: #e64a41;
@@ -344,7 +344,7 @@ ul.social-icons {
 
 .contact {
   background: url('../img/bg7-2.webp');
-  background-position: 95% 50%;
+  background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
