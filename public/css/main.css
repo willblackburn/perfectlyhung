@@ -947,7 +947,7 @@ ul.social-icons {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  border: 5px solid rgb(51, 50, 50);
+  border:3px solid rgb(51, 50, 50);
   border-radius: 0rem;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -981,7 +981,7 @@ ul.social-icons {
 }
 
 .service1:hover {
-  border: 2px solid #383838;
+  border: 5px solid #383838;
 }
 
 .service2 i,
@@ -991,7 +991,7 @@ ul.social-icons {
 }
 
 .service2:hover {
-  border: 2px solid #383838;
+  border: 5px solid #383838;
 }
 
 .service3 i,
@@ -1001,7 +1001,7 @@ ul.social-icons {
 }
 
 .service3:hover {
-  border: 2px solid #383838;
+  border: 5px solid #383838;
 }
 
 .service .cta span {
