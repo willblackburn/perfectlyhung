@@ -41,7 +41,7 @@ h3 {
   text-transform: uppercase;
 }
 
-h5 {
+h4 {
   color: #5a5a5a;
   padding-top: 0.5rem;
   font-size: 0.7rem;
@@ -936,8 +936,6 @@ ul.social-icons {
 
 .service {
   background-color: #f0f0f0;
-background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   margin: 10px;
   padding: 30px;
   border-radius: 4px;
@@ -1243,7 +1241,6 @@ background-image: url("https://www.transparenttextures.com/patterns/back-pattern
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
   grid-auto-rows: 270px;
-  grid-gap: 0.1em;
   grid-auto-flow: row dense;
   font-weight: 400;
   padding-left: 2rem;
