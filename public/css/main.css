@@ -9,9 +9,7 @@ Site Design By Will Blackburn. Coda4.com
     Global
 -------------------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
-
-@import url('https://fonts.googleapis.com/css?family=Teko:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&family=Raleway&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&display=swap');
 
@@ -30,6 +28,7 @@ Site Design By Will Blackburn. Coda4.com
 }
 
 body {
+  
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
    -ms-animation: fadein 2s; /* Internet Explorer */
@@ -410,6 +409,7 @@ ul.social-icons {
   color: #2e2e2e;
   position: absolute;
   font-family: 'Amiri', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   max-width: 420px;
 }
@@ -1269,118 +1269,62 @@ ul.social-icons {
     Gallery
 -------------------------------------------------------------------------------*/
 
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr ));
-  grid-auto-rows: 270px;
-  grid-auto-flow: row dense;
-  font-weight: 400;
-  padding-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-}
-
-figure {
-  display: flex;
-  flex-direction: column;
+.gallery-container > a {
   position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  background-color: rgb(51, 50, 50);
-  padding: 7px;
-  margin: 3px;
-}
-
-div.imgWrap {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
   overflow: hidden;
 }
 
-.gallery img {
-  display: inline-block;
+.gallery-container > a::after {
+  content: "";
+  background: linear-gradient(transparent, black);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition-duration: 0.75s;
+}
+
+.gallery-container > a:hover::after {
+  transform: translateY(50%);
+}
+
+.gallery-container > a > * {
   width: 100%;
-  height: auto;
-  flex: 1;
-  opacity: 0.7;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 300ms ease-out;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 1s;
 }
 
-figure:hover img {
-  transform: scale(1.2);
-  opacity: 1;
+.gallery-container > a:hover > img {
+  transform: scale(1.05);
 }
 
-.two-span-row {
-  grid-row: auto/span 2;
+.gallery-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  padding: 5rem;
 }
 
-.two-span-column {
-  grid-column: auto/span 2;
+.horizontal {
+  grid-column: span 2;
 }
 
-.full-span-column {
-  grid-column: 1/-1;
-  grid-row: span 1;
+.vertical {
+  grid-row: span 2;
 }
 
-
-figcaption {
-  font-family: 'Amari';
-  font-size: .8rem;
-  text-align: right;
-  margin-top: 3px;
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
-  padding-top: 5px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-
-
-@media (min-width: 1300px) {
-  .full-span-column {
-    grid-column: 1/span 2;
-    grid-row: span 1;
-  }
-}
-
-@media (max-width: 1300px) {
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr ));
-    grid-auto-rows: 200px;
-    margin-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  
-  }
-
-  .full-span-column {
-    grid-column: 1/span 2;
-    grid-row: span 1;
-  }
-
-
-}
-
-@media (max-width: 550px) {
-  .gallery {
-    display: block;
-  }
-
-  figure {
-    margin-bottom: 1em;
-  }
-
-  figcaption {
-    font-size: 0.9em;
-  }
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 /*-------------------------------------------------------------------------------
