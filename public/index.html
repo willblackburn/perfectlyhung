@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
+  <!-- Animate CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
@@ -50,8 +56,12 @@
 
   <body>
     <div class="header">
-      <li class="logo">
-        <a href="#home"><img src="./img/perfectlyhung-logo.png" alt="Perfectly Hung - Professional Art Installation" /></a>
+      <li class="logo animate__animated animate__fadein">
+        <a href="#home"
+          ><img
+            src="./img/perfectlyhung-logo.png"
+            alt="Perfectly Hung - Professional Art Installation"
+        /></a>
       </li>
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
@@ -116,15 +126,19 @@
     <!-- Begin Fullpage Home -->
 
     <div id="fullpage">
-      <div class="section home" data-anchor="home">
+      <div class="section home" id="home">
         <div class="main-container">
-          <div class="main-title">Perfectly Hung</div>
-          <div class="secondary-title">Professional Art Hanging London</div>
+          <div class="main-title animate__animated animate__backInLeft">
+            Perfectly Hung
+          </div>
+          <div class="secondary-title animate__animated animate__backInLeft">
+            Professional Art Hanging London
+          </div>
         </div>
       </div>
 
       <!-- Divider -->
-      <section class="has-section-divider" data-theme="dark">
+      <!-- <section class="has-section-divider" data-theme="dark">
         <div class="padding-y-xxl">
           <div class="container max-width-adaptive-sm"></div>
         </div>
@@ -142,11 +156,11 @@
         <div class="padding-y-xxl">
           <div class="container max-width-adaptive-sm"></div>
         </div>
-      </section>
+      </section> -->
 
       <!-- About Section -->
 
-      <div class="section about" data-anchor="aboutus">
+      <div class="section about" id="aboutus">
         <div class="main-container">
           <div class="paragraph-title"><h3>About Us</h3></div>
           <div class="paragraph-header">
@@ -177,7 +191,7 @@
 
       <!-- Services Section -->
 
-      <div class="section services" data-anchor="services">
+      <div class="section services" id="services">
         <div class="services-grid">
           <div class="service service1">
             <div class="icon-container">
@@ -236,9 +250,8 @@
 
       <!-- Process Section -->
 
-      <div class="section process" data-anchor="process">
+      <div class="section process" id="process">
         <video-container>
-          <!-- Video -->
           <video class="video-bg" autoplay muted loop>
             <source src="./video/perfectlyhung.mp4" type="video/mp4" />
             <source
@@ -247,17 +260,11 @@
             />
           </video>
         </video-container>
-
-        <div class="video-title">Our Process</div>
-        <div class="video-secondary-title">How We Work</div>
       </div>
 
       <!-- Gallery Section -->
 
-      <div
-        class="section fp-auto-height-responsive gallery"
-        data-anchor="gallery"
-      >
+      <div class="section" id="gallery" data-anchor="gallery">
         <section class="gallery-section clippy">
           <!-- <h2 class="section-heading">Our Work</h2> -->
 
@@ -376,7 +383,7 @@
 
       <!-- Contact Section -->
 
-      <div class="section contact" data-anchor="contact">
+      <div class="section contact" id="contact">
         <div class="main-container">
           <div class="main-title">London</div>
           <div class="secondary-title">Harrow H8 3HD</div>
@@ -396,15 +403,6 @@
 
     <!-- Begin Scripts -->
 
-    <!-- JQuery -->
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
     <!-- Fullpage.js -->
 
     <script
@@ -413,48 +411,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <script>
-      new fullpage('#fullpage', {
-        //options
-        scrollBar: false,
-        autoScrolling: true,
-        scrollingSpeed: 1000,
-        // responsiveWidth: 800,
-        scrollOverflow: true,
-        normalScrollElements: '.section gallery',
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        loopBottom: true,
-        anchors: [
-          'home',
-          'aboutus',
-          'services',
-          'residential',
-          'commercial',
-          'process',
-          'gallery',
-          'contact',
-        ],
-        //Design
-        css3: true,
-        controlArrows: true,
-        verticalCentered: true,
-        dropEffect: true,
-        dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999 },
-        waterEffect: false,
-        waterEffectOptions: { animateContent: true, animateOnMouseMove: true },
-        cards: false,
-        cardsOptions: {
-          perspective: 100,
-          fadeContent: true,
-          fadeBackground: true,
-        },
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-      })
-    </script>
   </body>
 </html>
