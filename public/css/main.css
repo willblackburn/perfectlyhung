@@ -24,10 +24,12 @@ Site Design By Will Blackburn. Coda4.com
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-snap-points-y: repeat(100vh);
+  
 }
 
 body {
-  font-family: 'Amiri', sans-serif;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
    -ms-animation: fadein 2s; /* Internet Explorer */
@@ -59,14 +61,13 @@ to   { opacity: 1; }
 }
 
 
-/* .fullpage{
-  scroll-snap-type: x mandatory;
-} */
 
 .section{
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  scroll-snap-align: start;
+ 
 }
 
 h1 {
@@ -1100,9 +1101,9 @@ ul.social-icons {
   }
 
   .service{
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1;
-    margin: 1rem;
+    margin: 8rem 0 0 0;
     padding: 2em;
    
   }
@@ -1111,6 +1112,7 @@ ul.social-icons {
     font-size: 1.2rem;
     margin: 0rem 0 0rem;
   }
+  
 }
 
 /* mobile */
