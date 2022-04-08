@@ -872,8 +872,8 @@ ul.social-icons {
 
 @media (min-width: 1300px) {
   .main-container {
-    margin-left: 11rem;
-    padding-top: 22vmin;
+    margin-left: 8rem;
+    padding-top: 16vmin;
     max-width: 100vw;
   }
 
@@ -903,7 +903,7 @@ ul.social-icons {
     line-height: 2rem;
     position: relative;
     padding-top: 50px;
-    max-width: 65%;
+    max-width: 60%;
   }
 
   .paragraph-header {
