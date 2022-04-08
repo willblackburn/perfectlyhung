@@ -469,6 +469,11 @@ ul.social-icons {
   max-width: 65%;
 }
 
+.about-container{
+  height: 100%;
+  width: 100%;
+}
+
 .quotes {
   font-family: 'Amiri', sans-serif;
   font-size: 1.5rem;
@@ -558,6 +563,7 @@ ul.social-icons {
     bottom: 5.5rem;
     margin-left: 6px;
   }
+
 
   .paragraph-header {
     font-size: 1.3rem;
