@@ -1169,7 +1169,7 @@ ul.social-icons {
   }
 
   .service{
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 1;
     margin: 1rem 0 0 0;
     
@@ -1177,8 +1177,8 @@ ul.social-icons {
   }
 
   .service h4 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0rem;
+    font-size: 1.4rem;
+    margin: 0 0 0 0;
   }
   
 }
@@ -1197,7 +1197,7 @@ ul.social-icons {
     font-size: 1.2rem;
     line-height: 1;
     padding: 30px;
-    margin: 0;
+    margin: .7rem;
     
   }
 
@@ -1269,7 +1269,7 @@ ul.social-icons {
     padding-right: 4rem;
   }
   .service {
-    margin: 10px;
+    margin: 5px;
     padding: 40px;
     font-size: 1.2rem;
     line-height: 1.2;
