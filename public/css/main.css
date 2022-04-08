@@ -872,19 +872,19 @@ ul.social-icons {
 
 @media (min-width: 1200px) {
   .main-container {
-    margin-left: 8rem;
+    margin-left: 6rem;
     padding-top: 16vmin;
     max-width: 100vw;
   }
 
   .main-title {
-    bottom: 10rem;
-    font-size: 6rem;
-    line-height: 5rem;
+    bottom: 5rem;
+    font-size: 5rem;
+    line-height: 4rem;
   }
 
   .secondary-title {
-    bottom: 8.5rem;
+    bottom: 3.5rem;
   }
 
   .secondary-title-light {
@@ -943,7 +943,7 @@ ul.social-icons {
 
   /* Large TV */
 
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
   .main-container {
     margin-left: 8rem;
     padding-top: 16vmin;
