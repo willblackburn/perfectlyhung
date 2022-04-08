@@ -19,11 +19,8 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <!-- Animate CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <!-- Animate On Scroll AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
@@ -118,12 +115,8 @@
 
     <div class="section home" id="home">
       <div class="main-container">
-        <div class="main-title animate__animated animate__backInLeft">
-          Perfectly Hung
-        </div>
-        <div class="secondary-title animate__animated animate__backInLeft">
-          Professional Art Hanging London
-        </div>
+        <div class="main-title" data-aos="fade-right">Perfectly Hung</div>
+        <div class="secondary-title">Professional Art Hanging London</div>
       </div>
     </div>
 
@@ -134,11 +127,11 @@
     <div class="section about" id="aboutus">
       <div class="main-container">
         <div class="about-container">
-          <div class="paragraph-title"><h3>About Us</h3></div>
-          <div class="paragraph-header">
+          <div class="paragraph-title" data-aos="fade-right"><h3>About Us</h3></div>
+          <div class="paragraph-header" data-aos="fade-right">
             ART & PICTURE HANGING DONE WITH LASER PRECISION
           </div>
-          <div class="paragraph">
+          <div class="paragraph" data-aos="fade-right">
             We are a close team of professional tradesmen with a passion for
             creativity and Interior Design. Based in London, uk we use our
             extensive experience and laser levelling tools to install. We are a
@@ -150,11 +143,11 @@
             laser levelling tools to install. We offer our Picture installion
             services to all, wether a residential home or commercial premisis.
           </div>
-          <div class="quotes">
+          <div class="quotes" data-aos="fade-right">
             “Perfectly Hung brought some much needed life and vibrance to our
             offices here in Chile.”
           </div>
-          <div class="quotes-author">
+          <div class="quotes-author" data-aos="fade-right">
             Angus Blackburn
             <h4>CFO chile energy</h4>
           </div>
@@ -166,7 +159,7 @@
 
     <div class="section services" id="services">
       <div class="services-grid">
-        <div class="service service1">
+        <div class="service service1" data-aos="flip-left">
           <div class="icon-container">
             <img src="./img/services-1.webp" alt="" />
           </div>
@@ -179,7 +172,7 @@
           </p>
         </div>
 
-        <div class="service service2">
+        <div class="service service2" data-aos="flip-left">
           <div class="icon-container">
             <img src="./img/services-2.webp" alt="" />
           </div>
@@ -192,7 +185,7 @@
           </p>
         </div>
 
-        <div class="service service3">
+        <div class="service service3" data-aos="flip-left">
           <div class="icon-container">
             <img src="./img/services-3.webp" alt="" />
           </div>
@@ -208,16 +201,16 @@
     </div>
     <div class="section residential">
       <div class="main-container">
-        <div class="main-title-light">Residential</div>
-        <div class="secondary-title-light">
+        <div class="main-title-light" data-aos="fade-right">Residential</div>
+        <div class="secondary-title-light" data-aos="fade-right">
           # PICTURE HANGING # LAZER LEVELLING
         </div>
       </div>
     </div>
     <div class="section commercial">
       <div class="main-container">
-        <div class="main-title-light">Commercial</div>
-        <div class="secondary-title-light">#FLORA'S RESTAURANT LONDON</div>
+        <div class="main-title-light" data-aos="fade-right">Commercial</div>
+        <div class="secondary-title-light" data-aos="fade-right">#FLORA'S RESTAURANT LONDON</div>
       </div>
     </div>
 
@@ -238,7 +231,7 @@
     <!-- Gallery Section -->
 
     <div class="section gallery" id="gallery" data-anchor="gallery">
-      <div class="gallery-container">
+      <div class="gallery-container" data-aos="fade-in">
         <input type="checkbox" id="pic-1" />
         <label for="pic-1" class="lightbox"
           ><img src="./img/gallery/gallery-001.webp"
@@ -358,5 +351,38 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Animate On Scroll AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init()
+
+      // You can also pass an optional settings object
+      // below listed default settings
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      })
+    </script>
+
+    <!-- End Scripts -->
   </body>
 </html>
