@@ -348,8 +348,8 @@ ul.social-icons {
 }
 
 .about {
-  background: url('../img/bg2-2.webp');
-  background-position: 40% 50%;
+  background: url('../img/bg2-3.webp');
+  background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -458,6 +458,7 @@ ul.social-icons {
 }
 
 .paragraph-header {
+  color: aliceblue;
   font-size: 3.2rem;
   font-weight: 400;
   max-width: 70%;
@@ -466,6 +467,7 @@ ul.social-icons {
 }
 
 .paragraph {
+  color: aliceblue;
   font-family: 'Amiri', sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -480,12 +482,14 @@ ul.social-icons {
 }
 
 .quotes {
+  color: aliceblue;
   font-family: 'Amiri', sans-serif;
   font-size: 1.5rem;
   padding-top: 5rem;
 }
 
 .quotes-author {
+  color: aliceblue;
   font-weight: 600;
   padding-top: 2rem;
   margin-left: 0.7rem;
@@ -1057,8 +1061,8 @@ ul.social-icons {
 }
 
 .service {
-  background-color: #bcbdc0;
-  opacity: .95;
+  background-color: #e5e7e9;
+  opacity: .97;
   margin: 10px;
   padding: 30px;
   border-radius: 4px;
