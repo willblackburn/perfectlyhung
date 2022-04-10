@@ -28,13 +28,18 @@ Site Design By Will Blackburn. Coda4.com
 }
 
 body {
-  /* border: 15px solid rgb(255, 255, 255); */
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
    -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
        animation: fadein 2s;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 @keyframes fadein {
 from { opacity: 0; }
@@ -225,7 +230,7 @@ input[type=checkbox] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: rgb(119, 119, 119);
+  background-color: rgb(236, 236, 236);
 }
 .horizontal {
   transition: all 0.3s;
@@ -1377,6 +1382,9 @@ ul.social-icons {
   /* Re-size video to cover full screen while maintaining aspect ratio */
   min-width: 100vw;
   min-height: 100vh;
+  max-width: 100vh;
+  max-height: 100vh;
+  height: 100vh;
   object-fit: cover;
 
   /* Display video below overlay */

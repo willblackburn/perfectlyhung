@@ -45,14 +45,14 @@
   <body>
     <div class="header">
       <ul>
-      <li class="logo animate__animated animate__fadein">
-        <a href="#home"
-          ><img
-            src="./img/perfectlyhung-logo.png"
-            alt="Perfectly Hung - Professional Art Installation"
-        /></a>
-      </li>
-    </ul>
+        <li class="logo animate__animated animate__fadein">
+          <a href="#home"
+            ><img
+              src="./img/perfectlyhung-logo.png"
+              alt="Perfectly Hung - Professional Art Installation"
+          /></a>
+        </li>
+      </ul>
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -241,6 +241,8 @@
             type="video/webm"
           />
         </video>
+        <!-- <div class="video-title">Our Process</div>
+        <div class="video-secondary-title">How We Work</div> -->
       </video-container>
     </div>
 
@@ -250,7 +252,9 @@
       <div class="gallery-container" data-aos="fade-right">
         <input type="checkbox" id="pic-1" />
         <label for="pic-1" class="lightbox"
-          ><img src="./img/gallery/gallery-001.webp" alt="Shelving Installation"
+          ><img
+            src="./img/gallery/gallery-001.webp"
+            alt="Shelving Installation"
         /></label>
         <input type="checkbox" id="pic-2" />
         <label for="pic-2" class="lightbox"
@@ -262,11 +266,15 @@
         /></label>
         <input type="checkbox" id="pic-4" />
         <label for="pic-4" class="lightbox"
-          ><img src="./img/gallery/gallery-004.webp" alt="Staircase Picture Hanging"
+          ><img
+            src="./img/gallery/gallery-004.webp"
+            alt="Staircase Picture Hanging"
         /></label>
         <input type="checkbox" id="pic-5" />
         <label for="pic-5" class="lightbox"
-          ><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging"
+          ><img
+            src="./img/gallery/gallery-005.webp"
+            alt="Tri painting wall hanging"
         /></label>
         <input type="checkbox" id="pic-5" />
         <label for="pic-6" class="lightbox"
@@ -278,7 +286,9 @@
         /></label>
         <input type="checkbox" id="pic-8" />
         <label for="pic-8" class="lightbox"
-          ><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging"
+          ><img
+            src="./img/gallery/gallery-008.webp"
+            alt="Stairwell picture Hanging"
         /></label>
         <input type="checkbox" id="pic-9" />
         <label for="pic-9" class="lightbox"
@@ -290,16 +300,22 @@
         /></label>
         <input type="checkbox" id="pic-11" />
         <label for="pic-11" class="lightbox"
-          ><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging"
+          ><img
+            src="./img/gallery/gallery-011.webp"
+            alt="Fireplace art wall hanging"
         /></label>
         <input type="checkbox" id="pic-12" />
         <label for="pic-12" class="lightbox"
-          ><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel"
+          ><img
+            src="./img/gallery/gallery-012.webp"
+            alt="Living Room Mosaic Art Panel"
         /></label>
         <div class="grid">
           <!-- Loop all pictures and print the actual images-->
           <label for="pic-1" class="grid-item"
-            ><img src="./img/gallery/gallery-001.webp" alt="Shelving Installation"
+            ><img
+              src="./img/gallery/gallery-001.webp"
+              alt="Shelving Installation"
           /></label>
           <label for="pic-2" class="grid-item"
             ><img src="./img/gallery/gallery-002.webp" alt="Art Wall Hanging"
@@ -308,10 +324,14 @@
             ><img src="./img/gallery/gallery-003.webp" alt="Mirror Hanging"
           /></label>
           <label for="pic-4" class="grid-item"
-            ><img src="./img/gallery/gallery-004.webp" alt="Staircase Picture Hanging"
+            ><img
+              src="./img/gallery/gallery-004.webp"
+              alt="Staircase Picture Hanging"
           /></label>
           <label for="pic-5" class="grid-item"
-            ><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging"
+            ><img
+              src="./img/gallery/gallery-005.webp"
+              alt="Tri painting wall hanging"
           /></label>
           <label for="pic-6" class="grid-item"
             ><img src="./img/gallery/gallery-005.webp" alt="wall hanging"
@@ -320,19 +340,29 @@
             ><img src="./img/gallery/gallery-007.webp" alt="Wall art"
           /></label>
           <label for="pic-8" class="grid-item"
-            ><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging"
+            ><img
+              src="./img/gallery/gallery-008.webp"
+              alt="Stairwell picture Hanging"
           /></label>
           <label for="pic-9" class="grid-item"
-            ><img src="./img/gallery/gallery-009.webp" alt="Bedroom art hanging"
+            ><img
+              src="./img/gallery/gallery-009.webp"
+              alt="Bedroom art hanging"
           /></label>
           <label for="pic-10" class="grid-item"
-            ><img src="./img/gallery/gallery-010.webp" alt="kitchen wall hanging"
+            ><img
+              src="./img/gallery/gallery-010.webp"
+              alt="kitchen wall hanging"
           /></label>
           <label for="pic-11" class="grid-item"
-            ><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging"
+            ><img
+              src="./img/gallery/gallery-011.webp"
+              alt="Fireplace art wall hanging"
           /></label>
           <label for="pic-12" class="grid-item"
-            ><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel"
+            ><img
+              src="./img/gallery/gallery-012.webp"
+              alt="Living Room Mosaic Art Panel"
           /></label>
         </div>
       </div>
@@ -389,7 +419,7 @@
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 50, // offset (in px) from the original trigger point
+        offset: 40, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 600, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
