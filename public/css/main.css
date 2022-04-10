@@ -28,7 +28,7 @@ Site Design By Will Blackburn. Coda4.com
 }
 
 body {
-  
+  /* border: 15px solid rgb(255, 255, 255); */
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
    -ms-animation: fadein 2s; /* Internet Explorer */
@@ -1203,7 +1203,7 @@ ul.social-icons {
   .services-grid {
     height: 10%;
     width: auto;
-    padding-top: 5rem;
+    padding-top: 8rem;
     padding-left: .7rem;
     padding-right: .7rem;
   }
