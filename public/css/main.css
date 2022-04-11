@@ -27,6 +27,11 @@ Site Design By Will Blackburn. Coda4.com
   
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 body {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -35,9 +40,6 @@ body {
        animation: fadein 2s;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
 
 
@@ -372,7 +374,7 @@ ul.social-icons {
 }
 
 .about {
-  background: url('../img/bg2-3.webp');
+  background: url('../img/bg2.webp');
   background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -606,6 +608,7 @@ ul.social-icons {
 
   .main-title {
     font-size: 2.8rem;
+    font-weight: 600;
     max-width: 20px;
     bottom: 10rem;
     line-height: 3rem;
@@ -1349,8 +1352,8 @@ ul.social-icons {
     padding-right: 4rem;
   }
   .service {
-    margin: 5px;
-    padding: 40px;
+    margin: 8px;
+    padding: 60px;
     font-size: 1.2rem;
     line-height: 1.2;
   }
@@ -1483,8 +1486,8 @@ input[type="checkbox"]:checked ~ .grid { opacity: .125; }
 }
 .grid .grid-item:hover { opacity: 1; }
 
-@media screen and (max-width: 1280px) { .grid .grid-item { width: 33.3333%; } }
-/* @media screen and (max-width: 960px)  { .grid .grid-item { width: 50%; } } */
+@media screen and (max-width: 880px) { .grid .grid-item { width: 33.3333%; } }
+/* @media screen and (max-width: 960px)  { .grid .grid-item { width: 100%; } } */
 @media screen and (max-width: 480px)  { .grid .grid-item { width: 100%; } }
 
 .grid img { max-width: 100%; max-height: 100%; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); }
