@@ -27,6 +27,7 @@ Site Design By Will Blackburn. Coda4.com
   
 }
 
+/* Hide Scroll */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -364,7 +365,7 @@ ul.social-icons {
 
 .home {
   background: url('../img/bg1-4.webp');
-  background-position: 70% 50%;
+  background-position: 45% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
