@@ -426,7 +426,6 @@ ul.social-icons {
 
 .gallery {
   background-color: #0f0f0f;
-  /* background: url('../img/bg6.webp'); */
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1242,7 +1241,7 @@ ul.social-icons {
   .services-grid {
     height: 10%;
     width: auto;
-    padding-top: 8rem;
+    padding-top: 3rem;
     padding-left: .7rem;
     padding-right: .7rem;
   }
@@ -1250,7 +1249,7 @@ ul.social-icons {
   .service{
     font-size: 1rem;
     line-height: 1;
-    margin: 1rem 0 0 0;
+    margin: 0rem 0 0 0;
     
    
   }
@@ -1486,9 +1485,10 @@ input[type="checkbox"]:checked ~ .grid { opacity: .125; }
 }
 .grid .grid-item:hover { opacity: 1; }
 
+
 @media screen and (max-width: 880px) { .grid .grid-item { width: 33.3333%; } }
 /* @media screen and (max-width: 960px)  { .grid .grid-item { width: 100%; } } */
-@media screen and (max-width: 480px)  { .grid .grid-item { width: 100%; } }
+@media screen and (max-width: 480px)  { .grid .grid-item { width: 50%; } }
 
 .grid img { max-width: 100%; max-height: 100%; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); }
 
