@@ -83,6 +83,10 @@ to   { opacity: 1; }
  
 }
 
+.divider{
+  padding-top: 5rem;
+}
+
 h1 {
   font-family: 'Amiri', sans-serif;
   text-align: center;
@@ -380,6 +384,14 @@ ul.social-icons {
     box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
 }
 
+@media all and (max-width: 800px){
+  .home{
+    background-size: 220%;
+    background-position: 50% 50%;
+  }
+}
+
+
 .about {
   background: url('../img/bg2-2.webp');
   background-position: 50% 50%;
@@ -410,8 +422,8 @@ ul.social-icons {
 }
 
 .residential {
-  background: url('../img/bg4.webp');
-  background-position: 60% 50%;
+  background: url('../img/bg4-1.webp');
+  background-position: 90% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
@@ -453,6 +465,13 @@ ul.social-icons {
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
 }
 
+@media all and (max-width: 800px){
+  .contact{
+    background-size: 150%;
+    background-position: 53% 50%;
+  }
+}
+
 /*-------------------------------------------------------------------------------
     Titles & Content
 -------------------------------------------------------------------------------*/
@@ -463,8 +482,8 @@ ul.social-icons {
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  flex-shrink: 2;
   position: relative;
+  flex-shrink: 2;
   height: 100vh;
   width: 1500px;
   padding-bottom: 7vmin;
@@ -560,6 +579,7 @@ ul.social-icons {
   padding-top: 2rem;
   margin-left: 0.7rem;
 }
+
 
 .video-title {
   color: #e9e9e9;
