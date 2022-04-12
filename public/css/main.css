@@ -11,9 +11,13 @@ Site Design By Will Blackburn. Coda4.com
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&family=Raleway&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&display=swap');
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
 
 /* ---------------------------------------------------------------------------- */
 
@@ -233,7 +237,7 @@ input[type=checkbox] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(17, 16, 16);
 }
 .horizontal {
   transition: all 0.3s;
@@ -364,11 +368,13 @@ ul.social-icons {
 
 
 .home {
-  background: url('../img/bg1-4.webp');
-  background-position: 45% 50%;
+  background: url('../img/bg1.webp');
+  background-position: 90% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  min-width: 100vw;
+  max-height: 100vh;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
     -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
     box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -376,7 +382,7 @@ ul.social-icons {
 
 .about {
   background: url('../img/bg2.webp');
-  background-position: 5% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -386,7 +392,7 @@ ul.social-icons {
 }
 
 .services {
-  background: url('../img/bg1-3.webp');
+  /* background: url('../img/bg1-3.webp'); */
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,8 +410,8 @@ ul.social-icons {
 }
 
 .residential {
-  background: url('../img/bg4-2.webp');
-  background-position: 70% 50%;
+  background: url('../img/bg4.webp');
+  background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -415,8 +421,8 @@ ul.social-icons {
 }
 
 .commercial {
-  background: url('../img/bg5-2.webp');
-  background-position: 90% 50%;
+  background: url('../img/bg5.webp');
+  background-position: 80% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -426,7 +432,7 @@ ul.social-icons {
 }
 
 .gallery {
-  background-color: #0f0f0f;
+  background-color: #ffffff;
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -437,8 +443,8 @@ ul.social-icons {
 }
 
 .contact {
-  background: url('../img/bg7-2.webp');
-  background-position: 100% 50%;
+  background: url('../img/bg7.webp');
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -469,7 +475,7 @@ ul.social-icons {
   color: #2e2e2e;
   position: absolute;
   font-family: 'Amiri', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   max-width: 420px;
 }
@@ -486,7 +492,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: #e9e9e9;
+  color: #2e2e2e;
   font-weight: 600;
   font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
@@ -518,7 +524,7 @@ ul.social-icons {
 }
 
 .paragraph-header {
-  color: aliceblue;
+  color: #2e2e2e;
   font-size: 3.2rem;
   font-weight: 400;
   max-width: 70%;
@@ -527,7 +533,7 @@ ul.social-icons {
 }
 
 .paragraph {
-  color: aliceblue;
+  color: #2e2e2e;
   font-family: 'Amiri', sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -542,14 +548,14 @@ ul.social-icons {
 }
 
 .quotes {
-  color: aliceblue;
+  color: #2e2e2e;
   font-family: 'Amiri', sans-serif;
   font-size: 1.5rem;
   padding-top: 5rem;
 }
 
 .quotes-author {
-  color: aliceblue;
+  color: #2e2e2e;
   font-weight: 600;
   padding-top: 2rem;
   margin-left: 0.7rem;
@@ -955,11 +961,12 @@ ul.social-icons {
 
   .main-title {
     bottom: 5rem;
-    font-size: 5rem;
+    font-size: 4.2rem;
     line-height: 4rem;
   }
 
   .secondary-title {
+    font-size: 1.2rem;
     bottom: 3.5rem;
   }
 
@@ -1028,7 +1035,7 @@ ul.social-icons {
 
   .main-title {
     bottom: 10rem;
-    font-size: 6rem;
+    font-size: 5.5rem;
     line-height: 5rem;
   }
 
@@ -1122,7 +1129,7 @@ ul.social-icons {
 }
 
 .service {
-  background-color: #e5e7e9;
+  background-color: #ffffff;
   opacity: .97;
   margin: 10px;
   padding: 30px;
