@@ -321,7 +321,7 @@ ul.social-icons {
   height: 100px;
 }
 .social-icons a {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
 }
 .fa-facebook {
@@ -369,7 +369,7 @@ ul.social-icons {
 
 .home {
   background: url('../img/bg1.webp');
-  background-position: 90% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100vw;
@@ -385,7 +385,7 @@ ul.social-icons {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -396,14 +396,14 @@ ul.social-icons {
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
 }
 
 .process {
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -414,7 +414,7 @@ ul.social-icons {
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -425,7 +425,7 @@ ul.social-icons {
   background-position: 80% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -436,7 +436,7 @@ ul.social-icons {
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -447,7 +447,7 @@ ul.social-icons {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
   /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
   box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
@@ -796,7 +796,7 @@ ul.social-icons {
   }
 
   .main-title {
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     bottom: 10rem;
     line-height: 4rem;
   }
@@ -962,7 +962,7 @@ ul.social-icons {
   .main-title {
     bottom: 5rem;
     font-size: 4.2rem;
-    line-height: 4rem;
+    line-height: 3.8rem;
   }
 
   .secondary-title {
@@ -985,15 +985,25 @@ ul.social-icons {
     font-size: 1.1rem;
     line-height: 1.5rem;
     position: relative;
-    padding-top: 30px;
+    padding-top: .6rem;
     max-width: 60%;
   }
 
   .paragraph-header {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     max-width: 60vw;
-    padding-top: 1.6rem;
+    padding-top: .6rem;
+  }
+
+  .quotes {
+    font-size: 1.1rem;
+    padding-top: 2rem;
+  }
+  
+  .quotes-author {
+    padding-top: 1.5rem;
+    margin-left: 0.2rem;
   }
 
 
@@ -1035,8 +1045,8 @@ ul.social-icons {
 
   .main-title {
     bottom: 10rem;
-    font-size: 5.5rem;
-    line-height: 5rem;
+    font-size: 4.9rem;
+    line-height: 4rem;
   }
 
   .secondary-title {
@@ -1055,18 +1065,18 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
     position: relative;
-    padding-top: 50px;
-    max-width: 65%;
+    padding-top: 2rem;
+    max-width: 67%;
   }
 
   .paragraph-header {
     font-size: 3.5rem;
     line-height: 3.5rem;
     max-width: 60vw;
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 
 
@@ -1129,7 +1139,6 @@ ul.social-icons {
 }
 
 .service {
-  background-color: #ffffff;
   opacity: .97;
   margin: 10px;
   padding: 30px;
@@ -1174,9 +1183,9 @@ ul.social-icons {
   color: #252525;
 }
 
-.service1:hover {
+/* .service1:hover {
   border: 5px solid #383838;
-}
+} */
 
 .service2 i,
 .service2 h4,
@@ -1184,9 +1193,9 @@ ul.social-icons {
   color: #252525;
 }
 
-.service2:hover {
+/* .service2:hover {
   border: 5px solid #383838;
-}
+} */
 
 .service3 i,
 .service3 h4,
@@ -1194,9 +1203,21 @@ ul.social-icons {
   color: #252525;
 }
 
-.service3:hover {
-  border: 5px solid #383838;
+.service1 {
+  background-color: #ffffff;
 }
+
+.service2 {
+  background-color: #ffffff;
+}
+
+.service3 {
+  background-color: #ffffff;
+}
+
+/* .service3:hover {
+  border: 5px solid #383838;
+} */
 
 .service .cta span {
   font-size: 0.6rem;
@@ -1218,6 +1239,15 @@ ul.social-icons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+    
+    
+  }
+
+  /* Remove Border on Smaller Devices */
+  @media all and (max-width: 600px){
+    .service{
+      border: none;
+    }
   }
 
   .service {
@@ -1352,7 +1382,7 @@ ul.social-icons {
 
 /* large desktop */
 
-@media (min-width: 1300px){
+@media (min-width: 1400px){
 
   .services-grid {
     padding-left: 4rem;
