@@ -368,8 +368,8 @@ ul.social-icons {
 
 
 .home {
-  background: url('../img/bg1.webp');
-  background-position: 50% 50%;
+  background: url('../img/bg1-2.webp');
+  background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100vw;
@@ -381,7 +381,7 @@ ul.social-icons {
 }
 
 .about {
-  background: url('../img/bg2.webp');
+  background: url('../img/bg2-2.webp');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
