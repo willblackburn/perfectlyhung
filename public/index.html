@@ -16,13 +16,16 @@
     </title>
 
     <!-- main css -->
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <!-- Animate On Scroll AOS -->
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!--Start of Tawk.to Script-->
+
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date()
@@ -36,6 +39,7 @@
       s0.parentNode.insertBefore(s1, s0)
     })()
   </script>
+
   <!--End of Tawk.to Script-->
 
   <!-- End Head -->
@@ -85,6 +89,7 @@
       </ul>
 
       <!-- Socials -->
+
       <div class="footer-social-icons">
         <ul class="social-icons">
           <li>
@@ -125,12 +130,15 @@
 
     <div class="section home" id="home">
       <div class="main-container">
-        <div class="main-title" data-aos="fade-right" data-aos-duration="1500">Perfectly Hung</div>
+        <div class="main-title" data-aos="fade-in" data-aos-duration="1500">
+          Perfectly Hung
+        </div>
         <div class="secondary-title">Professional Art Hanging London</div>
       </div>
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <!-- About Section -->
@@ -169,6 +177,7 @@
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <!-- Services Section -->
@@ -215,7 +224,38 @@
         </div>
       </div>
     </div>
-    <div class="section residential" data-aos="fade-in">
+
+    <!-- New Residential Commercial -->
+
+    <div class="section">
+      <div class="scene">
+        <div
+          id="people-2"
+          class="item"
+          data-aos="fade-in"
+          data-aos-duration="22200"
+        ></div>
+        <div id="shelf" class="item"></div>
+        <div id="dog-1" class="item"></div>
+        <div id="picture-1" class="item"></div>
+        <div id="picture-2" class="item"></div>
+        <div id="picture-3" class="item"></div>
+        <div id="plant" class="item"></div>
+        <!-- <div id="mirror">
+          <div id="mirror-content"></div>
+        </div> -->
+        <div id="plant-2" class="item"></div>
+        <div id="books" class="item">
+          <div id="apple" class="item"></div>
+        </div>
+        <div id="plant-3" class="item"></div>
+        <div id="clock" class="item"></div>
+      </div>
+    </div>
+
+    <!-- Residential Commercial -->
+
+    <div class="section residential" data-aos="fade-in" data-aos-offset="40">
       <div class="main-container">
         <div
           class="main-title-light"
@@ -235,6 +275,7 @@
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <div class="section commercial">
@@ -257,6 +298,7 @@
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <!-- Process Section -->
@@ -276,12 +318,13 @@
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <!-- Gallery Section -->
 
-    <div class="section gallery" id="gallery" data-anchor="gallery">
-      <div class="gallery-container" data-aos="fade-right">
+    <div class="section gallery" id="gallery">
+      <div class="gallery-container" data-aos="fade-in">
         <input type="checkbox" id="pic-1" />
         <label for="pic-1" class="lightbox"
           ><img
@@ -401,6 +444,7 @@
     </div>
 
     <!-- Divider -->
+
     <div class="divider"></div>
 
     <!-- Contact Section -->
@@ -454,13 +498,35 @@
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 40, // offset (in px) from the original trigger point
+        offset: 45, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 600, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      })
+    </script>
+
+    <!-- Modelled SCENE -->
+
+    <script>
+      const images = [
+        'https://data.whicdn.com/images/251238216/original.gif',
+        'https://i.pinimg.com/originals/3d/22/45/3d224511a5e13317e46e37bee1d249dd.gif',
+        'https://i.pinimg.com/originals/b0/10/e9/b010e954f94acbd034917b2d6931bd79.gif',
+        'https://64.media.tumblr.com/5f4c0252b15dda55028536c5a8923c7d/b691a90722d7bbb5-c8/s500x750/34aac55dfd7302e41fec400ba9636edeadb1890a.gif',
+        'https://64.media.tumblr.com/746e848c8b0cf90bc7938599421e6b4e/tumblr_pbhfk0rEth1txe8seo1_500.gif',
+        'https://media2.giphy.com/media/Wm9XlKG2xIMiVcH4CP/giphy.gif',
+      ]
+
+      $(document).ready(function () {
+        let current = 0
+        $('#mirror-content').on('click', function () {
+          $(this).css({
+            'background-image': `url(${images[++current % images.length]})`,
+          })
+        })
       })
     </script>
 
