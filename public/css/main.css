@@ -395,7 +395,7 @@ ul.social-icons {
 
 
 .about {
-  background: url('../img/bg2-2.webp');
+  /* background: url('../img/bg2-2.webp'); */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -491,7 +491,7 @@ ul.social-icons {
   position: absolute;
   flex-shrink: 2;
   height: 100vh;
-  width: 80%;
+  width: 80vw;
   padding-bottom: 7vmin;
   z-index: 990;
 }
@@ -876,7 +876,7 @@ ul.social-icons {
   .quotes {
     font-size: 1.3rem;
     padding-top: 5rem;
-    max-width: 70vw;
+    max-width: 50vw;
   }
 
   .phone-title {
@@ -1013,7 +1013,7 @@ ul.social-icons {
   }
 
   .paragraph-title h3 {
-    max-width: 11%;
+    max-width: 15%;
   }
 
   .paragraph {
@@ -1443,8 +1443,10 @@ ul.social-icons {
 
 }
 
+
+
 /*-------------------------------------------------------------------------------
-    SCENE LIVING ROOM
+    3D SCENES
 -------------------------------------------------------------------------------*/
 
 .scene {
@@ -1455,7 +1457,7 @@ ul.social-icons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: flex-end;
+	/* align-items: flex-end; */
 	perspective: 500px;
 }
 
@@ -1465,6 +1467,77 @@ ul.social-icons {
 	background-position: contain;
 	pointer-events: none;
 }
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+
+  .item {
+    background-size: 60% auto;
+  }
+
+}
+
+
+/* mobile */
+
+@media (min-width: 480px) {
+
+  .item {
+    background-size: 65% auto;
+  }
+
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+
+  .item {
+    background-size: 70% auto;
+  }
+
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+
+  .item {
+    background-size: 75% auto;
+  }
+
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+
+  .item {
+    background-size: 80% auto;
+  }
+
+
+}
+
+  /* Large TV */
+
+@media (min-width: 1400px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+  
+}
+
+
+
+/*-------------------------------------------------------------------------------
+    SCENE ONE
+-------------------------------------------------------------------------------*/
+
+
+
 
 #people {
 	background-image: url(https://ouch-cdn2.icons8.com/ecz_p2P5JFN6zLQpJkm-zJ5J0HflFTB0sfrkyi5STJU/rs:fit:256:162/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTQ0/L2IxNTlmNTM3LTQ2/MjEtNGFmZi1iOWQ2/LTkyNTBjNWM1MzVk/Yi5wbmc.png);
@@ -1601,22 +1674,11 @@ ul.social-icons {
 
 @media (min-width: 320px) {
 
-  .item {
-    background-size: 100% auto;
-  }
-
-  #people {
-    width: 620px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
   #people-2 {
     width: 840px;
-    height: 430px;
+    height: 260px;
     bottom: -26px;
-    margin-left: 100px;
+    margin-left: 300px;
   }
   
   
@@ -1644,23 +1706,23 @@ ul.social-icons {
   
   #picture-1 {
     width: 170px;
-    height: 650px;
+    height: 440px;
     bottom: -26px;
-    margin-left: -580px;
+    margin-left: -80px;
   }
   
   #picture-2 {
     width: 170px;
-    height: 650px;
+    height: 440px;
     bottom: -26px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   
   #picture-3 {
     width: 170px;
-    height: 650px;
+    height: 440px;
     bottom: -26px;
-    margin-left: 620px;
+    margin-left: 160px;
   }
   
   #grocery-bag {
@@ -1687,9 +1749,9 @@ ul.social-icons {
   
   #plant-3 {
     width: 160px;
-    height: 125px;
+    height: 85px;
     bottom: -50px;
-    margin-left: 1880px;
+    margin-left: -110px;
   }
   
   #books {
@@ -1720,10 +1782,6 @@ ul.social-icons {
 /* mobile */
 
 @media (min-width: 480px) {
-
-  .item {
-    background-size: 100% auto;
-  }
 
   #people {
     width: 620px;
@@ -1840,25 +1898,12 @@ ul.social-icons {
 
 @media (min-width: 768px) {
 
-  .item {
-    background-size: 100% auto;
-  }
-
-  #people {
-    width: 620px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
   #people-2 {
     width: 840px;
-    height: 430px;
+    height: 300px;
     bottom: -26px;
-    margin-left: 100px;
+    margin-left: 400px;
   }
-  
-  
   
   #bookshelf {
     width: 600px;
@@ -1869,9 +1914,9 @@ ul.social-icons {
   
   #shelf {
     width: 400px;
-    height: 700px;
+    height: 500px;
     bottom: -26px;
-    margin-left: -1200px;
+    margin-left: -180px;
   }
   
   #dog-1 {
@@ -1883,23 +1928,23 @@ ul.social-icons {
   
   #picture-1 {
     width: 170px;
-    height: 650px;
+    height: 500px;
     bottom: -26px;
-    margin-left: -580px;
+    margin-left: 60px;
   }
   
   #picture-2 {
     width: 170px;
-    height: 650px;
+    height: 500px;
     bottom: -26px;
-    margin-left: 20px;
+    margin-left: 230px;
   }
   
   #picture-3 {
     width: 170px;
-    height: 650px;
+    height: 500px;
     bottom: -26px;
-    margin-left: 620px;
+    margin-left: 400px;
   }
   
   #grocery-bag {
@@ -1912,9 +1957,9 @@ ul.social-icons {
   
   #plant {
     width: 400px;
-    height: 480px;
+    height: 330px;
     bottom: -26px;
-    margin-left: -1500px;
+    margin-left: -240px;
   }
   
   #plant-2 {
@@ -1946,7 +1991,7 @@ ul.social-icons {
   }
   
   #clock {
-    width: 170px;
+    width: 130px;
     height: 320px;
     bottom: 520px;
     margin-left: 30px;
@@ -1959,10 +2004,6 @@ ul.social-icons {
 /* Small Desktop */
 
 @media (min-width: 992px) {
-
-  .item {
-    background-size: 100% auto;
-  }
 
   #people {
     width: 620px;
@@ -2080,81 +2121,70 @@ ul.social-icons {
 
 @media (min-width: 1200px) {
 
-  .item {
-    background-size: 100% auto;
-  }
-
-  #people {
-    width: 620px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
   #people-2 {
-    width: 840px;
-    height: 430px;
+    width: 800px;
+    height: 330px;
     bottom: -26px;
-    margin-left: 100px;
+    margin-left: 200px;
   }
   
   
   
   #bookshelf {
     width: 600px;
-    height: 710px;
+    height: 570px;
     bottom: -26px;
-    margin-left: 850px;
+    margin-left: 1450px;
   }
   
   #shelf {
     width: 400px;
-    height: 700px;
+    height: 500px;
     bottom: -26px;
-    margin-left: -600px;
+    margin-left: -1000px;
   }
   
   #dog-1 {
     width: 200px;
-    height: 223px;
+    height: 180px;
     bottom: -26px;
-    margin-left: 500px;
+    margin-left: 900px;
   }
   
   #picture-1 {
     width: 170px;
-    height: 650px;
+    height: 520px;
     bottom: -26px;
-    margin-left: -280px;
+    margin-left: -380px;
   }
   
   #picture-2 {
     width: 170px;
-    height: 650px;
+    height: 520px;
     bottom: -26px;
     margin-left: 20px;
   }
   
   #picture-3 {
     width: 170px;
-    height: 650px;
+    height: 520px;
     bottom: -26px;
-    margin-left: 320px;
+    margin-left: 420px;
   }
   
   #grocery-bag {
     width: 240px;
-    height: 225px;
+    height: 175px;
     bottom: -26px;
-    margin-left: 350px;
+    margin-left: 550px;
     transform: skewx(6deg);
   }
   
   #plant {
     width: 400px;
-    height: 480px;
+    height: 380px;
     bottom: -26px;
-    margin-left: -520px;
+    margin-left: -1040px;
   }
   
   #plant-2 {
@@ -2200,12 +2230,9 @@ ul.social-icons {
 
 @media (min-width: 1400px) {
 
-  .item {
-    background-size: 100% auto;
-  }
 
   #people {
-    width: 620px;
+    width: 20px;
     height: 370px;
     bottom: -26px;
     margin-left: 1400px;
@@ -2314,6 +2341,110 @@ ul.social-icons {
 
 
 
+}
+
+
+/*-------------------------------------------------------------------------------
+    SCENE 2
+-------------------------------------------------------------------------------*/
+
+.scene-2 {
+	width: 100vw;
+	position: relative;
+	height: 86%;
+	background: #fdd8d8;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+	perspective: 500px;
+}
+
+#people-about {
+	background-image: url(https://ouch-cdn2.icons8.com/2PAdaqSMNZwqhbnK4ZvsUKRf7tBm1CFp2ZkIyi6BWPA/rs:fit:256:290/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNzMz/LzkwZWMzZDk1LTgy/YWUtNDliZS1iOTMx/LTVhMGYzMzdlNTdh/Zi5wbmc.png);
+}
+
+
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+
+  #people-about {
+    width: 600px;
+    height: 640px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+
+
+}
+
+
+/* mobile */
+
+@media (min-width: 480px) {
+
+  #people-about {
+    width: 600px;
+    height: 640px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+
+  #people-about {
+    width: 600px;
+    height: 440px;
+    bottom: -26px;
+    margin-left: 300px;
+  }
+
+
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+
+  #people-about {
+    width: 600px;
+    height: 640px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+
+  #people-about {
+    width: 600px;
+    height: 520px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+
+}
+
+  /* Large TV */
+
+@media (min-width: 1400px) {
+
+  #people-about {
+    width: 600px;
+    height: 640px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
 }
 
 /*-------------------------------------------------------------------------------
