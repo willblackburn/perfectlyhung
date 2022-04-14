@@ -374,7 +374,7 @@ ul.social-icons {
 
 
 .home {
-  background: url('../img/bg1-2.webp');
+  /* background: url('../img/bg1-2.webp'); */
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -477,18 +477,23 @@ ul.social-icons {
 /*-------------------------------------------------------------------------------
     Titles & Content
 -------------------------------------------------------------------------------*/
-
+.fullscreen-container{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
 
 .main-container {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  position: relative;
+  position: absolute;
   flex-shrink: 2;
   height: 100vh;
-  width: 1500px;
+  width: 80%;
   padding-bottom: 7vmin;
+  z-index: 990;
 }
 
 .main-title {
@@ -1439,11 +1444,11 @@ ul.social-icons {
 }
 
 /*-------------------------------------------------------------------------------
-    Modelled Scene
+    SCENE LIVING ROOM
 -------------------------------------------------------------------------------*/
 
 .scene {
-	width: 100%;
+	width: 100vw;
 	position: relative;
 	height: 86%;
 	background: #DCDCDC;
@@ -1457,59 +1462,39 @@ ul.social-icons {
 .item {
 	position: absolute;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
 	background-position: contain;
 	pointer-events: none;
 }
 
 #people {
 	background-image: url(https://ouch-cdn2.icons8.com/ecz_p2P5JFN6zLQpJkm-zJ5J0HflFTB0sfrkyi5STJU/rs:fit:256:162/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTQ0/L2IxNTlmNTM3LTQ2/MjEtNGFmZi1iOWQ2/LTkyNTBjNWM1MzVk/Yi5wbmc.png);
-	width: 620px;
-	height: 370px;
-	bottom: -26px;
-	margin-left: 1400px;
 }
 
 #people-2 {
 	background-image: url(https://ouch-cdn2.icons8.com/Fbk4fcLRj1TLCCM5oonwUWvuytC6etzD1XdcBif-k8A/rs:fit:256:145/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjAw/L2FlNmVlODA5LTFj/MWEtNDI3YS04NzE3/LWZhODRlZjE1NDg3/Zi5wbmc.png);
-	width: 840px;
-	height: 430px;
-	bottom: -26px;
-	margin-left: 150px;
 }
 
 
 
+#bookshelf {
+	background-image: url(https://ouch-cdn2.icons8.com/t71d6ky6MhNNXDNQ5fpHgZ2AUqzRNzJPTWqL314sIOw/rs:fit:256:310/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNTc3/L2Q1YzBjNzY2LTQ2/NDQtNDQyZC1iNWM5/LTc0ZTY0M2QyN2M5/OS5wbmc.png);
+}
+
 #shelf {
 	background-image: url(https://ouch-cdn2.icons8.com/c9QdXWFpwJd2MTZiro0HhxM6Wdlf5H6cBDaF8RsoD4A/rs:fit:256:223/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTc5/Lzg4ZmE1MTcxLTcx/ZTUtNDkyYi1hN2I5/LWU4YjIzNThjYzRj/OS5wbmc.png);
-	width: 400px;
-	height: 700px;
-	bottom: -26px;
-	margin-left: -1200px;
+
 }
 
 #dog-1 {
 	background-image: url(https://ouch-cdn2.icons8.com/9-HVzpFlr0z2UQgoIkkgxqcgGWtM5G9uIXP3OkUv0Kc/rs:fit:256:305/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEy/LzA0ZTc3MTkwLWQx/ZGMtNGJjMC1iZjE3/LWUzNTFjODViMGRl/Yi5wbmc.png);
-	width: 200px;
-	height: 223px;
-	bottom: -26px;
-	margin-right: -1000px;
 }
 
 #picture-1 {
 	background-image: url(https://ouch-cdn2.icons8.com/-4hQWIg5rjpEdxBHIB7VxoJdTRkbuf0WLgIcyiYnjxk/rs:fit:256:322/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTgv/ZmJjNWM0YWYtOThi/Yy00YWYyLTlhZWUt/MmJiODgwNDEyYWMz/LnBuZw.png);
-	width: 170px;
-	height: 650px;
-	bottom: -26px;
-	margin-right: 580px;
 }
 
 #picture-2 {
 	background-image: url(https://ouch-cdn2.icons8.com/-4hQWIg5rjpEdxBHIB7VxoJdTRkbuf0WLgIcyiYnjxk/rs:fit:256:322/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTgv/ZmJjNWM0YWYtOThi/Yy00YWYyLTlhZWUt/MmJiODgwNDEyYWMz/LnBuZw.png);
-	width: 170px;
-	height: 650px;
-	bottom: -26px;
-	margin-right: -20px;
 }
 
 #picture-3 {
@@ -1517,60 +1502,40 @@ ul.social-icons {
 	width: 170px;
 	height: 650px;
 	bottom: -26px;
-	margin-right: -620px;
+	margin-left: 620px;
 }
 
-
-
+#grocery-bag {
+	background-image: url(https://ouch-cdn2.icons8.com/AG_5XA3oFdocYkJ9IYzPIleCE1I2Ol3otDtkDph-9e0/rs:fit:256:257/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjk2/LzU1M2ZmZjEyLTJj/M2UtNGE4Zi1hNmU1/LTgxMTYzZjRmNmEz/My5wbmc.png);
+  transform: skewx(6deg);
+}
 
 #plant {
 	background-image: url(https://ouch-cdn2.icons8.com/CZaKIJ63jjlgvDcdjcjUnlfpffRScIiXzi4HMrpLAsM/rs:fit:728:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjM2/L2RkMzRmMzVhLWVk/YmMtNDRlZi1hOGNm/LTZlZjJlMTBlMzU2/My5wbmc.png);
-	width: 400px;
-	height: 480px;
-	bottom: -26px;
-	margin-right: 1500px;
 }
 
 #plant-2 {
 	background-image: url(https://ouch-cdn2.icons8.com/E47kcuNp_3-4IrDybcMwr6zMELcbhBQLKzImj-ot8E4/rs:fit:855:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzE5/LzljNjEwNjJhLTk4/YmMtNDViMS1iZGVm/LTMwNzVjMTMxYjQ1/OC5wbmc.png);
-	width: 300px;
-	height: 320px;
-	bottom: -50px;
-	margin-right: 900px;
 }
 
 #plant-3 {
 	background-image: url(https://ouch-cdn2.icons8.com/oo4nsgAN74wL_FDHCUIwOdB3rPN6SGavRjxiz-1ds4s/rs:fit:1201:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTk0/LzVlMGQ1NjhlLWNh/NTEtNGJlNC1iNWEz/LTQyYTcwNDlmZGMy/My5wbmc.png);
-	width: 160px;
-	height: 125px;
-	bottom: -50px;
-	margin-left: 1880px;
 }
 
 #books {
 	background-image: url(https://ouch-cdn2.icons8.com/AUAdQ5eK8APXniP0hwVusHWtZRMk9FA2Jm9FSza1StY/rs:fit:850:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNy9j/NTcxMWIzNC1mMTYy/LTQ3MTAtOGExYi1l/YzY1M2FlN2IwYWYu/cG5n.png);
-	width: 200px;
-	height: 220px;
-	bottom: -40px;
-	margin-left: 1620px;
 }
 
 #apple {
 	background-image: url(https://ouch-cdn2.icons8.com/-O2SifADepTOg7bXJ5whR6wB0iMfq5y7vrIaJdmKp20/rs:fit:851:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODYy/L2M3MjBkM2Q3LWMw/NTgtNDJkOC04ZGEw/LTc2MTM1N2YwMmNh/OC5wbmc.png);
-	width: 64px;
-	height: 70px;
-	top: -64px;
-	left: 30px;
+
 }
 
 #clock {
 	background-image: url(https://ouch-cdn2.icons8.com/ggxsAQVGAa4GMIlNl6vMuk0ANcEK07E5woeRpplKofI/rs:fit:945:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzI0/L2RmMDQzMzc4LTcy/NTUtNDA5My04ZDQy/LTgxOTJjNmE2ZmQx/ZC5wbmc.png);
-	width: 170px;
-	height: 320px;
 	background-size: 100% auto;
 	background-position: left top;
-	bottom: 520px;
-	margin-left: 40px;
+
 }
 
 #mirror {
@@ -1625,6 +1590,730 @@ ul.social-icons {
 #mirror:hover #mirror-content:before {
 	opacity: 0.4;
 	transform: translateY(4px);
+}
+
+
+
+
+
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 1700px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -1200px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -580px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 620px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 750px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -1500px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+}
+
+
+/* mobile */
+
+@media (min-width: 480px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 1700px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -1200px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -580px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 620px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 750px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -1500px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 1700px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -1200px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -580px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 620px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 750px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -1500px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 1700px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -1200px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -580px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 620px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 750px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -1500px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 850px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -600px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 500px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -280px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 320px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 350px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -520px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+
+}
+
+  /* Large TV */
+
+@media (min-width: 1400px) {
+
+  .item {
+    background-size: 100% auto;
+  }
+
+  #people {
+    width: 620px;
+    height: 370px;
+    bottom: -26px;
+    margin-left: 1400px;
+  }
+  
+  #people-2 {
+    width: 840px;
+    height: 430px;
+    bottom: -26px;
+    margin-left: 100px;
+  }
+  
+  
+  
+  #bookshelf {
+    width: 600px;
+    height: 710px;
+    bottom: -26px;
+    margin-left: 1700px;
+  }
+  
+  #shelf {
+    width: 400px;
+    height: 700px;
+    bottom: -26px;
+    margin-left: -1200px;
+  }
+  
+  #dog-1 {
+    width: 200px;
+    height: 223px;
+    bottom: -26px;
+    margin-left: 1000px;
+  }
+  
+  #picture-1 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: -580px;
+  }
+  
+  #picture-2 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 20px;
+  }
+  
+  #picture-3 {
+    width: 170px;
+    height: 650px;
+    bottom: -26px;
+    margin-left: 620px;
+  }
+  
+  #grocery-bag {
+    width: 240px;
+    height: 225px;
+    bottom: -26px;
+    margin-left: 750px;
+    transform: skewx(6deg);
+  }
+  
+  #plant {
+    width: 400px;
+    height: 480px;
+    bottom: -26px;
+    margin-left: -1600px;
+  }
+  
+  #plant-2 {
+    width: 300px;
+    height: 320px;
+    bottom: -50px;
+    margin-left: -1300px;
+  }
+  
+  #plant-3 {
+    width: 160px;
+    height: 125px;
+    bottom: -50px;
+    margin-left: 1880px;
+  }
+  
+  #books {
+    width: 200px;
+    height: 220px;
+    bottom: -40px;
+    margin-left: 1620px;
+  }
+  
+  #apple {
+    width: 64px;
+    height: 70px;
+    top: -64px;
+    left: 30px;
+  }
+  
+  #clock {
+    width: 170px;
+    height: 320px;
+    bottom: 520px;
+    margin-left: 30px;
+  }
+
+
+
 }
 
 /*-------------------------------------------------------------------------------
