@@ -1537,64 +1537,64 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 #people-2 {
-	background-image: url(/img/scene1/dog-on-couch-2.webp);
+	background-image: url(../img/scene1/dog-on-couch-2.webp);
 }
 
 
 
 #bookshelf {
-	background-image: url(/img/scene1/bookshelf-tall-hr.webp);
+	background-image: url(../img/scene1/bookshelf-tall-hr.webp);
 }
 
 #shelf {
-	background-image: url(/img/scene1/shelf-with-cat.webp);
+	background-image: url(../img/scene1/shelf-with-cat.webp);
 
 }
 
 #dog-1 {
-	background-image: url(/img/scene1/dog-a.webp);
+	background-image: url(../img/scene1/dog-a.webp);
 }
 
 #picture-1 {
-	background-image: url(/img/scene1/picture-a.webp);
+	background-image: url(../img/scene1/picture-a.webp);
 }
 
 #picture-2 {
-	background-image: url(/img/scene1/picture-b.webp);
+	background-image: url(../img/scene1/picture-b.webp);
 }
 
 #picture-3 {
-	background-image: url(/img/scene1/picture-c.webp);
+	background-image: url(../img/scene1/picture-c.webp);
 }
 
 #grocery-bag {
-	background-image: url(/img/scene1/grocery-bag.webp);
+	background-image: url(../img/scene1/grocery-bag.webp);
   transform: skewx(6deg);
 }
 
 #plant {
-	background-image: url(/img/scene1/plant-a.webp);
+	background-image: url(../img/scene1/plant-a.webp);
 }
 
 #plant-2 {
-	background-image: url(/img/scene1/plant-c.webp);
+	background-image: url(../img/scene1/plant-c.webp);
 }
 
 #plant-3 {
-	background-image: url(/img/scene1/plant-b.webp);
+	background-image: url(../img/scene1/plant-b.webp);
 }
 
 #books {
-	background-image: url(/img/scene1/book-stacked.webp);
+	background-image: url(../img/scene1/book-stacked.webp);
 }
 
 #apple {
-	background-image: url(/img/scene1/apple.webp);
+	background-image: url(../img/scene1/apple.webp);
 
 }
 
 #clock {
-	background-image: url(/img/scene1/clock.webp);
+	background-image: url(../img/scene1/clock.webp);
 	background-size: 100% auto;
 	background-position: left top;
 
@@ -2343,7 +2343,7 @@ ul.social-icons {
 }
 
 #people-about {
-	background-image: url(/img/scene2/people-dog-pose-a.webp);
+	background-image: url(../img/scene2/people-dog-pose-a.webp);
 }
 
 
