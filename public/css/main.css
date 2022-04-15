@@ -702,14 +702,14 @@ ul.social-icons {
   }
 
   .phone-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     bottom: 6.5rem;
     margin-left: 6px;
   }
 
   .email-title {
  
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     bottom: 4.5rem;
     margin-left: 6px;
   }
@@ -794,14 +794,14 @@ ul.social-icons {
   }
 
   .phone-title {
-    font-size: 1.5rem;
-    bottom: 6.5rem;
+    font-size: 1.3rem;
+    bottom: 6.3rem;
     margin-left: 6px;
   }
 
   .email-title {
  
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     bottom: 4.5rem;
     margin-left: 6px;
   }
@@ -1457,7 +1457,7 @@ ul.social-icons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	/* align-items: flex-end; */
+	align-items: flex-end;
 	perspective: 500px;
 }
 
@@ -1536,50 +1536,39 @@ ul.social-icons {
     SCENE ONE
 -------------------------------------------------------------------------------*/
 
-
-
-
-#people {
-	background-image: url(https://ouch-cdn2.icons8.com/ecz_p2P5JFN6zLQpJkm-zJ5J0HflFTB0sfrkyi5STJU/rs:fit:256:162/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTQ0/L2IxNTlmNTM3LTQ2/MjEtNGFmZi1iOWQ2/LTkyNTBjNWM1MzVk/Yi5wbmc.png);
-}
-
 #people-2 {
-	background-image: url(https://ouch-cdn2.icons8.com/Fbk4fcLRj1TLCCM5oonwUWvuytC6etzD1XdcBif-k8A/rs:fit:256:145/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjAw/L2FlNmVlODA5LTFj/MWEtNDI3YS04NzE3/LWZhODRlZjE1NDg3/Zi5wbmc.png);
+	background-image: url(/img/scene1/dog-on-couch-2.webp);
 }
 
 
 
 #bookshelf {
-	background-image: url(https://ouch-cdn2.icons8.com/t71d6ky6MhNNXDNQ5fpHgZ2AUqzRNzJPTWqL314sIOw/rs:fit:256:310/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNTc3/L2Q1YzBjNzY2LTQ2/NDQtNDQyZC1iNWM5/LTc0ZTY0M2QyN2M5/OS5wbmc.png);
+	background-image: url(/img/scene1/bookshelf-tall.webp);
 }
 
 #shelf {
-	background-image: url(https://ouch-cdn2.icons8.com/c9QdXWFpwJd2MTZiro0HhxM6Wdlf5H6cBDaF8RsoD4A/rs:fit:256:223/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTc5/Lzg4ZmE1MTcxLTcx/ZTUtNDkyYi1hN2I5/LWU4YjIzNThjYzRj/OS5wbmc.png);
+	background-image: url(/img/scene1/shelf-with-cat.webp);
 
 }
 
 #dog-1 {
-	background-image: url(https://ouch-cdn2.icons8.com/9-HVzpFlr0z2UQgoIkkgxqcgGWtM5G9uIXP3OkUv0Kc/rs:fit:256:305/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTEy/LzA0ZTc3MTkwLWQx/ZGMtNGJjMC1iZjE3/LWUzNTFjODViMGRl/Yi5wbmc.png);
+	background-image: url(/img/scene1/dog-a.webp);
 }
 
 #picture-1 {
-	background-image: url(https://ouch-cdn2.icons8.com/-4hQWIg5rjpEdxBHIB7VxoJdTRkbuf0WLgIcyiYnjxk/rs:fit:256:322/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTgv/ZmJjNWM0YWYtOThi/Yy00YWYyLTlhZWUt/MmJiODgwNDEyYWMz/LnBuZw.png);
+	background-image: url(/img/scene1/picture-a.webp);
 }
 
 #picture-2 {
-	background-image: url(https://ouch-cdn2.icons8.com/-4hQWIg5rjpEdxBHIB7VxoJdTRkbuf0WLgIcyiYnjxk/rs:fit:256:322/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTgv/ZmJjNWM0YWYtOThi/Yy00YWYyLTlhZWUt/MmJiODgwNDEyYWMz/LnBuZw.png);
+	background-image: url(/img/scene1/picture-b.webp);
 }
 
 #picture-3 {
-	background-image: url(https://ouch-cdn2.icons8.com/-4hQWIg5rjpEdxBHIB7VxoJdTRkbuf0WLgIcyiYnjxk/rs:fit:256:322/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTgv/ZmJjNWM0YWYtOThi/Yy00YWYyLTlhZWUt/MmJiODgwNDEyYWMz/LnBuZw.png);
-	width: 170px;
-	height: 650px;
-	bottom: -26px;
-	margin-left: 620px;
+	background-image: url(/img/scene1/picture-c.webp);
 }
 
 #grocery-bag {
-	background-image: url(https://ouch-cdn2.icons8.com/AG_5XA3oFdocYkJ9IYzPIleCE1I2Ol3otDtkDph-9e0/rs:fit:256:257/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjk2/LzU1M2ZmZjEyLTJj/M2UtNGE4Zi1hNmU1/LTgxMTYzZjRmNmEz/My5wbmc.png);
+	background-image: url(/img/scene1/grocery-bag.webp);
   transform: skewx(6deg);
 }
 
@@ -1596,7 +1585,7 @@ ul.social-icons {
 }
 
 #books {
-	background-image: url(https://ouch-cdn2.icons8.com/AUAdQ5eK8APXniP0hwVusHWtZRMk9FA2Jm9FSza1StY/rs:fit:850:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNy9j/NTcxMWIzNC1mMTYy/LTQ3MTAtOGExYi1l/YzY1M2FlN2IwYWYu/cG5n.png);
+	background-image: url(/img/scene1/book-stacked.webp);
 }
 
 #apple {
@@ -1782,19 +1771,12 @@ ul.social-icons {
 /* mobile */
 
 @media (min-width: 480px) {
-
-  #people {
-    width: 620px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
   
   #people-2 {
     width: 840px;
-    height: 430px;
+    height: 290px;
     bottom: -26px;
-    margin-left: 100px;
+    margin-left: 580px;
   }
   
   
@@ -1808,9 +1790,9 @@ ul.social-icons {
   
   #shelf {
     width: 400px;
-    height: 700px;
+    height: 500px;
     bottom: -26px;
-    margin-left: -1200px;
+    margin-left: -100px;
   }
   
   #dog-1 {
@@ -1822,38 +1804,38 @@ ul.social-icons {
   
   #picture-1 {
     width: 170px;
-    height: 650px;
+    height: 480px;
     bottom: -26px;
-    margin-left: -580px;
+    margin-left: 180px;
   }
   
   #picture-2 {
     width: 170px;
-    height: 650px;
+    height: 480px;
     bottom: -26px;
-    margin-left: 20px;
+    margin-left: 460px;
   }
   
   #picture-3 {
     width: 170px;
-    height: 650px;
+    height: 480px;
     bottom: -26px;
-    margin-left: 620px;
+    margin-left: 820px;
   }
   
   #grocery-bag {
     width: 240px;
-    height: 225px;
+    height: 145px;
     bottom: -26px;
-    margin-left: 750px;
+    margin-left: 650px;
     transform: skewx(6deg);
   }
   
   #plant {
     width: 400px;
-    height: 480px;
+    height: 320px;
     bottom: -26px;
-    margin-left: -1500px;
+    margin-left: -200px;
   }
   
   #plant-2 {
