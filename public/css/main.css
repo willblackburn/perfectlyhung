@@ -1573,15 +1573,15 @@ ul.social-icons {
 }
 
 #plant {
-	background-image: url(https://ouch-cdn2.icons8.com/CZaKIJ63jjlgvDcdjcjUnlfpffRScIiXzi4HMrpLAsM/rs:fit:728:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjM2/L2RkMzRmMzVhLWVk/YmMtNDRlZi1hOGNm/LTZlZjJlMTBlMzU2/My5wbmc.png);
+	background-image: url(/img/scene1/plant-a.webp);
 }
 
 #plant-2 {
-	background-image: url(https://ouch-cdn2.icons8.com/E47kcuNp_3-4IrDybcMwr6zMELcbhBQLKzImj-ot8E4/rs:fit:855:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzE5/LzljNjEwNjJhLTk4/YmMtNDViMS1iZGVm/LTMwNzVjMTMxYjQ1/OC5wbmc.png);
+	background-image: url(/img/scene1/plant-c.webp);
 }
 
 #plant-3 {
-	background-image: url(https://ouch-cdn2.icons8.com/oo4nsgAN74wL_FDHCUIwOdB3rPN6SGavRjxiz-1ds4s/rs:fit:1201:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTk0/LzVlMGQ1NjhlLWNh/NTEtNGJlNC1iNWEz/LTQyYTcwNDlmZGMy/My5wbmc.png);
+	background-image: url(/img/scene1/plant-b.webp);
 }
 
 #books {
@@ -1589,12 +1589,12 @@ ul.social-icons {
 }
 
 #apple {
-	background-image: url(https://ouch-cdn2.icons8.com/-O2SifADepTOg7bXJ5whR6wB0iMfq5y7vrIaJdmKp20/rs:fit:851:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODYy/L2M3MjBkM2Q3LWMw/NTgtNDJkOC04ZGEw/LTc2MTM1N2YwMmNh/OC5wbmc.png);
+	background-image: url(/img/scene1/apple.webp);
 
 }
 
 #clock {
-	background-image: url(https://ouch-cdn2.icons8.com/ggxsAQVGAa4GMIlNl6vMuk0ANcEK07E5woeRpplKofI/rs:fit:945:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzI0/L2RmMDQzMzc4LTcy/NTUtNDA5My04ZDQy/LTgxOTJjNmE2ZmQx/ZC5wbmc.png);
+	background-image: url(/img/scene1/clock.webp);
 	background-size: 100% auto;
 	background-position: left top;
 
@@ -2290,7 +2290,7 @@ ul.social-icons {
     width: 300px;
     height: 320px;
     bottom: -50px;
-    margin-left: -1300px;
+    margin-left: 2000px;
   }
   
   #plant-3 {
