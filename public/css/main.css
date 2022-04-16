@@ -395,7 +395,7 @@ ul.social-icons {
 
 
 .about {
-  background: url('../img/bg2-2.webp');
+  background: url('../img/bg2-3.webp');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -436,7 +436,7 @@ ul.social-icons {
 
 .commercial {
   background: url('../img/bg5.webp');
-  background-position: 80% 50%;
+  background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
@@ -648,9 +648,9 @@ ul.social-icons {
   }
 
   .main-title-light {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     max-width: 20px;
-    bottom: 6rem;
+    bottom: 2rem;
   }
 
   .secondary-title {
@@ -661,9 +661,9 @@ ul.social-icons {
   }
 
   .secondary-title-light {
-    font-size: .8rem;
+    font-size: .6rem;
     line-height: 1.5rem;
-    bottom: 5.5rem;
+    bottom: 2.2rem;
     margin-left: 6px;
   }
 
