@@ -1002,12 +1002,12 @@ ul.social-icons {
 
   .main-title-light {
     bottom: 3rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 5rem;
   }
 
   .secondary-title-light {
-    font-size: 1.2rem;
+    font-size: .9rem;
     bottom: 2.5rem;
     line-height: 1.5rem;
   }
@@ -1030,6 +1030,7 @@ ul.social-icons {
     max-width: 60vw;
     padding-top: 1.9rem;
   }
+  
 
   .quotes {
     font-size: 1.1rem;
