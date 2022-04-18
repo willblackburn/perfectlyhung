@@ -363,9 +363,6 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
 }
 
 .services {
@@ -374,16 +371,12 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 .process {
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 .residential {
@@ -392,9 +385,7 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 .commercial {
@@ -403,9 +394,7 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 .gallery {
@@ -414,9 +403,7 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 .contact {
@@ -425,9 +412,7 @@ ul.social-icons {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-  box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 @media all and (max-width: 800px){
@@ -505,7 +490,6 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  max-width: 9%;
   height: 3rem;
   color: aliceblue;
   background-color: #2e2e2e;
@@ -719,11 +703,7 @@ ul.social-icons {
 
 @media (max-width: 480px){
 
-  .quotes {
-    display: none;
-  }
-  
-  .quotes-author {
+  .quote-section {
     display: none;
   }
   
@@ -850,10 +830,6 @@ ul.social-icons {
     bottom: 6.5rem;
   }
 
-  .paragraph-title h3 {
-    max-width: 9%;
-  }
-
   .paragraph-header {
     font-size: 2.2rem;
     line-height: 2.5rem;
@@ -917,10 +893,6 @@ ul.social-icons {
     font-size: 1rem;
     bottom: 2.5rem;
     line-height: 1.5rem;
-  }
-
-  .paragraph-title h3 {
-    max-width: 9%;
   }
 
   .paragraph-header {
@@ -1001,10 +973,6 @@ ul.social-icons {
     line-height: 1.5rem;
   }
 
-  .paragraph-title h3 {
-    max-width: 15%;
-  }
-
   .paragraph {
     font-size: 1.1rem;
     line-height: 1.5rem;
@@ -1081,10 +1049,6 @@ ul.social-icons {
     font-size: 1.2rem;
     bottom: 2.5rem;
     line-height: 1.5rem;
-  }
-
-  .paragraph-title h3 {
-    max-width: 11%;
   }
 
   .paragraph {
@@ -1211,19 +1175,12 @@ ul.social-icons {
   color: #252525;
 }
 
-/* .service1:hover {
-  border: 5px solid #383838;
-} */
 
 .service2 i,
 .service2 h4,
 .service2 .cta {
   color: #252525;
 }
-
-/* .service2:hover {
-  border: 5px solid #383838;
-} */
 
 .service3 i,
 .service3 h4,
@@ -1243,9 +1200,6 @@ ul.social-icons {
   background-color: #ffffff;
 }
 
-/* .service3:hover {
-  border: 5px solid #383838;
-} */
 
 .service .cta span {
   font-size: 0.6rem;
@@ -1432,991 +1386,6 @@ ul.social-icons {
 }
 
 
-
-/*-------------------------------------------------------------------------------
-    3D SCENES
--------------------------------------------------------------------------------*/
-
-.scene {
-	width: 100vw;
-	position: relative;
-	height: 86%;
-	background: #DCDCDC;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-end;
-	perspective: 500px;
-}
-
-.item {
-	position: absolute;
-	background-repeat: no-repeat;
-	background-position: contain;
-	pointer-events: none;
-}
-
-/* Small Mobile */
-
-@media (min-width: 320px) {
-
-  .item {
-    background-size: 60% auto;
-  }
-
-}
-
-
-/* mobile */
-
-@media (min-width: 480px) {
-
-  .item {
-    background-size: 65% auto;
-  }
-
-}
-
-/* tablet */
-
-@media (min-width: 768px) {
-
-  .item {
-    background-size: 70% auto;
-  }
-
-}
-
-/* Small Desktop */
-
-@media (min-width: 992px) {
-
-  .item {
-    background-size: 75% auto;
-  }
-
-}
-
-/* Large Laptop */
-
-@media (min-width: 1200px) {
-
-  .item {
-    background-size: 80% auto;
-  }
-
-
-}
-
-  /* Large TV */
-
-@media (min-width: 1400px) {
-
-  .item {
-    background-size: 100% auto;
-  }
-  
-}
-
-
-
-/*-------------------------------------------------------------------------------
-    SCENE ONE
--------------------------------------------------------------------------------*/
-
-#people-2 {
-	background-image: url(../img/scene1/dog-on-couch-2.webp);
-}
-
-
-
-#bookshelf {
-	background-image: url(../img/scene1/bookshelf-tall-hr.webp);
-}
-
-#shelf {
-	background-image: url(../img/scene1/shelf-with-cat.webp);
-
-}
-
-#dog-1 {
-	background-image: url(../img/scene1/dog-a.webp);
-}
-
-#picture-1 {
-	background-image: url(../img/scene1/picture-a.webp);
-}
-
-#picture-2 {
-	background-image: url(../img/scene1/picture-b.webp);
-}
-
-#picture-3 {
-	background-image: url(../img/scene1/picture-c.webp);
-}
-
-#grocery-bag {
-	background-image: url(../img/scene1/grocery-bag.webp);
-  transform: skewx(6deg);
-}
-
-#plant {
-	background-image: url(../img/scene1/plant-a.webp);
-}
-
-#plant-2 {
-	background-image: url(../img/scene1/plant-c.webp);
-}
-
-#plant-3 {
-	background-image: url(../img/scene1/plant-b.webp);
-}
-
-#books {
-	background-image: url(../img/scene1/book-stacked.webp);
-}
-
-#apple {
-	background-image: url(../img/scene1/apple.webp);
-
-}
-
-#clock {
-	background-image: url(../img/scene1/clock.webp);
-	background-size: 100% auto;
-	background-position: left top;
-
-}
-
-#mirror {
-	width: 280px;
-	height: 580px;
-	position: relative;
-	box-shadow: 16px 2px 10px rgba(0, 0, 0, 0.4);
-	perspective: 500px;
-	border-top-left-radius: 300px;
-	border-top-right-radius: 300px;
-	transform-origin: top center;
-	transform: rotateX(3deg);
-	cursor: pointer;
-}
-
-#mirror-content {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-image: url(https://data.whicdn.com/images/251238216/original.gif);
-	background-position: center center;
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-	box-shadow: inset 6px 3px 10px rgba(0, 0, 0, 0.4);
-	border-top-left-radius: inherit;
-	border-top-right-radius: inherit;
-	border: 6px solid #e7e4df;
-	z-index: 0;
-	display: flex;
-	justify-content: center;
-}
-
-#mirror-content:before {
-	position: absolute;
-	content: "「 ｃｌｉｃｋ ｍｅ 」";
-	font-family: sans-serif;
-	text-transform: uppercase;
-	color: #e7e4df;
-	font-weight: bold;
-	letter-spacing: 4px;
-	font-size: 10px;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-	text-align: center;
-	bottom: 0;
-	z-index: 100;
-	opacity: 0.6;
-	transition: all 0.5s ease;
-	padding: 18px 0;
-}
-
-#mirror:hover #mirror-content:before {
-	opacity: 0.4;
-	transform: translateY(4px);
-}
-
-
-
-
-
-
-/* Small Mobile */
-
-@media (min-width: 320px) {
-
-  #people-2 {
-    width: 840px;
-    height: 260px;
-    bottom: -26px;
-    margin-left: 300px;
-  }
-  
-  
-  
-  #bookshelf {
-    width: 600px;
-    height: 710px;
-    bottom: -26px;
-    margin-left: 1700px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 700px;
-    bottom: -26px;
-    margin-left: -1200px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 223px;
-    bottom: -26px;
-    margin-left: 1000px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 440px;
-    bottom: -26px;
-    margin-left: -80px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 440px;
-    bottom: -26px;
-    margin-left: 40px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 440px;
-    bottom: -26px;
-    margin-left: 160px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 225px;
-    bottom: -26px;
-    margin-left: 750px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: -1500px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: -1300px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 85px;
-    bottom: -50px;
-    margin-left: -110px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 170px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-}
-
-
-/* mobile */
-
-@media (min-width: 480px) {
-  
-  #people-2 {
-    width: 840px;
-    height: 290px;
-    bottom: -26px;
-    margin-left: 580px;
-  }
-  
-  
-  
-  #bookshelf {
-    width: 600px;
-    height: 710px;
-    bottom: -26px;
-    margin-left: 1700px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: -100px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 223px;
-    bottom: -26px;
-    margin-left: 1000px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: 180px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: 460px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: 740px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 145px;
-    bottom: -26px;
-    margin-left: 650px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 320px;
-    bottom: -26px;
-    margin-left: -200px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: -1300px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 125px;
-    bottom: -50px;
-    margin-left: 1880px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 170px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-}
-
-/* tablet */
-
-@media (min-width: 768px) {
-
-  #people-2 {
-    width: 840px;
-    height: 300px;
-    bottom: -26px;
-    margin-left: 400px;
-  }
-  
-  #bookshelf {
-    width: 600px;
-    height: 710px;
-    bottom: -26px;
-    margin-left: 1700px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: -580px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 163px;
-    bottom: -26px;
-    margin-left: 800px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: -130px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: 150px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: 430px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 155px;
-    bottom: -26px;
-    margin-left: 620px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 330px;
-    bottom: -26px;
-    margin-left: -540px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: -1300px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 125px;
-    bottom: -50px;
-    margin-left: 1880px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 130px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-
-}
-
-/* Small Desktop */
-
-@media (min-width: 992px) {
-
-  #people {
-    width: 620px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
-  #people-2 {
-    width: 840px;
-    height: 430px;
-    bottom: -26px;
-    margin-left: 100px;
-  }
-  
-  
-  
-  #bookshelf {
-    width: 600px;
-    height: 710px;
-    bottom: -26px;
-    margin-left: 1700px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 700px;
-    bottom: -26px;
-    margin-left: -1200px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 223px;
-    bottom: -26px;
-    margin-left: 1000px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: -580px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: 20px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: 620px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 225px;
-    bottom: -26px;
-    margin-left: 750px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: -1500px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: -1300px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 125px;
-    bottom: -50px;
-    margin-left: 1880px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 170px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-
-}
-
-/* Large Laptop */
-
-@media (min-width: 1200px) {
-
-  #people-2 {
-    width: 800px;
-    height: 330px;
-    bottom: -26px;
-    margin-left: 200px;
-  }
-  
-  
-  
-  #bookshelf {
-    width: 600px;
-    height: 570px;
-    bottom: -26px;
-    margin-left: 1450px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 500px;
-    bottom: -26px;
-    margin-left: -1000px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 180px;
-    bottom: -26px;
-    margin-left: 900px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 520px;
-    bottom: -26px;
-    margin-left: -380px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 520px;
-    bottom: -26px;
-    margin-left: 20px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 520px;
-    bottom: -26px;
-    margin-left: 420px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 175px;
-    bottom: -26px;
-    margin-left: 550px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 380px;
-    bottom: -26px;
-    margin-left: -1040px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: -1300px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 125px;
-    bottom: -50px;
-    margin-left: 1880px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 170px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-
-}
-
-  /* Large TV */
-
-@media (min-width: 1400px) {
-
-
-  #people {
-    width: 20px;
-    height: 370px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
-  #people-2 {
-    width: 840px;
-    height: 430px;
-    bottom: -26px;
-    margin-left: 100px;
-  }
-  
-  
-  
-  #bookshelf {
-    width: 600px;
-    height: 710px;
-    bottom: -26px;
-    margin-left: 1700px;
-  }
-  
-  #shelf {
-    width: 400px;
-    height: 700px;
-    bottom: -26px;
-    margin-left: -1200px;
-  }
-  
-  #dog-1 {
-    width: 200px;
-    height: 223px;
-    bottom: -26px;
-    margin-left: 1000px;
-  }
-  
-  #picture-1 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: -580px;
-  }
-  
-  #picture-2 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: 20px;
-  }
-  
-  #picture-3 {
-    width: 170px;
-    height: 650px;
-    bottom: -26px;
-    margin-left: 620px;
-  }
-  
-  #grocery-bag {
-    width: 240px;
-    height: 225px;
-    bottom: -26px;
-    margin-left: 750px;
-    transform: skewx(6deg);
-  }
-  
-  #plant {
-    width: 400px;
-    height: 480px;
-    bottom: -26px;
-    margin-left: -1600px;
-  }
-  
-  #plant-2 {
-    width: 300px;
-    height: 320px;
-    bottom: -50px;
-    margin-left: 2000px;
-  }
-  
-  #plant-3 {
-    width: 160px;
-    height: 125px;
-    bottom: -50px;
-    margin-left: 1880px;
-  }
-  
-  #books {
-    width: 200px;
-    height: 220px;
-    bottom: -40px;
-    margin-left: 1620px;
-  }
-  
-  #apple {
-    width: 64px;
-    height: 70px;
-    top: -64px;
-    left: 30px;
-  }
-  
-  #clock {
-    width: 170px;
-    height: 320px;
-    bottom: 520px;
-    margin-left: 30px;
-  }
-
-
-
-}
-
-
-/*-------------------------------------------------------------------------------
-    SCENE 2
--------------------------------------------------------------------------------*/
-
-.scene-2 {
-	width: 100vw;
-	position: relative;
-	height: 86%;
-	background: #fdd8d8;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-end;
-	perspective: 500px;
-}
-
-#people-about {
-	background-image: url(../img/scene2/people-dog-pose-a.webp);
-}
-
-
-
-/* Small Mobile */
-
-@media (min-width: 320px) {
-
-  #people-about {
-    width: 600px;
-    height: 640px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-
-
-}
-
-
-/* mobile */
-
-@media (min-width: 480px) {
-
-  #people-about {
-    width: 600px;
-    height: 640px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-
-}
-
-/* tablet */
-
-@media (min-width: 768px) {
-
-  #people-about {
-    width: 600px;
-    height: 440px;
-    bottom: -26px;
-    margin-left: 300px;
-  }
-
-
-}
-
-/* Small Desktop */
-
-@media (min-width: 992px) {
-
-  #people-about {
-    width: 600px;
-    height: 640px;
-    bottom: -26px;
-    margin-left: 100px;
-  }
-
-}
-
-/* Large Laptop */
-
-@media (min-width: 1200px) {
-
-  #people-about {
-    width: 600px;
-    height: 520px;
-    bottom: -26px;
-    margin-left: 1000px;
-  }
-
-}
-
-  /* Large TV */
-
-@media (min-width: 1400px) {
-
-  #people-about {
-    width: 600px;
-    height: 640px;
-    bottom: -26px;
-    margin-left: 1400px;
-  }
-  
-}
-
 /*-------------------------------------------------------------------------------
     Process BG Video
 -------------------------------------------------------------------------------*/
@@ -2472,6 +1441,7 @@ ul.social-icons {
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
 }
+
 
 /*-------------------------------------------------------------------------------
     Gallery
