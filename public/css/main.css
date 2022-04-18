@@ -9,18 +9,6 @@ Site Design By Will Blackburn. Coda4.com
     Global
 -------------------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&family=Raleway&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Antic+Didone&family=Arimo&display=swap');
-
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-
-
-
-/* ---------------------------------------------------------------------------- */
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -108,6 +96,11 @@ h4 {
 
 img {
   z-index: 1;
+}
+
+ul {
+  padding:0;
+  list-style: none;
 }
 
 a {
@@ -284,8 +277,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .nav-contactinfo{
-  font-size: .9rem;
-  text-transform: uppercase;
+  font-size: 1.1rem;
   font-weight: 400;
   padding-top: 2rem;
   padding-left: 1.3rem;
@@ -299,24 +291,13 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     Social Icons
 -------------------------------------------------------------------------------*/
 
-._12 {
-  font-size: 1em;
-}
-._14 {
-  font-size: 1em;
-}
-ul {
-  padding:0;
-  list-style: none;
-}
+
 .footer-social-icons {
   width: 350px;
   display:block;
   margin: 0 auto;
 }
-.social-icon {
-  color: #fff;
-}
+
 ul.social-icons {
   margin-top: 25px;
   padding-left: 20px;
@@ -326,47 +307,29 @@ ul.social-icons {
   display: inline;
   height: 100px;
 }
-.social-icons a {
-  /* color: #fff; */
-  text-decoration: none;
-}
-.fa-facebook {
-  padding:10px 14px;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition: .5s;
-  background-color: #434343;
-}
-.fa-facebook:hover {
-  background-color: #3d5b99;
-}
-.fa-twitter {
-  padding:10px 12px;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition: .5s;
-  background-color: #434343;
-}
-.fa-twitter:hover {
-  background-color: #00aced;
+
+.social-icons svg {
+  width: 35px;
+  height: 35px;
 }
 
-.fa-youtube {
-  padding:10px 14px;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+.social-icons svg:hover {
   transition: .5s;
-  background-color: #434343;
 }
-.fa-youtube:hover {
-  background-color: #e64a41;
+
+.svg-facebook:hover{
+  fill: #3d5b99;
 }
+.svg-twitter:hover{
+  fill: #80d7ff;
+}
+.svg-youtube:hover{
+  fill: #ff0606;
+}
+
+
+
+
 
 /*-------------------------------------------------------------------------------
     Section Backgrounds
@@ -573,21 +536,6 @@ ul.social-icons {
   width: 100%;
 }
 
-.quotes {
-  color: #2e2e2e;
-  font-family: 'Amiri', sans-serif;
-  font-size: 1.5rem;
-  padding-top: 5rem;
-}
-
-.quotes-author {
-  color: #2e2e2e;
-  font-weight: 600;
-  padding-top: 2rem;
-  margin-left: 0.7rem;
-}
-
-
 .video-title {
   color: #e9e9e9;
   position: absolute;
@@ -626,6 +574,56 @@ ul.social-icons {
   position: absolute;
   bottom: 3rem;
   margin-left: 6px;
+}
+
+/* Quotes */
+
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 49rem;
+  padding-top: 2rem;
+}
+
+.quote-section .left {
+  position: relative;
+  order: 1;
+  flex-basis: 33%;
+}
+.quote-section .mid {
+  position: relative;
+  order: 2;
+  flex-basis: 33%;
+}
+.quote-section .right {
+  position: relative;
+  order: 3;
+  flex-basis: 33%;
+}
+.quote-section .quote:before {
+  color: #dbc757;
+  font: Niconne;
+  content: "“";
+  font-size: 2.5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  width: 0;
+  height: 0;
+  border-right: 20px solid transparent;
+}
+.quote-section .author {
+  color: #a9a9a9;
+  font-size: 18px;
+  position: absolute;
+  bottom: -2rem;
+  left: 20px;
+}
+.quote-section .author:before {
+  content: "— ";
 }
 
 
@@ -682,6 +680,16 @@ ul.social-icons {
     max-width: 80vw;
   }
 
+  .quote-section p {
+    font-size: .8rem;
+    padding-left: .2rem;
+  }
+
+  .quote-section .author {
+    font-size: 1rem;
+    left: 20px;
+  }
+
   .video-title {
     margin-left: 2.5rem;
     bottom: 10.5rem;
@@ -694,12 +702,6 @@ ul.social-icons {
     bottom: 10rem;
   }
 
-  .quotes {
-    font-size: 1rem;
-    line-height: 1.6rem;
-    padding-top: 1rem;
-    max-width: 60vw;
-  }
 
   .phone-title {
     font-size: 1.2rem;
@@ -781,16 +783,9 @@ ul.social-icons {
     bottom: 10rem;
   }
 
-  .quotes {
+  .quote-section p {
     font-size: 1.1rem;
-    line-height: 1.6rem;
-    padding-top: 5rem;
-    max-width: 70vw;
-  }
-
-  .quotes-author {
-    padding-top: 1rem;
-    margin-left: 0rem;
+    padding-left: .9rem;
   }
 
   .phone-title {
@@ -873,10 +868,9 @@ ul.social-icons {
     max-width: 78vw;
   }
 
-  .quotes {
-    font-size: 1.3rem;
-    padding-top: 5rem;
-    max-width: 50vw;
+  .quote-section p {
+    font-size: 1.1rem;
+    padding-left: .9rem;
   }
 
   .phone-title {
@@ -944,6 +938,11 @@ ul.social-icons {
     max-width: 52%;
   }
 
+  .quote-section p {
+    font-size: 1.1rem;
+    padding-left: .9rem;
+  }
+
   .video-title {
     margin-left: 11rem;
     bottom: 15rem;
@@ -954,16 +953,6 @@ ul.social-icons {
     font-size: 1.2rem;
     margin-left: 11.5rem;
     bottom: 14rem;
-  }
-
-  .quotes {
-    font-size: 1.2rem;
-    padding-top: 3rem;
-  }
-  
-  .quotes-author {
-    padding-top: 1.5rem;
-    margin-left: 0.2rem;
   }
 
   .phone-title {
@@ -1030,19 +1019,12 @@ ul.social-icons {
     max-width: 60vw;
     padding-top: 1.9rem;
   }
-  
 
-  .quotes {
-    font-size: 1.1rem;
-    padding-top: 2rem;
+  .quote-section p {
+    font-size: 1rem;
+    padding-left: .9rem;
   }
   
-  .quotes-author {
-    padding-top: 1.5rem;
-    margin-left: 0.2rem;
-  }
-
-
   .video-title {
     margin-left: 11rem;
     bottom: 11.5rem;
@@ -1118,6 +1100,11 @@ ul.social-icons {
     line-height: 3.5rem;
     max-width: 60vw;
     padding-top: 2rem;
+  }
+
+  .quote-section p {
+    font-size: 1.1rem;
+    padding-left: .9rem;
   }
 
 
