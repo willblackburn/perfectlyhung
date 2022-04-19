@@ -32,43 +32,27 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Whatsapp Script -->
+    <script
+      async
+      src="https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js"
+    ></script>
     <script>
-      var url =
-        'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?50272'
-      var s = document.createElement('script')
-      s.type = 'text/javascript'
-      s.async = true
-      s.src = url
-      var options = {
-        enabled: true,
-        chatButtonSetting: {
-          backgroundColor: '#000000',
-          ctaText: '',
-          borderRadius: '25',
-          marginLeft: '0',
-          marginBottom: '30',
-          marginRight: '25',
-          position: 'right',
-        },
-        brandSetting: {
-          brandName: 'Perfectly Hung',
-          brandSubTitle: 'Typically replies within a day',
-          brandImg:
-            'https://willblackburn.github.io/perfectlyhung/public/img/perfectlyhung-logo.png',
-          welcomeText: 'Hi there!\nHow can I help you?',
-          messageText: 'Hello, I have a question about {{page_link}}',
-          backgroundColor: '#050505',
-          ctaText: 'Start Chat',
-          borderRadius: '25',
-          autoShow: false,
-          phoneNumber: '447951101683',
-        },
+      var wa_btnSetting = {
+        btnColor: '#424242',
+        ctaText: '',
+        cornerRadius: 40,
+        marginBottom: 20,
+        marginLeft: 20,
+        marginRight: 20,
+        btnPosition: 'right',
+        whatsAppNumber: '447951101683',
+        welcomeMessage: 'Hello',
+        zIndex: 999999,
+        btnColorScheme: 'light',
       }
-      s.onload = function () {
-        CreateWhatsappChatWidget(options)
+      window.onload = () => {
+        _waEmbed(wa_btnSetting)
       }
-      var x = document.getElementsByTagName('script')[0]
-      x.parentNode.insertBefore(s, x)
     </script>
   </head>
 
@@ -380,7 +364,7 @@
           webkitallowfullscreen
           mozallowfullscreen
           allowfullscreen
-          allow=autoplay
+          allow="autoplay"
         ></iframe>
       </div>
     </div>
