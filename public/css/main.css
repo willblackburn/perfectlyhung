@@ -364,7 +364,6 @@ ul.social-icons {
 }
 
 .services {
-  /* background: url('../img/bg1-3.webp'); */
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,8 +373,8 @@ ul.social-icons {
 
 .process {
   opacity: 1;
-    -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-    -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
+    -webkit-box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
+    -moz-box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
     box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
 
 }
