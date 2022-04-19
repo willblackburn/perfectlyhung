@@ -344,9 +344,7 @@ ul.social-icons {
   min-width: 100vw;
   max-height: 100vh;
   opacity: 1;
-  /* -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-    -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
-    box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255); */
+
 }
 
 @media all and (max-width: 800px){
@@ -376,6 +374,9 @@ ul.social-icons {
 
 .process {
   opacity: 1;
+    -webkit-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
+    -moz-box-shadow:inset 0px 0px 0px 10px rgb(255, 255, 255);
+    box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
 
 }
 
@@ -1390,56 +1391,25 @@ ul.social-icons {
     Process BG Video
 -------------------------------------------------------------------------------*/
 
-.video-container {
-  /* Create grid spanning viewport width & height */
-  display: grid;
-  grid-template-rows: 100vh;
-  overflow: hidden;
-  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
-}
-
-.video-bg {
-  /* Span the full grid */
-  grid-area: var(--fullGrid);
-
-  /* Re-size video to cover full screen while maintaining aspect ratio */
-  min-width: 100vw;
-  min-height: 100vh;
-  max-width: 100vh;
-  max-height: 100vh;
+.vimeo-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  object-fit: cover;
-
-  /* Display video below overlay */
   z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
 }
-
-.video-bg::-webkit-media-controls {
-  display: none !important;
-}
-
-.video-overlay {
-  /* Span the full grid */
-  grid-area: var(--fullGrid);
-
-  /* Center Content */
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-
-  /* Semi-transparent background */
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-::-moz-selection {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-}
-
-::selection {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
+.vimeo-wrapper iframe {
+  width: 100vw;
+  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
