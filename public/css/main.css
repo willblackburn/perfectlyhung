@@ -373,9 +373,7 @@ ul.social-icons {
 
 .process {
   opacity: 1;
-    /* -webkit-box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
-    -moz-box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
-    box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255); */
+  box-shadow:inset 0px 0px 0px 80px rgb(255, 255, 255);
 
 }
 
