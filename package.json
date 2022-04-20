@@ -1,0 +1,23 @@
+{
+  "name": "pefectlyhung",
+  "version": "1.0.0",
+  "description": "Pefectly hung website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willblackburn/perfectlyhung.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willblackburn/perfectlyhung/issues"
+  },
+  "homepage": "https://github.com/willblackburn/perfectlyhung#readme",
+  "dependencies": {
+    "parcel": "^2.4.1"
+  }
+}
