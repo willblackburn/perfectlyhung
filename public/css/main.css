@@ -46,7 +46,7 @@ h3 {
 h4 {
   color: #5a5a5a;
   padding-top: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 2.7rem;
   text-transform: uppercase;
 }
 
@@ -436,8 +436,8 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  height: 3rem;
-  color: aliceblue;
+  height: 2rem;
+  color: rgb(255, 255, 255);
   background-color: #2e2e2e;
   padding: 8px;
 }
@@ -486,6 +486,25 @@ ul.social-icons {
   margin-left: 3px;
 }
 
+.location-title {
+  display: flex;
+  color: #2e2e2e;
+  position: absolute;
+  font-family: 'Amiri', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 420px;
+}
+
+.location-b-title {
+  color: #2e2e2e;
+  font-weight: 600;
+  font-family: 'Amiri', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  margin-left: 6px;
+}
+
 .phone-title {
   color: #2e2e2e;
   font-size: 1.8rem;
@@ -522,19 +541,19 @@ ul.social-icons {
   position: relative;
   order: 1;
   flex-basis: 33%;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .quote-section .mid {
   position: relative;
   order: 2;
   flex-basis: 33%;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .quote-section .right {
   position: relative;
   order: 3;
   flex-basis: 33%;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .quote-section .quote:before {
   color: #dbc757;
@@ -559,6 +578,26 @@ ul.social-icons {
   content: '— ';
 }
 
+@media all and (max-width: 1000px) {
+  .quote-section {
+    flex-direction: column;
+  }
+  .quote-section .left {
+    padding-bottom: 1rem;
+  }
+  .quote-section .mid {
+    padding-bottom: 1rem;
+  }
+  .quote-section .right {
+    padding-bottom: 1rem;
+  }
+
+  .quote-section .author {
+    bottom: -0.5rem;
+    left: 20px;
+  }
+}
+
 /* Small Mobile */
 
 @media (min-width: 320px) {
@@ -571,7 +610,7 @@ ul.social-icons {
     font-size: 2.7rem;
     font-weight: 600;
     max-width: 20px;
-    bottom: 10rem;
+    bottom: 5rem;
     line-height: 3rem;
   }
 
@@ -585,7 +624,7 @@ ul.social-icons {
     font-size: 0.8rem;
     line-height: 1.5rem;
     max-width: 90vw;
-    bottom: 8.5rem;
+    bottom: 3.5rem;
   }
 
   .secondary-title-light {
@@ -593,6 +632,10 @@ ul.social-icons {
     line-height: 1.5rem;
     bottom: 2.2rem;
     margin-left: 6px;
+  }
+
+  .paragraph-title h3 {
+    font-size: 0.9rem;
   }
 
   .paragraph-header {
@@ -607,6 +650,10 @@ ul.social-icons {
     line-height: 1.3rem;
     padding-top: 30px;
     max-width: 80vw;
+  }
+
+  .quote-section {
+    max-width: 69rem;
   }
 
   .quote-section p {
@@ -631,15 +678,30 @@ ul.social-icons {
     bottom: 10rem;
   }
 
+  .location-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 6rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 5rem;
+  }
+
   .phone-title {
     font-size: 1.2rem;
-    bottom: 6.5rem;
+    bottom: 3.5rem;
     margin-left: 6px;
   }
 
   .email-title {
     font-size: 1.4rem;
-    bottom: 4.5rem;
+    bottom: 2rem;
     margin-left: 6px;
   }
 }
@@ -661,7 +723,7 @@ ul.social-icons {
   .main-title {
     font-size: 2.8rem;
     max-width: 20px;
-    bottom: 10rem;
+    bottom: 5rem;
     line-height: 3rem;
   }
 
@@ -671,10 +733,21 @@ ul.social-icons {
     line-height: 5rem;
   }
 
+  .secondary-title {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 3.5rem;
+  }
+
   .secondary-title-light {
     font-size: 0.8rem;
     bottom: 2rem;
     line-height: 1.5rem;
+  }
+
+  .paragraph-title h3 {
+    font-size: 1rem;
   }
 
   .paragraph-header {
@@ -708,15 +781,30 @@ ul.social-icons {
     padding-left: 0.9rem;
   }
 
+  .location-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 8rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 7rem;
+  }
+
   .phone-title {
     font-size: 1.3rem;
-    bottom: 6.3rem;
+    bottom: 4.3rem;
     margin-left: 6px;
   }
 
   .email-title {
     font-size: 1.3rem;
-    bottom: 4.5rem;
+    bottom: 2.5rem;
     margin-left: 6px;
   }
 }
@@ -731,7 +819,7 @@ ul.social-icons {
 
   .main-title {
     font-size: 3.8rem;
-    bottom: 10rem;
+    bottom: 5rem;
     line-height: 4rem;
   }
 
@@ -769,6 +857,10 @@ ul.social-icons {
     bottom: 6.5rem;
   }
 
+  .paragraph-title h3 {
+    font-size: 1rem;
+  }
+
   .paragraph-header {
     font-size: 2.2rem;
     line-height: 2.5rem;
@@ -777,7 +869,7 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.3rem;
     padding-top: 30px;
     max-width: 78vw;
@@ -788,15 +880,30 @@ ul.social-icons {
     padding-left: 0.9rem;
   }
 
+  .location-title {
+    font-size: 3.7rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 9rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 7.5rem;
+  }
+
   .phone-title {
     font-size: 1.5rem;
-    bottom: 6.5rem;
+    bottom: 5rem;
     margin-left: 6px;
   }
 
   .email-title {
     font-size: 1.5rem;
-    bottom: 5rem;
+    bottom: 3rem;
     margin-left: 6px;
   }
 }
@@ -831,6 +938,10 @@ ul.social-icons {
     line-height: 1.5rem;
   }
 
+  .paragraph-title h3 {
+    font-size: 1rem;
+  }
+
   .paragraph-header {
     font-size: 1.8rem;
     line-height: 2.5rem;
@@ -843,7 +954,7 @@ ul.social-icons {
     line-height: 1.6rem;
     position: relative;
     padding-top: 25px;
-    max-width: 52%;
+    max-width: 65vw;
   }
 
   .quote-section p {
@@ -863,15 +974,30 @@ ul.social-icons {
     bottom: 14rem;
   }
 
+  .location-title {
+    font-size: 3.7rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 9rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 7rem;
+  }
+
   .phone-title {
     font-size: 1.5rem;
-    bottom: 4.3rem;
+    bottom: 4.5rem;
     margin-left: 6px;
   }
 
   .email-title {
     font-size: 1.5rem;
-    bottom: 2.8rem;
+    bottom: 2.5rem;
     margin-left: 6px;
   }
 }
@@ -887,8 +1013,8 @@ ul.social-icons {
 
   .main-title {
     bottom: 5rem;
-    font-size: 4.1rem;
-    line-height: 3.8rem;
+    font-size: 3.3rem;
+    line-height: 3.2rem;
   }
 
   .secondary-title {
@@ -908,12 +1034,16 @@ ul.social-icons {
     line-height: 1.5rem;
   }
 
-  .paragraph {
+  .paragraph-title h3 {
     font-size: 1.1rem;
+  }
+
+  .paragraph {
+    font-size: 1.3rem;
     line-height: 1.5rem;
     position: relative;
     padding-top: 1.3rem;
-    max-width: 60%;
+    max-width: 69%;
   }
 
   .paragraph-header {
@@ -923,9 +1053,15 @@ ul.social-icons {
     padding-top: 1.9rem;
   }
 
+  .quote-section {
+    padding-top: 3rem;
+    max-width: 47rem;
+  }
+
   .quote-section p {
     font-size: 1rem;
     padding-left: 0.9rem;
+    padding-right: 0.9rem;
   }
 
   .video-title {
@@ -940,9 +1076,24 @@ ul.social-icons {
     bottom: 10.5rem;
   }
 
+  .location-title {
+    font-size: 3.7rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 7.5rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 6rem;
+  }
+
   .phone-title {
     font-size: 1.5rem;
-    bottom: 0rem;
+    bottom: 3.5rem;
     margin-left: 6px;
   }
 
@@ -963,13 +1114,13 @@ ul.social-icons {
   }
 
   .main-title {
-    bottom: 10rem;
+    bottom: 8rem;
     font-size: 4.9rem;
     line-height: 4rem;
   }
 
   .secondary-title {
-    bottom: 8.5rem;
+    bottom: 6.7rem;
   }
 
   .main-title-light {
@@ -984,6 +1135,10 @@ ul.social-icons {
     line-height: 1.5rem;
   }
 
+  .paragraph-title h3 {
+    font-size: 1.2rem;
+  }
+
   .paragraph {
     font-size: 1.5rem;
     line-height: 1.7rem;
@@ -993,15 +1148,21 @@ ul.social-icons {
   }
 
   .paragraph-header {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     line-height: 3.5rem;
     max-width: 60vw;
     padding-top: 2rem;
   }
 
+  .quote-section {
+    padding-top: 5rem;
+    max-width: 65rem;
+  }
+
   .quote-section p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-left: 0.9rem;
+    padding-right: 0.9rem;
   }
 
   .video-title {
@@ -1016,18 +1177,37 @@ ul.social-icons {
     bottom: 10.5rem;
   }
 
+  .location-title {
+    font-size: 3.7rem;
+    font-weight: 600;
+    max-width: 20px;
+    bottom: 8.5rem;
+    line-height: 3rem;
+  }
+
+  .location-b-title {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    max-width: 90vw;
+    bottom: 7rem;
+  }
+
   .phone-title {
-    font-size: 1.5rem;
-    bottom: 6rem;
+    font-size: 1.4rem;
+    bottom: 4.6rem;
     margin-left: 6px;
   }
 
   .email-title {
-    font-size: 1.5rem;
-    bottom: 4rem;
+    font-size: 1.4rem;
+    bottom: 3rem;
     margin-left: 6px;
   }
 }
+
+/*-------------------------------------------------------------------------------
+    About 2
+-------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------
     Services
