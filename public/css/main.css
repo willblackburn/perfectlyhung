@@ -514,7 +514,7 @@ ul.social-icons {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  max-width: 49rem;
+  max-width: 69rem;
   padding-top: 2rem;
 }
 
@@ -522,16 +522,19 @@ ul.social-icons {
   position: relative;
   order: 1;
   flex-basis: 33%;
+  padding: 1rem;
 }
 .quote-section .mid {
   position: relative;
   order: 2;
   flex-basis: 33%;
+  padding: 1rem;
 }
 .quote-section .right {
   position: relative;
   order: 3;
   flex-basis: 33%;
+  padding: 1rem;
 }
 .quote-section .quote:before {
   color: #dbc757;
