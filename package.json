@@ -19,6 +19,7 @@
   "homepage": "https://github.com/willblackburn/perfectlyhung#readme",
   "dependencies": {
     "parcel": "2.4.1",
+    "prettier": "2.6.2",
     "sharp": "0.29.3"
   }
 }

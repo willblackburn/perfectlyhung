@@ -62,7 +62,7 @@ section {
 }
 
 h1 {
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-align: center;
 }
 
@@ -183,18 +183,18 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 .sidebarMenuInner li a {
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   color: rgb(56, 56, 56);
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
 }
-input[type='checkbox']:checked ~ #sidebarMenu {
+input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   transition: all 0.3s;
   box-sizing: border-box;
   display: none;
@@ -240,18 +240,18 @@ input[type='checkbox'] {
   float: left;
   margin-top: 3px;
 }
-input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
   opacity: 0;
 }
-input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(135deg);
   margin-top: 8px;
 }
-input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(-135deg);
@@ -313,7 +313,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1.webp');
+  background-image: url("../img/bg1.webp");
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -324,7 +324,7 @@ ul.social-icons {
 
 @media all and (max-width: 800px) {
   .home {
-    background-image: url('../img/bg1.webp?width=800');
+    background-image: url("../img/bg1.webp?width=800");
     background-size: 180%;
     background-position: 50% 50%;
   }
@@ -332,16 +332,16 @@ ul.social-icons {
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1.webp?width=400');
+    background-image: url("../img/bg1.webp?width=400");
   }
   .about {
-    background-image: url('../img/bg2-3.webp?width=400');
+    background-image: url("../img/bg2-3.webp?width=400");
     /* Finish for all sections */
   }
 }
 
 .about {
-  background: url('../img/bg2-3.webp');
+  background: url("../img/bg2-3.webp");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -349,7 +349,7 @@ ul.social-icons {
 }
 
 .services {
-  background: url('../img/bg3.webp');
+  background: url("../img/bg3.webp");
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -362,7 +362,7 @@ ul.social-icons {
 }
 
 .residential {
-  background: url('../img/bg4.webp');
+  background: url("../img/bg4.webp");
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -370,7 +370,7 @@ ul.social-icons {
 }
 
 .commercial {
-  background: url('../img/bg5.webp');
+  background: url("../img/bg5.webp");
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -385,7 +385,7 @@ ul.social-icons {
 }
 
 .contact {
-  background: url('../img/bg7.webp');
+  background: url("../img/bg7.webp");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -424,7 +424,7 @@ ul.social-icons {
   display: flex;
   color: #2e2e2e;
   position: absolute;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   max-width: 420px;
@@ -434,7 +434,7 @@ ul.social-icons {
   color: #2e2e2e;
   position: absolute;
   bottom: 10rem;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-transform: uppercase;
   max-width: 420px;
   font-size: 7rem;
@@ -444,7 +444,7 @@ ul.social-icons {
 .secondary-title {
   color: #2e2e2e;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -454,7 +454,7 @@ ul.social-icons {
   color: #202020;
   font-size: 1.6rem;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   position: absolute;
   bottom: 8rem;
   margin-left: 6px;
@@ -477,13 +477,13 @@ ul.social-icons {
   font-size: 3.2rem;
   font-weight: 400;
   max-width: 70%;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
   color: #2e2e2e;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
   position: relative;
@@ -499,7 +499,7 @@ ul.social-icons {
 .video-title {
   color: #e9e9e9;
   position: absolute;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-transform: uppercase;
   max-width: 420px;
   line-height: 5rem;
@@ -509,7 +509,7 @@ ul.social-icons {
   color: #e9e9e9;
   font-size: 1.6rem;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-transform: uppercase;
   position: absolute;
   bottom: 8rem;
@@ -520,7 +520,7 @@ ul.social-icons {
   display: flex;
   color: #2e2e2e;
   position: absolute;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   max-width: 420px;
@@ -529,7 +529,7 @@ ul.social-icons {
 .location-b-title {
   color: #2e2e2e;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -539,7 +539,7 @@ ul.social-icons {
   color: #2e2e2e;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   position: absolute;
   bottom: 5.5rem;
   margin-left: 6px;
@@ -549,7 +549,7 @@ ul.social-icons {
   color: #2e2e2e;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   position: absolute;
   bottom: 3rem;
   margin-left: 6px;
@@ -588,7 +588,7 @@ ul.social-icons {
 .quote-section .quote:before {
   color: #dbc757;
   font: Niconne;
-  content: '“';
+  content: "“";
   font-size: 2.5em;
   line-height: 0.1em;
   margin-right: 0.25em;
@@ -605,7 +605,7 @@ ul.social-icons {
   left: 20px;
 }
 .quote-section .author:before {
-  content: '— ';
+  content: "— ";
 }
 
 @media all and (max-width: 1000px) {
@@ -1254,7 +1254,7 @@ ul.social-icons {
 }
 
 .service h4 {
-  font-family: 'Amiri', sans-serif;
+  font-family: "Amiri", sans-serif;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
@@ -1543,7 +1543,7 @@ ul.social-icons {
 label[for] {
   cursor: pointer;
 }
-input[type='checkbox'] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -1581,12 +1581,12 @@ input[type='checkbox'] {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-input[type='checkbox']:checked + .lightbox {
+input[type="checkbox"]:checked + .lightbox {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 
-input[type='checkbox']:checked ~ .grid {
+input[type="checkbox"]:checked ~ .grid {
   opacity: 0.125;
 }
 
