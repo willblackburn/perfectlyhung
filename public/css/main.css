@@ -15,7 +15,37 @@ Site Design By Will Blackburn. coda4.com
   margin: 0;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  /* scroll-snap-points-y: repeat(100vh); */
+}
+
+:root {
+  --base00: #1e1e1e;
+  --base01: #292929;
+  --base02: #3f3f3f;
+  --base03: #6a726d;
+  --base04: #828282;
+  --base05: #b7bcbe;
+  --base06: #d0d0d0;
+  --base07: #eef2f8;
+  --base08: #59a8ff;
+  --base09: #d83bd2;
+  --base0A: #fecc1b;
+  --base0B: #6bd968;
+  --base0C: #3defe9;
+  --base0D: #3992ff;
+  --base0E: #d83bd2;
+  --base0F: #d0d0d0;
+}
+
+/*-------------------------------------------------------------------------------
+    Light / Dark Mode
+-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------
+    Main
+-------------------------------------------------------------------------------*/
+
+body {
+  /* background-color: var(--base00); */
 }
 
 .section,
@@ -283,7 +313,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-2.webp');
+  background-image: url('../img/bg1.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -294,7 +324,7 @@ ul.social-icons {
 
 @media all and (max-width: 800px) {
   .home {
-    background-image: url('../img/bg1-2.webp?width=800');
+    background-image: url('../img/bg1.webp?width=800');
     background-size: 180%;
     background-position: 50% 50%;
   }
@@ -302,7 +332,7 @@ ul.social-icons {
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1-2.webp?width=400');
+    background-image: url('../img/bg1.webp?width=400');
   }
   .about {
     background-image: url('../img/bg2-3.webp?width=400');
@@ -319,6 +349,7 @@ ul.social-icons {
 }
 
 .services {
+  background: url('../img/bg3.webp');
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -327,11 +358,11 @@ ul.social-icons {
 
 .process {
   opacity: 1;
-  box-shadow: inset 0px 0px 0px 80px rgb(255, 255, 255);
+  /* box-shadow: inset 0px 0px 0px 80px rgb(255, 255, 255); */
 }
 
 .residential {
-  background: url('../img/bg4-1.webp');
+  background: url('../img/bg4.webp');
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -347,7 +378,6 @@ ul.social-icons {
 }
 
 .gallery {
-  background-color: #ffffff;
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
