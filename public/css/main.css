@@ -44,9 +44,9 @@ Site Design By Will Blackburn. coda4.com
     Main
 -------------------------------------------------------------------------------*/
 
-body {
-  /* background-color: var(--base00); */
-}
+/* body {
+  background-color: var(--base00);
+} */
 
 .section,
 section {
@@ -848,9 +848,9 @@ ul.social-icons {
   }
 
   .main-title {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     bottom: 5rem;
-    line-height: 4rem;
+    line-height: 3rem;
   }
 
   .main-title-light {
@@ -858,7 +858,7 @@ ul.social-icons {
   }
 
   .secondary-title {
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: 1.5rem;
     max-width: 90vw;
   }
