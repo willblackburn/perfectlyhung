@@ -62,7 +62,7 @@ section {
 }
 
 h1 {
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   text-align: center;
 }
 
@@ -133,6 +133,7 @@ a {
   overflow: hidden;
   z-index: 10;
 }
+
 .main {
   margin: 0 auto;
   display: block;
@@ -183,18 +184,18 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 .sidebarMenuInner li a {
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   color: rgb(56, 56, 56);
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
 }
-input[type="checkbox"]:checked ~ #sidebarMenu {
+input[type='checkbox']:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   transition: all 0.3s;
   box-sizing: border-box;
   display: none;
@@ -218,7 +219,7 @@ input[type="checkbox"] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: rgb(17, 16, 16);
+  background-color: #f2efe4;
 }
 .horizontal {
   transition: all 0.3s;
@@ -240,18 +241,18 @@ input[type="checkbox"] {
   float: left;
   margin-top: 3px;
 }
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
   opacity: 0;
 }
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(135deg);
   margin-top: 8px;
 }
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(-135deg);
@@ -313,7 +314,8 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url("../img/bg1.webp");
+  background-color: #1f1d18;
+  background-image: url('../img/bg1.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -324,7 +326,7 @@ ul.social-icons {
 
 @media all and (max-width: 800px) {
   .home {
-    background-image: url("../img/bg1.webp?width=800");
+    background-image: url('../img/bg1.webp?width=800');
     background-size: 180%;
     background-position: 50% 50%;
   }
@@ -332,24 +334,23 @@ ul.social-icons {
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url("../img/bg1.webp?width=400");
-  }
-  .about {
-    background-image: url("../img/bg2-3.webp?width=400");
-    /* Finish for all sections */
+    background-image: url('../img/bg1.webp?width=400');
   }
 }
 
 .about {
-  background: url("../img/bg2-3.webp");
+  /* background: url('../img/bg2-3.webp'); */
+  /* background-color: #EEEBE0; */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
+  /* box-shadow: inset 0px 0px 0px 8px rgb(49, 49, 49); */
 }
 
 .services {
-  background: url("../img/bg3.webp");
+  /* background: url('../img/bg3.webp'); */
+  background-color: #1f1d18;
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -362,7 +363,7 @@ ul.social-icons {
 }
 
 .residential {
-  background: url("../img/bg4.webp");
+  background: url('../img/bg4.webp');
   background-position: 70% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -370,7 +371,8 @@ ul.social-icons {
 }
 
 .commercial {
-  background: url("../img/bg5.webp");
+  background: url('../img/bg5.webp');
+  background-color: #1f1d18;
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -378,6 +380,7 @@ ul.social-icons {
 }
 
 .gallery {
+  background-color: #1f1d18;
   background-position: 60% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -385,7 +388,7 @@ ul.social-icons {
 }
 
 .contact {
-  background: url("../img/bg7.webp");
+  background: url('../img/bg7.webp');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -422,9 +425,9 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: #2e2e2e;
+  color: #F2EFE4;
   position: absolute;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   max-width: 420px;
@@ -434,7 +437,7 @@ ul.social-icons {
   color: #2e2e2e;
   position: absolute;
   bottom: 10rem;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
   max-width: 420px;
   font-size: 7rem;
@@ -442,9 +445,9 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: #2e2e2e;
+  color: #F2EFE4;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -454,7 +457,7 @@ ul.social-icons {
   color: #202020;
   font-size: 1.6rem;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   position: absolute;
   bottom: 8rem;
   margin-left: 6px;
@@ -466,7 +469,7 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  height: 2rem;
+  height: 3rem;
   color: rgb(255, 255, 255);
   background-color: #2e2e2e;
   padding: 8px;
@@ -477,29 +480,23 @@ ul.social-icons {
   font-size: 3.2rem;
   font-weight: 400;
   max-width: 70%;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
   color: #2e2e2e;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
   position: relative;
   padding-top: 40px;
-  max-width: 65%;
-}
-
-.about-container {
-  height: 100%;
-  width: 100%;
 }
 
 .video-title {
   color: #e9e9e9;
-  position: absolute;
-  font-family: "Amiri", sans-serif;
+  position: relative;
+  font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
   max-width: 420px;
   line-height: 5rem;
@@ -509,9 +506,9 @@ ul.social-icons {
   color: #e9e9e9;
   font-size: 1.6rem;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
-  position: absolute;
+  position: relative;
   bottom: 8rem;
   margin-left: 3px;
 }
@@ -520,7 +517,7 @@ ul.social-icons {
   display: flex;
   color: #2e2e2e;
   position: absolute;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   max-width: 420px;
@@ -529,7 +526,7 @@ ul.social-icons {
 .location-b-title {
   color: #2e2e2e;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -539,7 +536,7 @@ ul.social-icons {
   color: #2e2e2e;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   position: absolute;
   bottom: 5.5rem;
   margin-left: 6px;
@@ -549,83 +546,10 @@ ul.social-icons {
   color: #2e2e2e;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   position: absolute;
   bottom: 3rem;
   margin-left: 6px;
-}
-
-/* Quotes */
-
-.quote-section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  max-width: 69rem;
-  padding-top: 2rem;
-}
-
-.quote-section .left {
-  position: relative;
-  order: 1;
-  flex-basis: 33%;
-  /* padding: 1rem; */
-}
-.quote-section .mid {
-  position: relative;
-  order: 2;
-  flex-basis: 33%;
-  /* padding: 1rem; */
-}
-.quote-section .right {
-  position: relative;
-  order: 3;
-  flex-basis: 33%;
-  /* padding: 1rem; */
-}
-.quote-section .quote:before {
-  color: #dbc757;
-  font: Niconne;
-  content: "“";
-  font-size: 2.5em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-  width: 0;
-  height: 0;
-  border-right: 20px solid transparent;
-}
-.quote-section .author {
-  color: #a9a9a9;
-  font-size: 18px;
-  position: absolute;
-  bottom: -2rem;
-  left: 20px;
-}
-.quote-section .author:before {
-  content: "— ";
-}
-
-@media all and (max-width: 1000px) {
-  .quote-section {
-    flex-direction: column;
-  }
-  .quote-section .left {
-    padding-bottom: 1rem;
-  }
-  .quote-section .mid {
-    padding-bottom: 1rem;
-  }
-  .quote-section .right {
-    padding-bottom: 1rem;
-  }
-
-  .quote-section .author {
-    bottom: -0.5rem;
-    left: 20px;
-  }
 }
 
 /* Small Mobile */
@@ -676,24 +600,9 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.3rem;
     padding-top: 30px;
-    max-width: 80vw;
-  }
-
-  .quote-section {
-    max-width: 69rem;
-  }
-
-  .quote-section p {
-    font-size: 0.8rem;
-    padding-left: 0.2rem;
-  }
-
-  .quote-section .author {
-    font-size: 1rem;
-    left: 20px;
   }
 
   .video-title {
@@ -788,10 +697,9 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.3rem;
     padding-top: 30px;
-    max-width: 78vw;
   }
 
   .video-title {
@@ -804,11 +712,6 @@ ul.social-icons {
     font-size: 1.2rem;
     margin-left: 4rem;
     bottom: 10rem;
-  }
-
-  .quote-section p {
-    font-size: 0.9rem;
-    padding-left: 0.9rem;
   }
 
   .location-title {
@@ -858,7 +761,7 @@ ul.social-icons {
   }
 
   .secondary-title {
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
     max-width: 90vw;
   }
@@ -902,12 +805,6 @@ ul.social-icons {
     font-size: 1.5rem;
     line-height: 1.3rem;
     padding-top: 30px;
-    max-width: 78vw;
-  }
-
-  .quote-section p {
-    font-size: 0.9rem;
-    padding-left: 0.9rem;
   }
 
   .location-title {
@@ -984,12 +881,6 @@ ul.social-icons {
     line-height: 1.6rem;
     position: relative;
     padding-top: 25px;
-    max-width: 65vw;
-  }
-
-  .quote-section p {
-    font-size: 1rem;
-    padding-left: 0.9rem;
   }
 
   .video-title {
@@ -1073,7 +964,6 @@ ul.social-icons {
     line-height: 1.5rem;
     position: relative;
     padding-top: 1.3rem;
-    max-width: 69%;
   }
 
   .paragraph-header {
@@ -1081,17 +971,6 @@ ul.social-icons {
     line-height: 2.5rem;
     max-width: 60vw;
     padding-top: 1.9rem;
-  }
-
-  .quote-section {
-    padding-top: 3rem;
-    max-width: 47rem;
-  }
-
-  .quote-section p {
-    font-size: 1rem;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
   }
 
   .video-title {
@@ -1174,7 +1053,6 @@ ul.social-icons {
     line-height: 1.7rem;
     position: relative;
     padding-top: 2rem;
-    max-width: 67%;
   }
 
   .paragraph-header {
@@ -1184,26 +1062,15 @@ ul.social-icons {
     padding-top: 2rem;
   }
 
-  .quote-section {
-    padding-top: 5rem;
-    max-width: 65rem;
-  }
-
-  .quote-section p {
-    font-size: 1.2rem;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
-  }
-
   .video-title {
-    margin-left: 11rem;
-    bottom: 11.5rem;
+    margin-left: 9rem;
+    bottom: 9rem;
     font-size: 3.5rem;
   }
 
   .video-secondary-title {
     font-size: 1.2rem;
-    margin-left: 11.5rem;
+    margin-left: 9.5rem;
     bottom: 10.5rem;
   }
 
@@ -1236,8 +1103,148 @@ ul.social-icons {
 }
 
 /*-------------------------------------------------------------------------------
-    About 2
+    ABOUT
 -------------------------------------------------------------------------------*/
+
+.about-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'amiri', sans-serif;
+}
+
+.item {
+  width: 60%;
+  min-height: 500px;
+  padding: 4.5em;
+  color: #222;
+}
+
+.item-right {
+  width: 40%;
+  padding: 4.5em;
+  min-height: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100vw;
+    min-height: 30vh;
+    margin-left: 0rem;
+  }
+
+  .item-right {
+    width: 100vw;
+    min-height: 30vh;
+  }
+}
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+  .item {
+    padding-top: 6rem;
+  }
+}
+
+/* mobile */
+
+@media (min-width: 480px) {
+  .item {
+    padding-top: 6rem;
+  }
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+  .item {
+    padding-top: 6rem;
+  }
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+  .item {
+    padding-top: 8rem;
+  }
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+  .item {
+    padding-top: 9rem;
+  }
+}
+
+/* Large TV */
+
+@media (min-width: 1400px) {
+  .item {
+    margin-left: 4rem;
+    padding-top: 12rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------
+    Quotes
+-------------------------------------------------------------------------------*/
+
+.collectionEl {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.innerEl {
+  color: #181616;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.collectionEl .outerEl {
+  width: 30vw;
+}
+
+.collectionEl .outerEl {
+  display: flex;
+  justify-content: center;
+}
+
+.collectionEl .innerEl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collectionEl .innerEl p + p {
+  margin-top: 0;
+}
+
+/*-------------------------------------------------------------------------------
+    Clients
+-------------------------------------------------------------------------------*/
+
+.carousel-client {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  padding: 4em 0em;
+}
 
 /*-------------------------------------------------------------------------------
     Services
@@ -1254,7 +1261,7 @@ ul.social-icons {
 }
 
 .service h4 {
-  font-family: "Amiri", sans-serif;
+  font-family: 'Amiri', sans-serif;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
@@ -1281,8 +1288,8 @@ ul.social-icons {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  border: 3px solid rgb(51, 50, 50);
-  border-radius: 0rem;
+  border: 3px solid rgb(124, 123, 123);
+  border-radius: 0.5rem;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1299,12 +1306,6 @@ ul.social-icons {
 .icon-container img {
   width: auto;
   height: 160px;
-}
-
-.service:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
 }
 
 .service1 i,
@@ -1543,7 +1544,7 @@ ul.social-icons {
 label[for] {
   cursor: pointer;
 }
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 
@@ -1581,12 +1582,12 @@ input[type="checkbox"] {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-input[type="checkbox"]:checked + .lightbox {
+input[type='checkbox']:checked + .lightbox {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 
-input[type="checkbox"]:checked ~ .grid {
+input[type='checkbox']:checked ~ .grid {
   opacity: 0.125;
 }
 
@@ -1607,7 +1608,7 @@ input[type="checkbox"]:checked ~ .grid {
   display: block;
   width: 20%;
   padding: 5px;
-  opacity: 0.85;
+  opacity: 0.95;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
