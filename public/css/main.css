@@ -20,6 +20,9 @@ Site Design By Will Blackburn. coda4.com
 :root {
   --textlight: #f2efe4;
   --darktheme: #1f1d18;
+  --brandcolor1: #D64121;
+  --brandcolor2: #1A5E67;
+  --brandcolor3: #F5C654;
 }
 
 /*-------------------------------------------------------------------------------
@@ -45,7 +48,6 @@ section {
 }
 
 .divider {
-  background-color: #1f1d18;
   padding-top: 5rem;
 }
 
@@ -79,7 +81,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(44, 44, 44);
+  color: rgb(212, 166, 40);
 }
 
 ::-webkit-scrollbar {
@@ -1200,6 +1202,24 @@ ul.social-icons {
   text-align: center;
 }
 
+.inner-a {
+  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
+  border-radius: 0.3rem;
+  background-color: var(--brandcolor1);
+}
+
+.inner-b {
+  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
+  border-radius: 0.3rem;
+  background-color: var(--brandcolor2);
+}
+
+.inner-c {
+  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
+  border-radius: 0.3rem;
+  background-color: var(--brandcolor3);
+}
+
 .collectionEl .outerEl {
   width: 30vw;
 }
@@ -1318,18 +1338,6 @@ ul.social-icons {
 .service3 h4,
 .service3 .cta {
   color: var(--textlight);
-}
-
-.service1 {
-  /* background-color: #ffffff; */
-}
-
-.service2 {
-  /* background-color: #ffffff; */
-}
-
-.service3 {
-  /* background-color: #ffffff; */
 }
 
 .service .cta span {
