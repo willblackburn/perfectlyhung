@@ -20,9 +20,9 @@ Site Design By Will Blackburn. coda4.com
 :root {
   --textlight: #f2efe4;
   --darktheme: #1f1d18;
-  --brandcolor1: #D64121;
-  --brandcolor2: #1A5E67;
-  --brandcolor3: #F5C654;
+  --brandcolor1: #d64121;
+  --brandcolor2: #1a5e67;
+  --brandcolor3: #f5c654;
 }
 
 /*-------------------------------------------------------------------------------
@@ -42,9 +42,8 @@ section {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
-  /* overflow-y: auto; */
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
 }
 
 .divider {
@@ -52,6 +51,7 @@ section {
 }
 
 h1 {
+  color: var(--textlight);
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
@@ -442,16 +442,6 @@ ul.social-icons {
   margin-left: 6px;
 }
 
-.secondary-title-light {
-  color: var(--textlight);
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  position: absolute;
-  bottom: 8rem;
-  margin-left: 6px;
-}
-
 .paragraph-title {
   display: flex;
   align-content: center;
@@ -461,8 +451,8 @@ ul.social-icons {
   height: 3rem;
   color: var(--textlight);
   text-decoration: underline double;
-  background-color: #2e2e2e;
-  padding: 8px;
+  text-underline-offset: 0.5rem;
+  padding: 4px;
 }
 
 .paragraph-header {
@@ -482,65 +472,6 @@ ul.social-icons {
 .paragraph p {
   font-weight: 300;
   opacity: 0.7;
-}
-
-.video-title {
-  color: var(--textlight);
-  position: relative;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  max-width: 420px;
-  line-height: 5rem;
-}
-
-.video-secondary-title {
-  color: var(--textlight);
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  position: relative;
-  bottom: 8rem;
-  margin-left: 3px;
-}
-
-.location-title {
-  display: flex;
-  color: var(--textlight);
-  position: absolute;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  max-width: 420px;
-}
-
-.location-b-title {
-  color: var(--textlight);
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  position: absolute;
-  margin-left: 6px;
-}
-
-.phone-title {
-  color: var(--textlight);
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  position: absolute;
-  bottom: 5.5rem;
-  margin-left: 6px;
-}
-
-.email-title {
-  color: var(--textlight);
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  position: absolute;
-  bottom: 3rem;
-  margin-left: 6px;
 }
 
 /* Small Mobile */
@@ -572,13 +503,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .secondary-title-light {
-    font-size: 0.6rem;
-    line-height: 1.5rem;
-    bottom: 2.2rem;
-    margin-left: 6px;
-  }
-
   .paragraph-title h3 {
     font-size: 0.9rem;
   }
@@ -594,45 +518,6 @@ ul.social-icons {
     font-size: 1rem;
     line-height: 1.3rem;
     padding-top: 30px;
-  }
-
-  .video-title {
-    margin-left: 2.5rem;
-    bottom: 10.5rem;
-    font-size: 3.5rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 3rem;
-    bottom: 10rem;
-  }
-
-  .location-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 6rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 5rem;
-  }
-
-  .phone-title {
-    font-size: 1.2rem;
-    bottom: 3.5rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.4rem;
-    bottom: 2rem;
-    margin-left: 6px;
   }
 }
 
@@ -670,12 +555,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .secondary-title-light {
-    font-size: 0.8rem;
-    bottom: 2rem;
-    line-height: 1.5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1rem;
   }
@@ -691,45 +570,6 @@ ul.social-icons {
     font-size: 1rem;
     line-height: 1.3rem;
     padding-top: 30px;
-  }
-
-  .video-title {
-    margin-left: 4rem;
-    bottom: 10.5rem;
-    font-size: 3rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 4rem;
-    bottom: 10rem;
-  }
-
-  .location-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 8rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 7rem;
-  }
-
-  .phone-title {
-    font-size: 1.3rem;
-    bottom: 4.3rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.3rem;
-    bottom: 2.5rem;
-    margin-left: 6px;
   }
 }
 
@@ -763,24 +603,6 @@ ul.social-icons {
     line-height: 5rem;
   }
 
-  .secondary-title-light {
-    font-size: 1rem;
-    bottom: 2.5rem;
-    line-height: 1.5rem;
-  }
-
-  .video-title {
-    margin-left: 4.5rem;
-    bottom: 7rem;
-    font-size: 3.5rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 5rem;
-    bottom: 6.5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1rem;
   }
@@ -796,33 +618,6 @@ ul.social-icons {
     font-size: 1.1rem;
     line-height: 1.3rem;
     padding-top: 30px;
-  }
-
-  .location-title {
-    font-size: 3.7rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 9rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 7.5rem;
-  }
-
-  .phone-title {
-    font-size: 1.5rem;
-    bottom: 5rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.5rem;
-    bottom: 3rem;
-    margin-left: 6px;
   }
 }
 
@@ -850,12 +645,6 @@ ul.social-icons {
     line-height: 5rem;
   }
 
-  .secondary-title-light {
-    font-size: 1rem;
-    bottom: 2.5rem;
-    line-height: 1.5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1rem;
   }
@@ -872,45 +661,6 @@ ul.social-icons {
     line-height: 1.6rem;
     position: relative;
     padding-top: 25px;
-  }
-
-  .video-title {
-    margin-left: 11rem;
-    bottom: 15rem;
-    font-size: 3.5rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 11.5rem;
-    bottom: 14rem;
-  }
-
-  .location-title {
-    font-size: 3.7rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 9rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 7rem;
-  }
-
-  .phone-title {
-    font-size: 1.5rem;
-    bottom: 4.5rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.5rem;
-    bottom: 2.5rem;
-    margin-left: 6px;
   }
 }
 
@@ -940,12 +690,6 @@ ul.social-icons {
     line-height: 5rem;
   }
 
-  .secondary-title-light {
-    font-size: 0.9rem;
-    bottom: 2.5rem;
-    line-height: 1.5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1.1rem;
   }
@@ -962,45 +706,6 @@ ul.social-icons {
     line-height: 2.5rem;
     max-width: 60vw;
     padding-top: 1.9rem;
-  }
-
-  .video-title {
-    margin-left: 11rem;
-    bottom: 11.5rem;
-    font-size: 3.5rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 11.5rem;
-    bottom: 10.5rem;
-  }
-
-  .location-title {
-    font-size: 3.7rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 7.5rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 6rem;
-  }
-
-  .phone-title {
-    font-size: 1.5rem;
-    bottom: 3.5rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.5rem;
-    bottom: 1.5rem;
-    margin-left: 6px;
   }
 }
 
@@ -1029,12 +734,6 @@ ul.social-icons {
     line-height: 5rem;
   }
 
-  .secondary-title-light {
-    font-size: 1.2rem;
-    bottom: 2.5rem;
-    line-height: 1.5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1.2rem;
   }
@@ -1051,45 +750,6 @@ ul.social-icons {
     line-height: 3rem;
     max-width: 60vw;
     padding-top: 2rem;
-  }
-
-  .video-title {
-    margin-left: 9rem;
-    bottom: 9rem;
-    font-size: 3.5rem;
-  }
-
-  .video-secondary-title {
-    font-size: 1.2rem;
-    margin-left: 9.5rem;
-    bottom: 10.5rem;
-  }
-
-  .location-title {
-    font-size: 3.7rem;
-    font-weight: 600;
-    max-width: 20px;
-    bottom: 8.5rem;
-    line-height: 3rem;
-  }
-
-  .location-b-title {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    max-width: 90vw;
-    bottom: 7rem;
-  }
-
-  .phone-title {
-    font-size: 1.4rem;
-    bottom: 4.6rem;
-    margin-left: 6px;
-  }
-
-  .email-title {
-    font-size: 1.4rem;
-    bottom: 3rem;
-    margin-left: 6px;
   }
 }
 
@@ -1113,8 +773,6 @@ ul.social-icons {
 
 .item-right {
   width: 50%;
-  /* margin-left: 2rem;
-  margin-right: 2rem; */
   min-height: 500px;
 }
 
@@ -1603,35 +1261,81 @@ ul.social-icons {
     visibility: visible;
     transform: none;
   }
+
+  .one {
+    margin-bottom: 7rem;
+  }
 }
 
 /*-------------------------------------------------------------------------------
-    Process BG Video
+    PROCESS VIDEO
 -------------------------------------------------------------------------------*/
 
-.process {
-  background-size: cover;
+.post-body {
+  max-width: 1200px;
+  margin: 4% auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
 }
-
-.vimeo-wrapper {
+/* Lazy Youtube */
+.lazy-youtube {
+  background-color: #414141;
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
   overflow: hidden;
+  padding-top: 56.3%;
+  cursor: pointer;
+  outline: 8px double #ccc;
 }
-.vimeo-wrapper iframe {
-  width: 100vw;
-  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-  min-height: 100vh;
-  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-  position: absolute;
+.lazy-youtube img {
+  width: 100%;
+  top: -16.84%;
+  left: 0;
+  opacity: 0.7;
+}
+.lazy-youtube .play-button {
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  opacity: 0.9;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.lazy-youtube .play-button:hover {
+  border-color: #ea6d23;
+}
+.lazy-youtube .play-button:hover:before {
+  border-color: transparent transparent transparent #00cc1b;
+}
+.lazy-youtube .play-button:before {
+  content: '';
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  margin-left: 1px;
+}
+.lazy-youtube img,
+.lazy-youtube .play-button {
+  cursor: pointer;
+}
+.lazy-youtube img,
+.lazy-youtube iframe,
+.lazy-youtube .play-button,
+.lazy-youtube .play-button:before {
+  position: absolute !important;
+}
+.lazy-youtube .play-button,
+.lazy-youtube .play-button:before {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
+}
+.lazy-youtube iframe {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1732,11 +1436,10 @@ input[type='checkbox']:checked ~ .grid {
 }
 
 /*-------------------------------------------------------------------------------
-    FOOTER
+    CONTACT FOOTER
 -------------------------------------------------------------------------------*/
 
 .footer {
-  /* background: #1f1d18; */
   padding: 30px 0px;
   font-family: 'Poppins', sans-serif;
   text-align: center;

@@ -63,13 +63,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
@@ -306,7 +299,12 @@
               result is perfect.
             </p>
             <br />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti sit minima, quia nobis expedita repellendus dicta perferendis magni nulla nisi, rerum harum! Placeat, cum magni. Ipsam, deserunt. Commodi repellat velit odit quasi eos natus, sunt consequuntur quibusdam? Eos repellendus commodi laudantium neque molestiae molestias, nihil animi est dolorem quis a quas illum aperiam consequatur quo fugit esse accusantium cumque aut?</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+              sit minima, quia nobis expedita repellendus dicta perferendis
+              magni nulla nisi, rerum harum! Placeat, cum magni. Ipsam,
+              deserunt.
+            </p>
           </div>
           <div class="collectionEl">
             <div class="outerEl">
@@ -372,6 +370,9 @@
 
     <div class="section services" id="services">
       <div class="services-grid">
+        <!-- <div class="paragraph-title" data-aos="fade-up">
+          <h3>What We Do</h3>
+        </div> -->
         <div class="service service1" data-aos="fade-right">
           <div class="icon-container">
             <img src="./img/services-1.webp" alt="" />
@@ -418,9 +419,10 @@
     <div class="divider"></div>
 
     <!-- RESIDENTIAL / COMMERCIAL COMBINED -->
-    <div class="section residential" data-aos="fade-in" data-aos-offset="40">
+
+    <div class="section residential">
       <div class="flex-wrapper">
-        <a href="" class="one">
+        <a href="" class="one" data-aos="fade-right">
           <div class="overlay">
             <div class="overlay-inner">
               <h2>Residential</h2>
@@ -431,7 +433,7 @@
             </div>
           </div>
         </a>
-        <a href="" class="two">
+        <a href="" class="two" data-aos="fade-left">
           <div class="overlay">
             <div class="overlay-inner">
               <h2>Commercial</h2>
@@ -445,89 +447,21 @@
       </div>
     </div>
 
-    <!-- RESIDENTIAL -->
-
-    <!-- <div class="section residential" data-aos="fade-in" data-aos-offset="40">
-      <div class="main-container">
-        <div
-          class="main-title-light"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          Residential
-        </div>
-        <div
-          class="secondary-title-light"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-        >
-          # PICTURE HANGING # LAZER LEVELLING
-        </div>
-      </div>
-    </div> -->
-
-    <!-- DIVIDER -->
-
-    <div class="divider"></div>
-
-    <!-- COMMERCIAL -->
-
-    <!-- <div class="section commercial">
-      <div class="main-container">
-        <div
-          class="main-title-light"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          Commercial
-        </div>
-        <div
-          class="secondary-title-light"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-        >
-          #OFFICE FIT OUTS #CINEMAS #RESTAURANTS
-        </div>
-      </div>
-    </div> -->
-
     <!-- DIVIDER -->
 
     <div class="divider"></div>
 
     <!-- PROCESS -->
-
-    <div class="section process" id="process">
-      <div class="vimeo-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/701198384?background=1&autoplay=1&loop=1&byline=0&title=0"
-          frameborder="0"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
-          allow="autoplay"
-          title="Perfectly Hung London"
-        ></iframe>
+    <div class="section process" data-aos="fade-in" id="process">
+      <div class="post-body" id="animated-thumbnail">
+        <h1>Our Process</h1>
+        <div class="post-body">
+          <div class="lazy-youtube" data-embed="B5896C3hFBc">
+            <div class="play-button"></div>
+          </div>
+        </div>
       </div>
-      <!-- <div class="main-content">
-        <div class="video-title" data-aos="fade-right" data-aos-duration="1000">
-          Our Process
-        </div>
-        <div
-          class="video-secondary-title"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          How we work
-        </div>
-      </div> -->
     </div>
-
-    <!-- DIVIDER -->
-
-    <div class="divider"></div>
 
     <!-- GALLERY -->
 
@@ -664,9 +598,9 @@
 
     <!-- DIVIDER -->
 
-    <!-- <div class="divider"></div> -->
+    <div class="divider"></div>
 
-    <!-- FOOTER -->
+    <!-- CONTACT -->
 
     <footer>
       <div class="footer" id="contact">
@@ -761,21 +695,6 @@
       </div>
     </footer>
 
-    <!-- CONTACT -->
-
-    <!-- <div class="section contact" id="contact">
-      <div class="main-container">
-        <div class="location-title" data-aos="fade-right">London</div>
-        <div class="location-b-title" data-aos="fade-right">Harrow H8 3HD</div>
-        <div class="phone-title" data-aos="fade-right">
-          <a href="tel:07951101683">07951 101683</a>
-        </div>
-        <div class="email-title" data-aos="fade-right">
-          <a href="mailto:hello@perfectlyhung.uk">hello@perfectlyhung.uk</a>
-        </div>
-      </div>
-    </div> -->
-
     <!-- End Body -->
 
     <!-- Begin Scripts -->
@@ -807,6 +726,81 @@
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
       })
+    </script>
+
+    <!-- Lazy Load Youtube -->
+
+    <script>
+      /*<![CDATA[*/
+      registerListener('load', lazyLoad)
+      registerListener('scroll', lazyLoad)
+
+      function lazyLoad() {
+        var lazy = document.getElementsByClassName('lazy')
+        for (var i = 0; i < lazy.length; i++) {
+          if (isInViewport(lazy[i])) {
+            lazy[i].src = lazy[i].getAttribute('data-src')
+          }
+        }
+      }
+
+      function isInViewport(el) {
+        var rect = el.getBoundingClientRect()
+        return (
+          rect.bottom >= 0 &&
+          rect.right >= 0 &&
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.left <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        )
+      }
+
+      function registerListener(event, func) {
+        if (window.addEventListener) {
+          window.addEventListener(event, func)
+        } else {
+          window.attachEvent('on' + event, func)
+        }
+      } /*]]>*/
+    </script>
+    <script>
+      /*<![CDATA[*/
+      ;(function () {
+        var youtube = document.querySelectorAll('.lazy-youtube')
+        for (var i = 0; i < youtube.length; i++) {
+          var source =
+            'https://img.youtube.com/vi/' +
+            youtube[i].dataset.embed +
+            '/sddefault.jpg'
+          var image = new Image()
+          image.setAttribute('class', 'lazy')
+          image.setAttribute('data-src', source)
+          image.setAttribute(
+            'src',
+            'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+          )
+          image.addEventListener(
+            'load',
+            (function () {
+              youtube[i].appendChild(image)
+            })(i)
+          )
+          youtube[i].addEventListener('click', function () {
+            var iframe = document.createElement('iframe')
+            iframe.setAttribute('frameborder', '0')
+            iframe.setAttribute('allowfullscreen', '')
+            iframe.setAttribute(
+              'src',
+              'https://www.youtube.com/embed/' +
+                this.dataset.embed +
+                '?rel=0&showinfo=0&autoplay=1'
+            )
+            this.innerHTML = ''
+            this.appendChild(iframe)
+          })
+        }
+      })() /*]]>*/
     </script>
 
     <!-- End Scripts -->
