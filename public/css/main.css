@@ -13,8 +13,8 @@ Site Design By Will Blackburn. coda4.com
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  /* scroll-behavior: smooth;
+  scroll-snap-type: y proximity; */
 }
 
 :root {
@@ -458,14 +458,13 @@ ul.social-icons {
 .paragraph-title h3 {
   height: 3rem;
   color: var(--textlight);
+  text-decoration: underline double;
   background-color: #2e2e2e;
   padding: 8px;
 }
 
 .paragraph-header {
   color: var(--textlight);
-  font-size: 3.2rem;
-  font-weight: 400;
   max-width: 70%;
   font-family: 'Poppins', sans-serif;
   padding-top: 3rem;
@@ -474,10 +473,13 @@ ul.social-icons {
 .paragraph {
   color: var(--textlight);
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  line-height: 2rem;
   position: relative;
   padding-top: 40px;
+}
+
+.paragraph p {
+  font-weight: 300;
+  opacity: 0.7;
 }
 
 .video-title {
@@ -684,7 +686,7 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.3rem;
     padding-top: 30px;
   }
@@ -789,7 +791,7 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     line-height: 1.3rem;
     padding-top: 30px;
   }
@@ -947,7 +949,7 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.5rem;
     position: relative;
     padding-top: 1.3rem;
@@ -1036,15 +1038,15 @@ ul.social-icons {
   }
 
   .paragraph {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
     position: relative;
     padding-top: 2rem;
   }
 
   .paragraph-header {
-    font-size: 3.2rem;
-    line-height: 3.5rem;
+    font-size: 3rem;
+    line-height: 3rem;
     max-width: 60vw;
     padding-top: 2rem;
   }
@@ -1104,12 +1106,13 @@ ul.social-icons {
 .item {
   width: 50%;
   min-height: 500px;
-  padding: 4.5em;
+  padding: 4.2em;
 }
 
 .item-right {
   width: 50%;
-  padding: 4.5em;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
   min-height: 500px;
 }
 
@@ -1186,14 +1189,14 @@ ul.social-icons {
 .collectionEl {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
 
 .innerEl {
   color: var(--textlight);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
   border-radius: 0.3rem;
-  margin: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 
@@ -1505,7 +1508,10 @@ ul.social-icons {
 
 .flex-wrapper {
   display: flex;
-  height: 100vh;
+  height: 80vh;
+  gap: 1%;
+  margin: 1.5rem;
+  /* border: double 10px #f2efe4; */
 }
 
 .flex-wrapper a {
@@ -1522,43 +1528,20 @@ ul.social-icons {
 
 .flex-wrapper .one {
   background-image: url('../img/bg-residential.webp');
-  background-color: red;
 }
 
 .flex-wrapper .two {
   background-image: url('../img/bg-commercial.webp');
-  background-color: green;
-}
-
-.flex-wrapper .three {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-003.jpg);
-  background-color: steelblue;
-}
-
-.flex-wrapper .four {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-004.jpg);
-  background-color: orange;
-}
-
-.flex-wrapper .five {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-005.jpg);
-  background-color: tomato;
 }
 
 .flex-wrapper a:hover {
-  flex: 3;
+  flex: 2;
 }
 
 .flex-wrapper .overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0 10px;
   position: absolute;
-  top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
   transition: background-color 0.4s;
 }
 
@@ -1573,6 +1556,7 @@ ul.social-icons {
 }
 
 .flex-wrapper .overlay h2 {
+  font-size: 2rem;
   transform: translate3d(0, -60px, 0);
 }
 
@@ -1744,7 +1728,7 @@ input[type='checkbox']:checked ~ .grid {
 -------------------------------------------------------------------------------*/
 
 .footer {
-  background: #1f1d18;
+  /* background: #1f1d18; */
   padding: 30px 0px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
