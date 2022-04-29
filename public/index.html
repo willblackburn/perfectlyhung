@@ -70,7 +70,8 @@
     <!-- Preload -->
 
     <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preload" href="img/bg1.webp" as="image" />
+    <!-- <link rel="preload" href="img/bg1.webp" as="image" /> -->
+    <link rel="prefetch" href="img/bg1.webp" />
     <link rel="preload" href="css/main.css" as="style" />
     <link
       rel="preload"
@@ -131,7 +132,7 @@
 
   <!-- End Head -->
 
-  <!-- Begin Nav -->
+  <!-- BEGIN NAV -->
 
   <body>
     <div class="header">
@@ -175,7 +176,7 @@
         </li>
       </ul>
 
-      <!-- Socials -->
+      <!-- SOCIALS -->
 
       <div class="footer-social-icons">
         <ul class="social-icons">
@@ -266,6 +267,18 @@
           <div class="main-title" data-aos="fade-in" data-aos-duration="1500">
             Perfectly Hung
           </div>
+
+          <!-- DARK MODE TOGGLE -->
+
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+
+          <!-- END DARK MODE TOGGLE -->
+
           <div class="secondary-title">Professional Art Hanging London</div>
         </div>
       </div>
@@ -275,7 +288,7 @@
 
     <!-- <div class="divider"></div> -->
 
-    <!-- About -->
+    <!-- ABOUT -->
 
     <div class="section about" id="aboutus">
       <div class="about-container">
@@ -299,12 +312,6 @@
               result is perfect.
             </p>
             <br />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
-              sit minima, quia nobis expedita repellendus dicta perferendis
-              magni nulla nisi, rerum harum! Placeat, cum magni. Ipsam,
-              deserunt.
-            </p>
           </div>
           <div class="collectionEl">
             <div class="outerEl">
@@ -341,30 +348,6 @@
         ></div>
       </div>
     </div>
-
-    <!-- Client Carousel -->
-    <!-- <div class="client" id="clients">
-      <div class="carousel-client">
-        <div class="slide">
-          <img src="img/slider/slider1.webp" />
-        </div>
-        <div class="slide">
-          <img
-            src="img/slider/slider1.webp"
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="img/slider/slider1.webp"
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="img/slider/slider1.webp"
-          />
-        </div>
-      </div>
-    </div> -->
 
     <!-- SERVICES -->
 
@@ -801,6 +784,35 @@
           })
         }
       })() /*]]>*/
+    </script>
+
+    <!-- Light Dark Toggle Button -->
+
+    <script>
+      const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+      )
+      const currentTheme = localStorage.getItem('theme')
+
+      if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme)
+
+        if (currentTheme === 'dark') {
+          toggleSwitch.checked = true
+        }
+      }
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+          localStorage.setItem('theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light')
+          localStorage.setItem('theme', 'light')
+        }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false)
     </script>
 
     <!-- End Scripts -->

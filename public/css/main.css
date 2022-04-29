@@ -17,24 +17,112 @@ Site Design By Will Blackburn. coda4.com
   scroll-snap-type: y proximity; */
 }
 
+/*-------------------------------------------------------------------------------
+    Light / Dark Mode
+-------------------------------------------------------------------------------*/
+
 :root {
-  --textlight: #f2efe4;
-  --darktheme: #1f1d18;
+  --text-light: #1f1d18;
+  --bg-light: #f2efe4;
+  --text-dark: #f2efe4;
+  --bg-dark: #1f1d18;
   --brandcolor1: #d64121;
   --brandcolor2: #1a5e67;
   --brandcolor3: #f5c654;
 }
 
-/*-------------------------------------------------------------------------------
-    Light / Dark Mode
--------------------------------------------------------------------------------*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: var(--text-light);
+    --bg: var(--bg-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--text-dark);
+    --bg: var(--bg-dark);
+  }
+
+  .footer .row svg {
+    filter: invert(100%);
+  }
+}
+
+[data-theme='dark'] {
+  --text: var(--text-dark);
+  --bg: var(--bg-dark);
+}
+
+[data-theme='light'] {
+  --text: var(--text-light);
+  --bg: var(--bg-light);
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 127px;
+  left: 225px;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  transform: scale(0.6);
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--brandcolor1);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 /*-------------------------------------------------------------------------------
     Main
 -------------------------------------------------------------------------------*/
 
 body {
-  background-color: var(--darktheme);
+  background-color: var(--bg);
 }
 
 .section,
@@ -51,12 +139,17 @@ section {
 }
 
 h1 {
-  color: var(--textlight);
+  color: var(--text);
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
+h2 {
+  color: var(--text);
+}
+
 h3 {
+  color: var(--text);
   display: block;
   font-size: 1.5rem;
   font-weight: 400;
@@ -209,7 +302,7 @@ input[type='checkbox'] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: #f2efe4;
+  background-color: var(--text);
 }
 .horizontal {
   transition: all 0.3s;
@@ -414,7 +507,7 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: var(--textlight);
+  color: var(--text);
   position: absolute;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -423,7 +516,7 @@ ul.social-icons {
 }
 
 .main-title-light {
-  color: var(--textlight);
+  color: var(--text);
   position: absolute;
   bottom: 10rem;
   font-family: 'Poppins', sans-serif;
@@ -434,7 +527,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: var(--textlight);
+  color: var(--text);
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
@@ -449,21 +542,21 @@ ul.social-icons {
 
 .paragraph-title h3 {
   height: 3rem;
-  color: var(--textlight);
+  color: var(--text);
   text-decoration: underline double;
   text-underline-offset: 0.5rem;
   padding: 4px;
 }
 
 .paragraph-header {
-  color: var(--textlight);
+  color: var(--text);
   max-width: 70%;
   font-family: 'Poppins', sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
-  color: var(--textlight);
+  color: var(--text);
   font-family: 'Poppins', sans-serif;
   position: relative;
   padding-top: 40px;
@@ -850,10 +943,11 @@ ul.social-icons {
   display: flex;
   justify-content: space-between;
   padding-top: 5rem;
+  max-width: 95%;
 }
 
 .innerEl {
-  color: var(--textlight);
+  color: var(--text);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
   border-radius: 0.3rem;
   margin-right: 1rem;
@@ -963,7 +1057,7 @@ ul.social-icons {
 }
 
 .service p {
-  color: var(--textlight);
+  color: var(--text);
   opacity: 0.7;
 }
 
@@ -983,19 +1077,19 @@ ul.social-icons {
 .service1 i,
 .service1 h4,
 .service1 .cta {
-  color: var(--textlight);
+  color: var(--text);
 }
 
 .service2 i,
 .service2 h4,
 .service2 .cta {
-  color: var(--textlight);
+  color: var(--text);
 }
 
 .service3 i,
 .service3 h4,
 .service3 .cta {
-  color: var(--textlight);
+  color: var(--text);
 }
 
 .service .cta span {
@@ -1185,7 +1279,7 @@ ul.social-icons {
   flex: 1;
   text-align: left;
   text-decoration: none;
-  color: var(--textlight);
+  color: var(--text);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1449,7 +1543,7 @@ input[type='checkbox']:checked ~ .grid {
   width: 100%;
   margin: 0% 0%;
   padding: 0.6% 0%;
-  color: var(--textlight);
+  color: var(--text);
   font-size: 0.8em;
 }
 
@@ -1459,12 +1553,12 @@ input[type='checkbox']:checked ~ .grid {
 
 .footer .row a {
   text-decoration: none;
-  color: var(--textlight);
+  color: var(--text);
   transition: 0.5s;
 }
 
 .footer .row a:hover {
-  color: var(--textlight);
+  color: var(--text);
 }
 
 .footer .row ul {
