@@ -64,10 +64,9 @@ Site Design By Will Blackburn. coda4.com
 .theme-switch-wrapper {
   display: flex;
   position: absolute;
-  bottom: 127px;
-  left: 225px;
   align-items: center;
 }
+
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -116,6 +115,54 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+}
+
+/* mobile */
+
+@media (min-width: 480px) {
+  .theme-switch-wrapper {
+    bottom: 78px;
+    left: 125px;
+  }
+  .slider{
+    transform: scale(0.5);
+  }
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+  .theme-switch-wrapper {
+    bottom: 78px;
+    left: 145px;
+  }
+  .slider{
+    transform: scale(0.6);
+  }
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+}
+
+/* Large TV */
+
+@media (min-width: 1400px) {
+  .theme-switch-wrapper {
+    bottom: 127px;
+    left: 225px;
+  }
 }
 
 /*-------------------------------------------------------------------------------
