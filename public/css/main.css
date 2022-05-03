@@ -24,8 +24,10 @@ Site Design By Will Blackburn. coda4.com
 :root {
   --text-light: #1f1d18;
   --bg-light: #f2efe4;
+
   --text-dark: #f2efe4;
   --bg-dark: #1f1d18;
+
   --brandcolor1: #d64121;
   --brandcolor2: #1a5e67;
   --brandcolor3: #f5c654;
@@ -129,7 +131,7 @@ input:checked + .slider:before {
     bottom: 78px;
     left: 125px;
   }
-  .slider{
+  .slider {
     transform: scale(0.5);
   }
 }
@@ -141,7 +143,7 @@ input:checked + .slider:before {
     bottom: 78px;
     left: 145px;
   }
-  .slider{
+  .slider {
     transform: scale(0.6);
   }
 }
