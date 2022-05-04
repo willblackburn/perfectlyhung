@@ -22,11 +22,14 @@ Site Design By Will Blackburn. coda4.com
 -------------------------------------------------------------------------------*/
 
 :root {
-  --text-light: #1f1d18;
-  --bg-light: #f2efe4;
+  --text-light: #000;
+  --bg-light: #fff;
 
-  --text-dark: #f2efe4;
-  --bg-dark: #1f1d18;
+  --text-dark: #fff;
+  --bg-dark: #000;
+
+  --inverted-light: #000;
+  --inverted-dark: #fff;
 
   --brandcolor1: #d64121;
   --brandcolor2: #1a5e67;
@@ -37,6 +40,7 @@ Site Design By Will Blackburn. coda4.com
   :root {
     --text: var(--text-light);
     --bg: var(--bg-light);
+    --inverted: var(--inverted-light);
   }
 }
 
@@ -44,6 +48,7 @@ Site Design By Will Blackburn. coda4.com
   :root {
     --text: var(--text-dark);
     --bg: var(--bg-dark);
+    --inverted: var(--inverted-dark);
   }
 
   .footer .row svg {
@@ -54,11 +59,13 @@ Site Design By Will Blackburn. coda4.com
 [data-theme='dark'] {
   --text: var(--text-dark);
   --bg: var(--bg-dark);
+  --inverted: var(--inverted-dark);
 }
 
 [data-theme='light'] {
   --text: var(--text-light);
   --bg: var(--bg-light);
+  --inverted: var(--inverted-light);
 }
 
 /*slider switch css */
@@ -81,7 +88,7 @@ Site Design By Will Blackburn. coda4.com
 }
 
 .slider {
-  background-color: #ccc;
+  background-color: var(--text);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -165,6 +172,9 @@ input:checked + .slider:before {
     bottom: 127px;
     left: 225px;
   }
+  .slider {
+    transform: scale(0.5);
+  }
 }
 
 /*-------------------------------------------------------------------------------
@@ -190,7 +200,7 @@ section {
 
 h1 {
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-align: center;
 }
 
@@ -294,13 +304,13 @@ a {
   margin-top: 0px;
   transform: translateX(300px);
   transition: transform 200ms ease-in-out;
-  background: linear-gradient(180deg, #1f1d18 0%, #1f1d18 100%);
+  background: linear-gradient(180deg, #000 0%, #000 100%);
   z-index: 998;
 }
 .sidebarMenuInner {
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid rgba(223, 122, 8, 0.9);
 }
 .sidebarMenuInner li {
   list-style: none;
@@ -317,7 +327,7 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 .sidebarMenuInner li a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #f2efe4;
   text-transform: uppercase;
   font-weight: 400;
@@ -559,7 +569,7 @@ ul.social-icons {
   display: flex;
   color: var(--text);
   position: absolute;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   max-width: 420px;
@@ -569,7 +579,7 @@ ul.social-icons {
   color: var(--text);
   position: absolute;
   bottom: 10rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
   max-width: 420px;
   font-size: 7rem;
@@ -579,7 +589,7 @@ ul.social-icons {
 .secondary-title {
   color: var(--text);
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -591,23 +601,22 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  height: 3rem;
   color: var(--text);
-  text-decoration: underline double;
-  text-underline-offset: 0.5rem;
+  border: 1px solid var(--inverted);
+  border-radius: 10px;
   padding: 4px;
 }
 
 .paragraph-header {
   color: var(--text);
   max-width: 70%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   position: relative;
   padding-top: 40px;
 }
@@ -905,7 +914,7 @@ ul.social-icons {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 .item {
@@ -1072,7 +1081,7 @@ ul.social-icons {
 }
 
 .service h4 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 600;
   line-height: 3rem;
   text-transform: uppercase;
@@ -1319,9 +1328,8 @@ ul.social-icons {
 .flex-wrapper {
   display: flex;
   height: 80vh;
-  gap: 1%;
+  gap: 0.5%;
   margin: 1.5rem;
-  /* border: double 10px #f2efe4; */
 }
 
 .flex-wrapper a {
@@ -1329,7 +1337,6 @@ ul.social-icons {
   flex: 1;
   text-align: left;
   text-decoration: none;
-  color: var(--text);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1342,6 +1349,14 @@ ul.social-icons {
 
 .flex-wrapper .two {
   background-image: url('../img/bg-commercial.webp');
+}
+
+.flex-wrapper .three {
+  background-image: url('../img/bg-restaurant.webp');
+}
+
+.flex-wrapper .four {
+  background-image: url('../img/bg-museum.webp');
 }
 
 .flex-wrapper a:hover {
@@ -1366,7 +1381,10 @@ ul.social-icons {
 }
 
 .flex-wrapper .overlay h2 {
-  font-size: 2rem;
+  font-family: 'Mulish', sans-serif;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  font-size: 1.2rem;
   transform: translate3d(0, -60px, 0);
 }
 
@@ -1407,7 +1425,15 @@ ul.social-icons {
   }
 
   .one {
-    margin-bottom: 7rem;
+    margin-bottom: 1rem;
+  }
+
+  .two {
+    margin-bottom: 1rem;
+  }
+
+  .three {
+    margin-bottom: 1rem;
   }
 }
 
@@ -1585,7 +1611,7 @@ input[type='checkbox']:checked ~ .grid {
 
 .footer {
   padding: 30px 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mulish', sans-serif;
   text-align: center;
 }
 
