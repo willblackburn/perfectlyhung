@@ -101,6 +101,7 @@ Site Design By Will Blackburn. coda4.com
 
 .slider:before {
   background-color: #fff;
+  opacity: .5;
   bottom: 4px;
   content: '';
   height: 26px;
@@ -304,7 +305,7 @@ a {
   margin-top: 0px;
   transform: translateX(300px);
   transition: transform 200ms ease-in-out;
-  background: linear-gradient(180deg, #000 0%, #000 100%);
+  background: var(--bg);
   z-index: 998;
 }
 .sidebarMenuInner {
@@ -319,7 +320,7 @@ a {
   font-weight: bold;
   padding: 20px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(59, 59, 59, 0.1);
+  /* border-bottom: 1px solid rgba(59, 59, 59, 0.1); */
 }
 .sidebarMenuInner li span {
   display: block;
@@ -328,7 +329,7 @@ a {
 }
 .sidebarMenuInner li a {
   font-family: 'Mulish', sans-serif;
-  color: #f2efe4;
+  color: var(--text);
   text-transform: uppercase;
   font-weight: 400;
   cursor: pointer;
@@ -410,7 +411,7 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .nav-contactinfo a {
-  color: #f2efe4;
+  color: var(--text);
 }
 
 .nav-contactinfo li {
@@ -462,7 +463,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1.webp');
+  background-image: url('../img/bg1-3.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -473,15 +474,15 @@ ul.social-icons {
 
 @media all and (max-width: 800px) {
   .home {
-    background-image: url('../img/bg1.webp?width=800');
-    background-size: 180%;
+    background-image: url('../img/bg1-3.webp?width=800');
+    background-size: cover;
     background-position: 50% 50%;
   }
 }
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1.webp?width=400');
+    background-image: url('../img/bg1-3.webp?width=400');
   }
 }
 
@@ -567,7 +568,7 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: var(--text);
+  color: #fff;
   position: absolute;
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
@@ -587,7 +588,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: var(--text);
+  color: #fff;
   font-weight: 600;
   font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
@@ -600,7 +601,20 @@ ul.social-icons {
   align-content: center;
 }
 
+.paragraph-title-center {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .paragraph-title h3 {
+  color: var(--text);
+  border: 1px solid var(--inverted);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.paragraph-title-center h3 {
   color: var(--text);
   border: 1px solid var(--inverted);
   border-radius: 10px;
