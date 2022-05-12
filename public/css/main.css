@@ -22,16 +22,16 @@ Site Design By Will Blackburn. coda4.com
 -------------------------------------------------------------------------------*/
 
 :root {
-  --text-light: #000;
-  --bg-light: #fff;
+  --text-light: #211f1f;
+  --bg-light: #f2f3f4;
 
-  --text-dark: #fff;
-  --bg-dark: #000;
+  --text-dark: #fffff0;
+  --bg-dark: #211f1f;
 
-  --inverted-light: #000;
-  --inverted-dark: #fff;
+  --inverted-light: #211f1f;
+  --inverted-dark: #f2f3f4;
 
-  --brandcolor1: #d64121;
+  --brandcolor1: #7e5c4a;
   --brandcolor2: #1a5e67;
   --brandcolor3: #f5c654;
 }
@@ -88,7 +88,7 @@ Site Design By Will Blackburn. coda4.com
 }
 
 .slider {
-  background-color: var(--text);
+  background-color: var(--brandcolor1);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -101,7 +101,7 @@ Site Design By Will Blackburn. coda4.com
 
 .slider:before {
   background-color: #fff;
-  opacity: .5;
+  opacity: 0.9;
   bottom: 4px;
   content: '';
   height: 26px;
@@ -284,12 +284,14 @@ a {
   height: 100%;
   margin-top: 60px;
 }
+
 .mainInner {
   display: table;
   height: 100%;
   width: 100%;
   text-align: center;
 }
+
 .mainInner div {
   display: table-cell;
   vertical-align: middle;
@@ -297,6 +299,7 @@ a {
   font-weight: bold;
   letter-spacing: 1.25px;
 }
+
 #sidebarMenu {
   height: 100%;
   position: fixed;
@@ -308,11 +311,13 @@ a {
   background: var(--bg);
   z-index: 998;
 }
+
 .sidebarMenuInner {
   margin: 0;
   padding: 0;
   border-top: 5px solid rgba(223, 122, 8, 0.9);
 }
+
 .sidebarMenuInner li {
   list-style: none;
   color: rgb(44, 44, 44);
@@ -320,13 +325,14 @@ a {
   font-weight: bold;
   padding: 20px;
   cursor: pointer;
-  /* border-bottom: 1px solid rgba(59, 59, 59, 0.1); */
 }
+
 .sidebarMenuInner li span {
   display: block;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
 }
+
 .sidebarMenuInner li a {
   font-family: 'Mulish', sans-serif;
   color: var(--text);
@@ -335,6 +341,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
 input[type='checkbox']:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
@@ -344,6 +351,7 @@ input[type='checkbox'] {
   box-sizing: border-box;
   display: none;
 }
+
 .sidebarIconToggle {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -357,6 +365,7 @@ input[type='checkbox'] {
   height: 22px;
   width: 22px;
 }
+
 .spinner {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -365,6 +374,7 @@ input[type='checkbox'] {
   width: 100%;
   background-color: var(--text);
 }
+
 .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -372,12 +382,14 @@ input[type='checkbox'] {
   float: left;
   margin-top: 3px;
 }
+
 .diagonal.part-1 {
   position: relative;
   transition: all 0.3s;
   box-sizing: border-box;
   float: left;
 }
+
 .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -385,17 +397,20 @@ input[type='checkbox'] {
   float: left;
   margin-top: 3px;
 }
+
 input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
   opacity: 0;
 }
+
 input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(135deg);
   margin-top: 8px;
 }
+
 input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -449,13 +464,13 @@ ul.social-icons {
 }
 
 .svg-facebook:hover {
-  fill: #3d5b99;
+  fill: var(--brandcolor1);
 }
 .svg-twitter:hover {
-  fill: #80d7ff;
+  fill: var(--brandcolor2);
 }
 .svg-youtube:hover {
-  fill: #ff0606;
+  fill: var(--brandcolor3);
 }
 
 /*-------------------------------------------------------------------------------
@@ -463,7 +478,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-3.webp');
+  background-image: url('../img/bg1-2.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -508,18 +523,19 @@ ul.social-icons {
 }
 
 .residential {
-  /* background: url('../img/bg4.webp'); */
+  background: url('../img/bg-restaurant.webp');
   background-position: 70% 50%;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   opacity: 1;
 }
 
 .commercial {
-  /* background: url('../img/bg5.webp'); */
+  background: url('../img/bg5.webp');
   background-position: 40% 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   opacity: 1;
 }
 
@@ -564,6 +580,16 @@ ul.social-icons {
   width: 80vw;
   padding-bottom: 7vmin;
   z-index: 990;
+}
+
+.midscreen-container {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+}
+
+.mid-container {
+  padding-left: 4rem;
 }
 
 .main-title {
@@ -938,6 +964,8 @@ ul.social-icons {
 }
 
 .item-right {
+  position: sticky;
+  top: 4rem;
   width: 50%;
   min-height: 500px;
 }
@@ -1063,21 +1091,6 @@ ul.social-icons {
 
 .collectionEl .innerEl p + p {
   margin-top: 0;
-}
-
-/*-------------------------------------------------------------------------------
-    Clients
--------------------------------------------------------------------------------*/
-
-.carousel-client {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 1;
-  justify-content: center;
-  align-content: center;
-  align-items: stretch;
-  flex-direction: row;
-  padding: 4em 0em;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1339,118 +1352,6 @@ ul.social-icons {
     RESIDENTIAL COMMERCIAL
 -------------------------------------------------------------------------------*/
 
-.flex-wrapper {
-  display: flex;
-  height: 80vh;
-  gap: 0.5%;
-  margin: 1.5rem;
-}
-
-.flex-wrapper a {
-  position: relative;
-  flex: 1;
-  text-align: left;
-  text-decoration: none;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: flex 0.4s;
-}
-
-.flex-wrapper .one {
-  background-image: url('../img/bg-residential.webp');
-}
-
-.flex-wrapper .two {
-  background-image: url('../img/bg-commercial.webp');
-}
-
-.flex-wrapper .three {
-  background-image: url('../img/bg-restaurant.webp');
-}
-
-.flex-wrapper .four {
-  background-image: url('../img/bg-museum.webp');
-}
-
-.flex-wrapper a:hover {
-  flex: 2;
-}
-
-.flex-wrapper .overlay {
-  padding: 0 10px;
-  position: absolute;
-  bottom: 0;
-  transition: background-color 0.4s;
-}
-
-.flex-wrapper a:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.flex-wrapper .overlay-inner * {
-  visibility: hidden;
-  opacity: 0;
-  transform-style: preserve-3d;
-}
-
-.flex-wrapper .overlay h2 {
-  font-family: 'Mulish', sans-serif;
-  color: var(--text-dark);
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  transform: translate3d(0, -60px, 0);
-}
-
-.flex-wrapper .overlay p {
-  transform: translate3d(0, 60px, 0);
-}
-
-.flex-wrapper a:hover .overlay-inner * {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-  transition: all 0.3s 0.3s;
-}
-
-@media screen and (max-width: 800px) {
-  body {
-    font-size: 1rem;
-    line-height: 1.25;
-  }
-
-  .flex-wrapper {
-    flex-direction: column;
-  }
-
-  .flex-wrapper a:hover {
-    flex: 1;
-  }
-
-  .flex-wrapper a:hover .overlay {
-    background-color: transparent;
-  }
-
-  .flex-wrapper .overlay h2,
-  .flex-wrapper .overlay p {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-  }
-
-  .one {
-    margin-bottom: 1rem;
-  }
-
-  .two {
-    margin-bottom: 1rem;
-  }
-
-  .three {
-    margin-bottom: 1rem;
-  }
-}
-
 /*-------------------------------------------------------------------------------
     PROCESS VIDEO
 -------------------------------------------------------------------------------*/
@@ -1618,6 +1519,10 @@ input[type='checkbox']:checked ~ .grid {
   max-height: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
+
+/*-------------------------------------------------------------------------------
+    Q&A
+-------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------
     CONTACT FOOTER
