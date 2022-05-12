@@ -130,6 +130,13 @@ input:checked + .slider:before {
 /* Small Mobile */
 
 @media (min-width: 320px) {
+  .theme-switch-wrapper {
+    bottom: 78px;
+    left: 125px;
+  }
+  .slider {
+    transform: scale(0.5);
+  }
 }
 
 /* mobile */
