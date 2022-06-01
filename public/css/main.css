@@ -119,13 +119,13 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.slider.round {
+/* .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
-}
+} */
 
 /* Small Mobile */
 
@@ -461,7 +461,7 @@ ul.social-icons {
 }
 
 .social-icons svg {
-  filter: invert(100%);
+  fill: var(--inverted);
   width: 35px;
   height: 35px;
 }
@@ -644,7 +644,6 @@ ul.social-icons {
 .paragraph-title h3 {
   color: var(--text);
   border: 1px solid var(--inverted);
-  border-radius: 10px;
   padding: 4px;
 }
 
@@ -1551,7 +1550,7 @@ input[type='checkbox']:checked ~ .grid {
 }
 
 .footer .row svg {
-  filter: invert(100%);
+  fill: var(--inverted);
 }
 
 .footer .row a {
