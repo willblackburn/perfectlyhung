@@ -23,7 +23,7 @@ Site Design By Will Blackburn. coda4.com
 
 :root {
   --text-light: #211f1f;
-  --bg-light: #f2f3f4;
+  --bg-light: #f2f3f4; font-weight: 400;
 
   --text-dark: #fffff0;
   --bg-dark: #211f1f;
@@ -31,7 +31,7 @@ Site Design By Will Blackburn. coda4.com
   --inverted-light: #211f1f;
   --inverted-dark: #f2f3f4;
 
-  --brandcolor1: #7e5c4a;
+  --brandcolor1: #ba7340;
   --brandcolor2: #1a5e67;
   --brandcolor3: #f5c654;
 }
@@ -112,30 +112,22 @@ Site Design By Will Blackburn. coda4.com
 }
 
 input:checked + .slider {
-  background-color: var(--brandcolor1);
+  background-color: var(--brandcolor2);
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* .slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} */
-
 /* Small Mobile */
 
 @media (min-width: 320px) {
   .theme-switch-wrapper {
-    bottom: 78px;
-    left: 125px;
+    bottom: 68px;
+    left: 120px;
   }
   .slider {
-    transform: scale(0.5);
+    transform: scale(0.4);
   }
 }
 
@@ -147,7 +139,7 @@ input:checked + .slider:before {
     left: 125px;
   }
   .slider {
-    transform: scale(0.5);
+    transform: scale(0.4);
   }
 }
 
@@ -156,28 +148,42 @@ input:checked + .slider:before {
 @media (min-width: 768px) {
   .theme-switch-wrapper {
     bottom: 78px;
-    left: 145px;
+    left: 148px;
   }
   .slider {
-    transform: scale(0.6);
+    transform: scale(0.4);
   }
 }
 
 /* Small Desktop */
 
 @media (min-width: 992px) {
+  .theme-switch-wrapper {
+    bottom: 79px;
+    left: 135px;
+  }
+  .slider {
+    transform: scale(0.5);
+  }
 }
 
 /* Large Laptop */
 
 @media (min-width: 1200px) {
+  .theme-switch-wrapper {
+    bottom: 80px;
+    left: 150px;
+  }
+  .slider {
+    transform: scale(0.5);
+  }
 }
 
 /* Large TV */
 
 @media (min-width: 1400px) {
   .theme-switch-wrapper {
-    bottom: 127px;
+    bottom: 77px;
     left: 225px;
   }
   .slider {
@@ -213,10 +219,12 @@ h1 {
 }
 
 h2 {
+  font-family: 'Mulish', sans-serif;
   color: var(--text);
 }
 
 h3 {
+  font-family: 'Mulish', sans-serif;
   color: var(--text);
   display: block;
   font-size: 1.5rem;
@@ -225,6 +233,7 @@ h3 {
 }
 
 h4 {
+  font-family: 'Mulish', sans-serif;
   color: #5a5a5a;
   padding-top: 0.5rem;
   font-size: 2.7rem;
@@ -303,7 +312,7 @@ a {
   display: table-cell;
   vertical-align: middle;
   font-size: 3em;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 1.25px;
 }
 
@@ -344,7 +353,7 @@ a {
   font-family: 'Mulish', sans-serif;
   color: var(--text);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
 }
@@ -485,7 +494,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-2.webp');
+  background-image: url('../img/bg1-4.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -496,7 +505,7 @@ ul.social-icons {
 
 @media all and (max-width: 800px) {
   .home {
-    background-image: url('../img/bg1-3.webp?width=800');
+    background-image: url('../img/bg1-5.webp?width=800');
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -504,7 +513,7 @@ ul.social-icons {
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1-3.webp?width=400');
+    background-image: url('../img/bg1-5.webp?width=400');
   }
 }
 
@@ -585,7 +594,7 @@ ul.social-icons {
   position: absolute;
   flex-shrink: 2;
   height: 100vh;
-  width: 80vw;
+  width: 100vw;
   padding-bottom: 7vmin;
   z-index: 990;
 }
@@ -602,7 +611,7 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: #fff;
+  color: var(--text-light);
   position: absolute;
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
@@ -622,7 +631,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: #fff;
+  color: var(--text-light);
   font-weight: 600;
   font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
@@ -650,7 +659,6 @@ ul.social-icons {
 .paragraph-title-center h3 {
   color: var(--text);
   border: 1px solid var(--inverted);
-  border-radius: 10px;
   padding: 4px;
 }
 
@@ -685,8 +693,8 @@ ul.social-icons {
     font-size: 2.7rem;
     font-weight: 600;
     max-width: 20px;
-    bottom: 5rem;
-    line-height: 3rem;
+    bottom: 4.5rem;
+    line-height: 2.5rem;
   }
 
   .main-title-light {
@@ -699,7 +707,7 @@ ul.social-icons {
     font-size: 0.8rem;
     line-height: 1.5rem;
     max-width: 90vw;
-    bottom: 3.5rem;
+    bottom: 3rem;
   }
 
   .paragraph-title h3 {
@@ -738,7 +746,7 @@ ul.social-icons {
     font-size: 2.8rem;
     max-width: 20px;
     bottom: 5rem;
-    line-height: 3rem;
+    line-height: 2.5rem;
   }
 
   .main-title-light {
@@ -794,6 +802,7 @@ ul.social-icons {
     font-size: 0.9rem;
     line-height: 1.5rem;
     max-width: 90vw;
+    bottom: 3.5rem;
   }
 
   .main-title-light {
@@ -829,13 +838,13 @@ ul.social-icons {
   }
 
   .main-title {
-    bottom: 7rem;
-    font-size: 4.4rem;
-    line-height: 4.1rem;
+    bottom: 5rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
   .secondary-title {
-    bottom: 6.2rem;
+    bottom: 3.5rem;
   }
 
   .main-title-light {
@@ -918,13 +927,14 @@ ul.social-icons {
   }
 
   .main-title {
-    bottom: 8rem;
+    bottom: 5rem;
     font-size: 4.9rem;
     line-height: 4.2rem;
   }
 
   .secondary-title {
-    bottom: 6.4rem;
+    font-size: 1.1rem;
+    bottom: 3.5rem;
   }
 
   .main-title-light {
@@ -1041,63 +1051,6 @@ ul.social-icons {
     margin-left: 4rem;
     padding-top: 12rem;
   }
-}
-
-/*-------------------------------------------------------------------------------
-    Quotes
--------------------------------------------------------------------------------*/
-
-.collectionEl {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5rem;
-  max-width: 95%;
-}
-
-.innerEl {
-  color: var(--text);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
-  border-radius: 0.3rem;
-  margin-right: 1rem;
-  text-align: center;
-}
-
-.inner-a {
-  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
-  border-radius: 0.3rem;
-  background-color: var(--brandcolor1);
-}
-
-.inner-b {
-  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
-  border-radius: 0.3rem;
-  background-color: var(--brandcolor2);
-}
-
-.inner-c {
-  /* box-shadow: 0 0 2px rgba(247, 24, 24, 0.8); */
-  border-radius: 0.3rem;
-  background-color: var(--brandcolor3);
-}
-
-.collectionEl .outerEl {
-  width: 30vw;
-}
-
-.collectionEl .outerEl {
-  display: flex;
-  justify-content: center;
-}
-
-.collectionEl .innerEl {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.collectionEl .innerEl p + p {
-  margin-top: 0;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1356,8 +1309,158 @@ ul.social-icons {
 }
 
 /*-------------------------------------------------------------------------------
-    RESIDENTIAL COMMERCIAL
+    REVIEWS
 -------------------------------------------------------------------------------*/
+
+.testimonial-heading {
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-heading span {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.testimonial-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.review {
+  font-family: 'Mulish', sans-serif;
+  width: 31.25rem;
+  background-color: var(--bg);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-user strong {
+  color: var(--text);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.name-user span {
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.reviews svg {
+  fill: var(--brandcolor3);
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-comment p {
+  min-height: 100%;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+#loadMore {
+  width: 110px;
+  color: var(--text-light);
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: var(--brandcolor3);
+  transition: 0.3s;
+}
+
+#loadMore:hover {
+  color: var(--brandcolor2);
+  background-color: #fff;
+  border: 1px solid var(--brandcolor2);
+  text-decoration: none;
+}
+
+.noContent {
+  color: var(--text) !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+@media (max-width: 1060px) {
+  .testimonial-box {
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 790px) {
+  .testimonial-box {
+    width: 100%;
+  }
+  .testimonial-heading h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .box-top {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .reviews {
+    margin-top: 10px;
+  }
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #252525;
+}
 
 /*-------------------------------------------------------------------------------
     PROCESS VIDEO
