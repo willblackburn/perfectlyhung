@@ -124,8 +124,8 @@ input:checked + .slider:before {
 
 @media (min-width: 320px) {
   .theme-switch-wrapper {
-    bottom: 68px;
-    left: 120px;
+    bottom: 51px;
+    left: 105px;
   }
   .slider {
     transform: scale(0.4);
@@ -499,8 +499,10 @@ ul.social-icons {
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border: 10px solid var(--bg); */
   min-width: 100vw;
   max-height: 100vh;
+  overflow-y: hidden;
   opacity: 1;
 }
 
@@ -519,10 +521,7 @@ ul.social-icons {
 }
 
 .item-right {
-  /* background: url(img/bg-about.webp) center center no-repeat; */
   background-image: url(../img/bg-about.webp);
-  /* width: 100%;
-  height: auto; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -537,24 +536,6 @@ ul.social-icons {
 }
 
 .process {
-  opacity: 1;
-  /* box-shadow: inset 0px 0px 0px 80px rgb(255, 255, 255); */
-}
-
-.residential {
-  background: url('../img/bg-restaurant.webp');
-  background-position: 70% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 1;
-}
-
-.commercial {
-  background: url('../img/bg5.webp');
-  background-position: 40% 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
   opacity: 1;
 }
 
@@ -602,16 +583,6 @@ ul.social-icons {
   z-index: 990;
 }
 
-.midscreen-container {
-  position: relative;
-  height: 50vh;
-  width: 100vw;
-}
-
-.mid-container {
-  padding-left: 4rem;
-}
-
 .main-title {
   display: flex;
   color: var(--text-light);
@@ -620,17 +591,6 @@ ul.social-icons {
   font-weight: 300;
   text-transform: uppercase;
   max-width: 420px;
-}
-
-.main-title-light {
-  color: var(--text);
-  position: absolute;
-  bottom: 10rem;
-  font-family: 'Mulish', sans-serif;
-  text-transform: uppercase;
-  max-width: 420px;
-  font-size: 7rem;
-  line-height: 5rem;
 }
 
 .secondary-title {
@@ -693,24 +653,19 @@ ul.social-icons {
   }
 
   .main-title {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     font-weight: 600;
     max-width: 20px;
-    bottom: 4.5rem;
+    bottom: 3.5rem;
     line-height: 2.5rem;
   }
 
-  .main-title-light {
-    font-size: 1.8rem;
-    max-width: 20px;
-    bottom: 2rem;
-  }
 
   .secondary-title {
     font-size: 0.8rem;
     line-height: 1.5rem;
     max-width: 90vw;
-    bottom: 3rem;
+    bottom: 2.1rem;
   }
 
   .paragraph-title h3 {
@@ -752,12 +707,6 @@ ul.social-icons {
     line-height: 2.5rem;
   }
 
-  .main-title-light {
-    bottom: 2rem;
-    font-size: 2.8rem;
-    line-height: 5rem;
-  }
-
   .secondary-title {
     font-size: 0.8rem;
     line-height: 1.5rem;
@@ -797,21 +746,11 @@ ul.social-icons {
     line-height: 3rem;
   }
 
-  .main-title-light {
-    font-size: 3.5rem;
-  }
-
   .secondary-title {
     font-size: 0.9rem;
     line-height: 1.5rem;
     max-width: 90vw;
     bottom: 3.5rem;
-  }
-
-  .main-title-light {
-    bottom: 3rem;
-    font-size: 3rem;
-    line-height: 5rem;
   }
 
   .paragraph-title h3 {
@@ -848,12 +787,6 @@ ul.social-icons {
 
   .secondary-title {
     bottom: 3.5rem;
-  }
-
-  .main-title-light {
-    bottom: 3rem;
-    font-size: 3rem;
-    line-height: 5rem;
   }
 
   .paragraph-title h3 {
@@ -895,12 +828,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .main-title-light {
-    bottom: 3rem;
-    font-size: 3.5rem;
-    line-height: 5rem;
-  }
-
   .paragraph-title h3 {
     font-size: 1.1rem;
   }
@@ -938,12 +865,6 @@ ul.social-icons {
   .secondary-title {
     font-size: 1.1rem;
     bottom: 3.5rem;
-  }
-
-  .main-title-light {
-    bottom: 3rem;
-    font-size: 4rem;
-    line-height: 5rem;
   }
 
   .paragraph-title h3 {
@@ -1065,7 +986,8 @@ ul.social-icons {
 .col-text {
   height: 40em;
 }
-.grid-flex {
+
+.services-grid {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
@@ -1087,7 +1009,7 @@ ul.social-icons {
 .col h4 {
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 2.3rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
   color: var(--text);
@@ -1109,9 +1031,9 @@ ul.social-icons {
 }
 
 @media (max-width: 640px) {
-  .grid-flex {
+  .services-grid {
     height: 40em;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .col {
     order: vertical;
@@ -1129,6 +1051,12 @@ ul.social-icons {
     font-size: 1.4rem;
   }
 }
+
+/*-------------------------------------------------------------------------------
+    PROJECT COUNTER
+-------------------------------------------------------------------------------*/
+
+
 
 /*-------------------------------------------------------------------------------
     REVIEWS
