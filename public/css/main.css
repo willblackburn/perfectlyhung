@@ -23,7 +23,8 @@ Site Design By Will Blackburn. coda4.com
 
 :root {
   --text-light: #211f1f;
-  --bg-light: #f2f3f4; font-weight: 400;
+  --bg-light: #f2f3f4;
+  font-weight: 400;
 
   --text-dark: #fffff0;
   --bg-dark: #211f1f;
@@ -517,12 +518,14 @@ ul.social-icons {
   }
 }
 
-.about {
-  /* background: url('../img/bg2-3.webp'); */
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.item-right {
+  /* background: url(img/bg-about.webp) center center no-repeat; */
+  background-image: url(../img/bg-about.webp);
+  /* width: 100%;
+  height: auto; */
   background-size: cover;
-  opacity: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .services {
@@ -963,7 +966,7 @@ ul.social-icons {
 }
 
 /*-------------------------------------------------------------------------------
-    ABOUT
+    ABOUT 
 -------------------------------------------------------------------------------*/
 
 .about-container {
@@ -977,13 +980,11 @@ ul.social-icons {
 .item {
   width: 50%;
   min-height: 500px;
-  padding: 4.2em;
 }
 
 .item-right {
-  position: sticky;
-  top: 4rem;
   width: 50%;
+  height: auto;
   min-height: 500px;
 }
 
@@ -995,7 +996,6 @@ ul.social-icons {
   .item {
     width: 100vw;
     min-height: 30vh;
-    margin-left: 0rem;
   }
 
   .item-right {
@@ -1009,6 +1009,8 @@ ul.social-icons {
 @media (min-width: 320px) {
   .item {
     padding-top: 6rem;
+    padding-bottom: 8rem;
+    padding: 1.5em;
   }
 }
 
@@ -1017,6 +1019,7 @@ ul.social-icons {
 @media (min-width: 480px) {
   .item {
     padding-top: 6rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -1024,7 +1027,8 @@ ul.social-icons {
 
 @media (min-width: 768px) {
   .item {
-    padding-top: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -1040,6 +1044,7 @@ ul.social-icons {
 
 @media (min-width: 1200px) {
   .item {
+    padding: 6em;
     padding-top: 9rem;
   }
 }
@@ -1048,263 +1053,80 @@ ul.social-icons {
 
 @media (min-width: 1400px) {
   .item {
-    margin-left: 4rem;
+    padding: 6em;
     padding-top: 12rem;
   }
 }
 
 /*-------------------------------------------------------------------------------
-    Services
+    Services 
 -------------------------------------------------------------------------------*/
 
-.section-lead {
-  max-width: 600px;
-  margin: 1rem auto 1.5rem;
+.col-text {
+  height: 40em;
 }
-
-.service a {
-  color: #5b7abb;
-  display: block;
-}
-
-.service h4 {
-  font-family: 'Mulish', sans-serif;
-  font-weight: 600;
-  line-height: 3rem;
-  text-transform: uppercase;
-  color: #56ceba;
-}
-
-.services-grid {
+.grid-flex {
   display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  flex-grow: 1;
+  flex-direction: row;
 }
 
-.service {
-  opacity: 0.97;
-  margin: 10px;
-  padding: 30px;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  line-height: 1.2;
-  text-align: center;
-  -webkit-box-flex: 1;
+.col {
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  border: 3px solid rgb(124, 123, 123);
-  border-style: double;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+}
+.col-left {
+  order: -1;
 }
 
-.service p {
+.col-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col h4 {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.col p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.1rem;
   color: var(--text);
   opacity: 0.7;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 180px;
+.Aligner-item {
+  width: 60%;
+}
+.col-image {
+  background-size: cover;
+  background-position: center center;
 }
 
-.icon-container img {
-  width: auto;
-  height: 160px;
-}
-
-.service1 i,
-.service1 h4,
-.service1 .cta {
-  color: var(--text);
-}
-
-.service2 i,
-.service2 h4,
-.service2 .cta {
-  color: var(--text);
-}
-
-.service3 i,
-.service3 h4,
-.service3 .cta {
-  color: var(--text);
-}
-
-.service .cta span {
-  font-size: 0.6rem;
-}
-
-.service > * {
-  flex: 1 1 100%;
-}
-
-.service .cta {
-  align-self: flex-end;
-}
-
-/* Remove ICON IMAGE */
-
-@media all and (max-width: 1000px) {
-  .services-grid {
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+@media (max-width: 640px) {
+  .grid-flex {
+    height: 40em;
     flex-direction: column;
   }
-
-  /* Remove Border on Smaller Devices */
-  @media all and (max-width: 600px) {
-    .service {
-      border: none;
-    }
+  .col {
+    order: vertical;
   }
-
-  .service {
-    padding: 40px;
-    margin: 5px;
+  .col-left {
+    order: 0;
   }
-
-  .icon-container {
-    display: none;
+  .col-text div p {
+    padding: 1em;
   }
-
-  .icon-container img {
-    display: none;
+  .Aligner-item {
+    width: 90%;
   }
-  .service i {
-    margin: 0rem 0;
-  }
-  .services h4 {
-    font-size: 1.3rem;
-  }
-}
-
-/* small mobile */
-
-@media (min-width: 320px) {
-  .services-grid {
-    height: 10%;
-    width: auto;
-    padding-top: 3rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-  }
-
-  .service {
-    font-size: 1rem;
-    line-height: 1;
-    margin: 0rem 0 0 0;
-  }
-
-  .service h4 {
+  .col h4 {
     font-size: 1.4rem;
-    margin: 0 0 0 0;
-  }
-}
-
-/* mobile */
-
-@media (min-width: 568px) {
-  .services-grid {
-    height: 50%;
-    width: auto;
-    padding-top: 5.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .service {
-    font-size: 1.2rem;
-    line-height: 1;
-    padding: 30px;
-    margin: 0.7rem;
-  }
-
-  .service h4 {
-    font-size: 2rem;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 568px) {
-  .icon-container {
-    display: none;
-  }
-}
-
-/* tablet */
-
-@media (min-width: 768px) {
-  .services-grid {
-    height: 60%;
-    width: auto;
-    padding-top: 3rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .service {
-    font-size: 1.2rem;
-    line-height: 1.2;
-    padding: 50px;
-    margin: 30px;
-  }
-
-  .service h4 {
-    font-size: 1.7rem;
-    padding: 20px;
-  }
-}
-
-/* small desktop */
-
-@media (min-width: 992px) {
-  .services-grid {
-    height: 100vh;
-    width: 100vw;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .service {
-    font-size: 1.1rem;
-    line-height: 1.1;
-    padding: 20px;
-    margin: 15px;
-  }
-
-  .service h4 {
-    font-size: 1.5rem;
-    padding: 20px;
-  }
-}
-
-/* large desktop */
-
-@media (min-width: 1400px) {
-  .services-grid {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  .service {
-    margin: 8px;
-    padding: 60px;
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
-
-  .service h4 {
-    font-size: 2rem;
-    line-height: 3rem;
-    margin: 1rem 0 0.6rem;
   }
 }
 
@@ -1593,7 +1415,7 @@ input[type='checkbox']:checked ~ .grid {
   align-items: flex-start;
   align-content: flex-start;
   height: 100%;
-  padding: 80px 25px 0px 25px;
+  padding: 80px 15px 0px 15px;
   overflow: auto;
   z-index: 0;
   text-align: center;
