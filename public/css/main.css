@@ -205,6 +205,7 @@ section {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  /* scroll-behavior: smooth; */
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -276,7 +277,8 @@ a {
   position: absolute;
   top: 15px;
   left: 18px;
-  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  margin-top: 0.5rem;
   max-width: 100%;
   height: auto;
   width: auto\9; /* ie8 */
@@ -499,7 +501,7 @@ ul.social-icons {
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  /* border: 10px solid var(--bg); */
+  border: 10px solid var(--bg);
   min-width: 100vw;
   max-height: 100vh;
   overflow-y: hidden;
@@ -521,14 +523,21 @@ ul.social-icons {
 }
 
 .item-right {
+  border: 10px solid var(--bg);
   background-image: url(../img/bg-about.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
+.item {
+  background-color: #e4e0dd;
+  border: 10px solid var(--bg);
+}
+
 .services {
   /* background: url('../img/bg3.webp'); */
+  /* border: 10px solid var(--bg); */
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -614,33 +623,36 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  color: var(--text);
-  border: 1px solid var(--inverted);
+  font-weight: 600;
+  color: var(--text-light);
+  border: 2px solid var(--text-light);
   padding: 4px;
 }
 
 .paragraph-title-center h3 {
+  font-weight: 600;
   color: var(--text);
-  border: 1px solid var(--inverted);
+  border: 2px solid var(--inverted);
   padding: 4px;
 }
 
 .paragraph-header {
-  color: var(--text);
+  font-weight: 600;
+  color: var(--text-light);
   max-width: 70%;
   font-family: 'Mulish', sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
-  color: var(--text);
+  color: var(--text-light);
   font-family: 'Mulish', sans-serif;
   position: relative;
   padding-top: 40px;
 }
 
 .paragraph p {
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.7;
 }
 
@@ -659,7 +671,6 @@ ul.social-icons {
     bottom: 3.5rem;
     line-height: 2.5rem;
   }
-
 
   .secondary-title {
     font-size: 0.8rem;
@@ -891,7 +902,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .about-container {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -931,7 +942,7 @@ ul.social-icons {
   .item {
     padding-top: 6rem;
     padding-bottom: 8rem;
-    padding: 1.5em;
+    padding: 1.2em;
   }
 }
 
@@ -975,7 +986,7 @@ ul.social-icons {
 @media (min-width: 1400px) {
   .item {
     padding: 6em;
-    padding-top: 12rem;
+    /* padding-top: 12rem; */
   }
 }
 
@@ -1008,7 +1019,8 @@ ul.social-icons {
 
 .col h4 {
   font-family: 'Mulish', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 2.3rem;
   line-height: 2.3rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
@@ -1018,14 +1030,16 @@ ul.social-icons {
 .col p {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
+  line-height: 1.7rem;
   color: var(--text);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .Aligner-item {
   width: 60%;
 }
 .col-image {
+  border: 10px solid var(--bg);
   background-size: cover;
   background-position: center center;
 }
@@ -1055,8 +1069,6 @@ ul.social-icons {
 /*-------------------------------------------------------------------------------
     PROJECT COUNTER
 -------------------------------------------------------------------------------*/
-
-
 
 /*-------------------------------------------------------------------------------
     REVIEWS
