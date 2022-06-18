@@ -596,7 +596,7 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: var(--text);
+  color: var(--text-dark);
   position: absolute;
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
@@ -605,7 +605,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: var(--text);
+  color: var(--text-dark);
   font-weight: 600;
   font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
@@ -1005,9 +1005,9 @@ ul.social-icons {
 }
 
 .col {
-  height: 50vh;
   flex: 1;
 }
+
 .col-left {
   order: -1;
 }
@@ -1031,7 +1031,7 @@ ul.social-icons {
 .col p {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
   color: var(--text);
   opacity: 0.9;
 }
@@ -1063,6 +1063,54 @@ ul.social-icons {
   }
   .col h4 {
     font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile */
+
+@media (min-width: 320px) {
+  .col {
+    height: 70vh;
+  }
+}
+
+/* mobile */
+
+@media (min-width: 480px) {
+  .col {
+    height: 70vh;
+  }
+}
+
+/* tablet */
+
+@media (min-width: 768px) {
+  .col {
+    height: 70vh;
+  }
+}
+
+/* Small Desktop */
+
+@media (min-width: 992px) {
+  .col {
+    height: 50vh;
+  }
+}
+
+/* Large Laptop */
+
+@media (min-width: 1200px) {
+  .col {
+    height: 50vh;
+  }
+}
+
+/* Large TV */
+
+@media (min-width: 1400px) {
+  .col {
+    height: 50vh;
   }
 }
 
