@@ -27,7 +27,7 @@ Site Design By Will Blackburn. coda4.com
   font-weight: 400;
 
   --text-dark: #fffff0;
-  --bg-dark: #211f1f;
+  --bg-dark: #2c2a2a;
 
   --inverted-light: #211f1f;
   --inverted-dark: #f2f3f4;
@@ -205,7 +205,7 @@ section {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -276,7 +276,7 @@ a {
   display: block;
   position: absolute;
   top: 15px;
-  left: 18px;
+  left: 19px;
   margin-left: 0.2rem;
   margin-top: 0.5rem;
   max-width: 100%;
@@ -334,7 +334,7 @@ a {
 .sidebarMenuInner {
   margin: 0;
   padding: 0;
-  border-top: 5px solid rgba(223, 122, 8, 0.9);
+  border-top: 10px solid rgba(223, 122, 8, 0.9);
 }
 
 .sidebarMenuInner li {
@@ -391,7 +391,7 @@ input[type='checkbox'] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: var(--text);
+  background-color: var(--text-light);
 }
 
 .horizontal {
@@ -497,33 +497,33 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-4.webp');
+  background-image: url('../img/bg1-2.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 10px solid var(--bg);
+  border: 15px solid var(--bg);
   min-width: 100vw;
   max-height: 100vh;
   overflow-y: hidden;
   opacity: 1;
 }
 
-@media all and (max-width: 800px) {
+/* @media all and (max-width: 800px) {
   .home {
-    background-image: url('../img/bg1-5.webp?width=800');
+    background-image: url('../img/bg1-3.webp?width=800');
     background-size: cover;
     background-position: 50% 50%;
   }
-}
+} */
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1-5.webp?width=400');
+    background-image: url('../img/bg1-3.webp?width=400');
   }
 }
 
 .item-right {
-  border: 10px solid var(--bg);
+  border: 15px solid var(--bg);
   background-image: url(../img/bg-about.webp);
   background-size: cover;
   background-position: center center;
@@ -538,9 +538,11 @@ ul.social-icons {
 .services {
   /* background: url('../img/bg3.webp'); */
   /* border: 10px solid var(--bg); */
+  /* background-color: #e4e0dd; */
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 15px solid var(--bg);
   opacity: 1;
 }
 
@@ -594,7 +596,7 @@ ul.social-icons {
 
 .main-title {
   display: flex;
-  color: var(--text-light);
+  color: var(--text);
   position: absolute;
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
@@ -603,7 +605,7 @@ ul.social-icons {
 }
 
 .secondary-title {
-  color: var(--text-light);
+  color: var(--text);
   font-weight: 600;
   font-family: 'Mulish', sans-serif;
   text-transform: uppercase;
@@ -653,7 +655,7 @@ ul.social-icons {
 
 .paragraph p {
   font-weight: 400;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* Small Mobile */
@@ -862,7 +864,7 @@ ul.social-icons {
 
 @media (min-width: 1400px) {
   .main-container {
-    margin-left: 8rem;
+    margin-left: 6rem;
     padding-top: 16vmin;
     max-width: 100vw;
   }
@@ -903,6 +905,7 @@ ul.social-icons {
 
 .about-container {
   height: 100%;
+  /* max-height: 100vh; */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -912,6 +915,8 @@ ul.social-icons {
 .item {
   width: 50%;
   min-height: 500px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .item-right {
@@ -940,9 +945,8 @@ ul.social-icons {
 
 @media (min-width: 320px) {
   .item {
-    padding-top: 6rem;
+    padding-top: 1rem;
     padding-bottom: 8rem;
-    padding: 1.2em;
   }
 }
 
@@ -950,7 +954,6 @@ ul.social-icons {
 
 @media (min-width: 480px) {
   .item {
-    padding-top: 6rem;
     padding-bottom: 8rem;
   }
 }
@@ -959,7 +962,6 @@ ul.social-icons {
 
 @media (min-width: 768px) {
   .item {
-    padding-top: 8rem;
     padding-bottom: 8rem;
   }
 }
@@ -968,7 +970,6 @@ ul.social-icons {
 
 @media (min-width: 992px) {
   .item {
-    padding-top: 8rem;
   }
 }
 
@@ -977,7 +978,6 @@ ul.social-icons {
 @media (min-width: 1200px) {
   .item {
     padding: 6em;
-    padding-top: 9rem;
   }
 }
 
@@ -986,7 +986,6 @@ ul.social-icons {
 @media (min-width: 1400px) {
   .item {
     padding: 6em;
-    /* padding-top: 12rem; */
   }
 }
 
@@ -1002,9 +1001,11 @@ ul.social-icons {
   display: flex;
   flex-grow: 1;
   flex-direction: row;
+  /* padding-bottom: 20px; */
 }
 
 .col {
+  height: 50vh;
   flex: 1;
 }
 .col-left {
@@ -1036,10 +1037,9 @@ ul.social-icons {
 }
 
 .Aligner-item {
-  width: 60%;
+  width: 80%;
 }
 .col-image {
-  border: 10px solid var(--bg);
   background-size: cover;
   background-position: center center;
 }
@@ -1070,6 +1070,95 @@ ul.social-icons {
     PROJECT COUNTER
 -------------------------------------------------------------------------------*/
 
+.sectionClass {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  display: flex;
+  width: 100vw;
+}
+
+.fullWidth {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.projectFactsWrap {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#projectFacts .fullWidth {
+  padding: 0;
+}
+
+.projectFactsWrap .animbox {
+  width: 25%;
+  height: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.projectFactsWrap .animbox:nth-child(1) {
+  background: var(--brandcolor1);
+}
+
+.projectFactsWrap .animbox:nth-child(2) {
+  background: var(--brandcolor2);
+}
+
+.projectFactsWrap .animbox:nth-child(3) {
+  background: var(--brandcolor3);
+}
+
+.projectFactsWrap .animbox:nth-child(4) {
+  background: rgb(23, 44, 66);
+}
+
+.projectFactsWrap .animbox p.number {
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.projectFactsWrap .animbox p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Open Sans';
+}
+
+.projectFactsWrap .animbox span {
+  width: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+.counter-svg {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.projectFactsWrap .animbox:hover i,
+.projectFactsWrap .animbox:hover p {
+  color: white;
+}
+
+.projectFactsWrap .animbox:hover span {
+  background: white;
+}
+
+@media (max-width: 786px) {
+  .projectFactsWrap .animbox {
+    flex: 0 0 50%;
+  }
+}
+
 /*-------------------------------------------------------------------------------
     REVIEWS
 -------------------------------------------------------------------------------*/
@@ -1094,7 +1183,7 @@ ul.social-icons {
 
 .testimonial-box-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: baseline;
   flex-wrap: wrap;
   width: 100vw;
@@ -1102,7 +1191,7 @@ ul.social-icons {
 
 .review {
   font-family: 'Mulish', sans-serif;
-  width: 31.25rem;
+  width: 22.25rem;
   background-color: var(--bg);
   padding: 20px;
   margin: 15px;
@@ -1158,7 +1247,7 @@ ul.social-icons {
 
 .client-comment p {
   min-height: 100%;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text);
 }
 
@@ -1174,7 +1263,7 @@ ul.social-icons {
   text-align: center;
   margin: 20px auto;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid transparent;
   background-color: var(--brandcolor3);
   transition: 0.3s;
@@ -1229,9 +1318,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .post-body {
-  max-width: 1200px;
-  margin: 4% auto;
-  padding: 20px;
+  border: 5px solid var(--bg);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -1242,7 +1329,6 @@ ul.social-icons {
   overflow: hidden;
   padding-top: 56.3%;
   cursor: pointer;
-  outline: 8px double #ccc;
 }
 .lazy-youtube img {
   width: 100%;
