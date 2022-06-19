@@ -994,6 +994,7 @@ ul.social-icons {
 
 .service-description {
   height: 40em;
+  box-shadow:inset 0px 0px 0px 15px #f7ecec;
 }
 
 .services-grid {
