@@ -206,6 +206,8 @@ section {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  border-left: 15px solid var(--bg);
+  border-right: 15px solid var(--bg);
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -501,7 +503,7 @@ ul.social-icons {
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 15px solid var(--bg);
+  border: 10px solid var(--bg);
   min-width: 100vw;
   max-height: 100vh;
   overflow-y: hidden;
@@ -522,27 +524,19 @@ ul.social-icons {
   }
 }
 
-.item-right {
-  border: 15px solid var(--bg);
+.about-image {
   background-image: url(../img/bg-about.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.item {
-  background-color: #e4e0dd;
-  border: 10px solid var(--bg);
-}
-
 .services {
-  /* background: url('../img/bg3.webp'); */
-  /* border: 10px solid var(--bg); */
-  /* background-color: #e4e0dd; */
+  background-color: #e4e0dd;
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 15px solid var(--bg);
+  border: 10px solid var(--bg);
   opacity: 1;
 }
 
@@ -639,7 +633,7 @@ ul.social-icons {
 }
 
 .paragraph-header {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-light);
   max-width: 70%;
   font-family: 'Mulish', sans-serif;
@@ -771,8 +765,8 @@ ul.social-icons {
   }
 
   .paragraph-header {
-    font-size: 2.2rem;
-    line-height: 2.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
     max-width: 75vw;
     padding-top: 2.6rem;
   }
@@ -808,7 +802,7 @@ ul.social-icons {
 
   .paragraph-header {
     font-size: 1.8rem;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     max-width: 55vw;
     padding-top: 1.6rem;
   }
@@ -853,8 +847,8 @@ ul.social-icons {
   }
 
   .paragraph-header {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
     max-width: 60vw;
     padding-top: 1.9rem;
   }
@@ -892,7 +886,7 @@ ul.social-icons {
   }
 
   .paragraph-header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3rem;
     max-width: 60vw;
     padding-top: 2rem;
@@ -912,14 +906,19 @@ ul.social-icons {
   font-family: 'Mulish', sans-serif;
 }
 
-.item {
+.about-description {
   width: 50%;
   min-height: 500px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 3.8rem;
+  padding-right: 3.8rem;
 }
 
-.item-right {
+.about-description {
+  background-color: #e4e0dd;
+  /* border: 10px solid var(--bg); */
+}
+
+.about-image {
   width: 50%;
   height: auto;
   min-height: 500px;
@@ -930,12 +929,12 @@ ul.social-icons {
     flex-direction: column;
   }
 
-  .item {
+  .about-description {
     width: 100vw;
     min-height: 30vh;
   }
 
-  .item-right {
+  .about-image {
     width: 100vw;
     min-height: 30vh;
   }
@@ -944,7 +943,7 @@ ul.social-icons {
 /* Small Mobile */
 
 @media (min-width: 320px) {
-  .item {
+  .about-description {
     padding-top: 1rem;
     padding-bottom: 8rem;
   }
@@ -953,7 +952,7 @@ ul.social-icons {
 /* mobile */
 
 @media (min-width: 480px) {
-  .item {
+  .about-description {
     padding-bottom: 8rem;
   }
 }
@@ -961,7 +960,7 @@ ul.social-icons {
 /* tablet */
 
 @media (min-width: 768px) {
-  .item {
+  .about-description {
     padding-bottom: 8rem;
   }
 }
@@ -969,14 +968,14 @@ ul.social-icons {
 /* Small Desktop */
 
 @media (min-width: 992px) {
-  .item {
+  .about-description {
   }
 }
 
 /* Large Laptop */
 
 @media (min-width: 1200px) {
-  .item {
+  .about-description {
     padding: 6em;
   }
 }
@@ -984,7 +983,7 @@ ul.social-icons {
 /* Large TV */
 
 @media (min-width: 1400px) {
-  .item {
+  .about-description {
     padding: 6em;
   }
 }
@@ -993,7 +992,7 @@ ul.social-icons {
     Services 
 -------------------------------------------------------------------------------*/
 
-.col-text {
+.service-description {
   height: 40em;
 }
 
@@ -1004,7 +1003,7 @@ ul.social-icons {
   /* padding-bottom: 20px; */
 }
 
-.col {
+.service-container {
   flex: 1;
 }
 
@@ -1012,34 +1011,34 @@ ul.social-icons {
   order: -1;
 }
 
-.col-text {
+.service-description {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.col h4 {
+.service-container h4 {
   font-family: 'Mulish', sans-serif;
   font-weight: 600;
   font-size: 2.3rem;
   line-height: 2.3rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--text-light);
 }
 
-.col p {
+.service-container p {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
   line-height: 1.5rem;
-  color: var(--text);
+  color: var(--text-light);
   opacity: 0.9;
 }
 
 .Aligner-item {
   width: 80%;
 }
-.col-image {
+.services-image {
   background-size: cover;
   background-position: center center;
 }
@@ -1049,19 +1048,19 @@ ul.social-icons {
     height: 40em;
     flex-direction: column-reverse;
   }
-  .col {
+  .service-container {
     order: vertical;
   }
   .col-left {
     order: 0;
   }
-  .col-text div p {
+  .service-description div p {
     padding: 1em;
   }
   .Aligner-item {
     width: 90%;
   }
-  .col h4 {
+  .service-container h4 {
     font-size: 1.4rem;
   }
 }
@@ -1069,7 +1068,7 @@ ul.social-icons {
 /* Small Mobile */
 
 @media (min-width: 320px) {
-  .col {
+  .service-container {
     height: 70vh;
   }
 }
@@ -1077,7 +1076,7 @@ ul.social-icons {
 /* mobile */
 
 @media (min-width: 480px) {
-  .col {
+  .service-container {
     height: 70vh;
   }
 }
@@ -1085,15 +1084,15 @@ ul.social-icons {
 /* tablet */
 
 @media (min-width: 768px) {
-  .col {
-    height: 70vh;
+  .service-container {
+    height: 50vh;
   }
 }
 
 /* Small Desktop */
 
 @media (min-width: 992px) {
-  .col {
+  .service-container {
     height: 50vh;
   }
 }
@@ -1101,7 +1100,7 @@ ul.social-icons {
 /* Large Laptop */
 
 @media (min-width: 1200px) {
-  .col {
+  .service-container {
     height: 50vh;
   }
 }
@@ -1109,7 +1108,7 @@ ul.social-icons {
 /* Large TV */
 
 @media (min-width: 1400px) {
-  .col {
+  .service-container {
     height: 50vh;
   }
 }
@@ -1311,7 +1310,7 @@ ul.social-icons {
   text-align: center;
   margin: 20px auto;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid transparent;
   background-color: var(--brandcolor3);
   transition: 0.3s;
@@ -1370,7 +1369,8 @@ ul.social-icons {
   font-size: 16px;
   line-height: 1.6;
 }
-/* Lazy Youtube */
+
+
 .lazy-youtube {
   background-color: #414141;
   position: relative;
@@ -1378,12 +1378,14 @@ ul.social-icons {
   padding-top: 56.3%;
   cursor: pointer;
 }
+
 .lazy-youtube img {
   width: 100%;
   top: -16.84%;
   left: 0;
   opacity: 0.7;
 }
+
 .lazy-youtube .play-button {
   width: 60px;
   height: 60px;
@@ -1392,12 +1394,15 @@ ul.social-icons {
   border-radius: 50px;
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
+
 .lazy-youtube .play-button:hover {
   border-color: #ea6d23;
 }
+
 .lazy-youtube .play-button:hover:before {
   border-color: transparent transparent transparent #00cc1b;
 }
+
 .lazy-youtube .play-button:before {
   content: '';
   border-style: solid;
@@ -1406,22 +1411,26 @@ ul.social-icons {
   border-radius: 3px;
   margin-left: 1px;
 }
+
 .lazy-youtube img,
 .lazy-youtube .play-button {
   cursor: pointer;
 }
+
 .lazy-youtube img,
 .lazy-youtube iframe,
 .lazy-youtube .play-button,
 .lazy-youtube .play-button:before {
   position: absolute !important;
 }
+
 .lazy-youtube .play-button,
 .lazy-youtube .play-button:before {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
 .lazy-youtube iframe {
   height: 100%;
   width: 100%;
@@ -1489,7 +1498,7 @@ input[type='checkbox']:checked ~ .grid {
   align-items: flex-start;
   align-content: flex-start;
   height: 100%;
-  padding: 80px 15px 0px 15px;
+  padding: 44px 15px 0px 15px;
   overflow: auto;
   z-index: 0;
   text-align: center;
@@ -1525,10 +1534,6 @@ input[type='checkbox']:checked ~ .grid {
   max-height: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-
-/*-------------------------------------------------------------------------------
-    Q&A
--------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------
     CONTACT FOOTER
