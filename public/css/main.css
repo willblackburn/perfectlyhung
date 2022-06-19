@@ -206,8 +206,8 @@ section {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  border-left: 15px solid var(--bg);
-  border-right: 15px solid var(--bg);
+  border-left: 10px solid var(--bg);
+  border-right: 10px solid var(--bg);
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -994,7 +994,7 @@ ul.social-icons {
 
 .service-description {
   height: 40em;
-  box-shadow:inset 0px 0px 0px 15px #f7ecec;
+  box-shadow: inset 0px 0px 0px 10px #f7ecec;
 }
 
 .services-grid {
@@ -1230,6 +1230,8 @@ ul.social-icons {
 }
 
 .testimonial-box-container {
+  background-color: #e4e0dd;
+  border: 10px solid var(--bg);
   display: flex;
   justify-content: space-around;
   align-items: baseline;
@@ -1366,11 +1368,9 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .post-body {
-  border: 5px solid var(--bg);
   font-size: 16px;
   line-height: 1.6;
 }
-
 
 .lazy-youtube {
   background-color: #414141;
