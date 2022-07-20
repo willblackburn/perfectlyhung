@@ -208,6 +208,8 @@ section {
   scroll-behavior: smooth;
   border-left: 10px solid var(--bg);
   border-right: 10px solid var(--bg);
+  /* padding-left: 5rem;
+  padding-right: 5rem; */
   /* scroll-snap-align: start;
   scroll-snap-stop: always; */
 }
@@ -332,7 +334,7 @@ a {
   height: 100%;
   position: fixed;
   right: 0;
-  width: 300px;
+  width: 250px;
   margin-top: 0px;
   transform: translateX(300px);
   transition: transform 200ms ease-in-out;
@@ -388,7 +390,7 @@ input[type='checkbox'] {
   z-index: 999;
   height: 100%;
   width: 100%;
-  top: 35px;
+  top: 38px;
   right: 30px;
   height: 22px;
   width: 22px;
