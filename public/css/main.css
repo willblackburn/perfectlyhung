@@ -206,15 +206,11 @@ section {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  border-left: 10px solid var(--bg);
-  border-right: 10px solid var(--bg);
-  /* padding-left: 5rem;
-  padding-right: 5rem; */
-  /* scroll-snap-align: start;
-  scroll-snap-stop: always; */
+  /* border-left: 10px solid var(--bg);
+  border-right: 10px solid var(--bg); */
 }
 
-.mask-svg{
+.mask-svg {
   position: absolute;
   width: 150px;
   height: 115px;
@@ -293,8 +289,6 @@ a {
   height: auto;
   width: auto\9; /* ie8 */
 }
-
-
 
 .header {
   display: flex;
@@ -512,7 +506,6 @@ ul.social-icons {
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 10px solid var(--bg);
   min-width: 100vw;
   max-height: 100vh;
   overflow-y: hidden;
@@ -541,11 +534,9 @@ ul.social-icons {
 }
 
 .services {
-  background-color: #e4e0dd;
   background-position: 40% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 10px solid var(--bg);
   opacity: 1;
 }
 
@@ -643,14 +634,14 @@ ul.social-icons {
 
 .paragraph-header {
   font-weight: 500;
-  color: var(--text-light);
+  color: var(--text);
   max-width: 70%;
   font-family: 'Mulish', sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
-  color: var(--text-light);
+  color: var(--text);
   font-family: 'Mulish', sans-serif;
   position: relative;
   padding-top: 40px;
@@ -923,7 +914,7 @@ ul.social-icons {
 }
 
 .about-description {
-  background-color: #e4e0dd;
+  /* background-color: #e4e0dd; */
   /* border: 10px solid var(--bg); */
 }
 
@@ -1003,7 +994,7 @@ ul.social-icons {
 
 .service-description {
   height: 40em;
-  box-shadow: inset 0px 0px 0px 10px #f7ecec;
+  /* box-shadow: inset 0px 0px 0px 10px #f7ecec; */
 }
 
 .services-grid {
@@ -1029,19 +1020,19 @@ ul.social-icons {
 
 .service-container h4 {
   font-family: 'Mulish', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.3rem;
   line-height: 2.3rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: var(--text);
 }
 
 .service-container p {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
   line-height: 1.5rem;
-  color: var(--text-light);
+  color: var(--text);
   opacity: 0.9;
 }
 
@@ -1557,8 +1548,7 @@ input[type='checkbox']:checked ~ .grid {
 
 .footer .row {
   width: 100%;
-  margin: 0% 0%;
-  padding: 0.6% 0%;
+  padding: 0.1%;
   color: var(--text);
   font-size: 0.8em;
 }
