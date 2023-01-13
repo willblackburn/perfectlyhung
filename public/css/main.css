@@ -519,11 +519,11 @@ ul.social-icons {
   }
 } */
 
-@media all and (max-width: 400px) {
+/* @media all and (max-width: 400px) {
   .home {
     background-image: url('../img/bg1-3.webp?width=400');
   }
-}
+} */
 
 .about-image {
   background-image: url(../img/bg-about.webp);
