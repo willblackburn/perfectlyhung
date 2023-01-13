@@ -32,7 +32,7 @@ Site Design By Will Blackburn. coda4.com
   --inverted-dark: #f2f3f4;
 
   --brandcolor1: #ba7340;
-  --brandcolor2: #1a5e67;
+  --brandcolor2: #446782;
   --brandcolor3: #f5c654;
 }
 
@@ -201,12 +201,11 @@ body {
 
 .section,
 section {
-  width: 100vw;
+  max-width: 100vw;
   height: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
-  /* border-left: 10px solid var(--bg);
-  border-right: 10px solid var(--bg); */
+  overflow-x: hidden;
+  /* border: .5vw solid var(--inverted); */
 }
 
 .mask-svg {
@@ -282,7 +281,7 @@ a {
   position: absolute;
   top: 15px;
   left: 19px;
-  margin-left: 0.2rem;
+  margin-left: 0.09rem;
   margin-top: 0.5rem;
   max-width: 100%;
   height: auto;
@@ -502,12 +501,11 @@ ul.social-icons {
 
 .home {
   background-image: url('../img/bg1-6.webp');
-  background-position: 52% 50%;
+  background-position: 22% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 100vw;
+  max-width: 100vw;
   max-height: 100vh;
-  overflow-y: hidden;
   opacity: 1;
 }
 
@@ -519,11 +517,12 @@ ul.social-icons {
   }
 } */
 
-/* @media all and (max-width: 400px) {
+@media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1-3.webp?width=400');
+    /* zoom: .6; */
+    /* background-image: url('../img/bg1-3.webp?width=400'); */
   }
-} */
+}
 
 .about-image {
   background-image: url(../img/bg-about.webp);
@@ -619,8 +618,8 @@ ul.social-icons {
 
 .paragraph-title h3 {
   font-weight: 600;
-  color: var(--text-light);
-  border: 2px solid var(--text-light);
+  color: var(--text);
+  border: 2px solid var(--text);
   padding: 4px;
 }
 
@@ -655,7 +654,7 @@ ul.social-icons {
 
 @media (min-width: 320px) {
   .main-container {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     padding-top: 35vmin;
   }
 
@@ -702,7 +701,7 @@ ul.social-icons {
 
 @media (min-width: 480px) {
   .main-container {
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding-top: 25vmin;
   }
 
@@ -908,13 +907,8 @@ ul.social-icons {
 .about-description {
   width: 50%;
   min-height: 500px;
-  padding-left: 3.8rem;
-  padding-right: 3.8rem;
-}
-
-.about-description {
-  /* background-color: #e4e0dd; */
-  /* border: 10px solid var(--bg); */
+  padding-left: 3.8vw;
+  padding-right: 3.8vw;
 }
 
 .about-image {
@@ -943,7 +937,7 @@ ul.social-icons {
 
 @media (min-width: 320px) {
   .about-description {
-    padding-top: 1rem;
+    padding-top: 5rem;
     padding-bottom: 8rem;
   }
 }
