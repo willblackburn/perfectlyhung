@@ -655,7 +655,7 @@ ul.social-icons {
 
 @media (min-width: 320px) {
   .main-container {
-    margin-left: 3rem;
+    margin-left: 2rem;
     padding-top: 35vmin;
   }
 
@@ -702,7 +702,7 @@ ul.social-icons {
 
 @media (min-width: 480px) {
   .main-container {
-    margin-left: 4.2rem;
+    margin-left: 2rem;
     padding-top: 25vmin;
   }
 
