@@ -281,7 +281,7 @@ a {
   position: absolute;
   top: 15px;
   left: 19px;
-  margin-left: 0.09rem;
+  /* margin-left: 0.02rem; */
   margin-top: 0.5rem;
   max-width: 100%;
   height: auto;
