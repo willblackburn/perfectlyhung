@@ -13,8 +13,7 @@ Site Design By Will Blackburn. coda4.com
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* scroll-behavior: smooth;
-  scroll-snap-type: y proximity; */
+  scroll-behavior: smooth;
 }
 
 /*-------------------------------------------------------------------------------
@@ -502,7 +501,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-2.webp');
+  background-image: url('../img/bg1-6.webp');
   background-position: 52% 50%;
   background-repeat: no-repeat;
   background-size: cover;
