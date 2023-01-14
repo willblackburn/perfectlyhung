@@ -994,13 +994,16 @@ ul.social-icons {
 }
 
 .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   grid-column: auto / span 4;
   border: 2px solid var(--inverted);
 }
 
 .location h5{
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 
