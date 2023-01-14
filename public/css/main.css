@@ -548,13 +548,13 @@ ul.social-icons {
   opacity: 1;
 }
 
-.contact {
-  background: url('../img/bg7.webp');
+/* .contact {
+  background: url('../img/bg.webp');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-}
+} */
 
 @media all and (max-width: 800px) {
   .contact {
