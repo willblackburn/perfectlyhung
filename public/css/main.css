@@ -394,7 +394,7 @@ input[type='checkbox'] {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: var(--text-light);
+  background-color: var(--text);
 }
 
 .horizontal {
@@ -883,8 +883,8 @@ ul.social-icons {
 .about-description {
   width: 50%;
   min-height: 500px;
-  padding-left: 4.8vw;
-  padding-right: 4.8vw;
+  padding-left: 4.7vw;
+  padding-right: 4.7vw;
 }
 
 .about-image {
@@ -1363,6 +1363,11 @@ ul.social-icons {
 /*-------------------------------------------------------------------------------
     PROCESS VIDEO
 -------------------------------------------------------------------------------*/
+
+/* .process {
+  padding-left: 4.7vw;
+  padding-right: 4.7vw;
+} */
 
 .post-body {
   font-size: 16px;
