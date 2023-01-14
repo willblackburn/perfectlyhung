@@ -280,7 +280,7 @@ a {
   display: block;
   position: absolute;
   top: 15px;
-  left: 19px;
+  left: 15px;
   /* margin-left: 0.02rem; */
   margin-top: 0.5rem;
   max-width: 100%;
@@ -616,6 +616,7 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
+  font-size: 1rem;
   font-weight: 400;
   color: var(--text);
   border: 2px solid var(--text);
@@ -672,10 +673,6 @@ ul.social-icons {
     bottom: 2.1rem;
   }
 
-  .paragraph-title h3 {
-    font-size: 0.9rem;
-  }
-
   .paragraph-header {
     font-size: 1.3rem;
     line-height: 2rem;
@@ -718,10 +715,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .paragraph-title h3 {
-    font-size: 1rem;
-  }
-
   .paragraph-header {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -757,10 +750,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .paragraph-title h3 {
-    font-size: 1rem;
-  }
-
   .paragraph-header {
     font-size: 1.6rem;
     line-height: 2rem;
@@ -791,10 +780,6 @@ ul.social-icons {
 
   .secondary-title {
     bottom: 3.5rem;
-  }
-
-  .paragraph-title h3 {
-    font-size: 1rem;
   }
 
   .paragraph-header {
@@ -832,10 +817,6 @@ ul.social-icons {
     bottom: 3.5rem;
   }
 
-  .paragraph-title h3 {
-    font-size: 1.1rem;
-  }
-
   .paragraph {
     font-size: 1.1rem;
     line-height: 1.5rem;
@@ -869,10 +850,6 @@ ul.social-icons {
   .secondary-title {
     font-size: 1.1rem;
     bottom: 3.5rem;
-  }
-
-  .paragraph-title h3 {
-    font-size: 1.2rem;
   }
 
   .paragraph {
