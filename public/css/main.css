@@ -616,14 +616,14 @@ ul.social-icons {
 }
 
 .paragraph-title h3 {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text);
   border: 2px solid var(--text);
   padding: 4px;
 }
 
 .paragraph-title-center h3 {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text);
   border: 2px solid var(--inverted);
   padding: 4px;
@@ -979,6 +979,31 @@ ul.social-icons {
     padding: 6em;
   }
 }
+
+/*-------------------------------------------------------------------------------
+    AREAS 
+-------------------------------------------------------------------------------*/
+
+.coverage {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  justify-content: space-evenly;
+  text-align:center;
+  padding-top: 2rem;
+}
+
+.location {
+  padding: 20px;
+  grid-column: auto / span 4;
+  border: 2px solid var(--inverted);
+}
+
+.location h5{
+  font-size: .9rem;
+}
+
+
 
 /*-------------------------------------------------------------------------------
     Services 
