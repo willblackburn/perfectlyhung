@@ -56,13 +56,13 @@ Site Design By Will Blackburn. coda4.com
   }
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --text: var(--text-dark);
   --bg: var(--bg-dark);
   --inverted: var(--inverted-dark);
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --text: var(--text-light);
   --bg: var(--bg-light);
   --inverted: var(--inverted-light);
@@ -103,7 +103,7 @@ Site Design By Will Blackburn. coda4.com
   background-color: #fff;
   opacity: 0.9;
   bottom: 4px;
-  content: '';
+  content: "";
   height: 26px;
   left: 4px;
   position: absolute;
@@ -224,17 +224,17 @@ section {
 
 h1 {
   color: var(--text);
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   text-align: center;
 }
 
 h2 {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--text);
 }
 
 h3 {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--text);
   display: block;
   font-size: 1.5rem;
@@ -243,7 +243,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #5a5a5a;
   padding-top: 0.5rem;
   font-size: 2.7rem;
@@ -356,7 +356,7 @@ a {
 }
 
 .sidebarMenuInner li a {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--text);
   text-transform: uppercase;
   font-weight: 600;
@@ -364,11 +364,11 @@ a {
   text-decoration: none;
 }
 
-input[type='checkbox']:checked ~ #sidebarMenu {
+input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   transition: all 0.3s;
   box-sizing: border-box;
   display: none;
@@ -420,20 +420,20 @@ input[type='checkbox'] {
   margin-top: 3px;
 }
 
-input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
   opacity: 0;
 }
 
-input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(135deg);
   margin-top: 8px;
 }
 
-input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(-135deg);
@@ -500,7 +500,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url('../img/bg1-5.webp');
+  background-image: url("../img/bg1-5.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -519,7 +519,7 @@ ul.social-icons {
 
 @media all and (max-width: 400px) {
   .home {
-    background-image: url('../img/bg1-4.webp?width=400');
+    background-image: url("../img/bg1-4.webp?width=400");
   }
 }
 
@@ -589,7 +589,7 @@ ul.social-icons {
   display: flex;
   color: var(--text-dark);
   position: absolute;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   max-width: 420px;
@@ -598,7 +598,7 @@ ul.social-icons {
 .secondary-title {
   color: var(--text-dark);
   font-weight: 600;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -634,13 +634,13 @@ ul.social-icons {
   font-weight: 500;
   color: var(--text);
   max-width: 70%;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
   color: var(--text);
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   position: relative;
   padding-top: 40px;
 }
@@ -877,7 +877,7 @@ ul.social-icons {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .about-description {
@@ -966,7 +966,7 @@ ul.social-icons {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
   justify-content: space-evenly;
-  text-align:center;
+  text-align: center;
   padding-top: 2rem;
 }
 
@@ -979,11 +979,9 @@ ul.social-icons {
   border: 2px solid var(--inverted);
 }
 
-.location h5{
-  font-size: .8rem;
+.location h5 {
+  font-size: 0.8rem;
 }
-
-
 
 /*-------------------------------------------------------------------------------
     Services 
@@ -1016,7 +1014,7 @@ ul.social-icons {
 }
 
 .service-container h4 {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: 500;
   font-size: 2.3rem;
   line-height: 2.3rem;
@@ -1026,7 +1024,7 @@ ul.social-icons {
 }
 
 .service-container p {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 1.1rem;
   line-height: 1.5rem;
   color: var(--text);
@@ -1174,7 +1172,7 @@ ul.social-icons {
   font-size: 18px;
   margin: 0;
   padding: 10px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 .projectFactsWrap .animbox span {
@@ -1237,7 +1235,7 @@ ul.social-icons {
 }
 
 .review {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   width: 22.25rem;
   background-color: var(--bg);
   padding: 20px;
@@ -1407,7 +1405,7 @@ ul.social-icons {
 }
 
 .lazy-youtube .play-button:before {
-  content: '';
+  content: "";
   border-style: solid;
   border-width: 10px 0 10px 15px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
@@ -1448,7 +1446,7 @@ ul.social-icons {
 label[for] {
   cursor: pointer;
 }
-input[type='checkbox'] {
+input[type="checkbox"] {
   display: none;
 }
 
@@ -1486,12 +1484,12 @@ input[type='checkbox'] {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-input[type='checkbox']:checked + .lightbox {
+input[type="checkbox"]:checked + .lightbox {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 
-input[type='checkbox']:checked ~ .grid {
+input[type="checkbox"]:checked ~ .grid {
   opacity: 0.125;
 }
 
@@ -1542,15 +1540,13 @@ input[type='checkbox']:checked ~ .grid {
     FAQS
 -------------------------------------------------------------------------------*/
 
-
-
 /*-------------------------------------------------------------------------------
     CONTACT FOOTER
 -------------------------------------------------------------------------------*/
 
 .footer {
   padding: 30px 0px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   text-align: center;
 }
 
