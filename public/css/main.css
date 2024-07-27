@@ -500,13 +500,14 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url("../img/bg1-5.webp");
+  background-image: url("../img/bg1-2.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100vw;
   max-height: 100vh;
   opacity: 1;
+  filter: brightness(90%);
 }
 
 /* @media all and (max-width: 800px) {
@@ -969,6 +970,10 @@ ul.social-icons {
   text-align: center;
   padding-top: 2rem;
 }
+
+/* .location:hover {
+  zoom: 1.15;
+} */
 
 .location {
   display: flex;
