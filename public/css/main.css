@@ -224,17 +224,17 @@ section {
 
 h1 {
   color: var(--text);
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   text-align: center;
 }
 
 h2 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   color: var(--text);
 }
 
 h3 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   color: var(--text);
   display: block;
   font-size: 1.5rem;
@@ -243,7 +243,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   color: #5a5a5a;
   padding-top: 0.5rem;
   font-size: 2.7rem;
@@ -356,7 +356,7 @@ a {
 }
 
 .sidebarMenuInner li a {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   color: var(--text);
   text-transform: uppercase;
   font-weight: 600;
@@ -591,7 +591,7 @@ ul.social-icons {
   display: flex;
   color: var(--text-dark);
   position: absolute;
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   max-width: 420px;
@@ -600,7 +600,7 @@ ul.social-icons {
 .secondary-title {
   color: var(--text-dark);
   font-weight: 600;
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   text-transform: uppercase;
   position: absolute;
   margin-left: 6px;
@@ -636,13 +636,13 @@ ul.social-icons {
   font-weight: 500;
   color: var(--text);
   max-width: 70%;
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   padding-top: 3rem;
 }
 
 .paragraph {
   color: var(--text);
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   position: relative;
   padding-top: 40px;
 }
@@ -879,7 +879,7 @@ ul.social-icons {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
 }
 
 .about-description {
@@ -1020,7 +1020,7 @@ ul.social-icons {
 }
 
 .service-container h4 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 500;
   font-size: 2.3rem;
   line-height: 2.3rem;
@@ -1030,7 +1030,7 @@ ul.social-icons {
 }
 
 .service-container p {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 1.1rem;
   line-height: 1.5rem;
   color: var(--text);
@@ -1241,7 +1241,7 @@ ul.social-icons {
 }
 
 .review {
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   width: 22.25rem;
   background-color: var(--bg);
   padding: 20px;
@@ -1552,7 +1552,7 @@ input[type="checkbox"]:checked ~ .grid {
 
 .footer {
   padding: 30px 0px;
-  font-family: "Mulish", sans-serif;
+  font-family: "Alata", sans-serif;
   text-align: center;
 }
 
