@@ -359,7 +359,7 @@ a {
   font-family: "Alata", sans-serif;
   color: var(--text);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   text-decoration: none;
 }
@@ -550,14 +550,6 @@ ul.social-icons {
   opacity: 1;
 }
 
-/* .contact {
-  background: url('../img/bg.webp');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-} */
-
 @media all and (max-width: 800px) {
   .contact {
     background-size: 150%;
@@ -593,6 +585,7 @@ ul.social-icons {
   position: absolute;
   font-family: "Alata", sans-serif;
   font-weight: 300;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   max-width: 420px;
 }
