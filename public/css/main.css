@@ -499,7 +499,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url("../img/bg1-5.webp");
+  background-image: url("../img/bg1-2.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1111,7 +1111,7 @@ ul.social-icons {
     PROJECT COUNTER
 -------------------------------------------------------------------------------*/
 
-.sectionClass {
+/* .sectionClass {
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
@@ -1198,7 +1198,7 @@ ul.social-icons {
   .projectFactsWrap .animbox {
     flex: 0 0 50%;
   }
-}
+} */
 
 /*-------------------------------------------------------------------------------
     REVIEWS
@@ -1360,10 +1360,10 @@ ul.social-icons {
     PROCESS VIDEO
 -------------------------------------------------------------------------------*/
 
-/* .process {
-  padding-left: 4.7vw;
-  padding-right: 4.7vw;
-} */
+.process {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .post-body {
   font-size: 16px;
