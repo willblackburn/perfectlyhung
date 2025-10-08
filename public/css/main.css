@@ -26,7 +26,7 @@ Site Design By Will Blackburn. coda4.com
   font-weight: 400;
 
   --text-dark: #fffff0;
-  --bg-dark: #2c2a2a;
+  --bg-dark: #1a1919;
 
   --inverted-light: #211f1f;
   --inverted-dark: #f2f3f4;
@@ -499,7 +499,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .home {
-  background-image: url("../img/bg1-2.webp");
+  background-image: url("../img/bg1.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -508,14 +508,6 @@ ul.social-icons {
   opacity: 1;
   filter: brightness(90%);
 }
-
-/* @media all and (max-width: 800px) {
-  .home {
-    background-image: url('../img/bg1-3.webp?width=800');
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-} */
 
 @media all and (max-width: 400px) {
   .home {
@@ -961,7 +953,7 @@ ul.social-icons {
   grid-gap: 20px;
   justify-content: space-evenly;
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 /* .location:hover {
@@ -1454,23 +1446,20 @@ label[for] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  min-height: 100%;
+  z-index: 1000;
   overflow: auto;
   transform: scale(0);
   transition: transform 0.5s ease-out;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .lightbox img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
   max-width: 96%;
   max-height: 96%;
-  transform: translate(-50%, -50%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
