@@ -17,7 +17,7 @@ Site Design By Will Blackburn. coda4.com
 }
 
 /*-------------------------------------------------------------------------------
-    Light / Dark Mode
+    Variables / Light / Dark Mode
 -------------------------------------------------------------------------------*/
 
 :root {
@@ -30,6 +30,16 @@ Site Design By Will Blackburn. coda4.com
   --brandcolor1: #ba7340;
   --brandcolor2: #446782;
   --brandcolor3: #f5c654;
+
+  --font-clamp-p: clamp(1rem, 1.5vw, 1.5rem);
+  --font-clamp-p2: clamp(0.85rem, 1.5vw, 1rem);
+  --font-clamp-nav: clamp(0.9rem, 1.5vw, 1.8rem);
+  --font-clamp-h1: clamp(2.8rem, 5vw, 6rem);
+  --font-clamp-h2: clamp(1.45rem, 2.6vw, 3.2rem);
+  --font-clamp-h3: clamp(1.15rem, 1.5vw, 1.85rem);
+  --font-clamp-h4: clamp(0.9rem, 2vw, 1.25rem);
+  --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
+  --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
 }
 
 @media (prefers-color-scheme: light) {
@@ -158,10 +168,6 @@ h4 {
   color: var(--text);
 }
 
-h1 {
-  text-align: center;
-}
-
 h3 {
   display: block;
   font-size: 1.5rem;
@@ -210,7 +216,7 @@ a {
   right: 0;
   width: 100%;
   height: clamp(4rem, 3rem + 2.5vw, 7rem);
-  padding: 0 1rem;
+  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
   z-index: 1001;
   background-color: transparent;
   transition: background-color 0.3s ease;
@@ -237,31 +243,6 @@ a {
 .logo img {
   width: clamp(3rem, 1rem + 3.5vw, 5rem);
   height: auto;
-}
-
-/* Responsive padding */
-@media (min-width: 768px) {
-  .header {
-    padding: 0 4.2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    padding: 0 4.5rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .header {
-    padding: 0 6rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .header {
-    padding: 0 8rem;
-  }
 }
 
 .main {
@@ -502,32 +483,29 @@ ul.social-icons {
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  position: absolute;
-  flex-shrink: 2;
+  justify-content: flex-end;
+  align-items: flex-start;
   height: 100vh;
-  width: 100vw;
-  padding-bottom: 7vmin;
+  width: 100%;
+  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem) 10vh;
   z-index: 990;
 }
 
 .main-title {
-  display: flex;
   color: var(--text-dark);
-  position: absolute;
-  font-family: "DM Sans", sans-serif;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   max-width: 26.25rem;
+  line-height: 1rem;
 }
 
 .secondary-title {
   color: var(--text-dark);
   font-weight: 600;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   text-transform: uppercase;
-  position: absolute;
+  margin-top: 0.5rem;
   margin-left: 0.375rem;
 }
 
@@ -560,16 +538,20 @@ ul.social-icons {
 .paragraph-header {
   font-weight: 500;
   color: var(--text);
-  max-width: 70%;
+  max-width: clamp(60%, 70% - 2vw, 80vw);
   font-family: "DM Sans", sans-serif;
-  padding-top: 3rem;
+  font-size: clamp(1.4rem, 1rem + 0.7vw, 2.5rem);
+  line-height: clamp(2rem, 1.5rem + 0.8vw, 3rem);
+  padding-top: clamp(1.8rem, 1rem + 1.5vw, 3rem);
 }
 
 .paragraph {
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   position: relative;
-  padding-top: 2.5rem;
+  font-size: clamp(1rem, 0.9rem + 0.2vw, 1.1rem);
+  line-height: clamp(1.3rem, 1.2rem + 0.3vw, 1.6rem);
+  padding-top: clamp(1.875rem, 1.5rem + 0.5vw, 2.5rem);
 }
 
 .paragraph p {
@@ -577,130 +559,17 @@ ul.social-icons {
   opacity: 1;
 }
 
-/* Mobile default */
-.main-container {
-  margin-left: 1rem;
-  padding-top: 30vmin;
-}
-
+/* Hero titles - fluid responsive sizing */
 .main-title {
-  font-size: 2.6rem;
+  font-size: clamp(2.6rem, 2rem + 2vw, 4.9rem);
   font-weight: 600;
-  max-width: 1.25rem;
-  bottom: 4rem;
-  line-height: 2.5rem;
+  line-height: 1.15;
 }
 
 .secondary-title {
-  font-size: 0.8rem;
-  line-height: 1.5rem;
+  font-size: clamp(0.8rem, 0.7rem + 0.3vw, 1.1rem);
+  line-height: 1.5;
   max-width: 90vw;
-  bottom: 2.5rem;
-}
-
-.paragraph-header {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  max-width: 80vw;
-  padding-top: 1.8rem;
-}
-
-.paragraph {
-  font-size: 1rem;
-  line-height: 1.3rem;
-  padding-top: 1.875rem;
-}
-
-.quote-section {
-  display: none;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-  .main-container {
-    margin-left: 4.2rem;
-    padding-top: 15vmin;
-  }
-
-  .main-title {
-    font-size: 3.2rem;
-    bottom: 5rem;
-    line-height: 3rem;
-  }
-
-  .secondary-title {
-    font-size: 0.9rem;
-    bottom: 3.5rem;
-  }
-
-  .paragraph-header {
-    font-size: 1.6rem;
-    max-width: 75vw;
-    padding-top: 2.6rem;
-  }
-
-  .paragraph {
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-  }
-
-  .quote-section {
-    display: block;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .main-container {
-    margin-left: 4.5rem;
-    padding-top: 12vmin;
-  }
-
-  .main-title {
-    font-size: 3.2rem;
-    line-height: 3.1rem;
-  }
-
-  .secondary-title {
-    font-size: 1rem;
-  }
-
-  .paragraph-header {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    max-width: 60vw;
-    padding-top: 2rem;
-  }
-
-  .paragraph {
-    line-height: 1.6rem;
-    padding-top: 1.5rem;
-  }
-}
-
-/* Large screens */
-@media (min-width: 1400px) {
-  .main-container {
-    margin-left: 6rem;
-  }
-
-  .main-title {
-    font-size: 4.9rem;
-    line-height: 4.2rem;
-  }
-
-  .secondary-title {
-    font-size: 1.1rem;
-  }
-
-  .paragraph-header {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  .paragraph {
-    padding-top: 2rem;
-  }
 }
 
 /*-------------------------------------------------------------------------------
@@ -1113,6 +982,10 @@ ul.social-icons {
     Gallery
 -------------------------------------------------------------------------------*/
 
+.gallery input[type="checkbox"] {
+  display: none;
+}
+
 label[for] {
   cursor: pointer;
 }
@@ -1123,7 +996,7 @@ label[for] {
 }
 
 .lightbox {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -1131,10 +1004,11 @@ label[for] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1010;
   overflow: auto;
-  transform: scale(0);
-  transition: transform 0.5s ease-out;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   background-color: rgba(0, 0, 0, 0.9);
 }
 .lightbox img {
@@ -1151,7 +1025,7 @@ label[for] {
   font-weight: 300;
   color: #fff;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1011;
   line-height: 1;
   transition: color 0.3s ease;
 }
@@ -1161,6 +1035,8 @@ label[for] {
 }
 
 input[type="checkbox"]:checked + .lightbox {
+  display: flex;
+  opacity: 1;
   transform: scale(1);
 }
 

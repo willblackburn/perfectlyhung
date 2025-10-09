@@ -51,13 +51,10 @@
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="prefetch" href="img/bg1-2.webp" />
     <link rel="prefetch" href="img/bg1-3.webp" />
-    <link rel="preload" href="css/main.css" as="style" />
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" />
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script" />
 
-    <!-- main css -->
-
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- main css will be loaded via Vite module -->
 
     <!-- Font Awesome -->
     <link
@@ -239,8 +236,8 @@
     <div class="section home" id="home">
       <div class="fullscreen-container">
         <div class="main-container">
-          <div class="main-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</div>
-          <div class="secondary-title">Professional Mounting and Installation</div>
+          <h1 class="main-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</h1>
+          <p class="secondary-title">Professional Mounting and Installation</p>
         </div>
       </div>
     </div>
@@ -1358,5 +1355,8 @@
     </script>
 
     <!-- End Scripts -->
+
+    <!-- Vite Entry Point -->
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>
