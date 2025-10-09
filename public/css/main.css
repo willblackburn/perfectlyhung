@@ -24,7 +24,7 @@ Site Design By Will Blackburn. coda4.com
   --text-light: #211f1f;
   --bg-light: #f2f3f4;
   --text-dark: #fffff0;
-  --bg-dark: #1a1919;
+  --bg-dark: #000000;
   --inverted-light: #211f1f;
   --inverted-dark: #f2f3f4;
   --brandcolor1: #ba7340;
@@ -226,13 +226,18 @@ a {
   background-color: var(--bg);
 }
 
+/* Mobile - add top spacing and increase height */
+@media (max-width: 800px) {
+  .header {
+    height: clamp(5rem, 4rem + 2.5vw, 8rem);
+  }
+}
+
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
   height: 100%;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
 }
 
 .logo a {
@@ -324,8 +329,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1.75rem;
-  height: 1.5rem;
+  width: clamp(1.25rem, 0.8rem + 0.8vw, 1.75rem);
+  height: clamp(1rem, 0.7rem + 0.6vw, 1.5rem);
   cursor: pointer;
   z-index: 1000;
   position: relative;
@@ -334,7 +339,7 @@ a {
 .hamburger-line {
   display: block;
   width: 100%;
-  height: 0.1875rem;
+  height: clamp(0.125rem, 0.1rem + 0.05vw, 0.1875rem);
   background-color: var(--text);
   transition: all 0.3s ease;
   transform-origin: center;
@@ -343,7 +348,7 @@ a {
 
 /* Hamburger animation when menu is open */
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(1) {
-  transform: translateY(0.625rem) rotate(45deg);
+  transform: translateY(clamp(0.4rem, 0.3rem + 0.25vw, 0.625rem)) rotate(45deg);
 }
 
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(2) {
@@ -351,7 +356,7 @@ a {
 }
 
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(3) {
-  transform: translateY(-0.625rem) rotate(-45deg);
+  transform: translateY(clamp(-0.4rem, -0.3rem - 0.25vw, -0.625rem)) rotate(-45deg);
 }
 
 .nav-contactinfo {
@@ -487,26 +492,31 @@ ul.social-icons {
   align-items: flex-start;
   height: 100vh;
   width: 100%;
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem) 10vh;
+  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem) 5vh;
   z-index: 990;
 }
 
 .main-title {
   color: var(--text-dark);
-  font-weight: 300;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(2.6rem, 2rem + 2vw, 4.9rem);
+  font-weight: 600;
   letter-spacing: 0.1rem;
+  line-height: 6vh;
   text-transform: uppercase;
   max-width: 26.25rem;
-  line-height: 1rem;
 }
 
 .secondary-title {
   color: var(--text-dark);
-  font-weight: 600;
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.5;
   text-transform: uppercase;
-  margin-top: 0.5rem;
-  margin-left: 0.375rem;
+  padding-top: 0.1rem;
+  letter-spacing: 0.1rem;
+  max-width: 90vw;
 }
 
 .paragraph-title {
@@ -522,17 +532,41 @@ ul.social-icons {
 
 .paragraph-title h3 {
   font-size: 1rem;
-  font-weight: 400;
-  color: var(--text);
-  border: 0.125rem solid var(--text);
-  padding: 0.25rem;
+  font-weight: 600;
+  color: var(--brandcolor3);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  padding-left: 0;
+  position: relative;
+}
+
+.paragraph-title h3::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 3rem;
+  height: 0.15rem;
+  background-color: var(--brandcolor3);
 }
 
 .paragraph-title-center h3 {
-  font-weight: 400;
-  color: var(--text);
-  border: 0.125rem solid var(--inverted);
-  padding: 0.25rem;
+  font-weight: 600;
+  color: var(--brandcolor3);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  position: relative;
+}
+
+.paragraph-title-center h3::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 0.15rem;
+  background-color: var(--brandcolor3);
 }
 
 .paragraph-header {
@@ -559,47 +593,35 @@ ul.social-icons {
   opacity: 1;
 }
 
-/* Hero titles - fluid responsive sizing */
-.main-title {
-  font-size: clamp(2.6rem, 2rem + 2vw, 4.9rem);
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-.secondary-title {
-  font-size: clamp(0.8rem, 0.7rem + 0.3vw, 1.1rem);
-  line-height: 1.5;
-  max-width: 90vw;
-}
-
 /*-------------------------------------------------------------------------------
     ABOUT 
 -------------------------------------------------------------------------------*/
 
 .about-container {
-  height: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  min-height: 100vh;
   font-family: "DM Sans", sans-serif;
 }
 
 .about-description {
   width: 50%;
-  min-height: 31.25rem;
-  padding-left: 4.7vw;
-  padding-right: 4.7vw;
+  padding: clamp(5rem, 4rem + 2vw, 8rem) clamp(1rem, -0.5rem + 3.5vw, 8rem);
+}
+
+/* Center about text content vertically on larger screens */
+@media (min-width: 1024px) {
+  .about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .about-image {
   width: 50%;
-  height: auto;
   min-height: 31.25rem;
-}
-
-.about-description {
-  padding-top: 5rem;
-  padding-bottom: 8rem;
 }
 
 /* Mobile - stack vertically */
@@ -608,24 +630,16 @@ ul.social-icons {
     flex-direction: column;
   }
 
-  .about-description,
-  .about-image {
-    width: 100vw;
-    min-height: 30vh;
-  }
-}
-
-/* Desktop - full height sections */
-@media (min-width: 1024px) {
-  .section.about,
-  .about-container,
-  .about-description,
-  .about-image {
-    min-height: 100vh;
-  }
-
   .about-description {
-    padding: 6em;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+    padding-right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  }
+
+  .about-image {
+    width: 100%;
+    min-height: 30vh;
   }
 }
 
@@ -646,13 +660,77 @@ ul.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1rem 1.25rem;
   grid-column: auto / span 4;
-  border: 0.125rem solid var(--inverted);
+  background-color: rgba(128, 128, 128, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.location::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.25rem;
+  background-color: var(--brandcolor3);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.location:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.location:hover::before {
+  transform: scaleY(1);
 }
 
 .location h5 {
   font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.view-all-locations {
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+.view-all-link {
+  display: inline-block;
+  color: var(--text);
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+
+.view-all-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--brandcolor3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: var(--brandcolor3);
+}
+
+.view-all-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /*-------------------------------------------------------------------------------
@@ -707,6 +785,8 @@ ul.social-icons {
 .services-image {
   background-size: cover;
   background-position: center center;
+  margin: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 640px) {
@@ -902,8 +982,8 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .process {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding-right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
 }
 
 .post-body {
@@ -1050,7 +1130,7 @@ input[type="checkbox"]:checked ~ .grid {
   align-items: flex-start;
   align-content: flex-start;
   height: 100%;
-  padding: 2.75rem 0.9375rem 0 0.9375rem;
+  padding: 2.75rem clamp(1rem, -0.5rem + 3.5vw, 8rem) 0;
   overflow: auto;
   z-index: 0;
   text-align: center;
@@ -1091,6 +1171,95 @@ input[type="checkbox"]:checked ~ .grid {
     FAQS
 -------------------------------------------------------------------------------*/
 
+.faq {
+  background-color: var(--bg);
+  padding: clamp(4rem, 3rem + 2vw, 6rem) 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.faq-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  height: auto;
+  overflow: visible;
+}
+
+.faq-header {
+  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.8rem);
+  font-weight: 600;
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.faq-item {
+  border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+  margin-bottom: 0;
+}
+
+.faq-toggle {
+  display: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--brandcolor3);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer p {
+  color: var(--text);
+  font-size: clamp(0.95rem, 0.9rem + 0.1vw, 1.05rem);
+  line-height: 1.7;
+  opacity: 0.85;
+  padding: 0;
+  margin: 0;
+}
+
+/* When checkbox is checked */
+.faq-toggle:checked + .faq-question .faq-icon {
+  transform: rotate(45deg);
+  color: var(--brandcolor3);
+}
+
+.faq-toggle:checked + .faq-question {
+  color: var(--brandcolor3);
+}
+
+.faq-toggle:checked ~ .faq-answer {
+  max-height: 31.25rem;
+  padding-bottom: 1.5rem;
+}
+
 /*-------------------------------------------------------------------------------
     CONTACT FOOTER
 -------------------------------------------------------------------------------*/
@@ -1099,13 +1268,13 @@ input[type="checkbox"]:checked ~ .grid {
   font-family: "DM Sans", sans-serif;
   background-color: var(--inverted);
   color: var(--bg);
-  padding: 3.75rem 1.25rem 1.25rem;
+  padding: clamp(2.5rem, 2rem + 1.5vw, 3.75rem) clamp(0.9375rem, 0.5rem + 1vw, 1.25rem) clamp(0.9375rem, 0.5rem + 1vw, 1.25rem);
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: clamp(1.875rem, 1.5rem + 1vw, 2.5rem);
   max-width: 87.5rem;
   margin: 0 auto;
   padding-bottom: 2.5rem;
@@ -1113,7 +1282,7 @@ input[type="checkbox"]:checked ~ .grid {
 }
 
 .footer-column h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 1.1rem + 0.4vw, 1.5rem);
   font-weight: 600;
   margin-bottom: 0.9375rem;
   color: var(--bg);
@@ -1121,7 +1290,7 @@ input[type="checkbox"]:checked ~ .grid {
 }
 
 .footer-column h4 {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 0.9rem + 0.2vw, 1.1rem);
   font-weight: 600;
   margin-bottom: 0.9375rem;
   color: var(--bg);
@@ -1165,7 +1334,7 @@ input[type="checkbox"]:checked ~ .grid {
 .footer-links a:hover {
   opacity: 1;
   color: var(--brandcolor3);
-  transform: translateX(0.3125rem);
+  transform: translateX(clamp(0.1875rem, 0.15rem + 0.1vw, 0.3125rem));
 }
 
 .contact-label {
@@ -1220,36 +1389,4 @@ input[type="checkbox"]:checked ~ .grid {
   font-size: 0.9rem;
   opacity: 0.75;
   margin: 0;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.875rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .footer {
-    padding: 2.5rem 0.9375rem 0.9375rem;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2.1875rem;
-  }
-
-  .footer-column h3 {
-    font-size: 1.3rem;
-  }
-
-  .footer-column h4 {
-    font-size: 1rem;
-  }
-
-  .footer-links a:hover {
-    transform: translateX(0.1875rem);
-  }
 }
