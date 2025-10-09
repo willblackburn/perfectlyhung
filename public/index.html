@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" /> -->
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Preload -->
 
@@ -73,27 +73,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Whatsapp Script -->
-    <script async src="whatsapp.js"></script>
-    <script>
-      var wa_btnSetting = {
-        btnColor: "#424242",
-        ctaText: "",
-        cornerRadius: 40,
-        marginBottom: 25,
-        marginLeft: 20,
-        marginRight: 20,
-        btnPosition: "right",
-        whatsAppNumber: "447951101683",
-        welcomeMessage: "Hi there i have a question regarding Perfectly Hung",
-        zIndex: 999999,
-        btnColorScheme: "light",
-      };
-      window.onload = () => {
-        _waEmbed(wa_btnSetting);
-      };
-    </script>
 
     <!-- JQuery -->
 
@@ -147,19 +126,22 @@
   <!-- BEGIN NAV -->
 
   <body>
-    <div class="header">
-      <ul>
-        <li class="logo animate__animated animate__fadein">
-          <a href="#home"><img src="./img/perfectlyhung-logo.png" alt="Perfectly Hung - Professional Art Installation" /></a>
-        </li>
-      </ul>
-    </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-      <div class="spinner diagonal part-1"></div>
-      <div class="spinner horizontal"></div>
-      <div class="spinner diagonal part-2"></div>
-    </label>
+
+    <!-- Navigation -->
+    <header class="header">
+      <div class="logo">
+        <a href="#home">
+          <img src="./img/perfectlyhung-logo.png" alt="Perfectly Hung - Professional Art Installation" />
+        </a>
+      </div>
+
+      <label for="openSidebarMenu" class="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </label>
+    </header>
     <div id="sidebarMenu">
       <ul class="sidebarMenuInner">
         <li><span></span></li>
@@ -233,6 +215,20 @@
           </li>
         </ul>
       </div>
+
+      <!-- THEME TOGGLE -->
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
+          <input type="checkbox" id="checkbox" />
+          <div class="theme-icon-box">
+            <svg class="bulb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+              <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"></path>
+            </svg>
+          </div>
+        </label>
+      </div>
     </div>
 
     <!-- HOME -->
@@ -244,19 +240,6 @@
       <div class="fullscreen-container">
         <div class="main-container">
           <div class="main-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</div>
-
-          <!-- DARK MODE TOGGLE -->
-          <div class="toggle-container">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-              </label>
-            </div>
-          </div>
-
-          <!-- END DARK MODE TOGGLE -->
-
           <div class="secondary-title">Professional Mounting and Installation</div>
         </div>
       </div>
@@ -280,8 +263,7 @@
             </p>
             <br />
             <p>
-              For all inquiries, please feel free to contact us via the WhatsApp icon located at the bottom right of the screen, or find our contact details at
-              the bottom of this page or by clicking
+              For all inquiries, please find our contact details at the bottom of this page or by clicking
               <a href="#contact"><b>here</b></a>
             </p>
             <br />
@@ -413,7 +395,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -454,7 +436,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -495,7 +477,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -533,7 +515,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -571,7 +553,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -612,7 +594,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -653,7 +635,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -694,7 +676,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -735,7 +717,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -773,7 +755,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -814,7 +796,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -855,7 +837,7 @@
         <div class="box-top">
           <div class="profile">
             <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" />
+              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
             </div>
 
             <div class="name-user">
@@ -909,149 +891,167 @@
     <div class="section gallery" id="gallery">
       <input type="checkbox" id="pic-28" />
       <label for="pic-28" class="lightbox"
-        ><label for="pic-28" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-028.webp" alt="Picture Hanging in London, UK"
+        ><label for="pic-28" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-028.webp" alt="Picture Hanging in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-27" />
       <label for="pic-27" class="lightbox"
-        ><label for="pic-27" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-027.webp" alt="Picture and Mirror Hanging in London, UK"
+        ><label for="pic-27" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-027.webp" alt="Picture and Mirror Hanging in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-26" />
       <label for="pic-26" class="lightbox"
-        ><label for="pic-26" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-026.webp" alt="Handyman In London"
+        ><label for="pic-26" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-026.webp" alt="Handyman In London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-21" />
       <label for="pic-21" class="lightbox"
-        ><label for="pic-21" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-021.webp" alt="Picture Hanging, Handyman in London, UK"
+        ><label for="pic-21" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-021.webp" alt="Picture Hanging, Handyman in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-22" />
       <label for="pic-22" class="lightbox"
-        ><label for="pic-22" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-022.webp" alt="Picture Hanging based in London"
+        ><label for="pic-22" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-022.webp" alt="Picture Hanging based in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-23" />
       <label for="pic-23" class="lightbox"
-        ><label for="pic-23" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-023.webp" alt="Wall Art Hanging in London, UK"
+        ><label for="pic-23" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-023.webp" alt="Wall Art Hanging in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-24" />
       <label for="pic-24" class="lightbox"
-        ><label for="pic-24" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-024.webp" alt="Wall Art Hanging in London, UK"
+        ><label for="pic-24" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-024.webp" alt="Wall Art Hanging in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-25" />
       <label for="pic-25" class="lightbox"
-        ><label for="pic-25" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-025.webp" alt="Picture and TV Hanging in London, UK"
+        ><label for="pic-25" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-025.webp" alt="Picture and TV Hanging in London, UK" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-1" />
       <label for="pic-1" class="lightbox"
         ><label for="pic-1" class="lightbox-close">&times;</label
-        ><img src="./img/gallery/gallery-001.webp" alt="Central London based handyman Shelving Installation"
+        ><img src="./img/gallery/gallery-001.webp" alt="Central London based handyman Shelving Installation" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-2" />
       <label for="pic-2" class="lightbox"
         ><label for="pic-2" class="lightbox-close">&times;</label
-        ><img src="./img/gallery/gallery-002.webp" alt="handyman Art Wall Hanging in London and London"
+        ><img src="./img/gallery/gallery-002.webp" alt="handyman Art Wall Hanging in London and London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-3" />
       <label for="pic-3" class="lightbox"
-        ><label for="pic-3" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-003.webp" alt="handyman based in London - Mirror Hanging"
+        ><label for="pic-3" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-003.webp" alt="handyman based in London - Mirror Hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-4" />
       <label for="pic-4" class="lightbox"
-        ><label for="pic-4" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-004.webp" alt="Handyman Stairwell Picture Hanging in London"
+        ><label for="pic-4" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-004.webp" alt="Handyman Stairwell Picture Hanging in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-5" />
       <label for="pic-5" class="lightbox"
-        ><label for="pic-5" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging in London"
+        ><label for="pic-5" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-6" />
       <label for="pic-6" class="lightbox"
-        ><label for="pic-6" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-006.webp" alt="handyman London wall hanging"
+        ><label for="pic-6" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-006.webp" alt="handyman London wall hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-7" />
       <label for="pic-7" class="lightbox"
-        ><label for="pic-7" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-007.webp" alt="perfectly hung handyman art hanging"
+        ><label for="pic-7" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-007.webp" alt="perfectly hung handyman art hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-8" />
       <label for="pic-8" class="lightbox"
-        ><label for="pic-8" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging"
+        ><label for="pic-8" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-9" />
       <label for="pic-9" class="lightbox"
-        ><label for="pic-9" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-009.webp" alt="Bedroom art hanging in London"
+        ><label for="pic-9" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-009.webp" alt="Bedroom art hanging in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-10" />
       <label for="pic-10" class="lightbox"
-        ><label for="pic-10" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-010.webp" alt="kitchen wall hanging"
+        ><label for="pic-10" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-010.webp" alt="kitchen wall hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-11" />
       <label for="pic-11" class="lightbox"
-        ><label for="pic-11" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging Kensington"
+        ><label for="pic-11" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging Kensington" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-12" />
       <label for="pic-12" class="lightbox"
-        ><label for="pic-12" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel"
+        ><label for="pic-12" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-13" />
       <label for="pic-13" class="lightbox"
-        ><label for="pic-13" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-013.webp" alt="Living Room Art Hanging"
+        ><label for="pic-13" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-013.webp" alt="Living Room Art Hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-14" />
       <label for="pic-14" class="lightbox"
-        ><label for="pic-14" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-014.webp" alt="Living Room Shelf Hanging"
+        ><label for="pic-14" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-014.webp" alt="Living Room Shelf Hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-15" />
       <label for="pic-15" class="lightbox"
-        ><label for="pic-15" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-015.webp" alt="Living Room Mirror Hanging in London"
+        ><label for="pic-15" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-015.webp" alt="Living Room Mirror Hanging in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-16" />
       <label for="pic-16" class="lightbox"
-        ><label for="pic-16" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-016.webp" alt="Living Room Mirror Hanging"
+        ><label for="pic-16" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-016.webp" alt="Living Room Mirror Hanging" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-17" />
       <label for="pic-17" class="lightbox"
-        ><label for="pic-17" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-017.webp" alt="Picture Hanging in London"
+        ><label for="pic-17" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-017.webp" alt="Picture Hanging in London" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-18" />
       <label for="pic-18" class="lightbox"
-        ><label for="pic-18" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-018.webp" alt="Hanging a picture"
+        ><label for="pic-18" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-018.webp" alt="Hanging a picture" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-19" />
       <label for="pic-19" class="lightbox"
-        ><label for="pic-19" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-019.webp" alt="Handyman hanging a mirror"
+        ><label for="pic-19" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-019.webp" alt="Handyman hanging a mirror" loading="lazy"
       /></label>
       <input type="checkbox" id="pic-20" />
       <label for="pic-20" class="lightbox"
-        ><label for="pic-20" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-020.webp" alt="TV handyman in London"
+        ><label for="pic-20" class="lightbox-close">&times;</label><img src="./img/gallery/gallery-020.webp" alt="TV handyman in London" loading="lazy"
       /></label>
       <div class="gallery-container" data-aos="fade-in">
         <div class="grid">
           <!-- Loop all pictures and print the actual images-->
-          <label for="pic-28" class="grid-item"><img src="./img/gallery/gallery-028.webp" alt="Picture Hanging in London, UK" /></label>
-          <label for="pic-27" class="grid-item"><img src="./img/gallery/gallery-027.webp" alt="Picture and Mirror Hanging in London, UK" /></label>
-          <label for="pic-26" class="grid-item"><img src="./img/gallery/gallery-026.webp" alt="Handyman In London" /></label>
-          <label for="pic-21" class="grid-item"><img src="./img/gallery/gallery-021.webp" alt="Picture Hanging, Handyman in London, UK" /></label>
-          <label for="pic-22" class="grid-item"><img src="./img/gallery/gallery-022.webp" alt="Picture Hanging based in London" /></label>
-          <label for="pic-23" class="grid-item"><img src="./img/gallery/gallery-023.webp" alt="Wall Art Hanging in London, UK" /></label>
-          <label for="pic-24" class="grid-item"><img src="./img/gallery/gallery-024.webp" alt="Wall Art Hanging in London, UK" /></label>
-          <label for="pic-25" class="grid-item"><img src="./img/gallery/gallery-025.webp" alt="Picture and TV Hanging in London, UK" /></label>
-          <label for="pic-1" class="grid-item"><img src="./img/gallery/gallery-001.webp" alt="Central London based handyman Shelving Installation" /></label>
-          <label for="pic-2" class="grid-item"><img src="./img/gallery/gallery-002.webp" alt="handyman Art Wall Hanging in London" /></label>
-          <label for="pic-3" class="grid-item"><img src="./img/gallery/gallery-003.webp" alt="handyman based in London Mirror Hanging" /></label>
-          <label for="pic-4" class="grid-item"><img src="./img/gallery/gallery-004.webp" alt="Handyman Stairwell Picture Hanging" /></label>
-          <label for="pic-5" class="grid-item"><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging" /></label>
-          <label for="pic-6" class="grid-item"><img src="./img/gallery/gallery-006.webp" alt="handyman in London wall hanging" /></label>
-          <label for="pic-7" class="grid-item"><img src="./img/gallery/gallery-007.webp" alt="perfectly hung handyman art hanging" /></label>
-          <label for="pic-8" class="grid-item"><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging" /></label>
-          <label for="pic-9" class="grid-item"><img src="./img/gallery/gallery-009.webp" alt="Bedroom art hanging" /></label>
-          <label for="pic-10" class="grid-item"><img src="./img/gallery/gallery-010.webp" alt="kitchen wall hanging" /></label>
-          <label for="pic-11" class="grid-item"><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging" /></label>
-          <label for="pic-12" class="grid-item"><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel" /></label>
-          <label for="pic-13" class="grid-item"><img src="./img/gallery/gallery-013.webp" alt="Living Room Mosaic Art Panel" /></label>
-          <label for="pic-14" class="grid-item"><img src="./img/gallery/gallery-014.webp" alt="Living Room Shelf Hanging" /></label>
-          <label for="pic-15" class="grid-item"><img src="./img/gallery/gallery-015.webp" alt="Living Room Mirror Hanging" /></label>
-          <label for="pic-16" class="grid-item"><img src="./img/gallery/gallery-016.webp" alt="Living Room Mirror Hanging" /></label>
-          <label for="pic-17" class="grid-item"><img src="./img/gallery/gallery-017.webp" alt="Picture Hanging" /></label>
-          <label for="pic-18" class="grid-item"><img src="./img/gallery/gallery-018.webp" alt="Hanging pictures in London" /></label>
-          <label for="pic-19" class="grid-item"><img src="./img/gallery/gallery-019.webp" alt="Handyman hanging a mirror in London" /></label>
-          <label for="pic-20" class="grid-item"><img src="./img/gallery/gallery-020.webp" alt="TV handyman in London" /></label>
+          <label for="pic-28" class="grid-item"><img src="./img/gallery/gallery-028.webp" alt="Picture Hanging in London, UK" loading="lazy" /></label>
+          <label for="pic-27" class="grid-item"
+            ><img src="./img/gallery/gallery-027.webp" alt="Picture and Mirror Hanging in London, UK" loading="lazy"
+          /></label>
+          <label for="pic-26" class="grid-item"><img src="./img/gallery/gallery-026.webp" alt="Handyman In London" loading="lazy" /></label>
+          <label for="pic-21" class="grid-item"
+            ><img src="./img/gallery/gallery-021.webp" alt="Picture Hanging, Handyman in London, UK" loading="lazy"
+          /></label>
+          <label for="pic-22" class="grid-item"><img src="./img/gallery/gallery-022.webp" alt="Picture Hanging based in London" loading="lazy" /></label>
+          <label for="pic-23" class="grid-item"><img src="./img/gallery/gallery-023.webp" alt="Wall Art Hanging in London, UK" loading="lazy" /></label>
+          <label for="pic-24" class="grid-item"><img src="./img/gallery/gallery-024.webp" alt="Wall Art Hanging in London, UK" loading="lazy" /></label>
+          <label for="pic-25" class="grid-item"><img src="./img/gallery/gallery-025.webp" alt="Picture and TV Hanging in London, UK" loading="lazy" /></label>
+          <label for="pic-1" class="grid-item"
+            ><img src="./img/gallery/gallery-001.webp" alt="Central London based handyman Shelving Installation" loading="lazy"
+          /></label>
+          <label for="pic-2" class="grid-item"><img src="./img/gallery/gallery-002.webp" alt="handyman Art Wall Hanging in London" loading="lazy" /></label>
+          <label for="pic-3" class="grid-item"><img src="./img/gallery/gallery-003.webp" alt="handyman based in London Mirror Hanging" loading="lazy" /></label>
+          <label for="pic-4" class="grid-item"><img src="./img/gallery/gallery-004.webp" alt="Handyman Stairwell Picture Hanging" loading="lazy" /></label>
+          <label for="pic-5" class="grid-item"><img src="./img/gallery/gallery-005.webp" alt="Tri painting wall hanging" loading="lazy" /></label>
+          <label for="pic-6" class="grid-item"><img src="./img/gallery/gallery-006.webp" alt="handyman in London wall hanging" loading="lazy" /></label>
+          <label for="pic-7" class="grid-item"><img src="./img/gallery/gallery-007.webp" alt="perfectly hung handyman art hanging" loading="lazy" /></label>
+          <label for="pic-8" class="grid-item"><img src="./img/gallery/gallery-008.webp" alt="Stairwell picture Hanging" loading="lazy" /></label>
+          <label for="pic-9" class="grid-item"><img src="./img/gallery/gallery-009.webp" alt="Bedroom art hanging" loading="lazy" /></label>
+          <label for="pic-10" class="grid-item"><img src="./img/gallery/gallery-010.webp" alt="kitchen wall hanging" loading="lazy" /></label>
+          <label for="pic-11" class="grid-item"><img src="./img/gallery/gallery-011.webp" alt="Fireplace art wall hanging" loading="lazy" /></label>
+          <label for="pic-12" class="grid-item"><img src="./img/gallery/gallery-012.webp" alt="Living Room Mosaic Art Panel" loading="lazy" /></label>
+          <label for="pic-13" class="grid-item"><img src="./img/gallery/gallery-013.webp" alt="Living Room Mosaic Art Panel" loading="lazy" /></label>
+          <label for="pic-14" class="grid-item"><img src="./img/gallery/gallery-014.webp" alt="Living Room Shelf Hanging" loading="lazy" /></label>
+          <label for="pic-15" class="grid-item"><img src="./img/gallery/gallery-015.webp" alt="Living Room Mirror Hanging" loading="lazy" /></label>
+          <label for="pic-16" class="grid-item"><img src="./img/gallery/gallery-016.webp" alt="Living Room Mirror Hanging" loading="lazy" /></label>
+          <label for="pic-17" class="grid-item"><img src="./img/gallery/gallery-017.webp" alt="Picture Hanging" loading="lazy" /></label>
+          <label for="pic-18" class="grid-item"><img src="./img/gallery/gallery-018.webp" alt="Hanging pictures in London" loading="lazy" /></label>
+          <label for="pic-19" class="grid-item"><img src="./img/gallery/gallery-019.webp" alt="Handyman hanging a mirror in London" loading="lazy" /></label>
+          <label for="pic-20" class="grid-item"><img src="./img/gallery/gallery-020.webp" alt="TV handyman in London" loading="lazy" /></label>
         </div>
       </div>
     </div>
@@ -1066,67 +1066,103 @@
 
     <footer>
       <div class="footer" id="contact">
-        <div class="row">
-          <a href="https://www.facebook.com/perfectlyhunguk" aria-label="Facebook" target="none" class="social-icon">
-            <svg
-              class="svg-facebook"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
-              image-rendering="optimizeQuality"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              viewBox="0 0 640 640"
-            >
-              <path
-                d="M579.999-.012H60C27-.012-.013 27-.013 60.001V580C-.013 613 27 640.012 60 640.012h519.999c33 0 60.013-27.012 60.013-60.012V60c0-33-27.013-60.012-60.013-60.012zM363.819 173.79h73.147V86.068h-73.147c-56.328 0-102.285 45.945-102.285 102.344v43.843h-58.489V320h58.477v233.932h87.734V320h73.075l14.634-87.745h-87.71v-43.843c0-7.938 6.698-14.634 14.564-14.634v.011z"
-              />
-            </svg>
-          </a>
-          <a href="https://www.youtube.com/channel/UCOpN6W1cyT4selRbt6IMvJQ/videos" aria-label="Youtube" target="none" class="social-icon">
-            <svg
-              class="svg-youtube"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 3333 3333"
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
-              image-rendering="optimizeQuality"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path
-                d="M3021 0H313C141 0 0 141 0 312v2708c0 172 141 312 313 312h2708c172 0 313-141 313-312V312c0-172-141-312-313-312zm-441 1294s-18-129-74-185c-71-74-151-75-187-79-261-19-652-19-652-19h-1s-392 0-652 19c-36 4-116 5-187 79-56 56-74 185-74 185s-19 151-19 302v141c0 151 19 302 19 302s18 129 74 185c71 74 164 72 206 80 149 14 634 19 634 19s392-1 653-19c36-4 116-5 187-79 56-56 74-185 74-185s19-151 19-302v-141c0-151-19-302-19-302zm-1107 615v-524l504 263-504 261z"
-              />
-            </svg>
-          </a>
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-column footer-brand">
+            <h3>Perfectly Hung</h3>
+            <p>Professional picture hanging, TV mounting, and handyman services in London.</p>
+            <p class="footer-location">Based in London, UK</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-column">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Picture Hanging</a></li>
+              <li><a href="#services">Mirror Installation</a></li>
+              <li><a href="#services">TV Mounting</a></li>
+              <li><a href="#services">Curtains & Blinds</a></li>
+              <li><a href="#services">Shelving Installation</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-column footer-contact">
+            <h4>Get In Touch</h4>
+            <ul class="footer-links">
+              <li>
+                <span class="contact-label">Phone:</span>
+                <a href="tel:07951101683">+44 7951 101683</a>
+              </li>
+              <li>
+                <span class="contact-label">Email:</span>
+                <a href="mailto:hello@perfectlydone.uk">hello@perfectlydone.uk</a>
+              </li>
+            </ul>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+              <h4>Follow Us</h4>
+              <div class="social-icons-footer">
+                <a href="https://www.facebook.com/perfectlyhunguk" aria-label="Facebook" target="_blank" rel="noopener">
+                  <svg class="svg-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                      d="M579.999-.012H60C27-.012-.013 27-.013 60.001V580C-.013 613 27 640.012 60 640.012h519.999c33 0 60.013-27.012 60.013-60.012V60c0-33-27.013-60.012-60.013-60.012zM363.819 173.79h73.147V86.068h-73.147c-56.328 0-102.285 45.945-102.285 102.344v43.843h-58.489V320h58.477v233.932h87.734V320h73.075l14.634-87.745h-87.71v-43.843c0-7.938 6.698-14.634 14.564-14.634v.011z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCOpN6W1cyT4selRbt6IMvJQ/videos" aria-label="Youtube" target="_blank" rel="noopener">
+                  <svg class="svg-youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3333 3333">
+                    <path
+                      d="M3021 0H313C141 0 0 141 0 312v2708c0 172 141 312 313 312h2708c172 0 313-141 313-312V312c0-172-141-312-313-312zm-441 1294s-18-129-74-185c-71-74-151-75-187-79-261-19-652-19-652-19h-1s-392 0-652 19c-36 4-116 5-187 79-56 56-74 185-74 185s-19 151-19 302v141c0 151 19 302 19 302s18 129 74 185c71 74 164 72 206 80 149 14 634 19 634 19s392-1 653-19c36-4 116-5 187-79 56-56 74-185 74-185s19-151 19-302v-141c0-151-19-302-19-302zm-1107 615v-524l504 263-504 261z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="row">
-          <ul>
-            <li>
-              <a href="tel:07951101683">Tel : +44 7951 101683</a>
-            </li>
-          </ul>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2027 Perfectly Hung. All rights reserved.</p>
         </div>
-        <div class="row">
-          <ul>
-            <li>
-              <a href="mailto:hello@perfectlydone.uk">hello@perfectlydone.uk</a>
-            </li>
-          </ul>
-        </div>
-        <div class="row">Copyright © 2027 Perfectly Hung</div>
-        <div class="row">London</div>
       </div>
     </footer>
 
     <!-- End Body -->
 
     <!-- Begin Scripts -->
+    <script>
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        const heroSection = document.querySelector(".home");
+
+        if (heroSection) {
+          const heroHeight = heroSection.offsetHeight;
+
+          if (window.scrollY > heroHeight) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        }
+      });
+    </script>
 
     <!-- Animate On Scroll AOS -->
 
@@ -1201,6 +1237,7 @@
           image.setAttribute("class", "lazy");
           image.setAttribute("data-src", source);
           image.setAttribute("src", "data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+          image.setAttribute("alt", "Perfectly Hung process video thumbnail");
           image.addEventListener(
             "load",
             (function () {
