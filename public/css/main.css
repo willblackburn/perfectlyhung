@@ -35,15 +35,15 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-p2: clamp(0.85rem, 1.5vw, 1rem);
   --font-clamp-nav: clamp(0.9rem, 1.5vw, 1.8rem);
   --font-clamp-h1: clamp(2.8rem, 5vw, 6rem);
-  --font-clamp-h2: clamp(1.45rem, 2.6vw, 3.2rem);
-  --font-clamp-h3: clamp(1.15rem, 1.5vw, 1.85rem);
-  --font-clamp-h4: clamp(0.9rem, 2vw, 1.25rem);
+  --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.9rem);
+  --font-clamp-h3: clamp(1.15rem, 1.5vw, 2rem);
+  --font-clamp-h4: clamp(1.2rem, 2vw, 1.8rem);
   --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
   --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
 
   --font-clamp-span: clamp(0.8rem, 3vw, 1.3rem);
 
-  --container-padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  --container-padding: 0 3.2vw;
 }
 
 @media (prefers-color-scheme: light) {
@@ -167,9 +167,12 @@ section {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: "DM Sans", sans-serif;
   color: var(--text);
+  text-transform: uppercase;
 }
 
 h1 {
@@ -178,7 +181,6 @@ h1 {
   font-weight: 800;
   line-height: 6vh;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -190,17 +192,17 @@ h2 {
 
 h3 {
   font-size: var(--font-clamp-h3);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: 0;
-  text-transform: uppercase;
 }
 
 h4 {
-  color: #5a5a5a;
+  font-size: var(--font-clamp-h4);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
   padding-top: 0.5rem;
-  font-size: 2.7rem;
-  text-transform: uppercase;
 }
 
 p {
@@ -215,7 +217,6 @@ p {
   font-size: var(--font-clamp-span);
   font-weight: 600;
   letter-spacing: 0.15rem;
-  padding-left: 0;
   color: var(--brandcolor3);
   text-transform: uppercase;
   position: relative;
@@ -513,7 +514,7 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .paragraph-header {
-  max-width: 85vw;
+  max-width: 77vw;
   padding-top: clamp(1.8rem, 1rem + 1.5vw, 3rem);
 }
 
@@ -581,7 +582,7 @@ ul.social-icons {
 
 .about-description {
   width: 50%;
-  padding: clamp(7rem, 4rem + 2vw, 8rem) clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: clamp(7rem, 4rem + 2vw, 8rem) clamp(1rem, 0rem + 3.5vw, 8rem);
 }
 
 .about-image {
@@ -614,15 +615,15 @@ ul.social-icons {
   .about-description {
     width: 100%;
     min-height: 100vh;
-    padding-left: clamp(1rem, -0.5rem + 3.5vw, 8rem);
-    padding-right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .about-image {
     width: auto;
     min-height: 30vh;
-    margin-left: clamp(1rem, -0.5rem + 3.5vw, 8rem);
-    margin-right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 0.5rem;
   }
 }
@@ -804,13 +805,7 @@ ul.social-icons {
 }
 
 .service-container h4 {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 500;
-  font-size: 2.3rem;
-  line-height: 2.3rem;
   padding-bottom: 1rem;
-  text-transform: uppercase;
-  color: var(--text);
 }
 
 .Aligner-item {
@@ -845,9 +840,6 @@ ul.social-icons {
 
   .Aligner-item {
     width: 90%;
-  }
-  .service-container h4 {
-    font-size: 1.4rem;
   }
 }
 
@@ -896,10 +888,6 @@ ul.social-icons {
 }
 
 .reviews-header {
-  font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
-  font-weight: 600;
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
   text-align: center;
   margin-bottom: clamp(3rem, 2rem + 2vw, 5rem);
   padding-top: 1rem;
@@ -1134,10 +1122,6 @@ ul.social-icons {
     flex: 0 0 auto;
     max-width: 100%;
     width: 100%;
-  }
-
-  .process-header {
-    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
   }
 }
 
