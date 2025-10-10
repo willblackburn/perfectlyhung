@@ -581,7 +581,7 @@ ul.social-icons {
 
 .about-description {
   width: 50%;
-  padding: clamp(5rem, 4rem + 2vw, 8rem) clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: clamp(7rem, 4rem + 2vw, 8rem) clamp(1rem, -0.5rem + 3.5vw, 8rem);
 }
 
 .about-image {
@@ -648,10 +648,6 @@ ul.social-icons {
 }
 
 .areas-header {
-  font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
-  font-weight: 600;
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
   text-align: center;
   margin-bottom: clamp(3rem, 2rem + 2vw, 5rem);
   padding-top: 1rem;
@@ -769,6 +765,19 @@ ul.social-icons {
 /*-------------------------------------------------------------------------------
     Services 
 -------------------------------------------------------------------------------*/
+
+.services-header-container {
+  text-align: center;
+  padding: clamp(4rem, 3rem + 2vw, 6rem) clamp(1rem, -0.5rem + 3.5vw, 8rem) clamp(3rem, 2rem + 2vw, 5rem);
+}
+
+.services-header {
+  padding-top: 1rem;
+}
+
+.service-description .span-heading {
+  margin-bottom: 1rem;
+}
 
 .service-description {
   height: 40em;
@@ -1047,13 +1056,89 @@ ul.social-icons {
 -------------------------------------------------------------------------------*/
 
 .process {
-  padding-left: clamp(1rem, -0.5rem + 3.5vw, 8rem);
-  padding-right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
 }
 
-.post-body {
-  font-size: 1rem;
+@media (min-width: 1024px) {
+  .process {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.process-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(2rem, 1rem + 2vw, 3rem);
+  padding: var(--container-padding);
+  width: 100%;
+}
+
+.process-content {
+  flex: 0.8 1 35rem;
+  max-width: 45rem;
+}
+
+.process-header {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.process-list li {
+  font-size: var(--font-clamp-p);
   line-height: 1.6;
+  color: var(--text);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.process-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brandcolor3);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.process-video {
+  flex: 1.5 1 55rem;
+  max-width: 75rem;
+}
+
+/* Mobile - stack vertically */
+@media (max-width: 800px) {
+  .process-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .process-content {
+    max-width: 100%;
+  }
+
+  .process-video {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .process-header {
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
+  }
 }
 
 .lazy-youtube {
