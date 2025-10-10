@@ -54,31 +54,11 @@
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" />
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script" />
 
-    <!-- main css will be loaded via Vite module -->
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
-      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <!-- Animate On Scroll AOS -->
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- JQuery -->
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V64EED9M6Y"></script>
@@ -120,8 +100,6 @@
 
   <!-- End Head -->
 
-  <!-- BEGIN NAV -->
-
   <body>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
 
@@ -133,17 +111,18 @@
         </a>
       </div>
 
-      <label for="openSidebarMenu" class="hamburger" aria-label="Toggle menu">
+      <label for="openSidebarMenu" class="hamburger" aria-label="Toggle navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </label>
     </header>
-    <div id="sidebarMenu">
+    <nav id="sidebarMenu" aria-label="Main navigation">
       <ul class="sidebarMenuInner">
         <li><span></span></li>
         <li><a href="#aboutus">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#locations">Areas Covered</a></li>
         <li>
           <a href="#reviews">Reviews</a>
         </li>
@@ -166,7 +145,7 @@
         </li>
       </ul>
 
-      <!-- SOCIALS -->
+      <!-- Socials -->
 
       <div class="footer-social-icons">
         <ul class="social-icons">
@@ -213,7 +192,7 @@
         </ul>
       </div>
 
-      <!-- THEME TOGGLE -->
+      <!-- Theme toggle-->
       <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
           <input type="checkbox" id="checkbox" />
@@ -226,23 +205,18 @@
           </div>
         </label>
       </div>
-    </div>
+    </nav>
 
-    <!-- HOME -->
-    <!-- <svg class="mask-svg" width="400" height="180">
-      <rect x="50" y="20" width="150" height="150"></rect>
-    </svg> -->
+    <!-- Hero -->
 
-    <div class="section home" id="home">
-      <div class="fullscreen-container">
-        <div class="main-container">
-          <h1 class="main-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</h1>
-          <p class="secondary-title">Professional Mounting and Installation</p>
-        </div>
+    <div class="section hero" id="home">
+      <div class="hero-container">
+        <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</h1>
+        <p class="hero-subtitle">Professional Mounting and Installation</p>
       </div>
     </div>
 
-    <!-- ABOUT -->
+    <!-- About -->
 
     <div class="section about" id="aboutus">
       <div class="about-container">
@@ -273,52 +247,53 @@
               <a href="#contact"><b>Get in touch for a free quote</b></a> or view our <a href="#gallery"><b>recent projects</b></a
               >.
             </p>
-            <br />
-            <br />
-
-            <!-- Areas -->
-            <div class="paragraph-title" data-aos="fade-right">
-              <h3>London Areas Covered</h3>
-            </div>
-
-            <div class="coverage" data-aos="fade-in">
-              <div class="location">
-                <h5>North West London</h5>
-              </div>
-              <div class="location">
-                <h5>Central London</h5>
-              </div>
-              <div class="location">
-                <h5>West London</h5>
-              </div>
-              <div class="location">
-                <h5>Chelsea & Kensington</h5>
-              </div>
-              <div class="location">
-                <h5>Mayfair</h5>
-              </div>
-              <div class="location">
-                <h5>Hampstead Heath</h5>
-              </div>
-              <div class="location">
-                <h5>Belgravia</h5>
-              </div>
-              <div class="location">
-                <h5>Marylebone</h5>
-              </div>
-              <div class="location">
-                <h5>West Brompton</h5>
-              </div>
-            </div>
-
-            <div class="view-all-locations" data-aos="fade-up">
-              <a href="#locations" class="view-all-link">View All Locations →</a>
-            </div>
-
-            <!-- End Areas -->
           </div>
         </div>
         <div class="about-image" data-aos="fade-left"></div>
+      </div>
+    </div>
+
+    <!-- London Areas -->
+    <div class="section areas-section" id="locations">
+      <div class="areas-container">
+        <div class="paragraph-title-center" data-aos="fade-up">
+          <h3>Service Areas</h3>
+        </div>
+        <h2 class="areas-header" data-aos="fade-up">London Areas We Cover</h2>
+
+        <div class="coverage" data-aos="fade-in">
+          <div class="location">
+            <h5>North West London</h5>
+          </div>
+          <div class="location">
+            <h5>Central London</h5>
+          </div>
+          <div class="location">
+            <h5>West London</h5>
+          </div>
+          <div class="location">
+            <h5>Chelsea & Kensington</h5>
+          </div>
+          <div class="location">
+            <h5>Mayfair</h5>
+          </div>
+          <div class="location">
+            <h5>Hampstead Heath</h5>
+          </div>
+          <div class="location">
+            <h5>Belgravia</h5>
+          </div>
+          <div class="location">
+            <h5>Marylebone</h5>
+          </div>
+          <div class="location">
+            <h5>West Brompton</h5>
+          </div>
+        </div>
+
+        <div class="view-all-locations" data-aos="fade-up">
+          <a href="#locations" class="view-all-link">View All Locations →</a>
+        </div>
       </div>
     </div>
 
@@ -326,7 +301,9 @@
 
     <div class="section services" id="services">
       <div class="services-grid">
-        <div class="service-container services-image" data-aos="fade-right" style="background-image: url(./img/gallery/gallery-006.webp)"></div>
+        <div class="service-container services-image" data-aos="fade-right">
+          <img src="./img/gallery/gallery-006.webp" loading="lazy" alt="Professional picture and mirror hanging service in London" />
+        </div>
         <div class="service-container service-description">
           <div class="Aligner-item" data-aos="fade-left">
             <h4>Pictures & Mirrors</h4>
@@ -339,7 +316,9 @@
       </div>
 
       <div class="services-grid">
-        <div class="service-container services-image" data-aos="fade-left" style="background-image: url(./img/perfectly-hung-curtains-blinds.webp)">&nbsp;</div>
+        <div class="service-container services-image" data-aos="fade-left">
+          <img src="./img/perfectly-hung-curtains-blinds.webp" loading="lazy" alt="Professional curtain and blind installation service in London" />
+        </div>
         <div class="service-container service-description col-left">
           <div class="Aligner-item" data-aos="fade-right">
             <h4>Curtains & Blinds</h4>
@@ -352,7 +331,9 @@
       </div>
 
       <div class="services-grid">
-        <div class="service-container services-image" data-aos="fade-right" style="background-image: url(./img/perfectly-hung-audio-tv.webp)">&nbsp;</div>
+        <div class="service-container services-image" data-aos="fade-right">
+          <img src="./img/perfectly-hung-audio-tv.webp" loading="lazy" alt="Professional TV and audio visual installation service in London" />
+        </div>
         <div class="service-container service-description">
           <div class="Aligner-item" data-aos="fade-left">
             <h4>TV & Audio Visual</h4>
@@ -365,7 +346,9 @@
       </div>
 
       <div class="services-grid">
-        <div class="service-container services-image" data-aos="fade-left" style="background-image: url(./img/bg-residential.webp)">&nbsp;</div>
+        <div class="service-container services-image" data-aos="fade-left">
+          <img src="./img/bg-residential.webp" loading="lazy" alt="Professional handyman services for residential properties in London" />
+        </div>
         <div class="service-container service-description col-left">
           <div class="Aligner-item" data-aos="fade-right">
             <h4>Residential</h4>
@@ -378,7 +361,9 @@
       </div>
 
       <div class="services-grid">
-        <div class="service-container services-image" data-aos="fade-right" style="background-image: url(./img/bg-commercial.webp)">&nbsp;</div>
+        <div class="service-container services-image" data-aos="fade-right">
+          <img src="./img/bg-commercial.webp" loading="lazy" alt="Professional handyman services for commercial properties in London" />
+        </div>
         <div class="service-container service-description">
           <div class="Aligner-item" data-aos="fade-left">
             <h4>Commercial</h4>
@@ -391,500 +376,148 @@
       </div>
     </div>
 
-    <!-- REVIEWS -->
+    <!-- Reviews -->
 
-    <div class="testimonial-heading" id="reviews">
-      <div class="paragraph-title-center">
-        <h3>Our Reviews</h3>
-      </div>
-    </div>
+    <div class="section reviews-section" id="reviews">
+      <div class="reviews-container">
+        <div class="paragraph-title-center" data-aos="fade-up">
+          <h3>Customer Reviews</h3>
+        </div>
+        <h2 class="reviews-header" data-aos="fade-up">What Our London Customers Say</h2>
 
-    <div class="testimonial-box-container">
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London UK" loading="lazy" />
+        <div class="reviews-grid">
+          <!-- Review Card -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Stephen did a great job with professional TV mounting in my London home. He helped mount pictures on the wall with laser precision. He has
+                extensive professional equipment and helped me make informed decisions. I highly recommend Perfectly Hung for TV installation and will
+                definitely use their services again."
+              </p>
             </div>
-
-            <div class="name-user">
+            <div class="review-author">
               <strong>Sean J.</strong>
-              <span>TV Installation</span>
+              <span>TV Wall Mounting, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Stephen did a great job mounting the TV and also helped me mount some pics on the wall. He has alot of tools and helped me on making good
-            decisions. I'd recommend Perfectly Hung and will be using again”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" loading="lazy" />
+          <!-- Review Card 2 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Perfectly Hung arrived on time and suggested the optimal viewing position for my flat-screen TV installation. Professional TV mounting service
+                with cable management - they expertly hid all the cables. Excellent picture hanging service in London. I will definitely use Perfectly Hung
+                again for all home installation tasks."
+              </p>
             </div>
-
-            <div class="name-user">
+            <div class="review-author">
               <strong>Edmundo B.</strong>
-              <span>TV Installation</span>
+              <span>TV Installation & Cable Management, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Arrived on time and suggested the best position for my flat-screen TV and installed it professionally even hiding the ugly cables. I will use them
-            again for all tasks in my house.”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
+          <!-- Review Card 3 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Stephen from Perfectly Hung was extremely knowledgeable about picture hanging techniques in London. Very precise with measurements using laser
+                levels and incredibly helpful throughout the entire art installation process. Highly recommend this professional picture hanging service."
+              </p>
             </div>
-
-            <div class="name-user">
-              <strong>Jam K</strong>
-              <span>Picture Hanging </span>
+            <div class="review-author">
+              <strong>Jam K.</strong>
+              <span>Picture Hanging Service, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>“Stephen from Perfectly Hung was very knowledgeable, precise and helpful. Highly recommend. ”</p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London" loading="lazy" />
+          <!-- Review Card 4 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Very professional mirror hanging service in London. Perfectly Hung got the job done perfectly with precision and care. Absolutely love my
+                beautifully mounted mirror. Expert mirror installation service I highly recommend. Thank you!"
+              </p>
             </div>
-
-            <div class="name-user">
+            <div class="review-author">
               <strong>Bijal P.</strong>
-              <span>Mirror Hanging</span>
+              <span>Mirror Installation, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>“Very professional and got the job done perfectly! Love my mounted mirror. Thank you!”</p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
+          <!-- Review Card 5 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "I tried mounting my TV myself but couldn't drill through the brick wall. Stephen from Perfectly Hung did a spotless job efficiently with
+                professional TV mounting equipment. He has an extensive range of specialized tools that could handle different wall types and installation tasks
+                in London. Excellent service!"
+              </p>
             </div>
-
-            <div class="name-user">
-              <strong>Nicky C</strong>
-              <span>TV Mounting</span>
+            <div class="review-author">
+              <strong>Nicky C.</strong>
+              <span>TV Mounting on Brick Wall, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “I tried to mount the TV by myself but in vain as I couldn't drill through the brick wall. Stephen did a spotless job efficiently and has loads of
-            equipment that could manage different tasks.”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung, London, UK" loading="lazy" />
+          <!-- Review Card 6 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Perfectly Hung provided an outstanding professional picture hanging service in London. Very detail-oriented with laser-level precision. They
+                brought an extensive collection of professional equipment including spare fixings for last-minute adjustments. Excellent art installation
+                service!"
+              </p>
             </div>
-
-            <div class="name-user">
-              <strong>Tracy W</strong>
-              <span>Picture Hanging</span>
+            <div class="review-author">
+              <strong>Tracy W.</strong>
+              <span>Picture Hanging & Art Installation, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Perfectly Hung was very professional and detail oriented and brought an extensive collection of equipment (including laser level and spare parts)
-            for the very much needed last minute improvisation.”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
+          <!-- Review Card 7 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Very professional shelf installation service in London. Diligent and polite with all the necessary equipment. Perfectly Hung provided screws,
+                plugs, and expert advice on optimal shelf placement within utility cupboards. Highly recommend their shelving services in London."
+              </p>
             </div>
-
-            <div class="name-user">
-              <strong>Tej M</strong>
-              <span>Shelving Installation</span>
+            <div class="review-author">
+              <strong>Tej M.</strong>
+              <span>Floating Shelf Installation, London</span>
             </div>
           </div>
 
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Very professional, diligent and polite, had all the equipment which was very much needed - provided the screws and plugs and also advice on how
-            best to put shelves within a utility cupboard.”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
+          <!-- Review Card 8 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">
+              <p>
+                "Excellent communication before the job. Stephen brought a special drill bit to fix our bathroom cabinets on tiled walls without any damage.
+                Quick, tidy worker with professional cabinet fitting expertise. I highly recommend Perfectly Hung for all installation services in London."
+              </p>
             </div>
-
-            <div class="name-user">
-              <strong>Anee-Sophie D</strong>
-              <span>Cabinet Fitting</span>
+            <div class="review-author">
+              <strong>Anne-Sophie D.</strong>
+              <span>Cabinet Fitting on Tiled Walls, London</span>
             </div>
           </div>
-
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
         </div>
 
-        <div class="client-comment">
-          <p>
-            “good communication before the job which meant Stephen bought a special drill bit to fix our bathroom cabinets on our tiled walls without any
-            damage. Quick and tidy worker. I would recommend Perfetcly Hung”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
-            </div>
-
-            <div class="name-user">
-              <strong>Cem S</strong>
-              <span>Picture Hanging</span>
-            </div>
-          </div>
-
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>“Amazing service from Stephen at Perfectly Hung. 6 stars. DEFINITELY RECOMMEND. ”</p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
-            </div>
-
-            <div class="name-user">
-              <strong>Helena S</strong>
-              <span>Picture Hanging </span>
-            </div>
-          </div>
-
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Stephen mounted our TV, some shelves and a few pictures and did a great job! I would definitely hire him again, he was polite and the work was
-            completed efficiently and to a high standard”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
-            </div>
-
-            <div class="name-user">
-              <strong>Vineet P</strong>
-              <span>Curtains & Blind Fitting </span>
-            </div>
-          </div>
-
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Stephen were very prompt and helped us by fixing the roller blinds very quickly. He also helped us in fixing the curtains in the bedroom. We found
-            him very professional and courteous. Thank you very much”
-          </p>
-        </div>
-      </div>
-      <!--Review-------------->
-
-      <div class="review" data-aos="fade-right">
-        <div class="box-top">
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/perfectlyhung-review-icon.webp" alt="review for Perfectly Hung London, UK" loading="lazy" />
-            </div>
-
-            <div class="name-user">
-              <strong>Simin R</strong>
-              <span>Picture Hanging</span>
-            </div>
-          </div>
-
-          <div class="reviews">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="client-comment">
-          <p>
-            “Perfectly Hung were fantastic! Super meticulous and detailed, and also helped me with other small tasks that I hadn't hired them for but that
-            needed doing round the house. Would definitely hire again.”
-          </p>
+        <!-- Mobile Scroll Indicator -->
+        <div class="reviews-scroll-hint">
+          <span>Swipe for more</span>
+          <span class="scroll-arrow">→</span>
         </div>
       </div>
     </div>
-    <a href="#" id="loadMore">Load More</a>
 
     <!-- PROCESS -->
 
@@ -1329,7 +962,7 @@
       // Navbar background on scroll
       window.addEventListener("scroll", function () {
         const header = document.querySelector(".header");
-        const heroSection = document.querySelector(".home");
+        const heroSection = document.querySelector(".hero");
 
         if (heroSection) {
           const heroHeight = heroSection.offsetHeight;
@@ -1460,80 +1093,6 @@
       }
 
       toggleSwitch.addEventListener("change", switchTheme, false);
-    </script>
-
-    <!-- REVIEW LOADER -->
-
-    <script>
-      $(document).ready(function () {
-        $(".review").slice(0, 4).show();
-        $("#loadMore").on("click", function (e) {
-          e.preventDefault();
-          $(".review:hidden").slice(0, 3).slideDown();
-          if ($(".review:hidden").length == 0) {
-            $("#loadMore").text("No More Content").addClass("noContent");
-          }
-        });
-      });
-    </script>
-
-    <!-- PROJECT STATS -->
-
-    <script>
-      $.fn.jQuerySimpleCounter = function (options) {
-        var settings = $.extend(
-          {
-            start: 0,
-            end: 100,
-            easing: "swing",
-            duration: 400,
-            complete: "",
-          },
-          options
-        );
-
-        var thisElement = $(this);
-
-        $({ count: settings.start }).animate(
-          { count: settings.end },
-          {
-            duration: settings.duration,
-            easing: settings.easing,
-            step: function () {
-              var mathCount = Math.ceil(this.count);
-              thisElement.text(mathCount);
-            },
-            complete: settings.complete,
-          }
-        );
-      };
-
-      $("#number1").jQuerySimpleCounter({
-        end: 1000,
-        duration: 3000,
-      });
-      $("#number2").jQuerySimpleCounter({
-        end: 997,
-        duration: 3000,
-      });
-      $("#number3").jQuerySimpleCounter({
-        end: 2359,
-        duration: 2000,
-      });
-      $("#number4").jQuerySimpleCounter({
-        end: 246,
-        duration: 2500,
-      });
-
-      /* AUTHOR LINK */
-      $(".about-me-img").hover(
-        function () {
-          $(".authorWindowWrapper").stop().fadeIn("fast").find("p").addClass("trans");
-        },
-        function () {
-          $(".authorWindowWrapper").stop().fadeOut("fast").find("p").removeClass("trans");
-        }
-      );
     </script>
 
     <!-- End Scripts -->
