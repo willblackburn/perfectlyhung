@@ -40,6 +40,10 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-h4: clamp(0.9rem, 2vw, 1.25rem);
   --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
   --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
+
+  --font-clamp-span: clamp(0.8rem, 3vw, 1.3rem);
+
+  --container-padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
 }
 
 @media (prefers-color-scheme: light) {
@@ -155,9 +159,9 @@ section {
   z-index: 19;
 }
 
-.divider {
+/* .divider {
   padding-top: 5rem;
-}
+} */
 
 /* Typography */
 h1,
@@ -185,9 +189,10 @@ h2 {
 }
 
 h3 {
-  display: block;
-  font-size: 1.5rem;
+  font-size: var(--font-clamp-h3);
   font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -204,6 +209,48 @@ p {
   font-size: var(--font-clamp-p);
   line-height: 1.6;
   letter-spacing: -0.1px;
+}
+
+.span-heading {
+  font-size: var(--font-clamp-span);
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  padding-left: 0;
+  color: var(--brandcolor3);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.span-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 3rem;
+  height: 0.15rem;
+  background-color: var(--brandcolor3);
+}
+
+.span-heading-center {
+  font-size: var(--font-clamp-span);
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  padding-left: 0;
+  color: var(--brandcolor3);
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+.span-heading-center::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 0.15rem;
+  background-color: var(--brandcolor3);
 }
 
 ul {
@@ -240,27 +287,24 @@ a {
   right: 0;
   width: 100%;
   height: clamp(4rem, 3rem + 2.5vw, 7rem);
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
   z-index: 1001;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
-/* Navbar background on scroll - mobile only */
 @media (max-width: 1024px) {
   .header.scrolled {
     background-color: var(--bg);
   }
 }
 
-/* Mobile - add top spacing and increase height */
 @media (max-width: 800px) {
   .header {
     height: clamp(5rem, 4rem + 2.5vw, 8rem);
   }
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -468,51 +512,6 @@ ul.social-icons {
     Titles & Content
 -------------------------------------------------------------------------------*/
 
-.paragraph-title-center {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.paragraph-title h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--brandcolor3);
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  padding-left: 0;
-  position: relative;
-}
-
-.paragraph-title h3::after {
-  content: "";
-  position: absolute;
-  bottom: -0.25rem;
-  left: 0;
-  width: 3rem;
-  height: 0.15rem;
-  background-color: var(--brandcolor3);
-}
-
-.paragraph-title-center h3 {
-  font-weight: 600;
-  color: var(--brandcolor3);
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  position: relative;
-}
-
-.paragraph-title-center h3::after {
-  content: "";
-  position: absolute;
-  bottom: -0.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3rem;
-  height: 0.15rem;
-  background-color: var(--brandcolor3);
-}
-
 .paragraph-header {
   max-width: 85vw;
   padding-top: clamp(1.8rem, 1rem + 1.5vw, 3rem);
@@ -533,7 +532,8 @@ ul.social-icons {
   align-items: flex-start;
   height: 100vh;
   width: 100%;
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem) 5vh;
+  padding: var(--container-padding);
+  padding-bottom: 5vh;
   z-index: 990;
 }
 
@@ -591,7 +591,6 @@ ul.social-icons {
   background-repeat: no-repeat;
 }
 
-/* Center about text content vertically on larger screens */
 @media (min-width: 1024px) {
   .about-description {
     display: flex;
@@ -607,7 +606,6 @@ ul.social-icons {
   min-height: 31.25rem;
 }
 
-/* Mobile - stack vertically */
 @media (max-width: 800px) {
   .about-container {
     flex-direction: column;
@@ -636,15 +634,16 @@ ul.social-icons {
 .areas-section {
   background-color: var(--bg);
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  height: auto !important; /* Override .section height: 100% */
+  overflow: visible;
 }
 
 .areas-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
   width: 100%;
 }
 
@@ -658,13 +657,13 @@ ul.social-icons {
   padding-top: 1rem;
 }
 
-/* Large screens - 100vh */
 @media (min-width: 1024px) {
   .areas-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 4rem 0;
+    overflow: visible;
   }
 
   .areas-container {
@@ -683,7 +682,6 @@ ul.social-icons {
   text-align: center;
 }
 
-/* Desktop - 3 columns */
 @media (min-width: 768px) {
   .coverage {
     grid-template-columns: repeat(3, 1fr);
@@ -867,7 +865,7 @@ ul.social-icons {
 
 .reviews-container {
   max-width: 100%;
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
 }
 
 /* Large screens - fit to viewport */
@@ -1248,16 +1246,12 @@ input[type="checkbox"]:checked ~ .grid {
 .faq-container {
   max-width: 56rem;
   margin: 0 auto;
-  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
   height: auto;
   overflow: visible;
 }
 
 .faq-header {
-  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.8rem);
-  font-weight: 600;
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
   margin-bottom: 3rem;
   padding-top: 2rem;
 }
@@ -1303,14 +1297,14 @@ input[type="checkbox"]:checked ~ .grid {
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-.faq-answer p {
+/* .faq-answer p {
   color: var(--text);
   font-size: clamp(0.95rem, 0.9rem + 0.1vw, 1.05rem);
   line-height: 1.7;
   opacity: 0.85;
   padding: 0;
   margin: 0;
-}
+} */
 
 /* When checkbox is checked */
 .faq-toggle:checked + .faq-question .faq-icon {
