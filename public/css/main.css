@@ -36,8 +36,8 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-p2: clamp(0.85rem, 1.5vw, 1rem);
   --font-clamp-nav: clamp(0.8rem, 1.2vw, 1.3rem);
   --font-clamp-h1: clamp(2.8rem, 5vw, 6rem);
-  --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.9rem);
-  --font-clamp-h3: clamp(1.25rem, 1.5vw, 2.1rem);
+  --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.7rem);
+  --font-clamp-h3: clamp(1.1rem, 1.5vw, 2.1rem);
   --font-clamp-h4: clamp(0.9rem, 1vw, 1.5rem);
   --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
   --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
@@ -107,7 +107,7 @@ Site Design By Will Blackburn. coda4.com
 }
 
 .theme-icon-box:hover {
-  background-color: var(--brandcolor3);
+  /* background-color: var(--bg); */
   transform: translateY(-0.1875rem);
 }
 
@@ -136,7 +136,7 @@ input:not(:checked) + .theme-icon-box .bulb-icon {
 }
 
 /*-------------------------------------------------------------------------------
-    Main
+    Global
 -------------------------------------------------------------------------------*/
 
 body {
@@ -161,11 +161,6 @@ section {
   z-index: 19;
 }
 
-/* .divider {
-  padding-top: 5rem;
-} */
-
-/* Typography */
 h1,
 h2,
 h3,
@@ -243,7 +238,6 @@ p {
   background-color: var(--text);
 }
 
-/* Specific span heading styles */
 .span-heading {
   font-weight: 800;
 }
@@ -312,6 +306,12 @@ a {
 @media (max-width: 800px) {
   .header {
     height: clamp(5rem, 4rem + 2.5vw, 8rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 2rem;
   }
 }
 
@@ -478,7 +478,7 @@ a {
 
 .paragraph-header {
   max-width: 77vw;
-  padding-top: clamp(1.8rem, 1rem + 1.5vw, 3rem);
+  padding-top: 2rem;
 }
 
 .paragraph {
@@ -502,7 +502,7 @@ a {
 }
 
 .hero {
-  background-image: url("../img/bg1.webp");
+  background-image: url("../img/bg1-5.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -526,12 +526,57 @@ a {
   color: var(--text-dark);
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.6rem);
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 800;
+  line-height: 1.2;
   text-transform: uppercase;
   padding-top: 0.1rem;
+  padding-left: 0.15rem;
   letter-spacing: 0.1rem;
-  max-width: 90vw;
+  max-width: 70vw;
+}
+
+.hero-icons {
+  position: absolute;
+  bottom: 5vh;
+  right: 3.2vw;
+  display: flex;
+  gap: 1rem;
+  z-index: 991;
+}
+
+@media (max-width: 800px) {
+  .hero-icons {
+    display: none;
+  }
+}
+
+.hero-icon-box {
+  width: clamp(3rem, 2.5rem + 1vw, 4rem);
+  height: clamp(3rem, 2.5rem + 1vw, 4rem);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hero-icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: var(--brandcolor3);
+  transform: translateY(-0.25rem);
+}
+
+.hero-icon-box svg {
+  width: clamp(1.5rem, 1.25rem + 0.5vw, 2rem);
+  height: clamp(1.5rem, 1.25rem + 0.5vw, 2rem);
+  stroke: var(--text-dark);
+  transition: stroke 0.3s ease;
+}
+
+.hero-icon-box:hover svg {
+  stroke: var(--brandcolor3);
 }
 
 /*-------------------------------------------------------------------------------
@@ -705,11 +750,12 @@ a {
 .view-all-link {
   display: inline-block;
   color: var(--text);
-  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+  font-size: 0.7rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 0;
   transition: all 0.3s ease;
+  text-transform: uppercase;
   letter-spacing: 0.05rem;
   position: relative;
 }
@@ -734,6 +780,97 @@ a {
 .view-all-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* Areas Covered Page */
+.areas-page {
+  min-height: 100vh;
+  padding: clamp(6rem, 5rem + 3vw, 10rem) 0 clamp(4rem, 3rem + 3vw, 8rem);
+}
+
+/* Ensure header has background on areas page */
+body:has(.areas-page) .header {
+  background-color: var(--bg);
+}
+
+.areas-page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 2rem + 2vw, 5rem);
+}
+
+@media (min-width: 1024px) {
+  .areas-page-layout {
+    flex-direction: row;
+    gap: clamp(3rem, 2rem + 3vw, 6rem);
+    align-items: flex-start;
+  }
+}
+
+.areas-text-column {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .areas-text-column {
+    flex: 0 0 28%;
+    position: sticky;
+    top: clamp(6rem, 5rem + 2vw, 9rem);
+  }
+}
+
+.areas-text-column .span-heading {
+  margin-bottom: 1rem;
+}
+
+.areas-text-column .areas-header {
+  text-align: left;
+  margin-bottom: clamp(1.5rem, 1rem + 1vw, 2rem);
+  padding-top: 0;
+}
+
+.areas-text-column .areas-intro {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.areas-grid-column {
+  flex: 1;
+}
+
+.areas-page-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 600px) {
+  .areas-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .areas-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .areas-page-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.areas-cta {
+  text-align: center;
+  padding-top: clamp(3rem, 2rem + 2vw, 5rem);
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.areas-cta p {
+  font-size: var(--font-clamp-p);
+  line-height: 1.6;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1085,6 +1222,8 @@ a {
   .process-container {
     flex-direction: column;
     gap: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .process-content {
