@@ -702,6 +702,8 @@ a {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 
 .location::before {
@@ -1430,6 +1432,13 @@ input[type="checkbox"]:checked ~ .grid {
   padding: var(--container-padding);
   height: auto;
   overflow: visible;
+}
+
+@media (max-width: 800px) {
+  .faq-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .faq-header {
