@@ -38,11 +38,11 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-h1: clamp(2.8rem, 5vw, 6rem);
   --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.9rem);
   --font-clamp-h3: clamp(1.25rem, 1.5vw, 2.1rem);
-  --font-clamp-h4: clamp(1.2rem, 2vw, 1.8rem);
+  --font-clamp-h4: clamp(0.9rem, 1vw, 1.5rem);
   --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
   --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
 
-  --font-clamp-span: clamp(0.8rem, 3vw, 1.3rem);
+  --font-clamp-span: clamp(0.9rem, 3vw, 1.5rem);
 
   --container-padding: 0 3.2vw;
 }
@@ -224,7 +224,6 @@ p {
   letter-spacing: 0.05em;
 }
 
-/* Base span heading styles */
 .span-heading,
 .span-heading-center {
   font-size: var(--font-clamp-span);
@@ -456,56 +455,6 @@ a {
 
 .nav-contactinfo a:hover {
   color: var(--brandcolor1);
-}
-
-/*-------------------------------------------------------------------------------
-    Social Icons
--------------------------------------------------------------------------------*/
-
-.sidebar-bottom-row {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  margin: 1.5625rem 0 0;
-  padding: 0 1.5rem;
-}
-
-.footer-social-icons {
-  margin: 0;
-  padding: 0;
-}
-
-ul.social-icons {
-  display: flex;
-  gap: 0.625rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-icons li {
-  display: flex;
-}
-
-.social-icons svg {
-  fill: var(--inverted);
-  width: 2.1875rem;
-  height: 2.1875rem;
-  transition: fill 0.3s ease;
-}
-
-.social-icons svg:hover {
-  transition: 0.5s;
-}
-
-.svg-facebook:hover {
-  fill: var(--brandcolor1);
-}
-.svg-twitter:hover {
-  fill: var(--brandcolor2);
-}
-.svg-youtube:hover {
-  fill: var(--brandcolor3);
 }
 
 /*-------------------------------------------------------------------------------
@@ -1543,4 +1492,54 @@ input[type="checkbox"]:checked ~ .grid {
   font-size: 0.9rem;
   opacity: 0.75;
   margin: 0;
+}
+
+/*-------------------------------------------------------------------------------
+    Social Icons
+-------------------------------------------------------------------------------*/
+
+.sidebar-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 1.5625rem 0 0;
+  padding: 0 1.5rem;
+}
+
+.footer-social-icons {
+  margin: 0;
+  padding: 0;
+}
+
+ul.social-icons {
+  display: flex;
+  gap: 0.625rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: flex;
+}
+
+.social-icons svg {
+  fill: var(--inverted);
+  width: 2.1875rem;
+  height: 2.1875rem;
+  transition: fill 0.3s ease;
+}
+
+.social-icons svg:hover {
+  transition: 0.5s;
+}
+
+.svg-facebook:hover {
+  fill: var(--brandcolor1);
+}
+.svg-twitter:hover {
+  fill: var(--brandcolor2);
+}
+.svg-youtube:hover {
+  fill: var(--brandcolor3);
 }
