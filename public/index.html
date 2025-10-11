@@ -118,7 +118,7 @@
       </label>
     </header>
     <nav id="sidebarMenu" aria-label="Main navigation">
-      <ul class="sidebarMenuInner">
+      <ul class="font-clamp-nav sidebarMenuInner">
         <li><span></span></li>
         <li><a href="#aboutus">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -136,7 +136,7 @@
           <a href="#contact">Contact Us</a>
         </li>
       </ul>
-      <ul class="nav-contactinfo">
+      <ul class="font-clamp-nav nav-contactinfo">
         <li>
           <a href="tel:07951101683">Tel: 07951 101683</a>
         </li>
@@ -145,65 +145,66 @@
         </li>
       </ul>
 
-      <!-- Socials -->
+      <!-- Socials & Theme Toggle -->
 
-      <div class="footer-social-icons">
-        <ul class="social-icons">
-          <li>
-            <a href="https://www.facebook.com/perfectlyhunguk" aria-label="Facebook" target="none" class="social-icon">
-              <svg
-                class="svg-facebook"
-                xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
-                shape-rendering="geometricPrecision"
-                text-rendering="geometricPrecision"
-                image-rendering="optimizeQuality"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  d="M579.999-.012H60C27-.012-.013 27-.013 60.001V580C-.013 613 27 640.012 60 640.012h519.999c33 0 60.013-27.012 60.013-60.012V60c0-33-27.013-60.012-60.013-60.012zM363.819 173.79h73.147V86.068h-73.147c-56.328 0-102.285 45.945-102.285 102.344v43.843h-58.489V320h58.477v233.932h87.734V320h73.075l14.634-87.745h-87.71v-43.843c0-7.938 6.698-14.634 14.564-14.634v.011z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/channel/UCOpN6W1cyT4selRbt6IMvJQ/videos" aria-label="Youtube" target="none" class="social-icon">
-              <svg
-                class="svg-youtube"
-                xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
-                viewBox="0 0 3333 3333"
-                shape-rendering="geometricPrecision"
-                text-rendering="geometricPrecision"
-                image-rendering="optimizeQuality"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              >
-                <path
-                  d="M3021 0H313C141 0 0 141 0 312v2708c0 172 141 312 313 312h2708c172 0 313-141 313-312V312c0-172-141-312-313-312zm-441 1294s-18-129-74-185c-71-74-151-75-187-79-261-19-652-19-652-19h-1s-392 0-652 19c-36 4-116 5-187 79-56 56-74 185-74 185s-19 151-19 302v141c0 151 19 302 19 302s18 129 74 185c71 74 164 72 206 80 149 14 634 19 634 19s392-1 653-19c36-4 116-5 187-79 56-56 74-185 74-185s19-151 19-302v-141c0-151-19-302-19-302zm-1107 615v-524l504 263-504 261z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div class="sidebar-bottom-row">
+        <div class="footer-social-icons">
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.facebook.com/perfectlyhunguk" aria-label="Facebook" target="none" class="social-icon">
+                <svg
+                  class="svg-facebook"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="64"
+                  height="64"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  image-rendering="optimizeQuality"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    d="M579.999-.012H60C27-.012-.013 27-.013 60.001V580C-.013 613 27 640.012 60 640.012h519.999c33 0 60.013-27.012 60.013-60.012V60c0-33-27.013-60.012-60.013-60.012zM363.819 173.79h73.147V86.068h-73.147c-56.328 0-102.285 45.945-102.285 102.344v43.843h-58.489V320h58.477v233.932h87.734V320h73.075l14.634-87.745h-87.71v-43.843c0-7.938 6.698-14.634 14.564-14.634v.011z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCOpN6W1cyT4selRbt6IMvJQ/videos" aria-label="Youtube" target="none" class="social-icon">
+                <svg
+                  class="svg-youtube"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 3333 3333"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  image-rendering="optimizeQuality"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                >
+                  <path
+                    d="M3021 0H313C141 0 0 141 0 312v2708c0 172 141 312 313 312h2708c172 0 313-141 313-312V312c0-172-141-312-313-312zm-441 1294s-18-129-74-185c-71-74-151-75-187-79-261-19-652-19-652-19h-1s-392 0-652 19c-36 4-116 5-187 79-56 56-74 185-74 185s-19 151-19 302v141c0 151 19 302 19 302s18 129 74 185c71 74 164 72 206 80 149 14 634 19 634 19s392-1 653-19c36-4 116-5 187-79 56-56 74-185 74-185s19-151 19-302v-141c0-151-19-302-19-302zm-1107 615v-524l504 263-504 261z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Theme toggle-->
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
-          <input type="checkbox" id="checkbox" />
-          <div class="theme-icon-box">
-            <svg class="bulb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 18h6"></path>
-              <path d="M10 22h4"></path>
-              <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"></path>
-            </svg>
-          </div>
-        </label>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
+            <input type="checkbox" id="checkbox" />
+            <div class="theme-icon-box">
+              <svg class="bulb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"></path>
+              </svg>
+            </div>
+          </label>
+        </div>
       </div>
     </nav>
 
@@ -281,9 +282,6 @@
           </div>
           <div class="location">
             <h5>Marylebone</h5>
-          </div>
-          <div class="location">
-            <h5>West Brompton</h5>
           </div>
         </div>
 
@@ -387,7 +385,7 @@
     <div class="section reviews-section" id="reviews">
       <div class="reviews-container">
         <div class="span-heading-center" data-aos="fade-up">Customer Reviews</div>
-        <h2 class="reviews-header" data-aos="fade-up">What Our London Customers Say</h2>
+        <h3 class="reviews-header" data-aos="fade-up">What Our London Customers Say</h3>
 
         <div class="reviews-grid">
           <!-- Review Card -->
@@ -1107,6 +1105,21 @@
       }
 
       toggleSwitch.addEventListener("change", switchTheme, false);
+    </script>
+
+    <!-- Close Mobile Menu on Link Click -->
+    <script>
+      // Get all navigation links in the sidebar menu
+      const sidebarLinks = document.querySelectorAll("#sidebarMenu .sidebarMenuInner a");
+      const menuCheckbox = document.getElementById("openSidebarMenu");
+
+      // Add click event listener to each navigation link
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Uncheck the checkbox to close the menu
+          menuCheckbox.checked = false;
+        });
+      });
     </script>
 
     <!-- End Scripts -->
