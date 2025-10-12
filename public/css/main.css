@@ -53,7 +53,9 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.6rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
+
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
+  --font-clamp-button: clamp(0.8rem, 2vw, 1.1rem);
   --font-clamp-icon: clamp(1.6rem, 1rem + 1vw, 2.4rem);
 
   --container-padding: 0 3.2vw;
@@ -270,6 +272,46 @@ p {
   transform: translateX(-50%);
 }
 
+.font-clamp-button {
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--font-clamp-button);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--brandcolor3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.cta:hover {
+  color: var(--brandcolor3);
+}
+
+.cta:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -277,7 +319,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(212, 166, 40);
+  color: var(--brandcolor1);
 }
 
 ::-webkit-scrollbar {
@@ -599,6 +641,7 @@ a {
 .about-container {
   display: flex;
   min-height: 100vh;
+  /* padding: var(--container-padding); */
 }
 
 .about-description {
@@ -760,41 +803,6 @@ a {
 .view-all-locations {
   text-align: center;
   padding-top: 2.5rem;
-}
-
-.view-all-link {
-  display: inline-block;
-  color: var(--text);
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  position: relative;
-}
-
-.view-all-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.125rem;
-  background-color: var(--brandcolor3);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.view-all-link:hover {
-  color: var(--brandcolor3);
-}
-
-.view-all-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
 }
 
 /* Areas Covered Page */
