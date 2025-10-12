@@ -32,17 +32,29 @@ Site Design By Will Blackburn. coda4.com
   --brandcolor2: #446782;
   --brandcolor3: #f5c654;
 
-  --font-clamp-p: clamp(1rem, 1.5vw, 1.5rem);
+  /* --font-clamp-p: clamp(1rem, 1.5vw, 1.6rem);
   --font-clamp-p2: clamp(0.85rem, 1.5vw, 1rem);
   --font-clamp-nav: clamp(0.8rem, 1.2vw, 1.3rem);
   --font-clamp-h1: clamp(2.6rem, 5vw, 6rem);
   --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.7rem);
-  --font-clamp-h3: clamp(1.1rem, 1.5vw, 2.1rem);
-  --font-clamp-h4: clamp(0.9rem, 1vw, 1.5rem);
+  --font-clamp-h3: clamp(1.2rem, 1.5vw, 2.1rem);
+  --font-clamp-h4: clamp(1rem, 1vw, 1.5rem);
   --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
   --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
+  --font-clamp-span: clamp(0.7rem, 3vw, 1.2rem);
+  --font-clamp-icon: clamp(1.8rem, 1.2rem + 0.8vw, 2.5rem); */
 
-  --font-clamp-span: clamp(0.7rem, 3vw, 1.4rem);
+  --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
+  --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.1rem);
+  --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
+  --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
+  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.7rem);
+  --font-clamp-h3: clamp(1.3rem, 2vw, 2.3rem);
+  --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.6rem);
+  --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
+  --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
+  --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
+  --font-clamp-icon: clamp(1.6rem, 1rem + 1vw, 2.4rem);
 
   --container-padding: 0 3.2vw;
 }
@@ -95,8 +107,8 @@ Site Design By Will Blackburn. coda4.com
 }
 
 .theme-icon-box {
-  width: 2.1875rem;
-  height: 2.1875rem;
+  width: var(--font-clamp-icon);
+  height: var(--font-clamp-icon);
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -107,13 +119,13 @@ Site Design By Will Blackburn. coda4.com
   transform: translateY(-0.1875rem);
 }
 
-.theme-icon-box:hover {
-  /* background-color: var(--bg); */
-}
+/* .theme-icon-box:hover {
+  background-color: var(--bg);
+} */
 
 .bulb-icon {
-  width: 1.375rem;
-  height: 1.375rem;
+  width: calc(var(--font-clamp-icon) * 0.7);
+  height: calc(var(--font-clamp-icon) * 0.7);
   stroke: var(--inverted);
   transition: all 0.3s ease;
 }
@@ -199,7 +211,7 @@ h4 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0;
-  padding-top: 0.5rem;
+  /* padding-top: 0.5rem; */
 }
 
 p {
@@ -520,7 +532,7 @@ a {
 }
 
 .hero-title {
-  max-width: 26.25rem;
+  max-width: 16.25rem;
 }
 
 .hero-subtitle {
@@ -1042,9 +1054,6 @@ body:has(.areas-page) .header {
 
 /* Review Text */
 .review-text p {
-  font-size: clamp(0.95rem, 0.9rem + 0.1vw, 1.05rem);
-  line-height: 1.7;
-  color: var(--text);
   opacity: 0.9;
   margin: 0;
   font-style: italic;
@@ -1517,9 +1526,8 @@ input[type="checkbox"]:checked ~ .grid {
 -------------------------------------------------------------------------------*/
 
 .footer {
-  font-family: "DM Sans", sans-serif;
   background-color: var(--inverted);
-  color: var(--bg);
+  /* color: var(--bg); */
   padding: clamp(2.5rem, 2rem + 1.5vw, 3.75rem) clamp(0.9375rem, 0.5rem + 1vw, 1.25rem) clamp(0.9375rem, 0.5rem + 1vw, 1.25rem);
 }
 
@@ -1534,20 +1542,13 @@ input[type="checkbox"]:checked ~ .grid {
 }
 
 .footer-column h3 {
-  font-size: clamp(1.3rem, 1.1rem + 0.4vw, 1.5rem);
-  font-weight: 600;
   margin-bottom: 0.9375rem;
   color: var(--bg);
-  text-transform: uppercase;
 }
 
 .footer-column h4 {
-  font-size: clamp(1rem, 0.9rem + 0.2vw, 1.1rem);
-  font-weight: 600;
   margin-bottom: 0.9375rem;
   color: var(--bg);
-  text-transform: uppercase;
-  padding-top: 0;
 }
 
 .footer-column p {
@@ -1558,27 +1559,12 @@ input[type="checkbox"]:checked ~ .grid {
   margin-bottom: 0.625rem;
 }
 
-.footer-location {
-  font-weight: 500;
-  opacity: 1;
-  color: var(--brandcolor3);
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .footer-links li {
   margin-bottom: 0.625rem;
 }
 
 .footer-links a {
   color: var(--bg);
-  text-decoration: none;
-  font-size: 0.95rem;
-  opacity: 0.85;
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -1616,8 +1602,8 @@ input[type="checkbox"]:checked ~ .grid {
 
 .social-icons-footer svg {
   fill: var(--bg);
-  width: 2.1875rem !important;
-  height: 2.1875rem !important;
+  width: var(--font-clamp-icon);
+  height: var(--font-clamp-icon);
   transition: fill 0.5s ease;
 }
 
@@ -1674,8 +1660,8 @@ ul.social-icons {
 
 .social-icons svg {
   fill: var(--inverted);
-  width: 2.1875rem;
-  height: 2.1875rem;
+  width: var(--font-clamp-icon);
+  height: var(--font-clamp-icon);
   transition: fill 0.3s ease;
 }
 
