@@ -32,20 +32,8 @@ Site Design By Will Blackburn. coda4.com
   --brandcolor2: #446782;
   --brandcolor3: #f5c654;
 
-  /* --font-clamp-p: clamp(1rem, 1.5vw, 1.6rem);
-  --font-clamp-p2: clamp(0.85rem, 1.5vw, 1rem);
-  --font-clamp-nav: clamp(0.8rem, 1.2vw, 1.3rem);
-  --font-clamp-h1: clamp(2.6rem, 5vw, 6rem);
-  --font-clamp-h2: clamp(1.4rem, 2.6vw, 2.7rem);
-  --font-clamp-h3: clamp(1.2rem, 1.5vw, 2.1rem);
-  --font-clamp-h4: clamp(1rem, 1vw, 1.5rem);
-  --font-clamp-h5: clamp(0.8rem, 1.8vw, 1.05rem);
-  --font-clamp-h6: clamp(0.7rem, 0.8vw, 1.2rem);
-  --font-clamp-span: clamp(0.7rem, 3vw, 1.2rem);
-  --font-clamp-icon: clamp(1.8rem, 1.2rem + 0.8vw, 2.5rem); */
-
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
-  --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.1rem);
+  --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
   --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.7rem);
@@ -56,7 +44,7 @@ Site Design By Will Blackburn. coda4.com
 
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
   --font-clamp-button: clamp(0.8rem, 2vw, 1.1rem);
-  --font-clamp-icon: clamp(1.6rem, 1rem + 1vw, 2.4rem);
+  --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
   --container-padding: 0 3.2vw;
 }
@@ -66,6 +54,17 @@ Site Design By Will Blackburn. coda4.com
     --text: var(--text-light);
     --bg: var(--bg-light);
     --inverted: var(--inverted-light);
+    --fontweight-p-light: 400;
+    --fontweight-p2-light: 500;
+    --fontweight-h1-light: 800;
+    --fontweight-h2-light: 600;
+    --fontweight-h3-light: 500;
+    --fontweight-h4-light: 600;
+    --fontweight-h5-light: 500;
+    --fontweight-h6-light: 500;
+    --fontweight-button-light: 600;
+    --fontweight-nav-light: 500;
+    --fontweight-span-light: 500;
   }
 }
 
@@ -74,6 +73,17 @@ Site Design By Will Blackburn. coda4.com
     --text: var(--text-dark);
     --bg: var(--bg-dark);
     --inverted: var(--inverted-dark);
+    --fontweight-p-dark: 200;
+    --fontweight-p2-dark: 200;
+    --fontweight-h1-dark: 800;
+    --fontweight-h2-dark: 500;
+    --fontweight-h3-dark: 500;
+    --fontweight-h4-dark: 500;
+    --fontweight-h5-dark: 500;
+    --fontweight-h6-dark: 500;
+    --fontweight-button-dark: 500;
+    --fontweight-nav-dark: 400;
+    --fontweight-span-dark: 400;
   }
 
   .footer .row svg {
@@ -85,12 +95,34 @@ Site Design By Will Blackburn. coda4.com
   --text: var(--text-dark);
   --bg: var(--bg-dark);
   --inverted: var(--inverted-dark);
+  --fontweight-p: var(--fontweight-p-dark);
+  --fontweight-p2: var(--fontweight-p2-dark);
+  --fontweight-nav: var(--fontweight-nav-dark);
+  --fontweight-h1: var(--fontweight-h1-dark);
+  --fontweight-h2: var(--fontweight-h2-dark);
+  --fontweight-h3: var(--fontweight-h3-dark);
+  --fontweight-h4: var(--fontweight-h4-dark);
+  --fontweight-h5: var(--fontweight-h5-dark);
+  --fontweight-h6: var(--fontweight-h6-dark);
+  --fontweight-button: var(--fontweight-button-dark);
+  --fontweight-span: var(--fontweight-span-dark);
 }
 
 [data-theme="light"] {
   --text: var(--text-light);
   --bg: var(--bg-light);
   --inverted: var(--inverted-light);
+  --fontweight-p: var(--fontweight-p-light);
+  --fontweight-p2: var(--fontweight-p2-light);
+  --fontweight-nav: var(--fontweight-nav-light);
+  --fontweight-h1: var(--fontweight-h1-light);
+  --fontweight-h2: var(--fontweight-h2-light);
+  --fontweight-h3: var(--fontweight-h3-light);
+  --fontweight-h4: var(--fontweight-h4-light);
+  --fontweight-h5: var(--fontweight-h5-light);
+  --fontweight-h6: var(--fontweight-h6-light);
+  --fontweight-button: var(--fontweight-button-light);
+  --fontweight-span: var(--fontweight-span-light);
 }
 
 #sidebarMenu .theme-switch-wrapper {
@@ -120,10 +152,6 @@ Site Design By Will Blackburn. coda4.com
   border-radius: 0.375rem;
   transform: translateY(-0.1875rem);
 }
-
-/* .theme-icon-box:hover {
-  background-color: var(--bg);
-} */
 
 .bulb-icon {
   width: calc(var(--font-clamp-icon) * 0.7);
@@ -165,16 +193,6 @@ section {
   overflow-x: hidden;
 }
 
-.mask-svg {
-  position: absolute;
-  width: 9.375rem;
-  height: 7.1875rem;
-  left: -3.75rem;
-  top: -1.25rem;
-  fill: var(--bg);
-  z-index: 19;
-}
-
 h1,
 h2,
 h3,
@@ -189,7 +207,7 @@ h6 {
 h1 {
   color: var(--text-dark);
   font-size: var(--font-clamp-h1);
-  font-weight: 800;
+  font-weight: var(--fontweight-h1);
   line-height: 0.85em;
   letter-spacing: -0.02em;
 }
@@ -198,19 +216,19 @@ h2 {
   font-size: var(--font-clamp-h2);
   line-height: 1.1;
   letter-spacing: -0.01em;
-  font-weight: 600;
+  font-weight: var(--fontweight-h2);
 }
 
 h3 {
   font-size: var(--font-clamp-h3);
-  font-weight: 600;
+  font-weight: var(--fontweight-h3);
   line-height: 1.65;
   letter-spacing: 0;
 }
 
 h4 {
   font-size: var(--font-clamp-h4);
-  font-weight: 600;
+  font-weight: var(--fontweight-h4);
   line-height: 1.2;
   letter-spacing: 0;
   /* padding-top: 0.5rem; */
@@ -224,11 +242,19 @@ p {
   letter-spacing: -0.1px;
 }
 
+.font-clamp-p2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--font-clamp-p2);
+  font-weight: var(--fontweight-p2);
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+
 .font-clamp-nav {
   font-family: "DM Sans", sans-serif;
   font-size: var(--font-clamp-nav);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--fontweight-nav);
   line-height: 1.2;
   letter-spacing: 0.05em;
 }
@@ -254,7 +280,7 @@ p {
 }
 
 .span-heading {
-  font-weight: 600;
+  font-weight: var(--fontweight-span);
 }
 
 .span-heading::after {
@@ -262,7 +288,7 @@ p {
 }
 
 .span-heading-center {
-  font-weight: 600;
+  font-weight: var(--fontweight-span);
   padding-left: 0;
   text-align: center;
 }
@@ -275,7 +301,7 @@ p {
 .font-clamp-button {
   font-family: "DM Sans", sans-serif;
   font-size: var(--font-clamp-button);
-  font-weight: 600;
+  font-weight: var(--fontweight-button);
   line-height: 1.1;
   letter-spacing: 0.05em;
   color: var(--text);
@@ -386,28 +412,6 @@ a {
   height: auto;
 }
 
-.main {
-  margin: 0 auto;
-  display: block;
-  height: 100%;
-  margin-top: 3.75rem;
-}
-
-.mainInner {
-  display: table;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-
-.mainInner div {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 3em;
-  font-weight: bolder;
-  letter-spacing: 0.078125rem;
-}
-
 /* Sidebar Menu */
 #sidebarMenu {
   position: fixed;
@@ -433,10 +437,70 @@ a {
 .sidebarMenuInner li {
   list-style: none;
   padding: 1.25rem 1.5rem;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInNav 0.3s ease-out forwards;
 }
 
 .sidebarMenuInner li:first-child {
   padding: 0;
+}
+
+/* Staggered animation delays for nav links */
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.openSidebarMenu:checked ~ #sidebarMenu .sidebarMenuInner li:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+@keyframes slideInNav {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reset animations when menu is closed */
+.openSidebarMenu:not(:checked) ~ #sidebarMenu .sidebarMenuInner li,
+.openSidebarMenu:not(:checked) ~ #sidebarMenu .nav-contactinfo,
+.openSidebarMenu:not(:checked) ~ #sidebarMenu .sidebar-bottom-row {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: none;
 }
 
 .sidebarMenuInner li a {
@@ -447,6 +511,138 @@ a {
 
 .sidebarMenuInner li a:hover {
   color: var(--brandcolor1);
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-dropdown-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-dropdown-header a {
+  flex: 1;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu {
+  position: relative;
+  background-color: var(--bg);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  list-style: none;
+  padding: 0.5rem 0 0 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid var(--brandcolor3);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  font-size: 0.7em;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(128, 128, 128, 0.05);
+  color: var(--brandcolor1);
+  padding-left: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+/* Hover effects */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100px;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: translateY(-50%) rotate(180deg);
+  opacity: 1;
+}
+
+/* Mobile dropdown behavior */
+@media (max-width: 768px) {
+  .nav-dropdown {
+    cursor: pointer;
+  }
+
+  .dropdown-arrow {
+    opacity: 0.6;
+  }
+
+  /* Override hover effects on mobile */
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  .nav-dropdown:hover .dropdown-arrow {
+    transform: none !important;
+    opacity: 0.6 !important;
+  }
+
+  /* Mobile click to toggle */
+  .nav-dropdown.active .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 100px !important;
+  }
+
+  .nav-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg) !important;
+    opacity: 1 !important;
+  }
 }
 
 .openSidebarMenu:checked ~ #sidebarMenu {
@@ -500,6 +696,10 @@ a {
   padding: 1rem 1.5rem 0;
   margin: 0;
   list-style: none;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInNav 0.3s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 .nav-contactinfo a {
@@ -515,10 +715,6 @@ a {
 /*-------------------------------------------------------------------------------
     Section Backgrounds
 -------------------------------------------------------------------------------*/
-
-/* .process {
-  opacity: 1;
-} */
 
 @media all and (max-width: 800px) {
   .contact {
@@ -557,7 +753,7 @@ a {
 }
 
 .hero {
-  background-image: url("../img/bg1-5.webp");
+  background-image: url("../img/bg1.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -641,7 +837,6 @@ a {
 .about-container {
   display: flex;
   min-height: 100vh;
-  /* padding: var(--container-padding); */
 }
 
 .about-description {
@@ -661,8 +856,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 
@@ -678,7 +871,6 @@ a {
 
   .about-description {
     width: 100%;
-    min-height: 100vh;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -903,10 +1095,35 @@ body:has(.areas-page) .header {
 .services-header-container {
   text-align: center;
   padding: clamp(4rem, 3rem + 2vw, 6rem) clamp(1rem, -0.5rem + 3.5vw, 8rem) clamp(3rem, 2rem + 2vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--inverted);
+  transform: translateX(-100%);
+  transition: transform 1.2s ease-out;
+  z-index: 1;
+}
+
+.services-header-container.animate::before {
+  transform: translateX(0);
 }
 
 .services-header {
-  padding-top: 1rem;
+  position: relative;
+  z-index: 2;
+  transition: color 1.2s ease-out;
+}
+
+.services-header-container.animate .services-header {
+  color: var(--bg);
 }
 
 .service-description .span-heading {
@@ -1478,8 +1695,8 @@ input[type="checkbox"]:checked ~ .grid {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.2rem);
-  font-weight: 600;
+  font-size: var(--font-clamp-h4);
+  font-weight: var(--fontweight-p2);
   color: var(--text);
   cursor: pointer;
   user-select: none;
@@ -1492,7 +1709,7 @@ input[type="checkbox"]:checked ~ .grid {
 
 .faq-icon {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: var(--fontweight-span);
   color: var(--text);
   transition: transform 0.3s ease, color 0.3s ease;
   flex-shrink: 0;
@@ -1595,34 +1812,6 @@ input[type="checkbox"]:checked ~ .grid {
   margin-top: 1.5625rem;
 }
 
-.social-icons-footer {
-  display: flex;
-  gap: 0.9375rem;
-  margin-top: 0.625rem;
-}
-
-.social-icons-footer a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-}
-
-.social-icons-footer svg {
-  fill: var(--bg);
-  width: var(--font-clamp-icon);
-  height: var(--font-clamp-icon);
-  transition: fill 0.5s ease;
-}
-
-.social-icons-footer .svg-facebook:hover {
-  fill: var(--brandcolor1);
-}
-
-.social-icons-footer .svg-youtube:hover {
-  fill: var(--brandcolor3);
-}
-
 .footer-bottom {
   max-width: 87.5rem;
   margin: 0 auto;
@@ -1647,6 +1836,10 @@ input[type="checkbox"]:checked ~ .grid {
   gap: 0.625rem;
   margin: 1.5625rem 0 0;
   padding: 0 1.5rem;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInNav 0.3s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .footer-social-icons {
@@ -1654,7 +1847,8 @@ input[type="checkbox"]:checked ~ .grid {
   padding: 0;
 }
 
-ul.social-icons {
+/* Base social icons container */
+.social-icons {
   display: flex;
   gap: 0.625rem;
   list-style: none;
@@ -1662,10 +1856,14 @@ ul.social-icons {
   margin: 0;
 }
 
+/* Social icon items */
 .social-icons li {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Social icon SVGs */
 .social-icons svg {
   fill: var(--inverted);
   width: var(--font-clamp-icon);
@@ -1673,16 +1871,19 @@ ul.social-icons {
   transition: fill 0.3s ease;
 }
 
+/* Hover effects */
 .social-icons svg:hover {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .svg-facebook:hover {
   fill: var(--brandcolor1);
 }
-.svg-twitter:hover {
-  fill: var(--brandcolor2);
-}
+
 .svg-youtube:hover {
   fill: var(--brandcolor3);
+}
+
+.svg-twitter:hover {
+  fill: var(--brandcolor2);
 }
