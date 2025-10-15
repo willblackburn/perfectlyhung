@@ -223,35 +223,6 @@
         <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Perfectly Hung</h1>
         <p class="hero-subtitle" data-aos="fade-in" data-aos-duration="1500">Professional Mounting and Installation</p>
       </div>
-      <div class="hero-icons">
-        <div class="hero-icon-box" data-aos="fade-up" data-aos-delay="100">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
-          </svg>
-        </div>
-        <div class="hero-icon-box" data-aos="fade-up" data-aos-delay="200">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2 L12 22 M2 12 L22 12"></path>
-          </svg>
-        </div>
-        <div class="hero-icon-box" data-aos="fade-up" data-aos-delay="300">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            <polyline points="2 17 12 22 22 17"></polyline>
-            <polyline points="2 12 12 17 22 12"></polyline>
-          </svg>
-        </div>
-        <div class="hero-icon-box" data-aos="fade-up" data-aos-delay="400">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-          </svg>
-        </div>
-      </div>
     </div>
 
     <!-- About -->
@@ -930,8 +901,8 @@
           <!-- Company Info -->
           <div class="footer-column footer-brand">
             <h3>Perfectly Hung</h3>
-            <p>Professional picture hanging, TV mounting, and handyman services in London.</p>
-            <p>Based in London, UK</p>
+            <p class="font-clamp-p2">Professional picture hanging, TV mounting, and handyman services in London.</p>
+            <h5>Based in London, UK</h5>
           </div>
 
           <!-- Quick Links -->
@@ -1037,23 +1008,23 @@
       // below listed default settings
       AOS.init({
         // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: "aos-init", // class applied after initialization
-        animatedClassName: "aos-animate", // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        initClassName: "aos-init",
+        animatedClassName: "aos-animate",
+        useClassNames: false,
+        disableMutationObserver: true, // Disable to reduce reflows
+        debounceDelay: 100, // Increased to reduce frequency
+        throttleDelay: 200, // Increased to reduce frequency
 
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 40, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 600, // values from 0 to 3000, with step 50ms
-        easing: "ease", // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+        offset: 40,
+        delay: 0,
+        duration: 600,
+        easing: "ease",
+        once: true, // Animate only once to reduce ongoing reflows
+        mirror: false,
+        anchorPlacement: "top-bottom",
       });
     </script>
 

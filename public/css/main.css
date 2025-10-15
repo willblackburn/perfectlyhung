@@ -54,17 +54,17 @@ Site Design By Will Blackburn. coda4.com
     --text: var(--text-light);
     --bg: var(--bg-light);
     --inverted: var(--inverted-light);
-    --fontweight-p-light: 400;
-    --fontweight-p2-light: 500;
-    --fontweight-h1-light: 800;
-    --fontweight-h2-light: 600;
-    --fontweight-h3-light: 500;
-    --fontweight-h4-light: 600;
-    --fontweight-h5-light: 500;
-    --fontweight-h6-light: 500;
-    --fontweight-button-light: 600;
-    --fontweight-nav-light: 500;
-    --fontweight-span-light: 500;
+    --fontweight-p: 400;
+    --fontweight-p2: 500;
+    --fontweight-h1: 800;
+    --fontweight-h2: 600;
+    --fontweight-h3: 500;
+    --fontweight-h4: 600;
+    --fontweight-h5: 500;
+    --fontweight-h6: 500;
+    --fontweight-button: 600;
+    --fontweight-nav: 500;
+    --fontweight-span: 500;
   }
 }
 
@@ -73,17 +73,17 @@ Site Design By Will Blackburn. coda4.com
     --text: var(--text-dark);
     --bg: var(--bg-dark);
     --inverted: var(--inverted-dark);
-    --fontweight-p-dark: 200;
-    --fontweight-p2-dark: 200;
-    --fontweight-h1-dark: 800;
-    --fontweight-h2-dark: 500;
-    --fontweight-h3-dark: 500;
-    --fontweight-h4-dark: 500;
-    --fontweight-h5-dark: 500;
-    --fontweight-h6-dark: 500;
-    --fontweight-button-dark: 500;
-    --fontweight-nav-dark: 400;
-    --fontweight-span-dark: 400;
+    --fontweight-p: 200;
+    --fontweight-p2: 200;
+    --fontweight-h1: 800;
+    --fontweight-h2: 500;
+    --fontweight-h3: 500;
+    --fontweight-h4: 500;
+    --fontweight-h5: 500;
+    --fontweight-h6: 500;
+    --fontweight-button: 500;
+    --fontweight-nav: 400;
+    --fontweight-span: 400;
   }
 
   .footer .row svg {
@@ -95,34 +95,34 @@ Site Design By Will Blackburn. coda4.com
   --text: var(--text-dark);
   --bg: var(--bg-dark);
   --inverted: var(--inverted-dark);
-  --fontweight-p: var(--fontweight-p-dark);
-  --fontweight-p2: var(--fontweight-p2-dark);
-  --fontweight-nav: var(--fontweight-nav-dark);
-  --fontweight-h1: var(--fontweight-h1-dark);
-  --fontweight-h2: var(--fontweight-h2-dark);
-  --fontweight-h3: var(--fontweight-h3-dark);
-  --fontweight-h4: var(--fontweight-h4-dark);
-  --fontweight-h5: var(--fontweight-h5-dark);
-  --fontweight-h6: var(--fontweight-h6-dark);
-  --fontweight-button: var(--fontweight-button-dark);
-  --fontweight-span: var(--fontweight-span-dark);
+  --fontweight-p: 200;
+  --fontweight-p2: 200;
+  --fontweight-h1: 800;
+  --fontweight-h2: 500;
+  --fontweight-h3: 500;
+  --fontweight-h4: 500;
+  --fontweight-h5: 500;
+  --fontweight-h6: 500;
+  --fontweight-button: 500;
+  --fontweight-nav: 400;
+  --fontweight-span: 400;
 }
 
 [data-theme="light"] {
   --text: var(--text-light);
   --bg: var(--bg-light);
   --inverted: var(--inverted-light);
-  --fontweight-p: var(--fontweight-p-light);
-  --fontweight-p2: var(--fontweight-p2-light);
-  --fontweight-nav: var(--fontweight-nav-light);
-  --fontweight-h1: var(--fontweight-h1-light);
-  --fontweight-h2: var(--fontweight-h2-light);
-  --fontweight-h3: var(--fontweight-h3-light);
-  --fontweight-h4: var(--fontweight-h4-light);
-  --fontweight-h5: var(--fontweight-h5-light);
-  --fontweight-h6: var(--fontweight-h6-light);
-  --fontweight-button: var(--fontweight-button-light);
-  --fontweight-span: var(--fontweight-span-light);
+  --fontweight-p: 400;
+  --fontweight-p2: 500;
+  --fontweight-h1: 800;
+  --fontweight-h2: 600;
+  --fontweight-h3: 500;
+  --fontweight-h4: 600;
+  --fontweight-h5: 500;
+  --fontweight-h6: 500;
+  --fontweight-button: 600;
+  --fontweight-nav: 500;
+  --fontweight-span: 500;
 }
 
 #sidebarMenu .theme-switch-wrapper {
@@ -588,7 +588,7 @@ a {
   transition: all 0.3s ease;
   border-left: 3px solid var(--brandcolor3);
   border-bottom: 1px solid rgba(128, 128, 128, 0.1);
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .dropdown-menu a:hover {
@@ -678,7 +678,7 @@ a {
 
 /* Hamburger animation when menu is open */
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(1) {
-  transform: translateY(clamp(0.4rem, 0.3rem + 0.25vw, 0.625rem)) rotate(45deg);
+  transform: translateY(clamp(0.45rem, 0.35rem + 0.25vw, 0.65rem)) rotate(45deg);
 }
 
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(2) {
@@ -686,7 +686,7 @@ a {
 }
 
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(3) {
-  transform: translateY(clamp(-0.4rem, -0.3rem - 0.25vw, -0.625rem)) rotate(-45deg);
+  transform: translateY(clamp(-0.45rem, -0.35rem - 0.25vw, -0.65rem)) rotate(-45deg);
 }
 
 .nav-contactinfo {
@@ -753,7 +753,7 @@ a {
 }
 
 .hero {
-  background-image: url("../img/bg1.webp");
+  background-image: url("../img/bg1-1.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -784,50 +784,6 @@ a {
   padding-left: 0.15rem;
   letter-spacing: 0.1rem;
   max-width: 70vw;
-}
-
-.hero-icons {
-  position: absolute;
-  bottom: 5vh;
-  right: 3.2vw;
-  display: flex;
-  gap: 1rem;
-  z-index: 991;
-}
-
-@media (max-width: 800px) {
-  .hero-icons {
-    display: none;
-  }
-}
-
-.hero-icon-box {
-  width: clamp(3rem, 2.5rem + 1vw, 4rem);
-  height: clamp(3rem, 2.5rem + 1vw, 4rem);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.hero-icon-box:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-color: var(--brandcolor3);
-  transform: translateY(-0.25rem);
-}
-
-.hero-icon-box svg {
-  width: clamp(1.5rem, 1.25rem + 0.5vw, 2rem);
-  height: clamp(1.5rem, 1.25rem + 0.5vw, 2rem);
-  stroke: var(--text-dark);
-  transition: stroke 0.3s ease;
-}
-
-.hero-icon-box:hover svg {
-  stroke: var(--brandcolor3);
 }
 
 /*-------------------------------------------------------------------------------
@@ -1777,10 +1733,7 @@ input[type="checkbox"]:checked ~ .grid {
 }
 
 .footer-column p {
-  font-size: 0.95rem;
-  line-height: 1.6;
   color: var(--bg);
-  opacity: 0.85;
   margin-bottom: 0.625rem;
 }
 

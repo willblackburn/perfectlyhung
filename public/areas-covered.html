@@ -607,14 +607,14 @@
         initClassName: "aos-init",
         animatedClassName: "aos-animate",
         useClassNames: false,
-        disableMutationObserver: false,
-        debounceDelay: 50,
-        throttleDelay: 99,
+        disableMutationObserver: true, // Disable to reduce reflows
+        debounceDelay: 100, // Increased to reduce frequency
+        throttleDelay: 200, // Increased to reduce frequency
         offset: 40,
         delay: 0,
         duration: 600,
         easing: "ease",
-        once: false,
+        once: true, // Animate only once to reduce ongoing reflows
         mirror: false,
         anchorPlacement: "top-bottom",
       });
