@@ -36,7 +36,7 @@ Site Design By Will Blackburn. coda4.com
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
-  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.7rem);
+  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.2rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.3rem);
   --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.6rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
@@ -851,6 +851,39 @@ a {
   align-items: center;
   height: auto !important; /* Override .section height: 100% */
   overflow: visible;
+}
+
+.areas-bg {
+  background-image: url("../img/bg1-2.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.areas-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.areas-bg .areas-container {
+  position: relative;
+  z-index: 2;
+}
+
+.areas-bg .span-heading-center,
+.areas-bg .areas-header,
+.areas-bg .location h4,
+.areas-bg .cta {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .areas-container {
