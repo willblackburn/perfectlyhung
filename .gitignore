@@ -2,3 +2,4 @@ psds/services_icons.psd
 node_modules
 .parcel-cache
 dist
+.vercel
