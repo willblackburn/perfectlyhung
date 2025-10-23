@@ -1266,8 +1266,9 @@
               item.classList.add("active");
 
               // Update featured image
-              const newSrc = item.getAttribute("data-src");
-              const newAlt = item.getAttribute("data-alt");
+              const img = item.querySelector("img");
+              const newSrc = img ? img.src : item.getAttribute("data-src");
+              const newAlt = img ? img.alt : item.getAttribute("data-alt");
 
               if (newSrc && newAlt) {
                 featuredImage.src = newSrc;
@@ -1277,8 +1278,9 @@
 
             // Add hover effect for preview
             item.addEventListener("mouseenter", function () {
-              const hoverSrc = item.getAttribute("data-src");
-              const hoverAlt = item.getAttribute("data-alt");
+              const img = item.querySelector("img");
+              const hoverSrc = img ? img.src : item.getAttribute("data-src");
+              const hoverAlt = img ? img.alt : item.getAttribute("data-alt");
 
               if (hoverSrc && hoverAlt && !item.classList.contains("active")) {
                 featuredImage.src = hoverSrc;
@@ -1290,8 +1292,9 @@
             item.addEventListener("mouseleave", function () {
               const activeItem = document.querySelector(".thumbnail-item.active");
               if (activeItem && !item.classList.contains("active")) {
-                const activeSrc = activeItem.getAttribute("data-src");
-                const activeAlt = activeItem.getAttribute("data-alt");
+                const activeImg = activeItem.querySelector("img");
+                const activeSrc = activeImg ? activeImg.src : activeItem.getAttribute("data-src");
+                const activeAlt = activeImg ? activeImg.alt : activeItem.getAttribute("data-alt");
 
                 if (activeSrc && activeAlt) {
                   featuredImage.src = activeSrc;
