@@ -9,7 +9,7 @@ Site Design By Will Blackburn. coda4.com */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 /*-------------------------------------------------------------------------------
@@ -17,16 +17,16 @@ Site Design By Will Blackburn. coda4.com */
 -------------------------------------------------------------------------------*/
 
 :root {
-  --text-light: #211f1f;
+  --text-light: #191919;
   --bg-light: #ffffff;
   --text-dark: #ffffff;
-  --bg-dark: #030303;
-  --inverted-light: #030303;
+  --bg-dark: #191919;
+  --inverted-light: #191919;
   --inverted-dark: #ffffff;
 
-  --brandcolor1: #a86c34;
-  --brandcolor2: #446782;
-  --brandcolor3: #a86c34;
+  --brandcolor1: #e5ded6;
+  --brandcolor2: #b77b57;
+  --brandcolor3: #2b2a28;
 
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
@@ -60,7 +60,7 @@ Site Design By Will Blackburn. coda4.com */
     --fontweight-h6: 500;
     --fontweight-button: 600;
     --fontweight-nav: 500;
-    --fontweight-span: 800;
+    --fontweight-span: 400;
   }
 }
 
@@ -79,7 +79,7 @@ Site Design By Will Blackburn. coda4.com */
     --fontweight-h6: 500;
     --fontweight-button: 500;
     --fontweight-nav: 400;
-    --fontweight-span: 800;
+    --fontweight-span: 400;
   }
 }
 
@@ -97,7 +97,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h6: 500;
   --fontweight-button: 500;
   --fontweight-nav: 400;
-  --fontweight-span: 800;
+  --fontweight-span: 400;
 }
 
 [data-theme="light"] {
@@ -114,7 +114,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h6: 500;
   --fontweight-button: 600;
   --fontweight-nav: 500;
-  --fontweight-span: 800;
+  --fontweight-span: 400;
 }
 
 #sidebarMenu .theme-switch-wrapper {
@@ -135,12 +135,11 @@ Site Design By Will Blackburn. coda4.com */
 .theme-icon-box {
   width: var(--font-clamp-icon);
   height: var(--font-clamp-icon);
-  background-color: transparent;
+  background-color: var(--brandcolor1);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  border: 0.125rem solid var(--inverted);
   transform: translateY(-0.1875rem);
 }
 
@@ -153,13 +152,11 @@ Site Design By Will Blackburn. coda4.com */
 
 /* Light mode (checked) */
 input:checked + .theme-icon-box {
-  background-color: var(--brandcolor1);
-  border-color: var(--brandcolor1);
+  background-color: var(--brandcolor2);
 }
 
 input:checked + .theme-icon-box .bulb-icon {
-  stroke: #fff;
-  fill: #fff;
+  stroke: var(--bg);
   filter: drop-shadow(0 0 0.25rem rgba(255, 255, 255, 0.6));
 }
 
@@ -261,7 +258,7 @@ p {
 }
 
 .span-heading {
-  color: var(--inverted-light);
+  color: var(--inverted-dark);
   font-family: "DM Sans", sans-serif;
   font-size: var(--font-clamp-span);
   font-weight: var(--fontweight-span);
@@ -275,37 +272,6 @@ p {
   display: inline-block;
 }
 
-.cta {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.cta::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.125rem;
-  background-color: var(--brandcolor3);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.cta:hover {
-  color: var(--brandcolor3);
-}
-
-.cta:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
 ul {
   padding: 0;
   list-style: none;
@@ -313,7 +279,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--brandcolor1);
+  color: var(--brandcolor2);
 }
 
 ::-webkit-scrollbar {
@@ -367,7 +333,8 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  height: 100%;
+  background-color: var(--bg-dark);
+  padding: 0.5rem;
 }
 
 .logo a {
@@ -376,7 +343,7 @@ a {
 }
 
 .logo img {
-  width: clamp(3rem, 1rem + 3.5vw, 5rem);
+  width: clamp(2.5rem, 0.8rem + 2.5vw, 4rem);
   height: auto;
 }
 
@@ -403,7 +370,6 @@ a {
 }
 
 .sidebarMenuInner li {
-  list-style: none;
   padding: 1.25rem 1.5rem;
   opacity: 0;
   transform: translateX(20px);
@@ -539,7 +505,6 @@ a {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  list-style: none;
   padding: 0.5rem 0 0 0;
   margin: 0;
 }
@@ -643,6 +608,14 @@ a {
   border-radius: 0.125rem;
 }
 
+.hamburger-line:nth-child(3) {
+  width: 50%;
+}
+
+.openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(3) {
+  width: 100%;
+}
+
 /* Hamburger animation when menu is open */
 .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(1) {
   transform: translateY(clamp(0.45rem, 0.35rem + 0.25vw, 0.65rem)) rotate(45deg);
@@ -740,7 +713,7 @@ a {
 }
 
 .hero-title {
-  max-width: 16.25rem;
+  max-width: 20.25rem;
 }
 
 .hero-subtitle {
@@ -1223,7 +1196,7 @@ a {
 /* Star Rating */
 .review-stars {
   font-size: 1.5rem;
-  color: var(--brandcolor3);
+  color: var(--brandcolor2);
   letter-spacing: 0.25rem;
 }
 
@@ -1366,7 +1339,6 @@ a {
 }
 
 .process-list {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -1386,7 +1358,7 @@ a {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--brandcolor3);
+  color: var(--brandcolor2);
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.6;
@@ -1905,7 +1877,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .faq-question:hover {
-  color: var(--brandcolor3);
+  color: var(--brandcolor2);
 }
 
 .faq-icon {
@@ -1929,7 +1901,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .faq-toggle:checked + .faq-question {
-  color: var(--brandcolor3);
+  color: var(--brandcolor2);
 }
 
 .faq-toggle:checked ~ .faq-answer {
@@ -2153,7 +2125,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .social-icons {
   display: flex;
   gap: 0.625rem;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -2165,7 +2136,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .social-icons svg {
-  fill: var(--inverted);
   width: var(--font-clamp-icon);
   height: var(--font-clamp-icon);
   transition: fill 0.3s ease;
@@ -2175,10 +2145,10 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   transition: 0.3s;
 }
 
-.svg-facebook:hover {
-  fill: var(--brandcolor1);
+.svg-facebook {
+  fill: var(--brandcolor2);
 }
 
-.svg-youtube:hover {
-  fill: var(--brandcolor3);
+.svg-youtube {
+  fill: var(--brandcolor2);
 }
