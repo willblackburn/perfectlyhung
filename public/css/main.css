@@ -28,6 +28,9 @@ Site Design By Will Blackburn. coda4.com */
   --brandcolor2: #b77b57;
   --brandcolor3: #2b2a28;
 
+  --fontfamily-primary: "DM Sans", sans-serif;
+  --fontfamily-secondary: "Outfit", sans-serif;
+
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
@@ -38,7 +41,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
-  --font-clamp-span: clamp(0.75rem, 1.2vw, 1.3rem);
+  --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
   --font-clamp-button: clamp(0.8rem, 2vw, 1.1rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
@@ -181,13 +184,18 @@ section {
   overflow-x: hidden;
 }
 
-h1,
+h1 {
+  font-family: var(--fontfamily-primary);
+  color: var(--text);
+  text-transform: uppercase;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fontfamily-secondary);
   color: var(--text);
   text-transform: uppercase;
 }
@@ -205,7 +213,6 @@ h2 {
   font-weight: var(--fontweight-h2);
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: clamp(1.875rem, 1.5rem + 0.5vw, 2.5rem);
 }
 
 h3 {
@@ -224,7 +231,7 @@ h4 {
 
 p {
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-p);
   font-weight: var(--fontweight-p);
   line-height: 1.6;
@@ -232,7 +239,7 @@ p {
 }
 
 .font-clamp-p2 {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-p2);
   font-weight: var(--fontweight-p2);
   line-height: 1.5;
@@ -240,7 +247,7 @@ p {
 }
 
 .font-clamp-nav {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-nav);
   font-weight: var(--fontweight-nav);
   line-height: 1.2;
@@ -250,7 +257,7 @@ p {
 
 .font-clamp-button {
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
   line-height: 1.1;
@@ -258,18 +265,30 @@ p {
 }
 
 .span-heading {
-  color: var(--inverted-dark);
-  font-family: "DM Sans", sans-serif;
+  color: var(--brandcolor2);
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-span);
   font-weight: var(--fontweight-span);
   line-height: 1.2;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background-color: var(--brandcolor3);
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   max-width: fit-content;
   display: inline-block;
+}
+
+.span-heading-center {
+  color: var(--brandcolor2);
+  font-family: var(--fontfamily-primary);
+  font-size: var(--font-clamp-span);
+  font-weight: var(--fontweight-span);
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  max-width: fit-content;
 }
 
 ul {
@@ -718,15 +737,15 @@ a {
 
 .hero-subtitle {
   color: var(--text-dark);
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--fontfamily-primary);
   font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.6rem);
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: 0.1rem;
+  max-width: 70vw;
   text-transform: uppercase;
   padding-top: 0.1rem;
   padding-left: 0.15rem;
-  letter-spacing: 0.1rem;
-  max-width: 70vw;
 }
 
 /* Areas-covered-hero */
@@ -776,6 +795,10 @@ a {
   align-items: center;
 }
 
+.about-header {
+  padding-bottom: 2rem;
+}
+
 .about-content {
   grid-area: content;
   padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
@@ -800,13 +823,29 @@ a {
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "content"
-      "image";
-    gap: 3rem;
+      "header"
+      "image"
+      "text";
+    gap: 2rem;
     min-height: auto;
   }
 
+  .about-header {
+    grid-area: header;
+    padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  }
+
+  .about-content {
+    display: contents;
+  }
+
+  .about-text {
+    grid-area: text;
+    padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  }
+
   .about-image {
+    grid-area: image;
     width: auto;
     min-height: 30vh;
     height: auto;
@@ -875,17 +914,21 @@ a {
 @media (max-width: 640px) {
   .service-item {
     grid-template-columns: 1fr;
-    grid-template-areas: "content" "image";
+    grid-template-areas: "image" "content";
     height: 40em;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   .service-reverse {
-    grid-template-areas: "content" "image";
+    grid-template-areas: "image" "content";
   }
 
   .service-content > div {
     width: 90%;
+  }
+
+  .service-content h3 {
+    padding-bottom: 0.5rem;
   }
 }
 
