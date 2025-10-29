@@ -97,7 +97,15 @@
       <ul class="font-clamp-nav sidebarMenuInner">
         <li><span></span></li>
         <li><a href="/#aboutus">About</a></li>
-        <li><a href="/#services">Services</a></li>
+        <li class="nav-dropdown">
+          <div class="nav-dropdown-header">
+            <a href="/#services">Services</a>
+            <span class="dropdown-arrow">▼</span>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="/picture-hanging.html">Picture Hanging</a></li>
+          </ul>
+        </li>
         <li class="nav-dropdown">
           <div class="nav-dropdown-header">
             <a href="/#locations">Areas Covered</a>
@@ -547,7 +555,7 @@
                   <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <h4>Our Services</h4>
                     <ul class="footer-links">
-                      <li><a href="/#services">Picture Hanging</a></li>
+                      <li><a href="/picture-hanging.html">Picture Hanging</a></li>
                       <li><a href="/#services">Mirror Installation</a></li>
                       <li><a href="/#services">TV Mounting</a></li>
                       <li><a href="/#services">Curtains & Blinds</a></li>
@@ -557,7 +565,7 @@
 
                   <!-- Contact Info -->
                   <div class="footer-column footer-contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <h4>Get In Touch</h4>
+                    <h4>Let's Hang</h4>
                     <ul class="footer-links">
                       <li>
                         <span class="contact-label">Phone:</span>
@@ -805,19 +813,22 @@
 
     <!-- Mobile dropdown toggle -->
     <script>
-      const navDropdown = document.querySelector(".nav-dropdown");
-      const dropdownArrow = document.querySelector(".dropdown-arrow");
+      const navDropdowns = document.querySelectorAll(".nav-dropdown");
 
-      if (navDropdown && dropdownArrow) {
-        dropdownArrow.addEventListener("click", (e) => {
-          // Only toggle on mobile
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            e.stopPropagation();
-            navDropdown.classList.toggle("active");
-          }
-        });
-      }
+      navDropdowns.forEach((navDropdown) => {
+        const dropdownArrow = navDropdown.querySelector(".dropdown-arrow");
+
+        if (dropdownArrow) {
+          dropdownArrow.addEventListener("click", (e) => {
+            // Only toggle on mobile
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              e.stopPropagation();
+              navDropdown.classList.toggle("active");
+            }
+          });
+        }
+      });
     </script>
 
     <!-- Vite Entry Point -->
