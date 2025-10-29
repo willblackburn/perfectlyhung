@@ -31,12 +31,12 @@ Site Design By Will Blackburn. coda4.com */
   --fontfamily-primary: "DM Sans", sans-serif;
   --fontfamily-secondary: "Outfit", sans-serif;
 
-  --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
+  --font-clamp-p: clamp(1.05rem, 1vw + 0.2rem, 1.6rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
-  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.2rem);
-  --font-clamp-h3: clamp(1.3rem, 2vw, 2.3rem);
+  --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
+  --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
   --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.5rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
@@ -48,7 +48,7 @@ Site Design By Will Blackburn. coda4.com */
   --container-padding: 0 3.2vw;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --text: var(--text-light);
     --bg: var(--bg-light);
@@ -84,7 +84,7 @@ Site Design By Will Blackburn. coda4.com */
     --fontweight-nav: 400;
     --fontweight-span: 400;
   }
-}
+} */
 
 [data-theme="dark"] {
   --text: var(--text-dark);
@@ -780,12 +780,6 @@ a {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
 }
 
-@media (max-width: 800px) {
-  .about {
-    padding-top: clamp(6rem, 5rem + 3vw, 10rem);
-  }
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -797,6 +791,13 @@ a {
 
 .about-header {
   padding-bottom: 2rem;
+  max-width: 90%;
+}
+
+@media (min-width: 1024px) {
+  .about-header {
+    max-width: 85%;
+  }
 }
 
 .about-content {
@@ -820,6 +821,10 @@ a {
 
 /* Mobile Responsive */
 @media (max-width: 800px) {
+  .about {
+    padding-top: clamp(6rem, 5rem + 3vw, 10rem);
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -859,6 +864,7 @@ a {
 
 .services {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
+  overflow: hidden;
 }
 
 @media (max-width: 800px) {
@@ -906,21 +912,26 @@ a {
   width: 80%;
 }
 
-.service-content h4 {
-  margin-bottom: 1rem;
-}
-
 /* Mobile Responsive */
 @media (max-width: 640px) {
   .service-item {
     grid-template-columns: 1fr;
     grid-template-areas: "image" "content";
-    height: 40em;
+    height: auto;
     margin-bottom: 1rem;
   }
 
   .service-reverse {
     grid-template-areas: "image" "content";
+  }
+
+  .service-image {
+    height: 40vh;
+  }
+
+  .service-content {
+    height: auto;
+    padding: 2rem 0;
   }
 
   .service-content > div {
@@ -1206,8 +1217,17 @@ a {
 }
 
 .reviews-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: clamp(3rem, 2rem + 2vw, 5rem);
+  max-width: 25rem;
+}
+
+@media (max-width: 768px) {
+  .reviews-header {
+    max-width: 18rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Desktop Grid - 4 columns */
@@ -1245,7 +1265,7 @@ a {
 
 /* Review Text */
 .review-text p {
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 0;
   font-style: italic;
 }
