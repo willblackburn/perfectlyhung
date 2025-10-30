@@ -994,7 +994,8 @@
       // Navbar background on scroll
       window.addEventListener("scroll", function () {
         const header = document.querySelector(".header");
-        const heroSection = document.querySelector(".hero");
+        // Support both homepage and service page hero sections
+        const heroSection = document.querySelector(".hero, .picture-hanging-hero");
 
         if (heroSection) {
           const heroHeight = heroSection.offsetHeight;
