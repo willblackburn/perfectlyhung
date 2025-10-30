@@ -324,10 +324,14 @@ a {
   right: 0;
   width: 100%;
   height: clamp(4rem, 3rem + 2.5vw, 7rem);
-  padding: var(--container-padding);
+  padding: 1rem;
   z-index: 1001;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: top 0.6s ease, background-color 0.3s ease;
+}
+
+.header.hidden {
+  top: -120px;
 }
 
 @media (max-width: 1024px) {
@@ -338,13 +342,21 @@ a {
 
 @media (max-width: 800px) {
   .header {
+    padding: var(--container-padding);
     height: clamp(5rem, 4rem + 2.5vw, 8rem);
   }
 }
 
 @media (min-width: 1024px) {
   .header {
-    padding-top: 2rem;
+    background-color: var(--bg);
+    margin: 2rem 0rem 0rem 3vw;
+    max-width: 1500px;
+    overflow: visible;
+  }
+
+  .header.hidden {
+    top: -200px;
   }
 }
 
@@ -537,9 +549,7 @@ a {
   color: var(--text);
   text-decoration: none;
   transition: all 0.3s ease;
-  border-left: 3px solid var(--brandcolor3);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .dropdown-menu a:hover {
@@ -553,7 +563,7 @@ a {
 .nav-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  max-height: 100px;
+  max-height: 350px;
 }
 
 .nav-dropdown:hover .dropdown-arrow {
@@ -598,6 +608,108 @@ a {
 
 .openSidebarMenu:checked ~ #sidebarMenu {
   transform: translateX(0);
+}
+
+/* Desktop: show nav links in the main viewport (no slide-in) */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  #sidebarMenu {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    width: auto;
+    transform: none !important;
+    background: transparent;
+    z-index: auto;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    transition: none;
+  }
+
+  .sidebarMenuInner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 0;
+    height: auto;
+    flex: 1;
+    overflow: visible;
+  }
+
+  .sidebarMenuInner li,
+  .nav-contactinfo,
+  .sidebar-bottom-row {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  /* Override closed-menu fades so items are visible on desktop */
+  .openSidebarMenu:not(:checked) ~ #sidebarMenu .sidebarMenuInner li,
+  .openSidebarMenu:not(:checked) ~ #sidebarMenu .nav-contactinfo,
+  .openSidebarMenu:not(:checked) ~ #sidebarMenu .sidebar-bottom-row {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .sidebarMenuInner li {
+    padding: 0;
+    overflow: visible;
+  }
+
+  .sidebarMenuInner li:first-child {
+    display: none;
+  }
+
+  .nav-contactinfo {
+    display: none !important;
+  }
+
+  .sidebar-bottom-row {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 0;
+  }
+
+  /* Desktop dropdown positioning */
+  .sidebarMenuInner .nav-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 2000;
+    background-color: var(--bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Desktop dropdown styling */
+  .sidebarMenuInner .nav-dropdown .dropdown-menu a {
+    border-left: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  }
+
+  .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(1),
+  .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(2),
+  .openSidebarMenu:checked ~ .header .hamburger .hamburger-line:nth-child(3) {
+    transform: none !important;
+    opacity: 1 !important;
+    width: 100% !important;
+  }
 }
 
 /* Hamburger Menu Toggle */
@@ -651,13 +763,38 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding: 1rem 1.5rem 0;
+  padding: 1rem 1.5rem 1rem;
   margin: 0;
   list-style: none;
   opacity: 0;
   transform: translateX(20px);
   animation: slideInNav 0.3s ease-out forwards;
   animation-delay: 0.5s;
+}
+
+/* Ensure hamburger stays hidden on desktop (placed after base styles for precedence) */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none !important;
+  }
+  /* Tiny baseline nudge for social icons to align perfectly with nav text */
+  #sidebarMenu .sidebar-bottom-row {
+    transform: translateY(-1px);
+  }
+
+  /* Center nav links between logo and social icons */
+  .logo {
+    flex: 0 0 auto;
+  }
+
+  #sidebarMenu {
+    flex: 1;
+  }
+
+  .sidebar-bottom-row {
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
 }
 
 .nav-contactinfo a {
@@ -2793,7 +2930,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  margin: 1.5625rem 0 0;
   padding: 0 1.5rem;
   opacity: 0;
   transform: translateX(20px);
