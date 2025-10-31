@@ -32,7 +32,7 @@ Site Design By Will Blackburn. coda4.com */
 
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.6rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
-  --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.3rem);
+  --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.25rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
   --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
@@ -137,7 +137,7 @@ Site Design By Will Blackburn. coda4.com */
 .theme-icon-box {
   width: var(--font-clamp-icon);
   height: var(--font-clamp-icon);
-  background-color: var(--brandcolor1);
+  background-color: var(--brandcolor2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,7 +225,7 @@ h4 {
   font-size: var(--font-clamp-h4);
   font-weight: var(--fontweight-h4);
   line-height: 1.2;
-  letter-spacing: 0;
+  letter-spacing: 0.1em;
 }
 
 p {
@@ -561,7 +561,6 @@ a {
   padding-top: 0.75rem;
 }
 
-/* Hover effects */
 .nav-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -583,7 +582,6 @@ a {
     opacity: 0.6;
   }
 
-  /* Override hover effects on mobile */
   .nav-dropdown:hover .dropdown-menu {
     opacity: 0;
     visibility: hidden;
@@ -595,7 +593,6 @@ a {
     opacity: 0.6 !important;
   }
 
-  /* Mobile click to toggle */
   .nav-dropdown.active .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
@@ -1625,10 +1622,9 @@ a {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
     color: var(--text);
     opacity: 0.6;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     animation: fadeSlide 2s ease-in-out infinite;
   }
 
@@ -2533,8 +2529,9 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 
   .service-detail-intro-image {
     grid-area: image;
-    width: auto;
-    margin-inline: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin-inline: 0;
   }
 }
 
@@ -2551,8 +2548,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .service-detail-items-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
 }
 
 .service-detail-items-subtitle {
@@ -2602,8 +2598,8 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .service-detail-item h4 {
-  margin-bottom: 0.5rem;
-  color: var(--text);
+  margin-top: 1rem;
+  color: var(--brandcolor2);
   grid-column: 1;
   grid-row: 2;
 }
