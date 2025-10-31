@@ -2324,9 +2324,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .footer-column h3 {
   margin-bottom: 0.9375rem;
   color: var(--bg);
-  font-size: var(--font-clamp-h3);
-  font-weight: var(--fontweight-h3);
-  letter-spacing: 0.05em;
 }
 
 .footer-column h4 {
