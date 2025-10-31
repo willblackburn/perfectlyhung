@@ -866,16 +866,22 @@ a {
   position: relative;
 }
 
-.hero {
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("../img/bg1-5.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(80%);
+  filter: brightness(90%);
+  z-index: 0;
 }
 
 @media all and (max-width: 400px) {
-  .hero {
+  .hero-background {
     background-image: url("../img/bg1-4.webp?width=400");
   }
 }
@@ -896,30 +902,6 @@ a {
   padding-top: 0.1rem;
   padding-left: 0.15rem;
 }
-
-/* Background colors for hero title and subtitle on larger devices */
-/* @media (min-width: 768px) {
-  .hero-title {
-    background-color: rgba(25, 25, 25, 0.85);
-    padding: 1.5rem 2rem;
-    backdrop-filter: blur(4px);
-    border-radius: 0.5rem;
-    display: block;
-    width: 35.25rem;
-    box-sizing: border-box;
-  }
-
-  .hero-subtitle {
-    padding: 1rem 1.5rem;
-    margin-top: 0.75rem;
-    background-color: rgba(25, 25, 25, 0.75);
-    backdrop-filter: blur(4px);
-    border-radius: 0.5rem;
-    display: inline-block;
-    width: fit-content;
-    max-width: 70vw;
-  }
-} */
 
 /* Areas-covered-hero */
 
@@ -954,16 +936,12 @@ a {
   position: relative;
 }
 
-.picture-hanging-hero {
+.picture-hanging-hero .hero-background {
   background-image: url("../img/bg1-2.webp");
-  background-position: 32% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(80%);
 }
 
 @media all and (max-width: 400px) {
-  .picture-hanging-hero {
+  .picture-hanging-hero .hero-background {
     background-image: url("../img/bg1-3.webp?width=400");
     background-position: center center;
   }
@@ -1144,7 +1122,7 @@ a {
   }
 
   .service-content h3 {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
 }
 
