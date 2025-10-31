@@ -92,11 +92,11 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-p: 200;
   --fontweight-p2: 200;
   --fontweight-h1: 800;
-  --fontweight-h2: 500;
-  --fontweight-h3: 500;
-  --fontweight-h4: 500;
-  --fontweight-h5: 500;
-  --fontweight-h6: 500;
+  --fontweight-h2: 600;
+  --fontweight-h3: 600;
+  --fontweight-h4: 600;
+  --fontweight-h5: 600;
+  --fontweight-h6: 600;
   --fontweight-button: 800;
   --fontweight-nav: 400;
   --fontweight-span: 400;
@@ -204,28 +204,28 @@ h1 {
   font-size: var(--font-clamp-h1);
   font-weight: var(--fontweight-h1);
   line-height: 0.85em;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
 }
 
 h2 {
   font-size: var(--font-clamp-h2);
   font-weight: var(--fontweight-h2);
   line-height: 1.1;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
 }
 
 h3 {
   font-size: var(--font-clamp-h3);
   font-weight: var(--fontweight-h3);
   line-height: 1.1;
-  letter-spacing: 0;
+  letter-spacing: 0.05em;
 }
 
 h4 {
   font-size: var(--font-clamp-h4);
   font-weight: var(--fontweight-h4);
   line-height: 1.2;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 p {
@@ -233,8 +233,8 @@ p {
   font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-p);
   font-weight: var(--fontweight-p);
-  line-height: 1.6;
-  letter-spacing: -0.1px;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
   opacity: 0.97;
 }
 
@@ -243,7 +243,7 @@ p {
   font-size: var(--font-clamp-p2);
   font-weight: var(--fontweight-p2);
   line-height: 1.5;
-  letter-spacing: 0.1px;
+  letter-spacing: -0.01em;
 }
 
 .font-clamp-nav {
