@@ -1,8 +1,23 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   root: "public",
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'robots.txt',
+          dest: '.'
+        },
+        {
+          src: 'sitemap.xml',
+          dest: '.'
+        }
+      ]
+    })
+  ],
   build: {
     outDir: "../dist",
     emptyOutDir: true,
