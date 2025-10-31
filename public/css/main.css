@@ -350,9 +350,11 @@ a {
 @media (min-width: 1024px) {
   .header {
     background-color: var(--bg);
-    margin: 2rem 0rem 0rem 3vw;
+    margin: 2rem 3vw 0rem 3vw;
     max-width: 1500px;
+    width: calc(100% - 6vw);
     overflow: visible;
+    right: auto;
   }
 
   .header.hidden {
@@ -687,14 +689,27 @@ a {
   }
 
   /* Desktop dropdown positioning */
-  .sidebarMenuInner .nav-dropdown .dropdown-menu {
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 200px;
-    z-index: 2000;
     background-color: var(--bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.25s ease;
+    z-index: 9999;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   /* Desktop dropdown styling */
