@@ -2722,99 +2722,19 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   }
 }
 
-/* Service Detail CTA Section */
-.service-detail-cta {
-  padding: clamp(5rem, 4rem + 3vw, 10rem) 0;
-  background: linear-gradient(135deg, var(--brandcolor1) 0%, var(--brandcolor2) 100%);
-  color: var(--text-dark);
-}
-
-.service-detail-cta-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--container-padding);
-}
-
-.service-detail-cta-content {
-  text-align: center;
-}
-
-.service-detail-cta-content h2 {
-  margin-bottom: 1.5rem;
-  color: var(--text-dark);
-}
-
-.service-detail-cta-content p {
-  margin-bottom: 2.5rem;
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  opacity: 0.95;
-}
-
-.service-detail-cta-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.service-detail-cta-button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 1.125rem;
-}
-
-.service-detail-cta-button.primary {
-  background-color: var(--text-dark);
-  color: var(--brandcolor1);
-}
-
-.service-detail-cta-button.primary:hover {
-  background-color: rgba(25, 25, 25, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.service-detail-cta-button.secondary {
-  background-color: transparent;
-  color: var(--text-dark);
-  border: 2px solid var(--text-dark);
-}
-
-.service-detail-cta-button.secondary:hover {
-  background-color: var(--text-dark);
-  color: var(--brandcolor1);
-}
-
-@media (max-width: 640px) {
-  .service-detail-cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .service-detail-cta-button {
-    text-align: center;
-  }
-}
-
 /* Service Detail Walls Section */
 .service-detail-walls {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
 }
 
 .service-detail-walls-container {
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--container-padding);
 }
 
 .service-detail-walls-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 4rem;
 }
 
@@ -2823,7 +2743,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-secondary);
 }
 
 .service-detail-walls-grid {
@@ -2834,7 +2753,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 .service-detail-wall-item {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg);
   padding: 2rem;
   border-radius: 0.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
