@@ -275,6 +275,7 @@ p {
   margin-bottom: 0.5rem;
   max-width: fit-content;
   display: inline-block;
+  opacity: 0.8;
 }
 
 .span-heading-center {
@@ -2611,7 +2612,8 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   grid-template-areas: "content image";
   gap: clamp(2rem, 1rem + 2vw, 4rem);
   align-items: center;
-  padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
+  min-height: 100vh;
 }
 
 .service-detail-benefits-content {
@@ -2644,6 +2646,13 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   object-fit: cover;
 }
 
+@media (min-width: 969px) {
+  .service-detail-benefits-image img {
+    min-height: 80vh;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 968px) {
   .service-detail-benefits-container {
     grid-template-columns: 1fr;
@@ -2663,19 +2672,19 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 }
 
 /* Service Detail Process Section */
+
 .service-detail-process {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
-  background-color: var(--bg-secondary);
 }
 
 .service-detail-process-container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
 }
 
 .service-detail-process-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 4rem;
 }
 
@@ -2695,20 +2704,15 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .process-step-number {
   font-size: 3rem;
   font-weight: 900;
-  color: var(--brandcolor1);
-  opacity: 0.2;
+  color: var(--brandcolor2);
+  opacity: 0.9;
   line-height: 1;
   margin-bottom: 1rem;
 }
 
-.service-detail-process-step h3 {
+.service-detail-process-step h4 {
+  color: var(--brandcolor2);
   margin-bottom: 1rem;
-  color: var(--text);
-}
-
-.service-detail-process-step p {
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -2728,7 +2732,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .service-detail-cta-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
 }
 
 .service-detail-cta-content {
@@ -2806,7 +2810,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .service-detail-walls-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+  padding: var(--container-padding);
 }
 
 .service-detail-walls-header {
