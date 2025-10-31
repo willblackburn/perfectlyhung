@@ -235,6 +235,7 @@ p {
   font-weight: var(--fontweight-p);
   line-height: 1.6;
   letter-spacing: -0.1px;
+  opacity: 0.97;
 }
 
 .font-clamp-p2 {
@@ -2538,7 +2539,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 /* Service Detail Items Section */
 .service-detail-items {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
-  background-color: var(--bg-secondary);
 }
 
 .service-detail-items-container {
@@ -2625,7 +2625,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   }
 }
 
-/* Service Detail Benefits Section */
+/* Benefits Section */
 .service-detail-benefits {
   padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
 }
@@ -2654,14 +2654,9 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   gap: 2rem;
 }
 
-.service-detail-benefit-item h3 {
+.service-detail-benefit-item h4 {
   margin-bottom: 0.75rem;
-  color: var(--text);
-}
-
-.service-detail-benefit-item p {
-  color: var(--text-secondary);
-  line-height: 1.6;
+  color: var(--brandcolor2);
 }
 
 .service-detail-benefits-image {
@@ -2672,7 +2667,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 0.5rem;
 }
 
 @media (max-width: 968px) {
