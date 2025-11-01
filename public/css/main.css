@@ -109,7 +109,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-p: 400;
   --fontweight-p2: 500;
   --fontweight-h1: 800;
-  --fontweight-h2: 600;
+  --fontweight-h2: 700;
   --fontweight-h3: 700;
   --fontweight-h4: 600;
   --fontweight-h5: 600;
@@ -2774,13 +2774,13 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   object-fit: contain;
 }
 
-.service-detail-wall-item h3 {
+.service-detail-wall-item h4 {
   margin-bottom: 1rem;
-  color: var(--text);
+  color: var(--brandcolor2);
 }
 
 .service-detail-wall-item p {
-  color: var(--text-secondary);
+  color: var(--text);
   line-height: 1.6;
 }
 
