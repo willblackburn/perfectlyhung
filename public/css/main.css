@@ -34,7 +34,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.25rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
-  --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
+  --font-clamp-h2: clamp(1.4rem, 2.8vw, 3.4rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
   --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.5rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
@@ -902,6 +902,12 @@ a {
   text-transform: uppercase;
   padding-top: 0.1rem;
   padding-left: 0.15rem;
+}
+
+@media (max-width: 50rem) {
+  .hero-title {
+    max-width: 100%;
+  }
 }
 
 /* Areas-covered-hero */
@@ -3176,3 +3182,11 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .svg-youtube {
   fill: var(--brandcolor2);
 }
+
+/*-------------------------------------------------------------------------------
+    Overflow Debug
+-------------------------------------------------------------------------------*/
+
+/* * {
+  outline: 1px solid red;
+} */
