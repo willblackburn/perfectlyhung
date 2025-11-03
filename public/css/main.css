@@ -355,7 +355,7 @@ a {
     margin: 2rem 3vw 0rem 3vw;
     max-width: 93.75rem;
     width: calc(100% - 6vw);
-    overflow: visible;
+    /* overflow: visible; */
     right: auto;
   }
 
