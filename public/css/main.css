@@ -1603,7 +1603,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
   .review-grid .grid {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
