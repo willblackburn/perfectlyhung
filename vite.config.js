@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   root: "public",
@@ -8,19 +8,19 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'robots.txt',
-          dest: '.'
+          src: "robots.txt",
+          dest: ".",
         },
         {
-          src: 'sitemap.xml',
-          dest: '.'
+          src: "sitemap.xml",
+          dest: ".",
         },
         {
-          src: 'img/*-modal.webp',
-          dest: 'img'
-        }
-      ]
-    })
+          src: "img/*-modal.webp",
+          dest: "img",
+        },
+      ],
+    }),
   ],
   build: {
     outDir: "../dist",
