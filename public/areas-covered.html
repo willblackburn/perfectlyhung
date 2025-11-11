@@ -105,12 +105,14 @@
         <li><span></span></li>
         <li><a href="/#aboutus">About</a></li>
         <li class="nav-dropdown">
+          <input type="checkbox" id="nav-services-toggle" class="nav-dropdown-toggle" aria-label="Toggle services menu" />
           <div class="nav-dropdown-header">
             <a href="/#services">Services</a>
-            <span class="dropdown-arrow">▼</span>
+            <label class="dropdown-arrow" for="nav-services-toggle">▼</label>
           </div>
           <ul class="dropdown-menu">
             <li><a href="/picture-hanging.html">Picture Hanging</a></li>
+            <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
           </ul>
         </li>
         <li><a href="/#reviews">Reviews</a></li>
@@ -162,7 +164,7 @@
     <!-- Hero -->
     <div class="section area-hero" id="home">
       <div class="hero-container">
-        <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Areas We Cover</h1>
+        <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Areas Covered</h1>
         <p class="hero-subtitle" data-aos="fade-in" data-aos-duration="1500">Picture Hanging Services Across London</p>
       </div>
     </div>
@@ -551,7 +553,7 @@
                       <li><a href="/picture-hanging.html">Picture Hanging</a></li>
                       <li><a href="/picture-hanging.html">Mirror Installation</a></li>
                       <li><a href="/#services">TV Mounting</a></li>
-                      <li><a href="/#services">Curtains & Blinds</a></li>
+                      <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
                       <li><a href="/#services">Shelving Installation</a></li>
                     </ul>
                   </div>
@@ -832,14 +834,15 @@
 
       navDropdowns.forEach((navDropdown) => {
         const dropdownArrow = navDropdown.querySelector(".dropdown-arrow");
+        const dropdownToggle = navDropdown.querySelector(".nav-dropdown-toggle");
 
-        if (dropdownArrow) {
+        if (dropdownArrow && dropdownToggle) {
           dropdownArrow.addEventListener("click", (e) => {
-            // Only toggle on mobile
             if (window.innerWidth <= 768) {
               e.preventDefault();
               e.stopPropagation();
-              navDropdown.classList.toggle("active");
+              dropdownToggle.checked = !dropdownToggle.checked;
+              navDropdown.classList.toggle("active", dropdownToggle.checked);
             }
           });
         }

@@ -1031,9 +1031,10 @@ a {
   }
 }
 
-/* Picture-hanging-hero */
+/* Service detail hero variants */
 
-.picture-hanging-hero {
+.picture-hanging-hero,
+.curtain-fitting-hero {
   max-width: 100vw;
   max-height: 100vh;
   opacity: 1;
@@ -1047,6 +1048,18 @@ a {
 @media all and (max-width: 25rem) {
   .picture-hanging-hero .hero-background {
     background-image: url("../img/bg1-3.webp?width=400");
+    background-position: center center;
+  }
+}
+
+.curtain-fitting-hero .hero-background {
+  background-image: url("../img/bg1-7.webp");
+  background-position: center center;
+}
+
+@media all and (max-width: 25rem) {
+  .curtain-fitting-hero .hero-background {
+    background-image: url("../img/perfectly-hung-curtains-blinds.webp");
     background-position: center center;
   }
 }
