@@ -33,6 +33,7 @@ export default defineConfig({
         main: resolve(__dirname, "public/index.html"),
         areas: resolve(__dirname, "public/areas-covered.html"),
         "picture-hanging": resolve(__dirname, "public/picture-hanging.html"),
+        "curtain-fitting": resolve(__dirname, "public/curtain-fitting.html"),
       },
     },
   },
