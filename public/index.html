@@ -227,7 +227,6 @@
             <p><strong>Need a professional picture hanger in London?</strong> Call Us Today for a free quote.</p>
             <div class="about-cta-container">
               <a href="tel:07951101683" class="cta btn btn-outline" aria-label="Get my free quote">Get my free quote</a>
-              <img src="./img/google-reviews.webp" alt="Google Reviews - Perfectly Hung customer reviews" loading="lazy" />
             </div>
           </div>
         </div>
@@ -1015,9 +1014,9 @@
                   <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
+                      <li><a href="/picture-hanging.html">Picture Hanging</a></li>
+                      <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
                       <li><a href="/areas-covered.html">Areas Covered</a></li>
-                      <li><a href="#reviews">Reviews</a></li>
-                      <li><a href="#contact">Contact</a></li>
                     </ul>
                   </div>
 
@@ -1027,9 +1026,8 @@
                     <ul class="footer-links">
                       <li><a href="/picture-hanging.html">Picture Hanging</a></li>
                       <li><a href="/picture-hanging.html">Mirror Installation</a></li>
-                      <li><a href="#services">TV Mounting</a></li>
-                      <li><a href="#services">Curtains & Blinds</a></li>
-                      <li><a href="#services">Shelving Installation</a></li>
+                      <li><a href="#services">TV AV Mounting</a></li>
+                      <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
                     </ul>
                   </div>
 
@@ -1315,8 +1313,11 @@
             var iframe = document.createElement("iframe");
             iframe.setAttribute("frameborder", "0");
             iframe.setAttribute("allowfullscreen", "");
-            iframe.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
-            iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1&mute=1&playsinline=1");
+            iframe.setAttribute("allow", "autoplay; encrypted-media");
+            iframe.setAttribute(
+              "src",
+              "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1&mute=1&playsinline=1&controls=0&disablekb=1"
+            );
             this.innerHTML = "";
             this.appendChild(iframe);
           });

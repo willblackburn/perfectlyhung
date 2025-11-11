@@ -920,6 +920,143 @@ a {
 }
 
 /*-------------------------------------------------------------------------------
+    Location Detail Pages
+-------------------------------------------------------------------------------*/
+
+.location-page {
+  padding-top: 15vh;
+}
+
+.location-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 0;
+  align-items: start;
+  min-height: 100vh;
+  padding: 0 var(--container-padding);
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+}
+
+.location-content h2 {
+  margin-bottom: clamp(0.75rem, 0.5rem + 0.7vw, 1.5rem);
+}
+
+.location-content p {
+  color: var(--text);
+}
+
+.location-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.location-content ul li {
+  color: var(--text);
+  display: flex;
+  gap: 0.6rem;
+}
+
+.location-content ul li::before {
+  content: "•";
+  color: var(--brandcolor2);
+}
+
+.location-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.location-cta .cta {
+  min-width: 12rem;
+  text-align: center;
+}
+
+.location-image-wrapper {
+  position: relative;
+  padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+}
+
+.location-image-sticky {
+  position: sticky;
+  top: clamp(5rem, 3rem + 2vw, 7rem);
+  overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+  background: var(--bg);
+}
+
+.location-image-sticky img {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.location-meta {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.location-meta h2 {
+  font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem);
+  line-height: 1.2;
+}
+
+.location-meta p {
+  margin: 0;
+}
+
+.location-meta strong {
+  color: var(--brandcolor1);
+}
+
+@media (max-width: 64rem) {
+  .location-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "image";
+    min-height: auto;
+  }
+
+  .location-image-sticky {
+    position: relative;
+    top: auto;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 48rem) {
+  .location-container {
+    gap: 2rem;
+    padding-left: clamp(1rem, 0rem + 3.5vw, 8rem);
+    padding-right: clamp(1rem, 0rem + 3.5vw, 8rem);
+  }
+
+  .location-content ul li {
+    font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  }
+
+  .location-content {
+    padding: 0;
+  }
+
+  .location-image-wrapper {
+    padding: 0;
+  }
+}
+
+/*-------------------------------------------------------------------------------
     Section Backgrounds
 -------------------------------------------------------------------------------*/
 

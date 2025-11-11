@@ -34,6 +34,7 @@ export default defineConfig({
         areas: resolve(__dirname, "public/areas-covered.html"),
         "picture-hanging": resolve(__dirname, "public/picture-hanging.html"),
         "curtain-fitting": resolve(__dirname, "public/curtain-fitting.html"),
+        "locations-mayfair": resolve(__dirname, "public/locations/mayfair.html"),
       },
     },
   },
