@@ -70,7 +70,6 @@ function updateHeaderForScroll(currentScrollY) {
 if (headerEl) {
   // Move nav (#sidebarMenu) into header on desktop so logo, links, icons share container
   const sidebarMenuEl = document.getElementById("sidebarMenu");
-  const menuCheckboxEl = document.getElementById("openSidebarMenu");
   const originalParent = sidebarMenuEl ? sidebarMenuEl.parentNode : null;
   const originalNextSibling = sidebarMenuEl ? sidebarMenuEl.nextSibling : null;
 
@@ -126,13 +125,131 @@ if (headerEl) {
   } catch (err) {
     // noop
   }
+}
 
-  // Ensure hamburger menu is closed on desktop to avoid showing an 'X'
-  const closeMenuOnDesktop = () => {
-    if (window.innerWidth >= 1024 && menuCheckboxEl) {
-      menuCheckboxEl.checked = false;
+// YouTube audio player toggle
+const musicToggleEl = document.querySelector(".music-toggle");
+let ytPlayer = null;
+let ytApiReady = false;
+let ytScriptLoading = false;
+let pendingPlay = false;
+
+function ensureWaveformMarkup() {
+  if (!musicToggleEl) return;
+  const box = musicToggleEl.querySelector(".music-icon-box");
+  if (!box) return;
+  if (box.querySelector(".music-waveform")) return;
+  const wf = document.createElement("div");
+  wf.className = "music-waveform";
+  for (let i = 0; i < 5; i++) {
+    const bar = document.createElement("span");
+    bar.className = "bar";
+    wf.appendChild(bar);
+  }
+  box.appendChild(wf);
+}
+
+function loadYouTubeApi() {
+  if (ytScriptLoading) return;
+  ytScriptLoading = true;
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  const firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+function initYouTubePlayer() {
+  if (ytPlayer || !musicToggleEl || typeof YT === "undefined" || !YT.Player) return;
+  const videoId = musicToggleEl.getAttribute("data-video-id") || "fdSkbTxkznU";
+
+  const container = document.createElement("div");
+  container.id = "yt-audio-player";
+  container.style.position = "absolute";
+  container.style.left = "-9999px";
+  container.style.width = "1px";
+  container.style.height = "1px";
+  document.body.appendChild(container);
+
+  ytPlayer = new YT.Player(container, {
+    width: "1",
+    height: "1",
+    videoId,
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      disablekb: 1,
+      modestbranding: 1,
+      rel: 0,
+      playsinline: 1,
+    },
+    events: {
+      onReady: () => {
+        if (pendingPlay) {
+          try {
+            ytPlayer.playVideo();
+          } catch (e) {
+            // noop
+          }
+          pendingPlay = false;
+        }
+      },
+      onStateChange: (e) => {
+        try {
+          if (e.data === YT.PlayerState.PLAYING) {
+            musicToggleEl.classList.add("is-playing");
+            musicToggleEl.setAttribute("aria-label", "Pause site music");
+            musicToggleEl.setAttribute("aria-pressed", "true");
+          } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
+            musicToggleEl.classList.remove("is-playing");
+            musicToggleEl.setAttribute("aria-label", "Play site music");
+            musicToggleEl.setAttribute("aria-pressed", "false");
+          }
+        } catch (err) {
+          // noop
+        }
+      },
+    },
+  });
+}
+
+// Expose the YouTube API ready callback on window (since this file is a module)
+// eslint-disable-next-line no-undef
+window.onYouTubeIframeAPIReady = function () {
+  ytApiReady = true;
+  initYouTubePlayer();
+};
+
+if (musicToggleEl) {
+  // Inject waveform bars once
+  ensureWaveformMarkup();
+
+  musicToggleEl.addEventListener("click", () => {
+    try {
+      if (!ytApiReady) {
+        pendingPlay = true;
+        loadYouTubeApi();
+        return;
+      }
+
+      if (!ytPlayer) {
+        initYouTubePlayer();
+        pendingPlay = true;
+        return;
+      }
+
+      const state = typeof ytPlayer.getPlayerState === "function" ? ytPlayer.getPlayerState() : -2;
+      // If not currently playing, play; otherwise pause
+      if (state !== 1 /* YT.PlayerState.PLAYING */) {
+        ytPlayer.playVideo();
+      } else {
+        ytPlayer.pauseVideo();
+      }
+    } catch (err) {
+      // noop
     }
-  };
-  closeMenuOnDesktop();
-  window.addEventListener("resize", closeMenuOnDesktop, { passive: true });
+  });
+
+  // Ensure label is correct on load
+  musicToggleEl.setAttribute("aria-label", "Play site music");
+  musicToggleEl.setAttribute("aria-pressed", "false");
 }
