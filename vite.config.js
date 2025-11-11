@@ -14,6 +14,10 @@ export default defineConfig({
         {
           src: 'sitemap.xml',
           dest: '.'
+        },
+        {
+          src: 'img/*-modal.webp',
+          dest: 'img'
         }
       ]
     })
