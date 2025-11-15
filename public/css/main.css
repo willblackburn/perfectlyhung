@@ -407,7 +407,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--brandcolor2);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {
