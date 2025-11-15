@@ -345,6 +345,7 @@ p {
 }
 
 .font-clamp-p2 {
+  color: var(--text);
   font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-p2);
   font-weight: var(--fontweight-p2);
