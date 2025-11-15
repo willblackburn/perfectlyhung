@@ -406,6 +406,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--brandcolor2);
+  font-weight: 600;
 }
 
 ::-webkit-scrollbar {
@@ -941,6 +942,10 @@ a {
   flex-direction: column;
   gap: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
   padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
+}
+
+.location-content h1 {
+  color: var(--text);
 }
 
 .location-content h2 {
