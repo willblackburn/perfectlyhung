@@ -36,6 +36,7 @@ export default defineConfig({
         "curtain-fitting": resolve(__dirname, "public/curtain-fitting.html"),
         "tv-audiovisual-installation": resolve(__dirname, "public/tv-audiovisual-installation.html"),
         "residential-installation": resolve(__dirname, "public/residential-installation.html"),
+        "terms-conditions": resolve(__dirname, "public/terms-conditions.html"),
         "locations-mayfair": resolve(__dirname, "public/locations/mayfair.html"),
       },
     },

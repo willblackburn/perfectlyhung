@@ -1678,6 +1678,41 @@ a {
   text-align: left;
 }
 
+/* Override areas-text-column width for terms page */
+.areas-page-layout:has(.terms-content) .areas-text-column,
+.areas-section .areas-text-column:only-child {
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  position: static;
+}
+
+@media (min-width: 64rem) {
+  .areas-page-layout:has(.terms-content) .areas-text-column,
+  .areas-section .areas-text-column:only-child {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@supports not selector(:has(*)) {
+  .areas-section .areas-text-column:only-child {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: static;
+  }
+
+  @media (min-width: 64rem) {
+    .areas-section .areas-text-column:only-child {
+      flex: 1 1 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
 .areas-grid-column {
   flex: 1.5;
 }
@@ -4043,6 +4078,45 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
     width: 0.625rem;
     height: 0.625rem;
   }
+}
+
+/*-------------------------------------------------------------------------------
+    Terms & Conditions
+-------------------------------------------------------------------------------*/
+
+.terms-content {
+  max-width: 100%;
+}
+
+.terms-content .terms-section {
+  margin-bottom: clamp(2rem, 1.5rem + 1vw, 3rem);
+}
+
+.terms-content h2 {
+  margin-top: clamp(2.5rem, 2rem + 1vw, 3.5rem);
+  margin-bottom: clamp(1rem, 0.75rem + 0.5vw, 1.5rem);
+}
+
+.terms-content h3 {
+  margin-top: clamp(1.5rem, 1.25rem + 0.5vw, 2rem);
+  margin-bottom: clamp(0.75rem, 0.5rem + 0.5vw, 1rem);
+}
+
+.terms-content p {
+  margin-bottom: clamp(1rem, 0.75rem + 0.5vw, 1.5rem);
+  line-height: 1.7;
+}
+
+.terms-content ul {
+  margin-bottom: clamp(1rem, 0.75rem + 0.5vw, 1.5rem);
+  padding-left: 1.5rem;
+  line-height: 1.7;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.terms-content li {
+  margin-bottom: 0.5rem;
 }
 
 /*-------------------------------------------------------------------------------
