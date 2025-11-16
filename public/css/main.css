@@ -932,6 +932,7 @@ a {
 .location-container {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-areas: "content image";
   gap: 0;
   align-items: start;
   min-height: 100vh;
@@ -939,9 +940,10 @@ a {
 }
 
 .location-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  gap: clamp(4rem, 1.2rem + 1vw, 2.25rem);
   padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
 }
 
@@ -953,16 +955,12 @@ a {
   margin-bottom: clamp(0.75rem, 0.5rem + 0.7vw, 1.5rem);
 }
 
-.location-content p {
-  color: var(--text);
-}
-
 .location-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .location-content ul li {
@@ -977,49 +975,36 @@ a {
 }
 
 .location-cta {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .location-cta .cta {
-  min-width: 12rem;
-  text-align: center;
+  min-width: 0;
 }
 
 .location-image-wrapper {
+  grid-area: image;
   position: relative;
   padding: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
 }
 
-.location-image-sticky {
-  position: sticky;
-  top: clamp(5rem, 3rem + 2vw, 7rem);
-  overflow: hidden;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
-  background: var(--bg);
-}
-
-.location-image-sticky img {
+.location-image img {
   display: block;
   width: 100%;
   height: 80vh;
   object-fit: cover;
 }
 
-.location-meta {
+/* .location-meta {
   display: grid;
   gap: 1.25rem;
 }
 
-.location-meta h2 {
-  font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2rem);
-  line-height: 1.2;
-}
-
 .location-meta p {
   margin: 0;
-}
+} */
 
 .location-meta strong {
   color: var(--brandcolor1);
@@ -1032,13 +1017,6 @@ a {
       "content"
       "image";
     min-height: auto;
-  }
-
-  .location-image-sticky {
-    position: relative;
-    top: auto;
-    max-width: 32rem;
-    margin: 0 auto;
   }
 }
 
@@ -1059,6 +1037,10 @@ a {
 
   .location-image-wrapper {
     padding: 0;
+  }
+
+  .location-image-sticky img {
+    height: 30vh;
   }
 }
 
@@ -1086,7 +1068,7 @@ a {
 }
 
 /*-------------------------------------------------------------------------------
-    Hero 
+    Heroes
 -------------------------------------------------------------------------------*/
 
 .hero-container {
@@ -1150,8 +1132,6 @@ a {
     max-width: 100%;
   }
 }
-
-/* Areas-covered-hero */
 
 .area-hero {
   max-width: 100vw;
@@ -1308,16 +1288,7 @@ a {
   }
 
   .about-cta-container .cta {
-    flex: 1 1 50%;
-    padding: clamp(0.8rem, 0.7rem + 0.5vw, 1rem) clamp(0.75rem, 0.6rem + 1vw, 1.5rem);
-    white-space: normal;
-  }
-
-  .about-cta-container img {
-    flex: 1 1 50%;
-    max-width: 50%;
-    width: 100%;
-    object-fit: contain;
+    flex: 0 0 auto;
   }
 }
 
@@ -1331,7 +1302,6 @@ a {
   margin: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
 }
 
-/* Mobile Responsive */
 @media (max-width: 50rem) {
   .about {
     padding-top: clamp(6rem, 5rem + 3vw, 10rem);
@@ -1441,7 +1411,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* Mobile Responsive */
 @media (max-width: 40rem) {
   .service-item {
     grid-template-columns: 1fr;
@@ -1488,7 +1457,7 @@ a {
 
 .areas-section {
   background-color: var(--bg);
-  height: auto !important; /* Override .section height: 100% */
+  height: auto !important;
   overflow: visible;
 }
 
@@ -1692,7 +1661,6 @@ a {
   text-align: left;
 }
 
-/* Override areas-text-column width for terms page */
 .areas-page-layout:has(.terms-content) .areas-text-column,
 .areas-section .areas-text-column:only-child {
   flex: 1 1 100% !important;
@@ -1761,7 +1729,7 @@ a {
 }
 
 /*-------------------------------------------------------------------------------
-    REVIEWS 2 
+    REVIEWS 
 -------------------------------------------------------------------------------*/
 
 .review-grid {
@@ -3079,7 +3047,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .locations-map {
   aspect-ratio: 16 / 9;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
@@ -3101,7 +3068,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .location-group {
   background-color: rgba(128, 128, 128, 0.05);
   padding: 1.25rem 1.25rem 1rem;
-  border-radius: 0.5rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   border: 0.0625rem solid rgba(128, 128, 128, 0.15);
 }
@@ -4142,6 +4108,8 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  max-width: 100%;
   background: linear-gradient(180deg, var(--brandcolor2) 0%, var(--brandcolor2) 100%);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
   font-family: var(--fontfamily-secondary);
@@ -4149,6 +4117,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   font-weight: var(--fontweight-button);
   text-transform: uppercase;
   padding: 0.85rem 1.8rem;
+  color: var(--text-light);
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
   position: relative;
@@ -4167,7 +4136,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .cta:hover,
 .button:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 14px color-mix(in srgb, var(--brandcolor2) 40%, transparent);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 92%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
 }
 
@@ -4181,7 +4149,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   transform: scale(1.03);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
   color: #ffffff;
-  box-shadow: 0 0 6px color-mix(in srgb, var(--brandcolor2) 35%, transparent);
 }
 
 /*-------------------------------------------------------------------------------
