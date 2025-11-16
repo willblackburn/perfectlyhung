@@ -41,7 +41,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
-  --font-clamp-button: clamp(0.8rem, 2vw, 1.1rem);
+  --font-clamp-button: clamp(0.8rem, 2vw, 1.2rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
   --container-padding: 0 3.2vw;
@@ -60,7 +60,7 @@ Site Design By Will Blackburn. coda4.com */
     --fontweight-h4: 600;
     --fontweight-h5: 600;
     --fontweight-h6: 600;
-    --fontweight-button: 800;
+    --fontweight-button: 600;
     --fontweight-nav: 500;
     --fontweight-span: 800;
   }
@@ -79,7 +79,7 @@ Site Design By Will Blackburn. coda4.com */
     --fontweight-h4: 500;
     --fontweight-h5: 500;
     --fontweight-h6: 500;
-    --fontweight-button: 800;
+    --fontweight-button: 600;
     --fontweight-nav: 400;
     --fontweight-span: 400;
   }
@@ -97,7 +97,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h4: 600;
   --fontweight-h5: 600;
   --fontweight-h6: 600;
-  --fontweight-button: 800;
+  --fontweight-button: 600;
   --fontweight-nav: 400;
   --fontweight-span: 400;
 }
@@ -114,7 +114,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h4: 600;
   --fontweight-h5: 600;
   --fontweight-h6: 600;
-  --fontweight-button: 800;
+  --fontweight-button: 600;
   --fontweight-nav: 500;
   --fontweight-span: 800;
 }
@@ -1758,11 +1758,6 @@ a {
   padding-top: clamp(3rem, 2rem + 2vw, 5rem);
   max-width: 50rem;
   margin: 0 auto;
-}
-
-.areas-cta p {
-  font-size: var(--font-clamp-p);
-  line-height: 1.6;
 }
 
 /*-------------------------------------------------------------------------------
@@ -4141,29 +4136,21 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
     Buttons / CTA
 -------------------------------------------------------------------------------*/
 
-/* Global Elegant CTA/Button Styles */
 .btn,
 .cta,
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* Fallback solid color */
   background: linear-gradient(180deg, var(--brandcolor2) 0%, var(--brandcolor2) 100%);
-  /* Soft gradient using brand color */
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
-  color: #f8f8f8;
-  font-family: var(--fontfamily-primary);
+  font-family: var(--fontfamily-secondary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   padding: 0.85rem 1.8rem;
-  border: none;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
-  box-shadow: 0 0 0 color-mix(in srgb, var(--brandcolor2) 0%, transparent);
-  text-transform: none;
   position: relative;
 }
 
@@ -4182,21 +4169,19 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   transform: scale(1.03);
   box-shadow: 0 0 14px color-mix(in srgb, var(--brandcolor2) 40%, transparent);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 92%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
-  color: #ffffff;
 }
 
 .btn-outline {
   background: transparent;
   color: var(--brandcolor2);
-  border: 0.125rem solid var(--brandcolor2);
-  box-shadow: none;
+  border: 0.05rem solid var(--brandcolor2);
 }
 
 .btn-outline:hover {
   transform: scale(1.03);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
   color: #ffffff;
-  box-shadow: 0 0 12px color-mix(in srgb, var(--brandcolor2) 35%, transparent);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--brandcolor2) 35%, transparent);
 }
 
 /*-------------------------------------------------------------------------------
