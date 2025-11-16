@@ -32,11 +32,11 @@ Site Design By Will Blackburn. coda4.com */
 
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.5rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
-  --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.25rem);
+  --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.15rem);
   --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
-  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.8rem);
-  --font-clamp-h3: clamp(1.3rem, 2vw, 3.2rem);
-  --font-clamp-h4: clamp(1.05rem, 1.5vw, 1.5rem);
+  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.4rem);
+  --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
+  --font-clamp-h4: clamp(1.05rem, 1.8vw, 1.7rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
@@ -2051,6 +2051,10 @@ a {
   object-fit: cover;
 }
 
+.review-grid .grid .item:nth-child(4) .box-left {
+  justify-content: center;
+}
+
 @media (min-width: 48rem) {
   .reviews2-card {
     grid-template-columns: 615px 1fr;
@@ -3433,7 +3437,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   }
 
   .footer-google-reviews img.taskrabbit-logo {
-    width: 6.25rem;
+    width: 4rem;
     height: auto;
   }
 }
