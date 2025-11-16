@@ -44,18 +44,21 @@
     <meta property="twitter:image" content="https://perfectlyhung.uk/img/perfectlyhung-logo.webp" />
     <meta property="twitter:image:alt" content="Perfectly Hung Logo - Professional Picture Hanging Services" />
 
-    <!-- Font Used -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- Preload -->
+
+    <link rel="preload" href="img/bg1-1.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="img/bg1-4.webp?width=400" as="image" media="(max-width: 30rem)" fetchpriority="high" />
+
+    <!-- Fonts Used -->
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Preload -->
-
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preload" href="img/bg1-1.webp" as="image" fetchpriority="high" />
 
     <!-- Animate On Scroll AOS -->
 
@@ -137,6 +140,7 @@
             <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
             <li><a href="/tv-audiovisual-installation.html">TV &amp; Audio Visual Installation</a></li>
             <li><a href="/residential-installation.html">Residential Installation</a></li>
+            <li><a href="/commercial-installation.html">Commercial Installation</a></li>
           </ul>
         </li>
 
@@ -343,7 +347,10 @@
               commercial installation services also cover office fit-outs and corporate spaces, delivering professional results on schedule with minimal
               disruption to your business.
             </p>
-            <a href="/commercial-installation.html" class="cta btn btn-outline" aria-label="View detailed information about our Commercial Installation Service"
+            <a
+              href="/commercial-installation.html#property-types"
+              class="cta btn btn-outline"
+              aria-label="View detailed information about our Commercial Installation Service"
               >What types of Commercial Properties?</a
             >
           </div>
@@ -1038,6 +1045,22 @@
                     <ul class="footer-links">
                       <li><a href="/areas-covered.html">Areas Covered</a></li>
                       <li><a href="/terms-conditions.html">Terms &amp; Conditions</a></li>
+                      <li>
+                        <a
+                          href="/residential-installation.html"
+                          aria-label="Residential installation services in London"
+                          title="Residential installation services in London"
+                          >Residential Installation Services</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/commercial-installation.html"
+                          aria-label="Commercial installation services in London"
+                          title="Commercial installation services in London"
+                          >Commercial Installation Services</a
+                        >
+                      </li>
                     </ul>
                   </div>
 

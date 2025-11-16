@@ -33,8 +33,8 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.5rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.15rem);
-  --font-clamp-h1: clamp(2.5rem, 4.5vw, 6rem);
-  --font-clamp-h2: clamp(1.6rem, 2.8vw, 3.4rem);
+  --font-clamp-h1: clamp(2.3rem, 4vw, 6rem);
+  --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
   --font-clamp-h4: clamp(1.05rem, 1.8vw, 1.7rem);
   --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
@@ -708,7 +708,7 @@ a {
   .nav-dropdown-toggle:checked ~ .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
-    max-height: 15rem !important;
+    max-height: 22rem !important;
   }
 
   .nav-dropdown-toggle:checked + .nav-dropdown-header .dropdown-arrow {
@@ -1122,7 +1122,7 @@ a {
   z-index: 0;
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .hero-background {
     background-image: url("../img/bg1-4.webp?width=400");
   }
@@ -1136,7 +1136,7 @@ a {
 .hero-subtitle {
   color: var(--text-dark);
   font-family: var(--fontfamily-primary);
-  font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.6rem);
+  font-size: clamp(0.8rem, 0.6rem + 0.6vw, 1.2rem);
   font-weight: 800;
   line-height: 1.5;
   letter-spacing: 0.1rem;
@@ -1168,7 +1168,7 @@ a {
   filter: brightness(80%);
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .area-hero {
     background-image: url("../img/bg1-6.webp?width=400");
   }
@@ -1179,7 +1179,8 @@ a {
 .picture-hanging-hero,
 .curtain-fitting-hero,
 .tv-av-hero,
-.residential-hero {
+.residential-hero,
+.commercial-hero {
   max-width: 100vw;
   max-height: 100vh;
   opacity: 1;
@@ -1190,7 +1191,7 @@ a {
   background-image: url("../img/bg1-2.webp");
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .picture-hanging-hero .hero-background {
     background-image: url("../img/bg1-3.webp?width=400");
     background-position: center center;
@@ -1202,7 +1203,7 @@ a {
   background-position: center center;
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .curtain-fitting-hero .hero-background {
     background-image: url("../img/perfectly-hung-curtains-blinds.webp");
     background-position: center center;
@@ -1214,7 +1215,7 @@ a {
   background-position: center center;
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .tv-av-hero .hero-background {
     background-image: url("../img/bg1-9.webp");
     background-position: center center;
@@ -1226,9 +1227,21 @@ a {
   background-position: center center;
 }
 
-@media all and (max-width: 25rem) {
+@media all and (max-width: 30rem) {
   .residential-hero .hero-background {
     background-image: url("../img/bg1-10.webp");
+    background-position: center center;
+  }
+}
+
+.commercial-hero .hero-background {
+  background-image: url("../img/bg1-11.webp");
+  background-position: center center;
+}
+
+@media all and (max-width: 30rem) {
+  .commercial-hero .hero-background {
+    background-image: url("../img/bg1-11.webp");
     background-position: center center;
   }
 }
