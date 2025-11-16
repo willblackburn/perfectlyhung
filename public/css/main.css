@@ -4121,6 +4121,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
   position: relative;
+  border: 0.05rem solid var(--brandcolor2);
 }
 
 .btn::before,
@@ -4135,20 +4136,28 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .btn:hover,
 .cta:hover,
 .button:hover {
-  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 92%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
+}
+
+.btn:active,
+.cta:active,
+.button:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--brandcolor2);
-  border: 0.05rem solid var(--brandcolor2);
 }
 
 .btn-outline:hover {
-  transform: scale(1.03);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
-  color: #ffffff;
+  color: var(--text-light);
 }
 
 /*-------------------------------------------------------------------------------
