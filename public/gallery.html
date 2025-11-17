@@ -4,36 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>London Areas We Cover - Perfectly Hung Picture Hanging Services</title>
+    <title>Gallery | Perfectly Hung</title>
     <meta
       name="description"
-      content="We provide professional picture hanging, TV mounting, and installation services across all London areas. Find out if we cover your area."
+      content="Browse our gallery of professional picture hanging and art installation projects across London. See our work in residential and commercial properties."
     />
     <meta name="author" content="PerfectlyHung" />
-    <link rel="canonical" href="https://perfectlyhung.uk/areas-covered.html" />
+    <link rel="canonical" href="https://perfectlyhung.uk/gallery.html" />
 
     <!-- Favicon -->
     <link rel="icon" href="img/perfectlyhung-favicon.webp" type="image/x-icon" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://perfectlyhung.uk/areas-covered.html" />
-    <meta property="og:title" content="London Areas We Cover - Perfectly Hung" />
-    <meta property="og:description" content="Professional picture hanging and installation services across all London areas." />
-    <meta property="og:image" content="https://perfectlyhung.uk/img/bg1.webp" />
-    <meta property="og:image:alt" content="London Areas Covered by Perfectly Hung" />
+    <meta property="og:url" content="https://perfectlyhung.uk/gallery.html" />
+    <meta property="og:title" content="Gallery | Perfectly Hung - Professional Picture Hanging and Art Installation" />
+    <meta property="og:description" content="Browse our gallery of professional picture hanging and art installation projects across London." />
+    <meta property="og:image" content="https://perfectlyhung.uk/img/perfectlyhung-logo.webp" />
+    <meta property="og:image:alt" content="Perfectly Hung Logo - Professional Picture Hanging Services" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://perfectlyhung.uk/areas-covered.html" />
-    <meta property="twitter:title" content="London Areas We Cover - Perfectly Hung" />
-    <meta property="twitter:description" content="Professional picture hanging and installation services across all London areas." />
-    <meta property="twitter:image" content="https://perfectlyhung.uk/img/bg1.webp" />
-    <meta property="twitter:image:alt" content="London Areas Covered by Perfectly Hung" />
+    <meta property="twitter:url" content="https://perfectlyhung.uk/gallery.html" />
+    <meta property="twitter:title" content="Gallery | Perfectly Hung - Professional Picture Hanging and Art Installation" />
+    <meta property="twitter:description" content="Browse our gallery of professional picture hanging and art installation projects across London." />
+    <meta property="twitter:image" content="https://perfectlyhung.uk/img/perfectlyhung-logo.webp" />
+    <meta property="twitter:image:alt" content="Perfectly Hung Logo - Professional Picture Hanging Services" />
 
-    <!-- Font Used -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- Fonts Used -->
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -53,48 +56,20 @@
       gtag("js", new Date());
       gtag("config", "G-V64EED9M6Y");
     </script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = "2.0";
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", "365100129032287");
-    fbq("track", "PageView");
-  </script>
-  <noscript
-    ><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=365100129032287&ev=PageView&noscript=1" alt="Facebook Pixel"
-  /></noscript>
-
   <body>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
 
     <!-- Navigation -->
     <header class="header">
-      <div class="logo">
+      <div class="logo" data-aos="fade-in" data-aos-duration="1500">
         <a href="/">
           <img src="./img/perfectlyhung-logo.webp" alt="Perfectly Hung - Professional Art Installation" />
         </a>
       </div>
 
-      <label for="openSidebarMenu" class="hamburger" aria-label="Toggle navigation menu">
+      <label for="openSidebarMenu" class="hamburger" aria-label="Toggle navigation menu" data-aos="fade-in" data-aos-duration="1500">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -118,7 +93,9 @@
             <li><a href="/commercial-installation.html">Commercial Installation</a></li>
           </ul>
         </li>
-        <li><a href="/#reviews">Reviews</a></li>
+        <li>
+          <a href="/#reviews">Reviews</a>
+        </li>
         <li>
           <a href="/gallery.html">Gallery</a>
         </li>
@@ -126,7 +103,9 @@
           <a href="/#process">Our Process</a>
         </li>
         <li><a href="/areas-covered.html">Areas Covered</a></li>
-        <li><a href="/#contact">Contact Us</a></li>
+        <li>
+          <a href="/#contact">Contact Us</a>
+        </li>
       </ul>
       <ul class="font-clamp-p2 nav-contactinfo">
         <li>
@@ -136,8 +115,6 @@
           <a href="mailto:hello@perfectlydone.uk">hello@perfectlydone.uk</a>
         </li>
       </ul>
-
-      <!-- Socials & Theme Toggle -->
       <div class="sidebar-bottom-row">
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
@@ -169,351 +146,252 @@
     </nav>
 
     <!-- Hero -->
-    <div class="section area-hero" id="home">
+    <div class="section hero hero-gallery" id="home">
+      <div class="hero-background"></div>
       <div class="hero-container">
-        <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Areas Covered</h1>
-        <p class="hero-subtitle" data-aos="fade-in" data-aos-duration="1500">Picture Hanging Services Across London</p>
+        <h1 class="hero-title" data-aos="fade-in" data-aos-duration="1500">Our Work</h1>
+        <p class="hero-subtitle" data-aos="fade-in" data-aos-duration="1500">A Showcase of Our London Installations</p>
       </div>
     </div>
 
-    <!-- London Areas Section -->
-    <div class="section areas-section areas-page">
-      <div class="areas-container">
-        <div class="areas-page-layout">
-          <div class="areas-text-column">
-            <div class="span-heading" data-aos="fade-up">Areas Covered</div>
-            <h2 class="areas-header" data-aos="fade-up">London Areas We Cover</h2>
-
-            <div class="paragraph areas-intro" data-aos="fade-up">
-              <p>
-                We proudly serve customers across London, providing professional picture hanging, TV mounting, mirror installation, and handyman services.
-                Whether you're in Central London, North, South, East, or West London, our experienced team is ready to help transform your space.
-              </p>
-            </div>
+    <!-- GALLERY -->
+    <div class="section gallery" id="gallery">
+      <input type="checkbox" id="pic-28" />
+      <label for="pic-28" class="lightbox"
+        ><label for="pic-28" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-028.webp" alt="Professional Picture Hanging Service in Chelsea, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-27" />
+      <label for="pic-27" class="lightbox"
+        ><label for="pic-27" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-027.webp" alt="Gallery Wall Installation by Perfectly Hung in Kensington, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-26" />
+      <label for="pic-26" class="lightbox"
+        ><label for="pic-26" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-026.webp" alt="Expert Picture Hanging in Mayfair, Central London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-21" />
+      <label for="pic-21" class="lightbox"
+        ><label for="pic-21" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-021.webp" alt="Art Installation and Picture Hanging in Belgravia, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-22" />
+      <label for="pic-22" class="lightbox"
+        ><label for="pic-22" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-022.webp" alt="Professional Picture Framing and Hanging Service West London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-23" />
+      <label for="pic-23" class="lightbox"
+        ><label for="pic-23" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-023.webp" alt="Wall Art and Canvas Hanging in Marylebone, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-24" />
+      <label for="pic-24" class="lightbox"
+        ><label for="pic-24" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-024.webp" alt="Large Canvas Picture Hanging Hampstead, North London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-25" />
+      <label for="pic-25" class="lightbox"
+        ><label for="pic-25" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-025.webp" alt="TV Wall Mounting and Picture Installation West Brompton, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-1" />
+      <label for="pic-1" class="lightbox"
+        ><label for="pic-1" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-001.webp" alt="Floating Shelf Installation and Picture Hanging Central London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-2" />
+      <label for="pic-2" class="lightbox"
+        ><label for="pic-2" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-002.webp" alt="Multiple Picture Gallery Wall Design and Installation London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-3" />
+      <label for="pic-3" class="lightbox"
+        ><label for="pic-3" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-003.webp" alt="Large Mirror Hanging Service Chelsea and Kensington, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-4" />
+      <label for="pic-4" class="lightbox"
+        ><label for="pic-4" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-004.webp" alt="Stairwell Picture Installation and Gallery Wall West London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-5" />
+      <label for="pic-5" class="lightbox"
+        ><label for="pic-5" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-005.webp" alt="Triptych Canvas Art Hanging in Mayfair, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-6" />
+      <label for="pic-6" class="lightbox"
+        ><label for="pic-6" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-006.webp" alt="Professional Wall Art Installation Service North West London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-7" />
+      <label for="pic-7" class="lightbox"
+        ><label for="pic-7" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-007.webp" alt="Modern Art Hanging and Installation Belgravia, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-8" />
+      <label for="pic-8" class="lightbox"
+        ><label for="pic-8" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-008.webp" alt="Stairwell Picture Arrangement and Installation Hampstead, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-9" />
+      <label for="pic-9" class="lightbox"
+        ><label for="pic-9" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-009.webp" alt="Bedroom Wall Art and Picture Hanging Service London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-10" />
+      <label for="pic-10" class="lightbox"
+        ><label for="pic-10" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-010.webp" alt="Kitchen Picture and Canvas Hanging Chelsea, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-11" />
+      <label for="pic-11" class="lightbox"
+        ><label for="pic-11" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-011.webp" alt="Fireplace Art Wall Installation Kensington, Central London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-12" />
+      <label for="pic-12" class="lightbox"
+        ><label for="pic-12" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-012.webp" alt="Mosaic Art Panel Installation and Mounting Marylebone, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-13" />
+      <label for="pic-13" class="lightbox"
+        ><label for="pic-13" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-013.webp" alt="Living Room Picture Hanging and Art Installation West Brompton" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-14" />
+      <label for="pic-14" class="lightbox"
+        ><label for="pic-14" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-014.webp" alt="Floating Shelf Installation Living Room Central London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-15" />
+      <label for="pic-15" class="lightbox"
+        ><label for="pic-15" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-015.webp" alt="Large Mirror Hanging Service Mayfair and Chelsea, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-16" />
+      <label for="pic-16" class="lightbox"
+        ><label for="pic-16" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-016.webp" alt="Heavy Mirror Installation Kensington, West London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-17" />
+      <label for="pic-17" class="lightbox"
+        ><label for="pic-17" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-017.webp" alt="Professional Picture Hanging Service Belgravia, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-18" />
+      <label for="pic-18" class="lightbox"
+        ><label for="pic-18" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-018.webp" alt="Expert Picture and Frame Hanging Hampstead Heath, London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-19" />
+      <label for="pic-19" class="lightbox"
+        ><label for="pic-19" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-019.webp" alt="Mirror Hanging and Installation Service North London" loading="lazy"
+      /></label>
+      <input type="checkbox" id="pic-20" />
+      <label for="pic-20" class="lightbox"
+        ><label for="pic-20" class="lightbox-close">&times;</label
+        ><img src="./img/gallery/gallery-020.webp" alt="TV Wall Mounting and Cable Management Central London" loading="lazy"
+      /></label>
+      <div class="gallery-container" data-aos="fade-in">
+        <div class="grid">
+          <div class="grid-item gallery-grid-intro">
+            <span class="span-heading">Our Work</span>
+            <h3>Picture Hanging Projects</h3>
+            <p class="font-clamp-p2"></p>
           </div>
-
-          <div class="areas-grid-column">
-            <div class="coverage areas-page-grid" data-aos="fade-in">
-              <!-- Central London -->
-              <a href="#" class="location region-heading">
-                <h4>Central London</h4>
-              </a>
-              <a href="/locations/mayfair.html" class="location">
-                <h4>Mayfair</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Marylebone</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Fitzrovia</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Bloomsbury</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Covent Garden</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Soho</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Westminster</h4>
-              </a>
-
-              <!-- West London -->
-              <a href="#" class="location region-heading">
-                <h4>West London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Chelsea</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Kensington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>South Kensington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Knightsbridge</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Belgravia</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Notting Hill</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Holland Park</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Earl's Court</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Fulham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hammersmith</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Chiswick</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Barnes</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Richmond</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Putney</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Wandsworth</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Battersea</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Clapham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Shepherd's Bush</h4>
-              </a>
-
-              <!-- North London -->
-              <a href="#" class="location region-heading">
-                <h4>North London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hampstead</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hampstead Heath</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Highgate</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Primrose Hill</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Camden</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>St John's Wood</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Swiss Cottage</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Kentish Town</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Islington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Angel</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Stoke Newington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Crouch End</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Muswell Hill</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Finchley</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Golders Green</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Barnet</h4>
-              </a>
-
-              <!-- North West London -->
-              <a href="#" class="location region-heading">
-                <h4>North West London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Maida Vale</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Little Venice</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Kilburn</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Queen's Park</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Willesden</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Harrow</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Wembley</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Brent</h4>
-              </a>
-
-              <!-- East London -->
-              <a href="#" class="location region-heading">
-                <h4>East London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Shoreditch</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hoxton</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hackney</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Dalston</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Bethnal Green</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Whitechapel</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Canary Wharf</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Bow</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Stratford</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Mile End</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Limehouse</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Wapping</h4>
-              </a>
-
-              <!-- South London -->
-              <a href="#" class="location region-heading">
-                <h4>South London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>South Kensington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Pimlico</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Vauxhall</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Stockwell</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Brixton</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Streatham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Balham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Tooting</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Wimbledon</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Southwark</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Borough</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Bermondsey</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Peckham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Camberwell</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Dulwich</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Greenwich</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Blackheath</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Lewisham</h4>
-              </a>
-
-              <!-- South East London -->
-              <a href="#" class="location region-heading">
-                <h4>South East London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Deptford</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>New Cross</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Rotherhithe</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Surrey Quays</h4>
-              </a>
-
-              <!-- South West London -->
-              <a href="#" class="location region-heading">
-                <h4>South West London</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Clapham Junction</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Clapham Common</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Earlsfield</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Merton</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Kingston</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Twickenham</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Teddington</h4>
-              </a>
-              <a href="#" class="location">
-                <h4>Hampton</h4>
-              </a>
-            </div>
+          <!-- Loop all pictures and print the actual images-->
+          <label for="pic-28" class="grid-item"
+            ><img src="./img/gallery/gallery-028.webp" alt="Professional Picture Hanging Service in Chelsea, London" loading="lazy"
+          /></label>
+          <label for="pic-27" class="grid-item"
+            ><img src="./img/gallery/gallery-027.webp" alt="Gallery Wall Installation by Perfectly Hung in Kensington, London" loading="lazy"
+          /></label>
+          <label for="pic-26" class="grid-item"
+            ><img src="./img/gallery/gallery-026.webp" alt="Expert Picture Hanging in Mayfair, Central London" loading="lazy"
+          /></label>
+          <label for="pic-21" class="grid-item"
+            ><img src="./img/gallery/gallery-021.webp" alt="Art Installation and Picture Hanging in Belgravia, London" loading="lazy"
+          /></label>
+          <label for="pic-22" class="grid-item"
+            ><img src="./img/gallery/gallery-022.webp" alt="Professional Picture Framing and Hanging Service West London" loading="lazy"
+          /></label>
+          <label for="pic-23" class="grid-item"
+            ><img src="./img/gallery/gallery-023.webp" alt="Wall Art and Canvas Hanging in Marylebone, London" loading="lazy"
+          /></label>
+          <label for="pic-24" class="grid-item"
+            ><img src="./img/gallery/gallery-024.webp" alt="Large Canvas Picture Hanging Hampstead, North London" loading="lazy"
+          /></label>
+          <label for="pic-25" class="grid-item"
+            ><img src="./img/gallery/gallery-025.webp" alt="TV Wall Mounting and Picture Installation West Brompton, London" loading="lazy"
+          /></label>
+          <label for="pic-1" class="grid-item"
+            ><img src="./img/gallery/gallery-001.webp" alt="Floating Shelf Installation and Picture Hanging Central London" loading="lazy"
+          /></label>
+          <label for="pic-2" class="grid-item"
+            ><img src="./img/gallery/gallery-002.webp" alt="Multiple Picture Gallery Wall Design and Installation London" loading="lazy"
+          /></label>
+          <label for="pic-3" class="grid-item"
+            ><img src="./img/gallery/gallery-003.webp" alt="Large Mirror Hanging Service Chelsea and Kensington, London" loading="lazy"
+          /></label>
+          <label for="pic-4" class="grid-item"
+            ><img src="./img/gallery/gallery-004.webp" alt="Stairwell Picture Installation and Gallery Wall West London" loading="lazy"
+          /></label>
+          <label for="pic-5" class="grid-item"
+            ><img src="./img/gallery/gallery-005.webp" alt="Triptych Canvas Art Hanging in Mayfair, London" loading="lazy"
+          /></label>
+          <label for="pic-6" class="grid-item"
+            ><img src="./img/gallery/gallery-006.webp" alt="Professional Wall Art Installation Service North West London" loading="lazy"
+          /></label>
+          <label for="pic-7" class="grid-item"
+            ><img src="./img/gallery/gallery-007.webp" alt="Modern Art Hanging and Installation Belgravia, London" loading="lazy"
+          /></label>
+          <label for="pic-8" class="grid-item"
+            ><img src="./img/gallery/gallery-008.webp" alt="Stairwell Picture Arrangement and Installation Hampstead, London" loading="lazy"
+          /></label>
+          <label for="pic-9" class="grid-item"
+            ><img src="./img/gallery/gallery-009.webp" alt="Bedroom Wall Art and Picture Hanging Service London" loading="lazy"
+          /></label>
+          <label for="pic-10" class="grid-item"
+            ><img src="./img/gallery/gallery-010.webp" alt="Kitchen Picture and Canvas Hanging Chelsea, London" loading="lazy"
+          /></label>
+          <label for="pic-11" class="grid-item"
+            ><img src="./img/gallery/gallery-011.webp" alt="Fireplace Art Wall Installation Kensington, Central London" loading="lazy"
+          /></label>
+          <label for="pic-12" class="grid-item"
+            ><img src="./img/gallery/gallery-012.webp" alt="Mosaic Art Panel Installation and Mounting Marylebone, London" loading="lazy"
+          /></label>
+          <label for="pic-13" class="grid-item"
+            ><img src="./img/gallery/gallery-013.webp" alt="Living Room Picture Hanging and Art Installation West Brompton" loading="lazy"
+          /></label>
+          <label for="pic-14" class="grid-item"
+            ><img src="./img/gallery/gallery-014.webp" alt="Floating Shelf Installation Living Room Central London" loading="lazy"
+          /></label>
+          <label for="pic-15" class="grid-item"
+            ><img src="./img/gallery/gallery-015.webp" alt="Large Mirror Hanging Service Mayfair and Chelsea, London" loading="lazy"
+          /></label>
+          <label for="pic-16" class="grid-item"
+            ><img src="./img/gallery/gallery-016.webp" alt="Heavy Mirror Installation Kensington, West London" loading="lazy"
+          /></label>
+          <label for="pic-17" class="grid-item"
+            ><img src="./img/gallery/gallery-017.webp" alt="Professional Picture Hanging Service Belgravia, London" loading="lazy"
+          /></label>
+          <label for="pic-18" class="grid-item"
+            ><img src="./img/gallery/gallery-018.webp" alt="Expert Picture and Frame Hanging Hampstead Heath, London" loading="lazy"
+          /></label>
+          <label for="pic-19" class="grid-item"
+            ><img src="./img/gallery/gallery-019.webp" alt="Mirror Hanging and Installation Service North London" loading="lazy"
+          /></label>
+          <label for="pic-20" class="grid-item"
+            ><img src="./img/gallery/gallery-020.webp" alt="TV Wall Mounting and Cable Management Central London" loading="lazy"
+          /></label>
+          <div class="grid-item gallery-grid-cta">
+            <h4>See More On Instagram</h4>
+            <a href="https://www.instagram.com/perfectlyhunguk/" target="_blank" rel="noopener noreferrer">@perfectlyhunguk</a>
           </div>
-        </div>
-
-        <div class="areas-cta" data-aos="fade-up">
-          <p><strong>Don't see your area listed?</strong> We cover many more locations across Greater London. Contact us to discuss your requirements.</p>
-          <br />
-          <a href="mailto:hello@perfectlydone.uk?subject=Request%20an%20Install" class="cta btn btn-outline">Get in touch</a>
         </div>
       </div>
     </div>
@@ -529,7 +407,7 @@
                 <!-- Company Info -->
                 <div class="footer-column footer-brand" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                   <h3>Perfectly Hung</h3>
-                  <p class="font-clamp-p2">Professional picture hanging, TV mounting, and handyman services in London.</p>
+                  <p class="font-clamp-p2">Professional Picture Hanging and Art Installation services in London.</p>
                   <p>Based in London, UK</p>
                   <div class="footer-google-reviews">
                     <img src="./img/google-reviews.webp" alt="Google Reviews - Perfectly Hung customer reviews" loading="lazy" />
@@ -543,7 +421,6 @@
                   <div class="footer-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                      <li><a href="/">Home</a></li>
                       <li><a href="/areas-covered.html">Areas Covered</a></li>
                       <li><a href="/terms-conditions.html">Terms &amp; Conditions</a></li>
                       <li>
@@ -571,9 +448,8 @@
                     <ul class="footer-links">
                       <li><a href="/picture-hanging.html">Picture Hanging</a></li>
                       <li><a href="/picture-hanging.html">Mirror Installation</a></li>
-                      <li><a href="/#services">TV Mounting</a></li>
+                      <li><a href="#services">TV AV Mounting</a></li>
                       <li><a href="/curtain-fitting.html">Curtain &amp; Blind Fitting</a></li>
-                      <li><a href="/#services">Shelving Installation</a></li>
                     </ul>
                   </div>
 
@@ -640,8 +516,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Footer Bottom -->
               <div class="footer-bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                 <p>&copy; 2027 Perfectly Hung. All rights reserved.</p>
               </div>
@@ -653,8 +527,6 @@
         <div class="faq-section">
           <div class="faq-container">
             <h3 class="faq-header" data-aos="fade-right">Frequently Asked Questions</h3>
-
-            <!-- FAQ Item 1 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-1" class="faq-toggle" />
               <label for="faq-1" class="faq-question">
@@ -669,8 +541,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- FAQ Item 2 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-2" class="faq-toggle" />
               <label for="faq-2" class="faq-question">
@@ -685,8 +555,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- FAQ Item 3 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-3" class="faq-toggle" />
               <label for="faq-3" class="faq-question">
@@ -701,8 +569,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- FAQ Item 4 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-4" class="faq-toggle" />
               <label for="faq-4" class="faq-question">
@@ -717,8 +583,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- FAQ Item 5 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-5" class="faq-toggle" />
               <label for="faq-5" class="faq-question">
@@ -733,8 +597,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- FAQ Item 6 -->
             <div class="faq-item" data-aos="fade-up">
               <input type="checkbox" id="faq-6" class="faq-toggle" />
               <label for="faq-6" class="faq-question">
@@ -756,60 +618,24 @@
 
     <!-- Scripts -->
     <script>
-      // Navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector(".header");
-        const heroSection = document.querySelector(".hero");
-        const areaHero = document.querySelector(".area-hero");
-
-        // Check if we're on mobile (768px and below)
-        if (window.innerWidth <= 768) {
-          // On mobile, use area-hero if it exists, otherwise use hero
-          const targetSection = areaHero || heroSection;
-          if (targetSection) {
-            const sectionHeight = targetSection.offsetHeight;
-            if (window.scrollY > sectionHeight) {
-              header.classList.add("scrolled");
-            } else {
-              header.classList.remove("scrolled");
-            }
-          }
-        } else {
-          // On desktop, use hero section
-          if (heroSection) {
-            const heroHeight = heroSection.offsetHeight;
-            if (window.scrollY > heroHeight) {
-              header.classList.add("scrolled");
-            } else {
-              header.classList.remove("scrolled");
-            }
-          }
-        }
-      });
-    </script>
-
-    <!-- Animate On Scroll AOS -->
-    <script>
       AOS.init({
         disable: false,
         startEvent: "DOMContentLoaded",
         initClassName: "aos-init",
         animatedClassName: "aos-animate",
         useClassNames: false,
-        disableMutationObserver: true, // Disable to reduce reflows
-        debounceDelay: 100, // Increased to reduce frequency
-        throttleDelay: 200, // Increased to reduce frequency
+        disableMutationObserver: true,
+        debounceDelay: 100,
+        throttleDelay: 200,
         offset: 40,
         delay: 0,
         duration: 600,
         easing: "ease",
-        once: true, // Animate only once to reduce ongoing reflows
+        once: true,
         mirror: false,
         anchorPlacement: "top-bottom",
       });
     </script>
-
-    <!-- Light Dark Toggle Button -->
     <script>
       const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
       const currentTheme = localStorage.getItem("theme");
@@ -834,8 +660,6 @@
 
       toggleSwitch.addEventListener("change", switchTheme, false);
     </script>
-
-    <!-- Close Mobile Menu on Link Click -->
     <script>
       const sidebarLinks = document.querySelectorAll("#sidebarMenu .sidebarMenuInner a");
       const menuCheckbox = document.getElementById("openSidebarMenu");
@@ -846,29 +670,6 @@
         });
       });
     </script>
-
-    <!-- Mobile dropdown toggle -->
-    <script>
-      const navDropdowns = document.querySelectorAll(".nav-dropdown");
-
-      navDropdowns.forEach((navDropdown) => {
-        const dropdownArrow = navDropdown.querySelector(".dropdown-arrow");
-        const dropdownToggle = navDropdown.querySelector(".nav-dropdown-toggle");
-
-        if (dropdownArrow && dropdownToggle) {
-          dropdownArrow.addEventListener("click", (e) => {
-            if (window.innerWidth <= 768) {
-              e.preventDefault();
-              e.stopPropagation();
-              dropdownToggle.checked = !dropdownToggle.checked;
-              navDropdown.classList.toggle("active", dropdownToggle.checked);
-            }
-          });
-        }
-      });
-    </script>
-
-    <!-- Vite Entry Point -->
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>

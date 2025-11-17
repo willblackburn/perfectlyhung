@@ -1226,6 +1226,16 @@ a {
   }
 }
 
+.hero-gallery .hero-background {
+  background-image: url("../img/bg-gallery.webp");
+}
+
+@media all and (max-width: 30rem) {
+  .hero-gallery .hero-background {
+    background-image: url("../img/bg-gallery-mobile.webp");
+  }
+}
+
 /*-------------------------------------------------------------------------------
     ABOUT 
 -------------------------------------------------------------------------------*/
