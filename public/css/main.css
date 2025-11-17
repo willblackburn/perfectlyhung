@@ -582,7 +582,7 @@ a {
 }
 
 .sidebarMenuInner li a:hover {
-  color: var(--brandcolor1);
+  color: var(--brandcolor2);
 }
 
 .nav-dropdown {
@@ -3478,13 +3478,13 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   left: 0;
   width: 0;
   height: 0.125rem;
-  background-color: var(--brandcolor3);
+  background-color: var(--brandcolor2);
   transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
   opacity: 1;
-  color: var(--brandcolor3);
+  color: var(--brandcolor2);
   transform: translateX(clamp(0.1875rem, 0.15rem + 0.1vw, 0.3125rem));
 }
 
