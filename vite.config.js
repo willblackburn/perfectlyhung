@@ -39,6 +39,7 @@ export default defineConfig({
         "commercial-installation": resolve(__dirname, "public/commercial-installation.html"),
         "terms-conditions": resolve(__dirname, "public/terms-conditions.html"),
         "locations-mayfair": resolve(__dirname, "public/locations/mayfair.html"),
+        gallery: resolve(__dirname, "public/gallery.html"),
       },
     },
   },
