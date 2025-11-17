@@ -23,9 +23,9 @@ Site Design By Will Blackburn. coda4.com */
   --inverted-light: #191919;
   --inverted-dark: #ffffff;
 
-  --brandcolor1: #49bbcf;
+  --brandcolor1: #1a2634;
   --brandcolor2: #cf7c45;
-  --brandcolor3: #d38856;
+  --brandcolor3: #f2d5b5;
 
   --fontfamily-primary: "DM Sans", sans-serif;
   --fontfamily-secondary: "Outfit", sans-serif;
@@ -1266,7 +1266,7 @@ a {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: nowrap;
 }
 
@@ -1284,11 +1284,11 @@ a {
 
 @media (max-width: 50rem) {
   .about-cta-container {
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .about-cta-container .cta {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
   }
 }
 
@@ -1442,7 +1442,7 @@ a {
 }
 
 .service-item + .service-item {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 @media (max-width: 40rem) {
@@ -4209,4 +4209,92 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 
 .svg-youtube {
   fill: var(--brandcolor2);
+}
+
+/*-------------------------------------------------------------------------------
+    WHY CHOOSE US
+-------------------------------------------------------------------------------*/
+
+.why-us {
+  padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.why-us-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--container-padding);
+  margin-bottom: 1rem;
+}
+
+.why-us-header {
+  text-align: left;
+  margin-bottom: 3rem;
+  max-width: 45rem;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.why-us-card {
+  /* background-color: rgba(128, 128, 128, 0.05); */
+  /* padding: 1rem; */
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us-card:hover {
+  animation: expand 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.why-us-card-icon {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.why-us-card h4 {
+  color: var(--brandcolor2);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 64rem) {
+  .why-us {
+    min-height: auto;
+  }
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .why-us-card {
+    padding: 0.5rem;
+  } */
+  .why-us-card-icon {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-us-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------
+    CUSTOM ANIMATIONS
+-------------------------------------------------------------------------------*/
+@keyframes expand {
+  to {
+    transform: scale(1.02);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+  }
 }
