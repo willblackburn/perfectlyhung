@@ -1096,7 +1096,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../img/bg1-5.webp");
+  background-image: url("../img/bg-home.webp");
   background-position: 32% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1106,7 +1106,7 @@ a {
 
 @media all and (max-width: 30rem) {
   .hero-background {
-    background-image: url("../img/bg1-4.webp?width=400");
+    background-image: url("../img/bg-home-mobile.webp?width=400");
   }
 }
 
