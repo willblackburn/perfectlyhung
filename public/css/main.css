@@ -40,7 +40,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h5: clamp(1rem, 1.2vw, 1.7rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
-  --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
+  --font-clamp-span: clamp(0.75rem, 1.2vw, 1.3rem);
   --font-clamp-button: clamp(0.85rem, 2vw, 1.2rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
@@ -364,11 +364,12 @@ p {
 
 .font-clamp-button {
   color: var(--text);
-  font-family: var(--fontfamily-primary);
+  font-family: var(--fontfamily-secondary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
-  line-height: 1.1;
+  line-height: 1.7;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .span-heading {
@@ -1302,14 +1303,28 @@ a {
   }
 }
 
-.about-image {
+.about-image-wrapper {
   grid-area: image;
+  position: relative;
+}
+
+.about-image {
   background-image: url(../img/bg-about-1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0 clamp(1rem, -0.5rem + 3.5vw, 8rem);
+}
+
+.google-horizontal {
+  background-color: var(--bg);
+  position: absolute;
+  top: 0rem;
+  right: clamp(1rem, -0.5rem + 3.5vw, 8rem);
+  z-index: 2;
+  max-width: 220px;
+  height: auto;
 }
 
 @media (max-width: 50rem) {
@@ -1350,12 +1365,23 @@ a {
     padding: 0 clamp(1rem, 0rem + 3.5vw, 8rem);
   }
 
-  .about-image {
+  .about-image-wrapper {
     grid-area: image;
+  }
+
+  .about-image {
     width: auto;
     min-height: 30vh;
     height: auto;
     margin-inline: 1rem;
+  }
+
+  .google-horizontal {
+    top: auto;
+    bottom: 0rem;
+    left: 1rem;
+    right: auto;
+    max-width: 100px;
   }
 }
 
@@ -4290,19 +4316,19 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 .btn,
 .cta,
 .button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
   background: linear-gradient(180deg, var(--brandcolor2) 0%, var(--brandcolor2) 100%);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
   font-family: var(--fontfamily-secondary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
-  text-transform: uppercase;
-  padding: 0.85rem 1.8rem;
   color: var(--text-light);
+  text-transform: uppercase;
+  line-height: 1.7;
+  padding: 0.85rem 1rem;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
   position: relative;
