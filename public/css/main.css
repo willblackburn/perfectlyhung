@@ -36,12 +36,12 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h1: clamp(2.3rem, 4vw, 6rem);
   --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
-  --font-clamp-h4: clamp(1.05rem, 1.8vw, 1.7rem);
-  --font-clamp-h5: clamp(0.9rem, 1.2vw, 1.2rem);
+  --font-clamp-h4: clamp(1.1rem, 1.8vw, 1.7rem);
+  --font-clamp-h5: clamp(1rem, 1.2vw, 1.7rem);
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.2rem);
-  --font-clamp-button: clamp(0.8rem, 2vw, 1.2rem);
+  --font-clamp-button: clamp(0.85rem, 2vw, 1.2rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
   --container-padding: 0 3.2vw;
@@ -1462,6 +1462,108 @@ a {
 }
 
 /*-------------------------------------------------------------------------------
+    WHY CHOOSE US
+-------------------------------------------------------------------------------*/
+
+.why-us {
+  padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.why-us-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--container-padding);
+  margin-bottom: 1rem;
+}
+
+.why-us-header {
+  text-align: left;
+  margin-bottom: 3rem;
+  max-width: 45rem;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.why-us-card {
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-us-card:hover {
+  animation: expand 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.why-us-card-icon {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.why-us-card h4 {
+  color: var(--brandcolor2);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 64rem) {
+  .why-us {
+    min-height: auto;
+  }
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-us-card-icon {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 50rem) {
+  .why-us {
+    overflow: visible !important;
+  }
+
+  .why-us-container {
+    padding: 0;
+  }
+
+  .why-us-header {
+    position: sticky;
+    top: 0rem;
+    z-index: 5;
+    background-color: var(--bg);
+    min-height: clamp(5rem, 4rem + 4vw, 7rem);
+    display: grid;
+    align-content: center;
+    padding: clamp(1.2rem, 0.6rem + 2vw, 2rem) clamp(1rem, 0rem + 3.5vw, 8rem);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .why-us-grid {
+    padding: 0 3.2vw;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-us-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------
     AREAS 
 -------------------------------------------------------------------------------*/
 
@@ -2711,6 +2813,80 @@ a {
 }
 
 /*-------------------------------------------------------------------------------
+    Our Clients
+-------------------------------------------------------------------------------*/
+
+.clients {
+  background-color: var(--bg);
+  padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
+}
+
+.clients-container {
+  max-width: 100%;
+  padding: var(--container-padding);
+  margin: 0 auto;
+}
+
+.clients-header {
+  max-width: 50rem;
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  align-items: start;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg);
+}
+
+.client-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.client-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.client-card:hover .client-image img {
+  transform: scale(1.05);
+}
+
+.client-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.client-content h4 {
+  color: var(--brandcolor2);
+  margin-bottom: 1rem;
+}
+
+.client-content p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 50rem) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+/*-------------------------------------------------------------------------------
     Gallery
 -------------------------------------------------------------------------------*/
 
@@ -3265,8 +3441,7 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  font-size: var(--font-clamp-h4);
-  font-weight: var(--fontweight-p2);
+  font-size: var(--font-clamp-h5);
   color: var(--text);
   cursor: pointer;
   user-select: none;
@@ -4219,84 +4394,6 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 
 .svg-youtube {
   fill: var(--brandcolor2);
-}
-
-/*-------------------------------------------------------------------------------
-    WHY CHOOSE US
--------------------------------------------------------------------------------*/
-
-.why-us {
-  padding: clamp(4rem, 3rem + 3vw, 8rem) 0;
-  height: auto;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.why-us-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: var(--container-padding);
-  margin-bottom: 1rem;
-}
-
-.why-us-header {
-  text-align: left;
-  margin-bottom: 3rem;
-  max-width: 45rem;
-}
-
-.why-us-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.why-us-card {
-  /* background-color: rgba(128, 128, 128, 0.05); */
-  /* padding: 1rem; */
-  border: 1px solid rgba(128, 128, 128, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-us-card:hover {
-  animation: expand 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.why-us-card-icon {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-  margin-bottom: 1.5rem;
-}
-
-.why-us-card h4 {
-  color: var(--brandcolor2);
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 64rem) {
-  .why-us {
-    min-height: auto;
-  }
-  .why-us-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* .why-us-card {
-    padding: 0.5rem;
-  } */
-  .why-us-card-icon {
-    height: 30vh;
-  }
-}
-
-@media (max-width: 37.5rem) {
-  .why-us-grid {
-    grid-template-columns: 1fr;
-  }
-  .why-us-header {
-    margin-bottom: 2rem;
-  }
 }
 
 /*-------------------------------------------------------------------------------
