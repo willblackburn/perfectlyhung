@@ -30,7 +30,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontfamily-primary: "DM Sans", sans-serif;
   --fontfamily-secondary: "Outfit", sans-serif;
 
-  --font-clamp-p: clamp(1rem, 1vw + 0.2rem, 1.5rem);
+  --font-clamp-p: clamp(1.1rem, 1vw + 0.2rem, 1.5rem);
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.85rem, 0.9vw, 1.15rem);
   --font-clamp-h1: clamp(2.3rem, 4vw, 6rem);
@@ -41,7 +41,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.3rem);
-  --font-clamp-button: clamp(0.85rem, 2vw, 1.2rem);
+  --font-clamp-button: clamp(0.85rem, 2vw, 1.3rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
   --container-padding: 0 3.2vw;
@@ -97,7 +97,7 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h4: 600;
   --fontweight-h5: 600;
   --fontweight-h6: 600;
-  --fontweight-button: 600;
+  --fontweight-button: 700;
   --fontweight-nav: 400;
   --fontweight-span: 400;
 }
@@ -111,10 +111,10 @@ Site Design By Will Blackburn. coda4.com */
   --fontweight-h1: 800;
   --fontweight-h2: 700;
   --fontweight-h3: 700;
-  --fontweight-h4: 600;
-  --fontweight-h5: 600;
-  --fontweight-h6: 600;
-  --fontweight-button: 600;
+  --fontweight-h4: 700;
+  --fontweight-h5: 700;
+  --fontweight-h6: 700;
+  --fontweight-button: 700;
   --fontweight-nav: 500;
   --fontweight-span: 800;
 }
@@ -167,7 +167,6 @@ input:not(:checked) + .theme-icon-box .bulb-icon {
   fill: transparent;
 }
 
-/* Music toggle matches theme icon styling */
 .music-toggle {
   display: inline-block;
   cursor: pointer;
@@ -201,7 +200,6 @@ input:not(:checked) + .theme-icon-box .bulb-icon {
   background-color: var(--brandcolor2);
 }
 
-/* Animated waveform shown while playing */
 .music-waveform {
   position: absolute;
   inset: 0;
@@ -339,7 +337,7 @@ p {
   font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-p);
   font-weight: var(--fontweight-p);
-  line-height: 1.7;
+  line-height: 1.6;
   letter-spacing: -0.01em;
   opacity: 0.97;
 }
@@ -364,7 +362,7 @@ p {
 
 .font-clamp-button {
   color: var(--text);
-  font-family: var(--fontfamily-secondary);
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
   line-height: 1.7;
@@ -1161,7 +1159,8 @@ a {
 .curtain-fitting-hero,
 .tv-av-hero,
 .residential-hero,
-.commercial-hero {
+.commercial-hero,
+.blog-hero {
   max-width: 100vw;
   max-height: 100vh;
   opacity: 1;
@@ -1235,6 +1234,35 @@ a {
   .hero-gallery .hero-background {
     background-image: url("../img/bg-gallery-mobile.webp");
   }
+}
+
+.blog-hero .hero-background {
+  background-image: url("../img/bg-blog.webp");
+  background-position: center center;
+}
+
+@media all and (max-width: 30rem) {
+  .blog-hero .hero-background {
+    background-image: url("../img/bg-blog-mobile.webp");
+    background-position: center center;
+  }
+}
+
+/* Blog Coming Soon Divider */
+.blog-coming-soon-divider {
+  text-align: center;
+  padding: clamp(3rem, 2rem + 2vw, 5rem) var(--container-padding);
+  background-color: var(--bg);
+}
+
+.coming-soon-text {
+  font-family: var(--fontfamily-secondary);
+  font-size: clamp(0.875rem, 0.7rem + 0.5vw, 1.125rem);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  opacity: 0.7;
 }
 
 /*-------------------------------------------------------------------------------
@@ -1340,13 +1368,13 @@ a {
       "header"
       "image"
       "text";
-    gap: 2rem;
+    gap: 1.5rem;
     min-height: auto;
   }
 
   .about-header {
     grid-area: header;
-    padding: clamp(1.2rem, 0.6rem + 2vw, 2rem) clamp(1rem, 0rem + 3.5vw, 8rem);
+    padding: clamp(1.5rem, 0.6rem + 2vw, 2rem) clamp(1rem, 0rem + 3.5vw, 8rem);
     position: sticky;
     top: 0rem;
     z-index: 5;
@@ -1585,7 +1613,7 @@ a {
     grid-template-columns: 1fr;
   }
   .why-us-header {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -4319,10 +4347,10 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
   background: linear-gradient(180deg, var(--brandcolor2) 0%, var(--brandcolor2) 100%);
   background: linear-gradient(180deg, color-mix(in srgb, var(--brandcolor2) 85%, #ffffff) 0%, color-mix(in srgb, var(--brandcolor2) 100%, #000000) 100%);
-  font-family: var(--fontfamily-secondary);
+  font-family: var(--fontfamily-primary);
   font-size: var(--font-clamp-button);
   font-weight: var(--fontweight-button);
   color: var(--text-light);
