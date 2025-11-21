@@ -40,6 +40,7 @@ export default defineConfig({
         "terms-conditions": resolve(__dirname, "public/terms-conditions.html"),
         "locations-mayfair": resolve(__dirname, "public/locations/mayfair.html"),
         gallery: resolve(__dirname, "public/gallery.html"),
+        blog: resolve(__dirname, "public/blog.html"),
       },
     },
   },
