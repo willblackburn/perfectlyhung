@@ -41,7 +41,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-h6: clamp(0.8rem, 1vw, 1rem);
 
   --font-clamp-span: clamp(0.75rem, 1.2vw, 1.3rem);
-  --font-clamp-button: clamp(0.85rem, 2vw, 1.3rem);
+  --font-clamp-button: clamp(0.85rem, 1vw, 1.3rem);
   --font-clamp-icon: clamp(1.7rem, 1rem + 1vw, 2.8rem);
 
   --container-padding: 0 3.2vw;
