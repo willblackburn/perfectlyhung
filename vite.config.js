@@ -26,9 +26,10 @@ export default defineConfig({
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      // ⚠️ IMPORTANT: When creating a new HTML page in the public directory,
-      // you MUST add it here for it to be included in the Vite build and deployed to Vercel.
-      // Format: "page-name": resolve(__dirname, "public/page-name.html"),
+      // ⚠️ IMPORTANT: Every standalone HTML page must be listed here or it will not exist in
+      // `dist/` after build. Missing files 404 in production (or hit Firebase's SPA rewrite to
+      // index.html). Includes root pages and subfolders e.g. public/locations/*.html.
+      // Format: "rollup-key": resolve(__dirname, "public/relative/path.html"),
       input: {
         main: resolve(__dirname, "public/index.html"),
         areas: resolve(__dirname, "public/areas-covered.html"),
@@ -39,6 +40,12 @@ export default defineConfig({
         "commercial-installation": resolve(__dirname, "public/commercial-installation.html"),
         "terms-conditions": resolve(__dirname, "public/terms-conditions.html"),
         "locations-mayfair": resolve(__dirname, "public/locations/mayfair.html"),
+        "locations-marylebone": resolve(__dirname, "public/locations/marylebone.html"),
+        "locations-fitzrovia": resolve(__dirname, "public/locations/fitzrovia.html"),
+        "locations-bloomsbury": resolve(__dirname, "public/locations/bloomsbury.html"),
+        "locations-covent-garden": resolve(__dirname, "public/locations/covent-garden.html"),
+        "locations-soho": resolve(__dirname, "public/locations/soho.html"),
+        "locations-westminster": resolve(__dirname, "public/locations/westminster.html"),
         gallery: resolve(__dirname, "public/gallery.html"),
         blog: resolve(__dirname, "public/blog.html"),
       },

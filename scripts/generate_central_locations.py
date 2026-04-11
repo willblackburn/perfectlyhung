@@ -1,4 +1,8 @@
-"""Generate Central London location pages from marylebone.html (split + replace)."""
+"""Generate Central London location pages from marylebone.html (split + replace).
+
+After adding a new `public/locations/*.html`, register it in vite.config.js
+`build.rollupOptions.input` so `npm run build` emits it to dist (Firebase/Vercel).
+"""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
