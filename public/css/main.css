@@ -16,11 +16,11 @@ Site Design By Will Blackburn. coda4.com */
 -------------------------------------------------------------------------------*/
 
 :root {
-  --text-light: #191919;
+  --text-light: #0f0f0f;
   --bg-light: #ffffff;
   --text-dark: #ffffff;
-  --bg-dark: #191919;
-  --inverted-light: #191919;
+  --bg-dark: #0f0f0f;
+  --inverted-light: #0f0f0f;
   --inverted-dark: #ffffff;
 
   --brandcolor1: #1a2634;
