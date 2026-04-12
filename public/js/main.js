@@ -4,26 +4,116 @@ import "../css/main.css";
 // Import Lenis for smooth scrolling
 import Lenis from "lenis";
 
-// Initialize Lenis smooth scrolling
-const lenis = new Lenis({
-  duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  direction: "vertical",
-  gestureDirection: "vertical",
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false,
-});
+const LENIS_REDUCED_KEY = "perfectlyhung-lenis-reduced";
 
-// Lenis RAF loop
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+function readLenisReducedPreference() {
+  const v = localStorage.getItem(LENIS_REDUCED_KEY);
+  if (v === "1") return true;
+  if (v === "0") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-requestAnimationFrame(raf);
+let lenis = null;
+let lenisRafId = 0;
+let lenisReducedActive = readLenisReducedPreference();
+
+function lenisRaf(time) {
+  if (!lenis) return;
+  lenis.raf(time);
+  lenisRafId = requestAnimationFrame(lenisRaf);
+}
+
+function attachLenisHeaderScroll() {
+  if (!lenis || typeof lenis.on !== "function") return;
+  lenis.on("scroll", (e) => {
+    const current = e && typeof e.scroll === "number" ? e.scroll : window.pageYOffset || document.documentElement.scrollTop || 0;
+    updateHeaderForScroll(current);
+  });
+}
+
+function startLenis() {
+  if (lenis) return;
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: "vertical",
+    gestureDirection: "vertical",
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+  });
+  try {
+    attachLenisHeaderScroll();
+  } catch {
+    // noop
+  }
+  lenisRafId = requestAnimationFrame(lenisRaf);
+}
+
+function stopLenis() {
+  if (lenisRafId) {
+    cancelAnimationFrame(lenisRafId);
+    lenisRafId = 0;
+  }
+  if (lenis) {
+    lenis.destroy();
+    lenis = null;
+  }
+}
+
+function setLenisReduced(reduced) {
+  lenisReducedActive = reduced;
+  localStorage.setItem(LENIS_REDUCED_KEY, reduced ? "1" : "0");
+  if (reduced) {
+    stopLenis();
+  } else {
+    startLenis();
+  }
+  syncReduceMotionToggle();
+}
+
+function syncReduceMotionToggle() {
+  const btn = document.querySelector(".reduce-motion-toggle");
+  if (!btn) return;
+  btn.setAttribute("aria-pressed", lenisReducedActive ? "true" : "false");
+  btn.classList.toggle("is-active", lenisReducedActive);
+  btn.setAttribute(
+    "aria-label",
+    lenisReducedActive
+      ? "Reduced motion on; smooth scrolling is off. Activate to turn smooth scrolling back on."
+      : "Smooth scrolling is on. Activate for reduced motion and native scrolling."
+  );
+}
+
+function injectReduceMotionToggle() {
+  const themeWrap = document.querySelector(".theme-switch-wrapper");
+  if (!themeWrap || document.querySelector(".reduce-motion-toggle")) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "reduce-motion-toggle";
+  btn.setAttribute("aria-pressed", lenisReducedActive ? "true" : "false");
+  btn.classList.toggle("is-active", lenisReducedActive);
+  btn.setAttribute(
+    "aria-label",
+    lenisReducedActive
+      ? "Reduced motion on; smooth scrolling is off. Activate to turn smooth scrolling back on."
+      : "Smooth scrolling is on. Activate for reduced motion and native scrolling."
+  );
+  btn.innerHTML =
+    '<span class="reduce-motion-icon-box" aria-hidden="true"><svg class="reduce-motion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="3" height="14" rx="0.5"/><rect x="14" y="5" width="3" height="14" rx="0.5"/></svg></span>';
+  btn.addEventListener("click", () => {
+    setLenisReduced(!lenisReducedActive);
+  });
+  themeWrap.insertAdjacentElement("afterend", btn);
+}
+
+if (!lenisReducedActive) {
+  startLenis();
+}
+
+injectReduceMotionToggle();
 
 // Enable HMR for CSS
 if (import.meta.hot) {
@@ -113,18 +203,6 @@ if (headerEl) {
     },
     { passive: true }
   );
-
-  // Hook into Lenis scroll (smooth/touch)
-  try {
-    if (typeof lenis !== "undefined" && lenis && typeof lenis.on === "function") {
-      lenis.on("scroll", (e) => {
-        const current = e && typeof e.scroll === "number" ? e.scroll : window.pageYOffset || document.documentElement.scrollTop || 0;
-        updateHeaderForScroll(current);
-      });
-    }
-  } catch (err) {
-    // noop
-  }
 }
 
 // YouTube audio player toggle

@@ -34,7 +34,7 @@ Site Design By Will Blackburn. coda4.com */
   --font-clamp-p2: clamp(0.9rem, 0.8vw + 0.2rem, 1.4rem);
   --font-clamp-nav: clamp(0.75rem, 0.9vw, 1.15rem);
   --font-clamp-h1: clamp(2.3rem, 4vw, 6rem);
-  --font-clamp-h1-alt: clamp(1.9rem, 4vw, 4.5rem);
+  --font-clamp-h1-alt: clamp(1.9rem, 4vw, 4.2rem);
   --font-clamp-h2: clamp(1.5rem, 2.8vw, 3.4rem);
   --font-clamp-h3: clamp(1.3rem, 2vw, 2.8rem);
   --font-clamp-h4: clamp(1.1rem, 1.8vw, 1.7rem);
@@ -170,6 +170,37 @@ input:checked + .theme-icon-box .bulb-icon {
 /* Dark mode (unchecked) */
 input:not(:checked) + .theme-icon-box .bulb-icon {
   fill: transparent;
+}
+
+.reduce-motion-toggle {
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.reduce-motion-icon-box {
+  width: var(--font-clamp-icon);
+  height: var(--font-clamp-icon);
+  background-color: var(--brandcolor2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: translateY(-0.1875rem);
+}
+
+.reduce-motion-icon {
+  width: calc(var(--font-clamp-icon) * 0.45);
+  height: calc(var(--font-clamp-icon) * 0.55);
+  stroke: #191919;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.reduce-motion-toggle.is-active .reduce-motion-icon-box {
+  filter: brightness(0.92);
 }
 
 .music-toggle {
@@ -2931,6 +2962,7 @@ a {
 
 .client-content p {
   margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 
 @media (max-width: 50rem) {
@@ -3333,6 +3365,11 @@ input[type="checkbox"]:checked ~ .gallery-container .grid {
 
   .locations-map {
     aspect-ratio: 4 / 3;
+  }
+
+  .locations-cta {
+    display: flex;
+    justify-content: center;
   }
 }
 
